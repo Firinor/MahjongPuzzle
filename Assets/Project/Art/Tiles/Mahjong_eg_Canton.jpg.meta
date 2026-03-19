@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_0
+      name: Dot1
       rect:
         serializedVersion: 2
         x: 0
@@ -148,10 +148,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_1
+      name: Dot2
       rect:
         serializedVersion: 2
-        x: 133
+        x: 132
         y: 720
         width: 133
         height: 180
@@ -324,7 +324,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_9
+      name: Bambo1
       rect:
         serializedVersion: 2
         x: 0
@@ -522,7 +522,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_18
+      name: Char1
       rect:
         serializedVersion: 2
         x: 0
@@ -720,7 +720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_27
+      name: Wind1
       rect:
         serializedVersion: 2
         x: 0
@@ -808,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_31
+      name: DragonRed
       rect:
         serializedVersion: 2
         x: 532
@@ -830,7 +830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_32
+      name: DragonGreen
       rect:
         serializedVersion: 2
         x: 665
@@ -852,7 +852,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_33
+      name: DragonWhite
       rect:
         serializedVersion: 2
         x: 798
@@ -874,7 +874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_36
+      name: Season1
       rect:
         serializedVersion: 2
         x: 0
@@ -962,7 +962,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mahjong_eg_Canton_40
+      name: Flower1
       rect:
         serializedVersion: 2
         x: 532
@@ -1065,8 +1065,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":133.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":1.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":1,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Mahjong_eg_Canton_0: 8877719945192168586
-      Mahjong_eg_Canton_1: 473117121
+      Bambo1: 110565156
+      Char1: -485375523
+      Dot1: 8877719945192168586
+      Dot2: 473117121
+      DragonGreen: 958688136
+      DragonRed: 517382423
+      DragonWhite: -1584219968
+      Flower1: -1357027803
       Mahjong_eg_Canton_10: 549787630
       Mahjong_eg_Canton_11: -732448589
       Mahjong_eg_Canton_12: 780393270
@@ -1075,7 +1081,6 @@ TextureImporter:
       Mahjong_eg_Canton_15: 1006718763
       Mahjong_eg_Canton_16: -1734958567
       Mahjong_eg_Canton_17: -1432479464
-      Mahjong_eg_Canton_18: -485375523
       Mahjong_eg_Canton_19: 1041348774
       Mahjong_eg_Canton_2: -1259051442
       Mahjong_eg_Canton_20: 111697291
@@ -1085,22 +1090,16 @@ TextureImporter:
       Mahjong_eg_Canton_24: -1828701355
       Mahjong_eg_Canton_25: 352523524
       Mahjong_eg_Canton_26: 958437851
-      Mahjong_eg_Canton_27: 1548607187
       Mahjong_eg_Canton_28: 1811962301
       Mahjong_eg_Canton_29: -576410667
       Mahjong_eg_Canton_3: 1853554648
       Mahjong_eg_Canton_30: 1035166509
-      Mahjong_eg_Canton_31: 517382423
-      Mahjong_eg_Canton_32: 958688136
-      Mahjong_eg_Canton_33: -1584219968
       Mahjong_eg_Canton_34: 2014466784
       Mahjong_eg_Canton_35: 1699421574
-      Mahjong_eg_Canton_36: 1882661658
       Mahjong_eg_Canton_37: -1652645141
       Mahjong_eg_Canton_38: -1244156221
       Mahjong_eg_Canton_39: -370003825
       Mahjong_eg_Canton_4: -655427951
-      Mahjong_eg_Canton_40: -1357027803
       Mahjong_eg_Canton_41: 933421162
       Mahjong_eg_Canton_42: 1739723592
       Mahjong_eg_Canton_43: 151264843
@@ -1109,7 +1108,8 @@ TextureImporter:
       Mahjong_eg_Canton_6: -1038273737
       Mahjong_eg_Canton_7: 1949148878
       Mahjong_eg_Canton_8: 2120537029
-      Mahjong_eg_Canton_9: 110565156
+      Season1: 1882661658
+      Wind1: 1548607187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
