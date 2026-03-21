@@ -1,16 +1,67 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CoreBootstrap : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] 
+    private TilesData data;
+    [SerializeField] 
+    private Desk desk;
+    [SerializeField, Min(9)] 
+    private int NumberOfUniqueTiles;
+    [SerializeField] 
+    private TilePool pool;
+    
+    private void Awake()
     {
-        
+        //LoadSaves();
+        pool.ClearAll();
+        DeckInitialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DeckInitialize()
     {
+        int pairs = desk.TilesPositions.Count / 2;
+        int lastTileIndex = Math.Min(NumberOfUniqueTiles, pairs);
+
+        List<Tile> tiles = new(desk.TilesPositions.Count);
+        var possibleTiles = FillListWhisTiles();
+
+        int currentIndex = 0;
+        while (tiles.Count < desk.TilesPositions.Count)
+        {
+            int randomTile = possibleTiles.PullRandom();
+            if (possibleTiles.Count <= 0)
+                possibleTiles = FillListWhisTiles();
+            
+            tiles.Add(data.Tiles[randomTile]);
+            tiles.Add(data.Tiles[randomTile]);
+            currentIndex++;
+        }
         
+        tiles.Shuffle();
+
+        currentIndex = 0;
+        foreach (var position in desk.TilesPositions)
+        {
+            MajhongTileView tile = pool.Get();
+            tile.SetData(tiles[currentIndex]);
+            tile.transform.position = position;
+            currentIndex++;
+        }
+
+        List<int> FillListWhisTiles()
+        {
+            List<int> ints = new(lastTileIndex);
+            for (int i = 0; i < lastTileIndex; i++)
+            {
+                int index = i;
+                ints.Add(index);
+            }
+
+            return ints;
+        }
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[SelectionBase]
 public class MajhongTileView : MonoBehaviour
 {
     [SerializeField] 

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TilePool : MonoBehaviour
@@ -20,20 +19,20 @@ public class TilePool : MonoBehaviour
         if (result is null)
             result = Instantiate(prefab, transform);
         
-        result.gameObject.SetActive(true);
+        //result.gameObject.SetActive(true);
         
         return result;
     }
     
     public void Release(MajhongTileView tile)
     {
-        tile.gameObject.SetActive(false);
+        Destroy(tile.gameObject);
     }
     public void ClearAll()
     {
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
-            transform.GetChild(i).gameObject.SetActive(false);
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 }

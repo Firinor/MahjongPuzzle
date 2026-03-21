@@ -12,88 +12,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037fa2511e28ca54f83d54a1d35292e7, type: 3}
   m_Name: TilesData
   m_EditorClassIdentifier: Assembly-CSharp::TilesData
+  TileBase: {fileID: 21300000, guid: 36187073cd287dd45a9077f2eb4d7a7a, type: 3}
   Tiles:
-  - Sprite: {fileID: 8877719945192168586, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 2767130507941780709, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 5
-  - Sprite: {fileID: 473117121, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 4115620096900029113, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 5
-  - Sprite: {fileID: -1259051442, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: 1853554648, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: -655427951, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: 1119308829, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: -1038273737, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: 1949148878, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: 2120537029, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
-    Points: 5
-  - Sprite: {fileID: 110565156, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 4801148881075527995, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: 549787630, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -190073748676759091, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: -732448589, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -7801912333312437076, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: 780393270, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -7641676697583760880, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: -2011802772, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 3023479387696996260, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: 817354819, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -6612614972434443636, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: 1006718763, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 1309307982446630181, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: -1734958567, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 4229873965754347177, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: -1432479464, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -1099601911021952972, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 10
-  - Sprite: {fileID: -485375523, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -8810920825110261836, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 1041348774, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -7214235460110537666, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 111697291, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 2532483073510714689, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: -1056326832, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 679299586748948242, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 671736604, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 9082108026627664782, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: -378122542, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 3506702296278513, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: -1828701355, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 5934651115081871494, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 352523524, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -5311447394570848762, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 958437851, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 1040843892264521962, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 15
-  - Sprite: {fileID: 1548607187, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 5714429099446461014, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 20
-  - Sprite: {fileID: 1811962301, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -556056609483860263, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 20
-  - Sprite: {fileID: -576410667, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 2797918777759238612, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 20
-  - Sprite: {fileID: 1035166509, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 6773398976817502487, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 20
-  - Sprite: {fileID: 517382423, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 8733002177220447202, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 40
-  - Sprite: {fileID: 958688136, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 7830409045383036483, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 40
-  - Sprite: {fileID: -1584219968, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 6027746538573486994, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 40
-  - Sprite: {fileID: 1882661658, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -2961484719845404544, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 30
-  - Sprite: {fileID: -1652645141, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -350329033166935790, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 30
-  - Sprite: {fileID: -1244156221, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 683040143870889450, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 30
-  - Sprite: {fileID: -370003825, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 4953098879130201023, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 30
-  - Sprite: {fileID: -1357027803, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 2554622657365561628, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 25
-  - Sprite: {fileID: 933421162, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -681856224584120725, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 25
-  - Sprite: {fileID: 1739723592, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: 5746194309806152948, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 25
-  - Sprite: {fileID: 151264843, guid: 1d575a965ddf5724abb5e1d8ba9719e2, type: 3}
+  - Sprite: {fileID: -4299477990030589185, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
     Points: 25
