@@ -1272,6 +1272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180524334}
+  - component: {fileID: 180524335}
   m_Layer: 0
   m_Name: GameRules
   m_TagString: Untagged
@@ -1294,6 +1295,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1839880449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180524335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180524333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed91fdace26470043bbd78d8c73cc1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MajhongSolitaireRules
+  defaultMaterial: {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
+  selectedMaterial: {fileID: 2100000, guid: a2b99e28d9292e44d8d45c3dc080afe6, type: 2}
+  player: {fileID: 1205326070}
 --- !u!1001 &187537093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7785,8 +7801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171a120edef7c1542953c9d209d020d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHand
-  defaultMaterial: {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
-  selectedMaterial: {fileID: 2100000, guid: a2b99e28d9292e44d8d45c3dc080afe6, type: 2}
 --- !u!1001 &1209045151
 PrefabInstance:
   m_ObjectHideFlags: 0

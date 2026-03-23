@@ -6,13 +6,9 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerHand : MonoBehaviour
 {
-    [SerializeField] 
-    private Material defaultMaterial;
-    [SerializeField] 
-    private Material selectedMaterial;
-
-    private MajhongTileView tile;
     private InputActionAsset action;
+
+    public Action<MajhongTileView> OnTileClick;
 
     private void Start()
     {
@@ -25,26 +21,13 @@ public class PlayerHand : MonoBehaviour
     {
         if (!obj.control.IsPressed())
             return;
-
-        WashHand();
-
+        
         MajhongTileView tile = GetRayHitTile();
         
         if(tile == null)
             return;
-
-        this.tile = tile;
-        tile.SetMaterial(selectedMaterial);
-    }
-
-    private void WashHand()
-    {
-        if (tile != null)
-        {
-            tile.SetMaterial(defaultMaterial);
-        }
         
-        tile = null;
+        OnTileClick?.Invoke(tile);
     }
 
     private static MajhongTileView GetRayHitTile()
