@@ -9,6 +9,10 @@ public class MajhongSolitaireRules : MonoBehaviour
     private Material selectedMaterial;
     [SerializeField] 
     private PlayerHand player;
+    [SerializeField] 
+    private TilesEffects effects;
+    [SerializeField] 
+    private TilePool pool;
     
     private MajhongTileView tile;
     
@@ -26,6 +30,29 @@ public class MajhongSolitaireRules : MonoBehaviour
         
         if (!isClosedTile)
         {
+            if (this.tile != null)
+            {
+                if (this.tile == tile)
+                {
+                    UnselectTile();
+                    return;
+                }
+
+                MajhongTileView tile1 = this.tile;
+                effects.FlyTiles(tile1, tile, () =>
+                {
+                    pool.Release(tile1);
+                    pool.Release(tile);
+                });
+                UnselectTile();
+                return;
+                /*if (this.tile.Sprite == tile.Sprite)
+                {
+                    CheckWinCondition();
+                    return;
+                }*/
+            }
+            
             UnselectTile();
             this.tile = tile;
             tile.SetMaterial(selectedMaterial);
@@ -34,6 +61,11 @@ public class MajhongSolitaireRules : MonoBehaviour
         {
             UnselectTile();
         }
+    }
+
+    private void CheckWinCondition()
+    {
+        
     }
 
     private void UnselectTile()

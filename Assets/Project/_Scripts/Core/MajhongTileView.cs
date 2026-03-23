@@ -9,6 +9,8 @@ public class MajhongTileView : MonoBehaviour
     [SerializeField] 
     private MeshRenderer Cube;
     private Tile Data;
+
+    public Sprite Sprite => Data.Sprite;
     
     public Transform[] RayPoints;
 
@@ -21,5 +23,10 @@ public class MajhongTileView : MonoBehaviour
     public void SetMaterial(Material material)
     {
         Cube.material = material;
+    }
+
+    public void RaycastDisable()
+    {
+        GetComponent<Collider>().enabled = false;
     }
 }

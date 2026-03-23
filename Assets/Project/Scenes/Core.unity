@@ -1310,6 +1310,8 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
   selectedMaterial: {fileID: 2100000, guid: a2b99e28d9292e44d8d45c3dc080afe6, type: 2}
   player: {fileID: 1205326070}
+  effects: {fileID: 1138478092}
+  pool: {fileID: 171712896}
 --- !u!1001 &187537093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7633,6 +7635,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1255066357088913466, guid: 266fa307b4cb40341b38f6c10bc74423, type: 3}
   m_PrefabInstance: {fileID: 1115306485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1138478090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138478091}
+  - component: {fileID: 1138478092}
+  m_Layer: 0
+  m_Name: TileEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138478091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138478090}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1839880449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138478092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138478090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedc22438e67aaa42a00e4386900a62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TilesEffects
+  collideZCoordinate: -10
+  tilePath:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.4386797
+      outSlope: -0.4386797
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04957519
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tileZPath:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 18.423403
+      outSlope: 18.423403
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.06470263
+    - serializedVersion: 3
+      time: 0.043599337
+      value: 0.9734366
+      inSlope: 0.18259744
+      outSlope: 0.18259744
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.060112182
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  tileXYPath:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 9.942197
+      outSlope: 9.942197
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.052887812
+    - serializedVersion: 3
+      time: 0.5
+      value: 2
+      inSlope: 0.10281587
+      outSlope: 0.10281587
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -8.505786
+      outSlope: -8.505786
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.055534005
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1157879020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11733,6 +11870,7 @@ Transform:
   - {fileID: 621459967}
   - {fileID: 180524334}
   - {fileID: 1205326069}
+  - {fileID: 1138478091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864269415
