@@ -28,22 +28,47 @@ public class TilesEffects : MonoBehaviour
         Vector3 tile2StartPoint = tile2.transform.position;
         Vector3 collidePoint = (tile1StartPoint + tile2StartPoint) / 2;
         collidePoint.z = collideZCoordinate;
-        Vector3 tile1CollidePoint = collidePoint + Vector3.left * halfTile3;
-        Vector3 tile2CollidePoint = collidePoint + Vector3.right * halfTile3;
+
+        bool isRight = tile1StartPoint.x > tile2StartPoint.x;
+
+        Vector3 tile1CollidePoint, tile2CollidePoint;
+        if (isRight)
+        {
+            tile1CollidePoint = collidePoint + Vector3.right * halfTile3;
+            tile2CollidePoint = collidePoint + Vector3.left * halfTile3;
+        }
+        else
+        {
+            tile1CollidePoint = collidePoint + Vector3.left * halfTile3;
+            tile2CollidePoint = collidePoint + Vector3.right * halfTile3;
+        }
 
         float timer = 0;
 
         Vector3 delta1 = tile1CollidePoint - tile1StartPoint;
         Vector3 delta2 = tile2CollidePoint - tile2StartPoint;
         
-        while (true)
+        while (timer < 1)
         {
-            if(timer >= 1)
-                break;
+            Vector3 nexPosition1 = tile1StartPoint;
+            float path1 = tilePath.Evaluate(timer);
+            float Zpath1 = tileZPath.Evaluate(timer);
 
-            float path = tilePath.Evaluate(timer);
+            nexPosition1.x += delta1.x * path1;
+            nexPosition1.y += delta1.y * path1;
+            nexPosition1.z += delta1.z * Zpath1;
+            
+            tile1.transform.position = nexPosition1;
+            
+            Vector3 nexPosition2 = tile2StartPoint;
+            float path2 = tilePath.Evaluate(timer);
+            float Zpath2 = tileZPath.Evaluate(timer);
 
-            tile1.transform.position = tile1StartPoint + delta1 * path;
+            nexPosition2.x += delta2.x * path2;
+            nexPosition2.y += delta2.y * path2;
+            nexPosition2.z += delta2.z * Zpath2;
+            
+            tile2.transform.position = nexPosition2;
                 
             yield return null;
             
