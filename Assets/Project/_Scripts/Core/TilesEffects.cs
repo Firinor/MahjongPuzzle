@@ -30,6 +30,7 @@ public class TilesEffects : MonoBehaviour
         collidePoint.z = collideZCoordinate;
 
         bool isRight = tile1StartPoint.x > tile2StartPoint.x;
+        bool isUp = tile1StartPoint.y > tile2StartPoint.y;
 
         Vector3 tile1CollidePoint, tile2CollidePoint;
         if (isRight)
@@ -50,24 +51,20 @@ public class TilesEffects : MonoBehaviour
         
         while (timer < 1)
         {
-            Vector3 nexPosition1 = tile1StartPoint;
-            float path1 = tilePath.Evaluate(timer);
-            float Zpath1 = tileZPath.Evaluate(timer);
+            float path = tilePath.Evaluate(timer);
+            float Zpath = tileZPath.Evaluate(timer);
+            float XYpath = tileXYPath.Evaluate(timer);
 
-            nexPosition1.x += delta1.x * path1;
-            nexPosition1.y += delta1.y * path1;
-            nexPosition1.z += delta1.z * Zpath1;
-            
+            Vector3 nexPosition1 = tile1StartPoint;
+            nexPosition1.x += delta1.x * path + (isRight ? XYpath : -XYpath);
+            nexPosition1.y += delta1.y * path + (isUp ? -XYpath : XYpath);
+            nexPosition1.z += delta1.z * Zpath;
             tile1.transform.position = nexPosition1;
             
             Vector3 nexPosition2 = tile2StartPoint;
-            float path2 = tilePath.Evaluate(timer);
-            float Zpath2 = tileZPath.Evaluate(timer);
-
-            nexPosition2.x += delta2.x * path2;
-            nexPosition2.y += delta2.y * path2;
-            nexPosition2.z += delta2.z * Zpath2;
-            
+            nexPosition2.x += delta2.x * path + (isRight ? -XYpath : XYpath);
+            nexPosition2.y += delta2.y * path + (isUp ? XYpath : -XYpath);
+            nexPosition2.z += delta2.z * Zpath;
             tile2.transform.position = nexPosition2;
                 
             yield return null;
