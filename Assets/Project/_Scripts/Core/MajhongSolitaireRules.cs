@@ -4,10 +4,6 @@ using UnityEngine;
 public class MajhongSolitaireRules : MonoBehaviour
 {
     [SerializeField] 
-    private Material defaultMaterial;
-    [SerializeField] 
-    private Material selectedMaterial;
-    [SerializeField] 
     private PlayerHand player;
     [SerializeField] 
     private TilesEffects effects;
@@ -39,8 +35,9 @@ public class MajhongSolitaireRules : MonoBehaviour
                 }
 
                 MajhongTileView tile1 = this.tile;
-                effects.FlyTiles(tile1, tile, () =>
+                effects.FlyTiles(tile1, tile, tile1.Data.Points, () =>
                 {
+                    //player.addScores(tile1.Data.Points);
                     pool.Release(tile1);
                     pool.Release(tile);
                 });
@@ -55,11 +52,11 @@ public class MajhongSolitaireRules : MonoBehaviour
             
             UnselectTile();
             this.tile = tile;
-            tile.SetMaterial(selectedMaterial);
+            tile.SelectedAnimation();
         }
         else
         {
-            UnselectTile();
+            tile.ErrorAnimation();
         }
     }
 
@@ -72,7 +69,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     {
         if (tile != null)
         {
-            tile.SetMaterial(defaultMaterial);
+            tile.StopAnimation();
         }
 
         tile = null;

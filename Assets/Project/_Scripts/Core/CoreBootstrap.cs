@@ -14,6 +14,7 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private TilePool pool;
     
+    [ContextMenu("DeckInitialize")]
     private void Awake()
     {
         //LoadSaves();

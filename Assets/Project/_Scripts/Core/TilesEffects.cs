@@ -12,14 +12,23 @@ public class TilesEffects : MonoBehaviour
     private AnimationCurve tileZPath;
     [SerializeField] 
     private AnimationCurve tileXYPath;
+
+    [SerializeField] 
+    private Transform tileCollideEffectParent;
+    [SerializeField] 
+    private TileCollideEffect tileCollideEffectPrefab;
+    
+    public bool isHintAnimation;
     
     private const float halfTile3 = 1.1f;
-    public void FlyTiles(MajhongTileView tile1, MajhongTileView tile2, Action callback)
+    public void FlyTiles(MajhongTileView tile1, MajhongTileView tile2, 
+        int scores, Action callback)
     {
-        StartCoroutine(FlyTilesCoroutine(tile1, tile2, callback));
+        StartCoroutine(FlyTilesCoroutine(tile1, tile2, scores, callback));
     }
-
-    private IEnumerator FlyTilesCoroutine(MajhongTileView tile1, MajhongTileView tile2, Action callback)
+    
+    private IEnumerator FlyTilesCoroutine(MajhongTileView tile1, MajhongTileView tile2,
+        int scores, Action callback)
     {
         tile1.RaycastDisable();
         tile2.RaycastDisable();
@@ -71,6 +80,21 @@ public class TilesEffects : MonoBehaviour
             
             timer += Time.deltaTime;
         }
+
+        Vector3 effectPosition = Camera.main.WorldToScreenPoint(collidePoint);
+        var effect = Instantiate(tileCollideEffectPrefab,
+            collidePoint,
+            Quaternion.identity,
+            tileCollideEffectParent);
+        effect.SetText(scores);
         callback?.Invoke();
+    }
+
+    public void Hint(MajhongTileView tile1, MajhongTileView tile2)
+    {
+        isHintAnimation = true;
+        
+        tile1.HintAnimation();
+        tile2.HintAnimation();
     }
 }

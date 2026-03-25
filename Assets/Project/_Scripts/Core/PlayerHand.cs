@@ -47,4 +47,9 @@ public class PlayerHand : MonoBehaviour
         }
         return result;
     }
+
+    private void OnDestroy()
+    {
+        action.FindAction("Click").performed -= FindTile;
+    }
 }
