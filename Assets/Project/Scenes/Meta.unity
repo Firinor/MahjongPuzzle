@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 4927759579659169254, guid: 372187b1486f68044801782d48978c02, type: 3}
     - target: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: ID
-      value: 'Gems '
+      value: Gems
       objectReference: {fileID: 0}
     - target: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: UnlockCost
@@ -921,7 +921,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 329453227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 329453229}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: SwitchToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &329453227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1977,7 +1989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5655054155767208148, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_IsOn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5655054155767208148, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_Group
@@ -3190,6 +3202,10 @@ PrefabInstance:
       value: DeckToggle (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5132836664354303180, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
+      propertyPath: ID
+      value: Classic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132836664354303180, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: UnlockButton
       value: 
       objectReference: {fileID: 0}
@@ -3472,6 +3488,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7830409045383036483, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    - target: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: ID
+      value: Classic
+      objectReference: {fileID: 0}
     - target: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: UnlockButton
       value: 

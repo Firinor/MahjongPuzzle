@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037fa2511e28ca54f83d54a1d35292e7, type: 3}
+  m_Name: GemsTilesData
+  m_EditorClassIdentifier: Assembly-CSharp::TilesData
+  ID: Gems
+  TileBase: {fileID: 21300000, guid: 36187073cd287dd45a9077f2eb4d7a7a, type: 3}
+  Tiles:
+  - Sprite: {fileID: 4801148881075527995, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -190073748676759091, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -7801912333312437076, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -7641676697583760880, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: 3023479387696996260, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -6612614972434443636, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: 1309307982446630181, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: 4229873965754347177, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -1099601911021952972, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 10
+  - Sprite: {fileID: -8810920825110261836, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 15
+  - Sprite: {fileID: -7214235460110537666, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+    Points: 15
+  - Sprite: {fileID: -3544473172925499936, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: 8121872055916434533, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: -91336907518514029, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: 6956004791966609150, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: 6714018493582849218, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: 8018692358278564448, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: 4870833606896229837, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 15
+  - Sprite: {fileID: -2954112808961615118, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 20
+  - Sprite: {fileID: 530023847842193850, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 20
+  - Sprite: {fileID: -1772601602552242070, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 20
+  - Sprite: {fileID: -6505131733041347116, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 20
+  - Sprite: {fileID: 419412834808604244, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 40
+  - Sprite: {fileID: -6815795485557842128, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 40
+  - Sprite: {fileID: 4927759579659169254, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 40
+  - Sprite: {fileID: 7546169622722981358, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 30
+  - Sprite: {fileID: -7601509317824776120, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 30
+  - Sprite: {fileID: -4227474806443862197, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 30
+  - Sprite: {fileID: 6420388561620925923, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 30
+  - Sprite: {fileID: 3452386634899022386, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 25
+  - Sprite: {fileID: -5427856167715736993, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 25
+  - Sprite: {fileID: -8453590629512148456, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 25
+  - Sprite: {fileID: 8203763315271916137, guid: 372187b1486f68044801782d48978c02, type: 3}
+    Points: 25

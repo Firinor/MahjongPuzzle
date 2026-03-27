@@ -28,7 +28,11 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             {
                 tiles.Find(t => t.ID == tileID).Unlock();
             }
+
         }
+        var selectedTiles = tiles.Find(t => t.ID == player.tilesID);
+        tiles[0].Toggle.isOn = false;
+        selectedTiles.Toggle.isOn = true;
         if (player.Desks != null)
         {
             foreach (var deckID in player.Desks)
@@ -36,6 +40,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
                 desks.Find(d => d.ID == deckID).Unlock();
             }
         }
+        desks.Find(d => d.ID == player.deskID).Toggle.isOn = true;
 
         Subscriptions();
     }
@@ -45,6 +50,12 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         player.OnGoldChange += GoldChanged;
         foreach (var tileToggle in tiles)
         {
+            tileToggle.Toggle.onValueChanged.AddListener(v =>
+            {
+                if(!v)
+                    return;
+                SelectTiles(tileToggle.ID);
+            });
             if(tileToggle.UnlockButton == null)
                 continue;
                     
@@ -52,11 +63,28 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         }
         foreach (var deskToggle in desks)
         {
+            deskToggle.Toggle.onValueChanged.AddListener(v =>
+            {
+                if(!v)
+                    return;
+                SelectDesk(deskToggle.ID);
+            });
             if(deskToggle.UnlockButton == null)
                 continue;
                     
             deskToggle.UnlockButton.onClick.AddListener(() => TryUnlockDesk(deskToggle));
         }
+    }
+
+    private void SelectTiles(string ID)
+    {
+        player.tilesID = ID;
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+    }
+    private void SelectDesk(string ID)
+    {
+        player.deskID = ID;
+        SaveLoadSystem<ProgressData>.Save("Player", player);
     }
 
     private void GoldChanged(int coins)
@@ -97,6 +125,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         player.OnGoldChange -= GoldChanged;
         foreach (var tileToggle in tiles)
         {
+            tileToggle.Toggle.onValueChanged.RemoveAllListeners();
             if(tileToggle.UnlockButton == null)
                 continue;
                     
@@ -104,6 +133,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         }
         foreach (var deskToggle in desks)
         {
+            deskToggle.Toggle.onValueChanged.RemoveAllListeners();
             if(deskToggle.UnlockButton == null)
                 continue;
                     

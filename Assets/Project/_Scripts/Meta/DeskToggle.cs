@@ -15,5 +15,6 @@ public class DeskToggle : MonoBehaviour
             return;
         
         Destroy(UnlockButton.gameObject);
+        UnlockButton = null;
     }
 }

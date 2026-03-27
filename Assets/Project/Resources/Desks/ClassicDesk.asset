@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4553ffc6a86d59a499b5952c29315ea6, type: 3}
   m_Name: ClassicDesk
   m_EditorClassIdentifier: Assembly-CSharp::Desk
+  ID: Classic
   TilesPositions:
   - {x: 11, y: -15, z: -3.2}
   - {x: 22, y: -6, z: -1.6}

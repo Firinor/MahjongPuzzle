@@ -15,5 +15,6 @@ public class TileToggle : MonoBehaviour
             return;
         
         Destroy(UnlockButton.gameObject);
+        UnlockButton = null;
     }
 }

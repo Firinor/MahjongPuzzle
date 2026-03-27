@@ -4,7 +4,9 @@
 public class ProgressData
 {
     public int GoldCoins;
+    public string tilesID = "Classic";
     public string[] TilesPacks;
+    public string deskID = "Classic";
     public string[] Desks;
 
     public event Action<int> OnGoldChange;

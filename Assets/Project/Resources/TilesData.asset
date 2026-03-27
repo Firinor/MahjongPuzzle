@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037fa2511e28ca54f83d54a1d35292e7, type: 3}
   m_Name: TilesData
   m_EditorClassIdentifier: Assembly-CSharp::TilesData
+  ID: Classic
   TileBase: {fileID: 21300000, guid: 36187073cd287dd45a9077f2eb4d7a7a, type: 3}
   Tiles:
   - Sprite: {fileID: 2767130507941780709, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}

@@ -1,54 +1,65 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CoreBootstrap : MonoBehaviour
 {
     [SerializeField] 
-    private TilesData data;
+    private TilesData[] tiles;
     [SerializeField] 
-    private Desk desk;
-    [SerializeField, Min(9)] 
-    private int NumberOfUniqueTiles;
+    private Desk[] desks;
+    //[SerializeField, Min(9)] 
+    //private int NumberOfUniqueTiles;
     [SerializeField] 
     private TilePool pool;
+    
+    private ProgressData player;
+    private TilesData tileData;
+    private Desk desk;
     
     [ContextMenu("DeckInitialize")]
     private void Awake()
     {
-        //LoadSaves();
+        LoadSaves();
         pool.ClearAll();
         DeckInitialize();
+    }
+
+    private void LoadSaves()
+    {
+        player = SaveLoadSystem<ProgressData>.Load("Player", Default: new());
+        tileData = tiles.First(t => string.Equals(t.ID, player.tilesID));
+        desk = desks.First(d => string.Equals(d.ID, player.deskID));
     }
 
     private void DeckInitialize()
     {
         int pairs = desk.TilesPositions.Count / 2;
-        int lastTileIndex = Math.Min(NumberOfUniqueTiles, pairs);
+        int lastTileIndex = Math.Min(tileData.Tiles.Length, pairs);
 
-        List<Tile> tiles = new(desk.TilesPositions.Count);
+        List<Tile> listTiles = new(desk.TilesPositions.Count);
         var possibleTiles = FillListWhisTiles();
 
         int currentIndex = 0;
-        while (tiles.Count < desk.TilesPositions.Count)
+        while (listTiles.Count < desk.TilesPositions.Count)
         {
             int randomTile = possibleTiles.PullRandom();
             if (possibleTiles.Count <= 0)
                 possibleTiles = FillListWhisTiles();
             
-            tiles.Add(data.Tiles[randomTile]);
-            tiles.Add(data.Tiles[randomTile]);
+            listTiles.Add(tileData.Tiles[randomTile]);
+            listTiles.Add(tileData.Tiles[randomTile]);
             currentIndex++;
         }
         
-        tiles.Shuffle();
+        listTiles.Shuffle();
 
         currentIndex = 0;
         foreach (var position in desk.TilesPositions)
         {
             MajhongTileView tile = pool.Get();
-            tile.SetData(tiles[currentIndex]);
+            tile.SetData(listTiles[currentIndex]);
             tile.transform.position = position;
             currentIndex++;
         }
