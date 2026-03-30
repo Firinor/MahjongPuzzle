@@ -30,9 +30,6 @@ public class TilesEffects : MonoBehaviour
     private IEnumerator FlyTilesCoroutine(MajhongTileView tile1, MajhongTileView tile2,
         int scores, Action callback)
     {
-        tile1.RaycastDisable();
-        tile2.RaycastDisable();
-
         Vector3 tile1StartPoint = tile1.transform.position;
         Vector3 tile2StartPoint = tile2.transform.position;
         Vector3 collidePoint = (tile1StartPoint + tile2StartPoint) / 2;

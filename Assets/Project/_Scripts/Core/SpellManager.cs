@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +12,49 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private MajhongSolitaireRules rules;
     [SerializeField] private TilePool pool;
     [SerializeField] private TilesEffects effects;
-    [SerializeField] private Material darkMaterial;
-    private void Awake()
+    
+    [SerializeField] private GameObject SpellSupply;
+
+    [SerializeField] private TextMeshProUGUI ShuffleCountText;
+    [SerializeField] private TextMeshProUGUI HintCountText;
+    [SerializeField] private TextMeshProUGUI SpotLightCountText;
+
+    private ProgressData player;
+
+    private bool isSpotLightOn = false;
+    
+    public void Initialize(ProgressData progress)
     {
+        player = progress;
+        
         spellShuffle.onClick.AddListener(Shuffle);
         spellHint.onClick.AddListener(Hint);
-        spellSpotlight.onClick.AddListener(Spotlight);
+        spellSpotlight.onClick.AddListener(ApplySpotlight);
+
+        rules.OnTilesChanged += TrySpotlight;
+
+        
+        ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
+        HintCountText.text = GetSpellCount(player.HintSpell);
+        SpotLightCountText.text = GetSpellCount(player.SpotLightSpell);
     }
 
+    private string GetSpellCount(int count)
+    {
+        return count > 0 ? count.ToString() : "<color=green>+</color>";
+    }
     private void Shuffle()
     {
+        if (player.ShuffleSpell <= 0)
+        {
+            SpellSupply.SetActive(true);
+            return;
+        }
+
+        player.ShuffleSpell--;
+        ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+        
         List<Tile> tiles = new();
         for (int i = pool.transform.childCount; i > 0; i--)
         {
@@ -37,6 +71,16 @@ public class SpellManager : MonoBehaviour
 
     private void Hint()
     {
+        if (player.HintSpell <= 0)
+        {
+            SpellSupply.SetActive(true);
+            return;
+        }
+        
+        player.HintSpell--;
+        HintCountText.text = GetSpellCount(player.HintSpell);
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+        
         if(!CheckHint())
             return;
         
@@ -66,22 +110,78 @@ public class SpellManager : MonoBehaviour
         return !effects.isHintAnimation;
     }
     
+    private void ApplySpotlight()
+    {
+        if (isSpotLightOn)
+        {
+            isSpotLightOn = false;
+            for (int i = 0; i < pool.transform.childCount; i++)
+            {
+                MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
+                tileView.DisableDarkerMaterial();
+            }
+            return;
+        }
+        
+        if (player.SpotLightSpell <= 0)
+        {
+            SpellSupply.SetActive(true);
+            return;
+        }
+        
+        player.SpotLightSpell--;
+        SpotLightCountText.text = GetSpellCount(player.SpotLightSpell);
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+        
+        Spotlight();
+    }
+    private void TrySpotlight()
+    {
+        if (isSpotLightOn) Spotlight();
+    }
+    
     private void Spotlight()
     {
         for (int i = 0; i < pool.transform.childCount; i++)
         {
-            MajhongTileView data = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            if (!rules.CheckNeighbors(data))
+            MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
+            if (!rules.CheckNeighbors(tileView))
+            {
+                tileView.DisableDarkerMaterial();
                 continue;
+            }
             
-            data.SetMaterial(darkMaterial);
+            tileView.SetDarkerMaterial();
         }
+
+        isSpotLightOn = true;
     }
 
+    public void AddHintSpell()
+    {
+        player.HintSpell++;
+        HintCountText.text = player.HintSpell.ToString();
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+    }
+    public void AddShuffleSpell()
+    {
+        player.ShuffleSpell++;
+        ShuffleCountText.text = player.ShuffleSpell.ToString();
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+    }
+    public void AddSpotLightSpell()
+    {
+        player.SpotLightSpell++;
+        SpotLightCountText.text = player.SpotLightSpell.ToString();
+        SaveLoadSystem<ProgressData>.Save("Player", player);
+    }
+    
     private void OnDestroy()
     {
         spellShuffle.onClick.RemoveAllListeners();
         spellHint.onClick.RemoveAllListeners();
         spellSpotlight.onClick.RemoveAllListeners();
+        
+        rules.OnTilesChanged -= TrySpotlight;
     }
 }

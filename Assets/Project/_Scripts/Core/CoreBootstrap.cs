@@ -13,6 +13,13 @@ public class CoreBootstrap : MonoBehaviour
     //private int NumberOfUniqueTiles;
     [SerializeField] 
     private TilePool pool;
+    [SerializeField] 
+    private MajhongSolitaireRules rules;
+    [SerializeField] 
+    private SpellManager spells;
+    
+    [SerializeField] 
+    private Material[] floorMaterials;
     
     private ProgressData player;
     private TilesData tileData;
@@ -24,6 +31,8 @@ public class CoreBootstrap : MonoBehaviour
         LoadSaves();
         pool.ClearAll();
         DeckInitialize();
+        rules.Initialize(player);
+        spells.Initialize(player);
     }
 
     private void LoadSaves()
@@ -61,6 +70,9 @@ public class CoreBootstrap : MonoBehaviour
             MajhongTileView tile = pool.Get();
             tile.SetData(listTiles[currentIndex]);
             tile.transform.position = position;
+
+            int floor = (int)(position.z / -1.6f);
+            tile.SetDefaultMaterial(floorMaterials[floor]);
             currentIndex++;
         }
 

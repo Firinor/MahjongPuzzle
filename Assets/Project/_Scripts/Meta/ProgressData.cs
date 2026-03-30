@@ -9,6 +9,10 @@ public class ProgressData
     public string deskID = "Classic";
     public string[] Desks;
 
+    public int ShuffleSpell = 3;
+    public int HintSpell = 3;
+    public int SpotLightSpell = 3;
+    
     public event Action<int> OnGoldChange;
 
     public void AddGold(int count)

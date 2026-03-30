@@ -18,6 +18,8 @@ public class MajhongTileView : MonoBehaviour
     private Material selectedMaterial;
     [SerializeField] 
     private Material errorMaterial;
+
+    private Dictionary<Material, bool> statuses;
     
     [SerializeField] 
     private FirAnimation zoomAnimation;
@@ -29,46 +31,100 @@ public class MajhongTileView : MonoBehaviour
     
     public Transform[] RayPoints;
 
+    private void Awake()
+    {
+        statuses = new();
+        statuses.Add(defaultMaterial, true);
+        statuses.Add(darkerMaterial, false);
+        //statuses.Add(selectedMaterial, false);//Hint spell
+        statuses.Add(selectedMaterial, false);//Player click
+        statuses.Add(errorMaterial, false);
+    }
+    
     public void SetData(Tile data)
     {
         Data = data;
         Renderer.sprite = data.Sprite;
     }
 
-    public void SetMaterial(Material material)
+    private void ResetMaterial()
     {
-        Cube.material = material;
+        if (statuses[errorMaterial])
+        {
+            Cube.material = errorMaterial;
+            return;
+        }
+        if (statuses[selectedMaterial])
+        {
+            Cube.material = selectedMaterial;
+            return;
+        }
+        if (statuses[darkerMaterial])
+        {
+            Cube.material = darkerMaterial;
+            return;
+        }
+        Cube.material = defaultMaterial;
     }
 
     public void RaycastDisable()
     {
-        GetComponent<Collider>().enabled = false;
+        DestroyImmediate(GetComponent<Collider>());
     }
 
+    public void SetDarkerMaterial()
+    {
+        statuses[darkerMaterial] = true;
+        ResetMaterial();
+    }
+    public void DisableDarkerMaterial()
+    {
+        statuses[darkerMaterial] = false;
+        ResetMaterial();
+    }
     public void ErrorAnimation()
     {
         StopAnimation();
-        SetMaterial(errorMaterial);
-        rotateAnimation.OnComplete = () => SetMaterial(defaultMaterial);
+        statuses[errorMaterial] = true;
+        rotateAnimation.OnComplete = () =>
+        {
+            statuses[errorMaterial] = false;
+            ResetMaterial();
+        };
         rotateAnimation.Play();
+        ResetMaterial();
     }
     public void HintAnimation()
     {
         StopAnimation();
-        SetMaterial(selectedMaterial);
+        statuses[selectedMaterial] = true;
         rotateAnimation.Play();
+        ResetMaterial();
     }
     public void SelectedAnimation()
     {
         StopAnimation();
-        SetMaterial(selectedMaterial);
+        statuses[selectedMaterial] = true;
         zoomAnimation.Play();
+        ResetMaterial();
     }
 
     public void StopAnimation()
     {
         zoomAnimation.Stop();
         rotateAnimation.Stop();
-        SetMaterial(defaultMaterial);
+        ResetMaterial();
+    }
+
+    public void SetDefaultMaterial(Material floorMaterial)
+    {
+        defaultMaterial = floorMaterial;
+        ResetMaterial();
+    }
+
+    public void Unselect()
+    {
+        statuses[selectedMaterial] = false;
+        ResetMaterial();
     }
 }
