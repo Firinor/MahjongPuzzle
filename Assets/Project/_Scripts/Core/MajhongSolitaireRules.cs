@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,13 @@ public class MajhongSolitaireRules : MonoBehaviour
     private TilesEffects effects;
     [SerializeField] 
     private TilePool pool;
+    [SerializeField] 
+    private GameObject winPopup;
+    [SerializeField] 
+    private GameObject losePopup;
     
+    [SerializeField] 
+    private TextMeshProUGUI winPopupGoldText;
     [SerializeField] 
     private TextMeshProUGUI allPlayerGold;
     [SerializeField] 
@@ -45,54 +52,81 @@ public class MajhongSolitaireRules : MonoBehaviour
     private void IsCorrectTile(MajhongTileView tile)
     {
         bool isClosedTile = CheckNeighbors(tile);
-        
-        if (!isClosedTile)
-        {
-            if (this.tile != null)
-            {
-                if (this.tile == tile)
-                {
-                    UnselectTile();
-                    return;
-                }
 
-                MajhongTileView tile1 = this.tile;
-                tile1.RaycastDisable();
-                tile.RaycastDisable();
-                
-                OnTilesChanged?.Invoke();
-                
-                effects.FlyTiles(tile1, tile, tile1.Data.Points, () =>
-                {
-                    player.AddGold(tile1.Data.Points);
-                    roundScores += tile1.Data.Points;
-                    roundPlayerGold.text = "+" + roundScores;
-                    pool.Release(tile1);
-                    pool.Release(tile);
-                    SaveLoadSystem<ProgressData>.Save("Player", player);
-                });
-                UnselectTile();
-                return;
-                /*if (this.tile.Sprite == tile.Sprite)
-                {
-                    CheckWinCondition();
-                    return;
-                }*/
-            }
-            
+        if (isClosedTile)
+        {
+            tile.ErrorAnimation();
+            UnselectTile();
+            return;
+        }
+
+        if (this.tile == null)
+        {
             UnselectTile();
             this.tile = tile;
             tile.SelectedAnimation();
+            return;
         }
-        else
+
+        if (this.tile == tile)
         {
-            tile.ErrorAnimation();
+            tile.ClickUnselect();
+            UnselectTile();
+            return;
         }
+
+        if (this.tile.Sprite != tile.Sprite)
+        {
+            UnselectTile();
+            this.tile = tile;
+            tile.SelectedAnimation();
+            return;
+        }
+        
+        MajhongTileView tile1 = this.tile;
+        tile1.RaycastDisable();
+        tile.RaycastDisable();
+    
+        OnTilesChanged?.Invoke();
+    
+        effects.FlyTiles(tile1, tile, tile1.Data.Points, () =>
+        {
+            player.AddGold(tile1.Data.Points);
+            roundScores += tile1.Data.Points;
+            roundPlayerGold.text = "+" + roundScores;
+            pool.Release(tile1);
+            pool.Release(tile);
+            SaveLoadSystem<ProgressData>.Save("Player", player);
+            
+            CheckWinCondition();
+        });
+        
+        UnselectTile();
     }
 
     private void CheckWinCondition()
     {
+        if (pool.transform.childCount == 0)
+        {
+            winPopup.SetActive(true);
+            winPopupGoldText.text = roundPlayerGold.text;
+            return;
+        }
+
+        HashSet<Sprite> openTiles = new();
+        for (int i = 0; i < pool.transform.childCount; i++)
+        {
+            MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
+            bool openTile = CheckNeighbors(tileView);
+            if(!openTile)
+                continue;
+
+            Sprite tileSprite = tileView.Sprite;
+            if(!openTiles.Add(tileSprite))
+                return;
+        }
         
+        losePopup.SetActive(true);
     }
 
     private void UnselectTile()
@@ -105,7 +139,7 @@ public class MajhongSolitaireRules : MonoBehaviour
         tile = null;
     }
 
-    public bool CheckNeighbors(MajhongTileView tile)
+    public static bool CheckNeighbors(MajhongTileView tile)
     {
         if (ChechTilesLyingOnTop(tile))
             return true;
@@ -120,7 +154,7 @@ public class MajhongSolitaireRules : MonoBehaviour
         
         return true;
     }
-    private bool ChechTilesLyingOnRight(MajhongTileView tile)
+    private static bool ChechTilesLyingOnRight(MajhongTileView tile)
     {
         if (Physics.Raycast(tile.RayPoints[2].position,
                 Vector3.right,
@@ -135,7 +169,7 @@ public class MajhongSolitaireRules : MonoBehaviour
 
         return false;
     }
-    private bool ChechTilesLyingOnLeft(MajhongTileView tile)
+    private static bool ChechTilesLyingOnLeft(MajhongTileView tile)
     {
         if (Physics.Raycast(tile.RayPoints[0].position,
                 Vector3.left,
@@ -150,7 +184,7 @@ public class MajhongSolitaireRules : MonoBehaviour
 
         return false;
     }
-    private bool ChechTilesLyingOnTop(MajhongTileView tile)
+    private static bool ChechTilesLyingOnTop(MajhongTileView tile)
     {
         foreach (var tileRayPoint in tile.RayPoints)
         {

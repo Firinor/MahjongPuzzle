@@ -6,6 +6,6 @@ public class Desk : ScriptableObject
 {
     public string ID;
     [SerializeField]
-    public List<Vector3> TilesPositions = new();
+    public List<Vector4> TilesPositions = new();
 }
 

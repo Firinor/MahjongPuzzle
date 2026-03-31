@@ -18,8 +18,6 @@ public class TilesEffects : MonoBehaviour
     [SerializeField] 
     private TileCollideEffect tileCollideEffectPrefab;
     
-    public bool isHintAnimation;
-    
     private const float halfTile3 = 1.1f;
     public void FlyTiles(MajhongTileView tile1, MajhongTileView tile2, 
         int scores, Action callback)
@@ -89,8 +87,6 @@ public class TilesEffects : MonoBehaviour
 
     public void Hint(MajhongTileView tile1, MajhongTileView tile2)
     {
-        isHintAnimation = true;
-        
         tile1.HintAnimation();
         tile2.HintAnimation();
     }

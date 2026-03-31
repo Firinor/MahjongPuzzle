@@ -61,16 +61,19 @@ public class CoreBootstrap : MonoBehaviour
             listTiles.Add(tileData.Tiles[randomTile]);
             currentIndex++;
         }
+
+        List<Vector3> PositionsOrderByDescending = new();
         
-        listTiles.Shuffle();
+        desk.TilesPositions.Shuffle();
+        var TilesPositions = desk.TilesPositions.OrderByDescending(o => o.w);
 
         currentIndex = 0;
-        foreach (var position in desk.TilesPositions)
+        foreach (var position in TilesPositions)
         {
             MajhongTileView tile = pool.Get();
             tile.SetData(listTiles[currentIndex]);
             tile.transform.position = position;
-
+            
             int floor = (int)(position.z / -1.6f);
             tile.SetDefaultMaterial(floorMaterials[floor]);
             currentIndex++;

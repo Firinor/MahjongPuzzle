@@ -13,6 +13,9 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private TilePool pool;
     [SerializeField] private TilesEffects effects;
     
+    [SerializeField] private GameObject losePopup;
+    [SerializeField] private Button spellShuffle2;
+    
     [SerializeField] private GameObject SpellSupply;
 
     [SerializeField] private TextMeshProUGUI ShuffleCountText;
@@ -28,6 +31,7 @@ public class SpellManager : MonoBehaviour
         player = progress;
         
         spellShuffle.onClick.AddListener(Shuffle);
+        spellShuffle2.onClick.AddListener(Shuffle);
         spellHint.onClick.AddListener(Hint);
         spellSpotlight.onClick.AddListener(ApplySpotlight);
 
@@ -67,6 +71,8 @@ public class SpellManager : MonoBehaviour
         {
             pool.transform.GetChild(i-1).GetComponent<MajhongTileView>().SetData(tiles[i-1]);
         }
+        
+        losePopup.SetActive(false);
     }
 
     private void Hint()
@@ -77,37 +83,31 @@ public class SpellManager : MonoBehaviour
             return;
         }
         
-        player.HintSpell--;
-        HintCountText.text = GetSpellCount(player.HintSpell);
-        SaveLoadSystem<ProgressData>.Save("Player", player);
-        
-        if(!CheckHint())
-            return;
-        
         for (int i = 0; i < pool.transform.childCount-1; i++)
         {
             MajhongTileView data1 = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            if(rules.CheckNeighbors(data1))
+            if(data1.isHint || MajhongSolitaireRules.CheckNeighbors(data1))
                 continue;
             
             for (int j = i+1; j < pool.transform.childCount; j++)
             {
                 MajhongTileView data2 = pool.transform.GetChild(j).GetComponent<MajhongTileView>();
-                if(rules.CheckNeighbors(data2))
+                if(data2.isHint || MajhongSolitaireRules.CheckNeighbors(data2))
                     continue;
                 
                 if (data1.Sprite == data2.Sprite)
                 {
+                    player.HintSpell--;
+                    HintCountText.text = GetSpellCount(player.HintSpell);
+                    SaveLoadSystem<ProgressData>.Save("Player", player);
+
+                    data1.isHint = true;
+                    data2.isHint = true;
                     effects.Hint(data1, data2);
                     return;
                 }
             }
         }
-    }
-
-    private bool CheckHint()
-    {
-        return !effects.isHintAnimation;
     }
     
     private void ApplySpotlight()
@@ -145,7 +145,7 @@ public class SpellManager : MonoBehaviour
         for (int i = 0; i < pool.transform.childCount; i++)
         {
             MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            if (!rules.CheckNeighbors(tileView))
+            if (!MajhongSolitaireRules.CheckNeighbors(tileView))
             {
                 tileView.DisableDarkerMaterial();
                 continue;
@@ -179,6 +179,7 @@ public class SpellManager : MonoBehaviour
     private void OnDestroy()
     {
         spellShuffle.onClick.RemoveAllListeners();
+        spellShuffle2.onClick.RemoveAllListeners();
         spellHint.onClick.RemoveAllListeners();
         spellSpotlight.onClick.RemoveAllListeners();
         

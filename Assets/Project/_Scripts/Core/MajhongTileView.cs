@@ -26,6 +26,8 @@ public class MajhongTileView : MonoBehaviour
     [SerializeField] 
     private FirAnimation rotateAnimation;
     
+    public bool isHint;
+    
     public Tile Data { get; private set; }
     public Sprite Sprite => Data.Sprite;
     
@@ -109,7 +111,7 @@ public class MajhongTileView : MonoBehaviour
         ResetMaterial();
     }
 
-    public void StopAnimation()
+    private void StopAnimation()
     {
         zoomAnimation.Stop();
         rotateAnimation.Stop();
@@ -125,6 +127,13 @@ public class MajhongTileView : MonoBehaviour
     public void Unselect()
     {
         statuses[selectedMaterial] = false;
+        ResetMaterial();
+    }
+    public void ClickUnselect()
+    {
+        StopAnimation();
+        statuses[selectedMaterial] = false;
+        zoomAnimation.Play();
         ResetMaterial();
     }
 }
