@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -29,8 +30,8 @@ public class CoreBootstrap : MonoBehaviour
     private void Awake()
     {
         LoadSaves();
-        pool.ClearAll();
-        DeckInitialize();
+        pool.ClearAll(instant: true);
+        StartCoroutine(DeckInitialize());
         rules.Initialize(player);
         spells.Initialize(player);
     }
@@ -42,15 +43,14 @@ public class CoreBootstrap : MonoBehaviour
         desk = desks.First(d => string.Equals(d.ID, player.deskID));
     }
 
-    private void DeckInitialize()
+    private IEnumerator DeckInitialize()
     {
         int pairs = desk.TilesPositions.Count / 2;
         int lastTileIndex = Math.Min(tileData.Tiles.Length, pairs);
 
         List<Tile> listTiles = new(desk.TilesPositions.Count);
         var possibleTiles = FillListWhisTiles();
-
-        int currentIndex = 0;
+        
         while (listTiles.Count < desk.TilesPositions.Count)
         {
             int randomTile = possibleTiles.PullRandom();
@@ -59,23 +59,62 @@ public class CoreBootstrap : MonoBehaviour
             
             listTiles.Add(tileData.Tiles[randomTile]);
             listTiles.Add(tileData.Tiles[randomTile]);
-            currentIndex++;
         }
 
-        List<Vector3> PositionsOrderByDescending = new();
-        
-        desk.TilesPositions.Shuffle();
-        var TilesPositions = desk.TilesPositions.OrderByDescending(o => o.w);
-
-        currentIndex = 0;
-        foreach (var position in TilesPositions)
+        //Empty Desk
+        List<MajhongTileView> tilesView = new();
+        foreach (var position in desk.TilesPositions)
         {
             MajhongTileView tile = pool.Get();
-            tile.SetData(listTiles[currentIndex]);
+            tile.gameObject.name = "Tile" + tilesView.Count;
             tile.transform.position = position;
-            
             int floor = (int)(position.z / -1.6f);
             tile.SetDefaultMaterial(floorMaterials[floor]);
+            tilesView.Add(tile);
+        }
+
+        yield return null;
+        
+        List<MajhongTileView> tilesToSpawn = new();
+        
+        //Decomposition
+        int Count = tilesView.Count;
+        while (tilesToSpawn.Count < Count)
+        {
+            List<MajhongTileView> tilesToCheck = new(tilesView);
+            MajhongTileView randomTile1 = null;
+            while(randomTile1 == null)
+            {
+                MajhongTileView randomTile = tilesToCheck.PullRandom();
+                if (MajhongSolitaireRules.CheckNeighbors(randomTile))
+                    continue;
+                
+                randomTile1 = randomTile;
+                tilesToSpawn.Add(randomTile1);
+                tilesView.Remove(randomTile1);
+            }
+            MajhongTileView randomTile2 = null;
+            while(randomTile2 == null)
+            {
+                MajhongTileView randomTile = tilesToCheck.PullRandom();
+                if (MajhongSolitaireRules.CheckNeighbors(randomTile))
+                    continue;
+                
+                randomTile2 = randomTile;
+                tilesToSpawn.Add(randomTile2);
+                tilesView.Remove(randomTile2);
+            }
+            randomTile1.gameObject.SetActive(false);
+            randomTile2.gameObject.SetActive(false);
+        }
+        
+        //Initialization
+        int currentIndex = 0;
+        //tilesToSpawn.Reverse();
+        foreach (var tile in tilesToSpawn)
+        {
+            tile.gameObject.SetActive(true);
+            tile.SetData(listTiles[currentIndex]);
             currentIndex++;
         }
 

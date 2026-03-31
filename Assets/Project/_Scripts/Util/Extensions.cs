@@ -3,6 +3,12 @@ using UnityEngine;
 
 public static class Extensions
 {
+    public static T GetRandom<T>(this List<T> list)
+    {
+        int index = Random.Range(0, list.Count);
+        return  list[index];
+    }
+    
     public static T PullRandom<T>(this List<T> list)
     {
         int index = Random.Range(0, list.Count);

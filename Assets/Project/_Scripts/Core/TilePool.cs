@@ -28,11 +28,14 @@ public class TilePool : MonoBehaviour
     {
         Destroy(tile.gameObject);
     }
-    public void ClearAll()
+    public void ClearAll(bool instant = false)
     {
         for (int i = transform.childCount - 1; i >= 0; i--)
         {
-            Destroy(transform.GetChild(i).gameObject);
+            if(instant)
+                DestroyImmediate(transform.GetChild(i).gameObject);
+            else
+                Destroy(transform.GetChild(i).gameObject);
         }
     }
 }

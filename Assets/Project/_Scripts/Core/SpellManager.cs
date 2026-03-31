@@ -97,7 +97,7 @@ public class SpellManager : MonoBehaviour
                 
                 if (data1.Sprite == data2.Sprite)
                 {
-                    player.HintSpell--;
+                    //player.HintSpell--;//TODO
                     HintCountText.text = GetSpellCount(player.HintSpell);
                     SaveLoadSystem<ProgressData>.Save("Player", player);
 

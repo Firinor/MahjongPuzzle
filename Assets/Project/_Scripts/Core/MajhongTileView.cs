@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using FirAnimations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [SelectionBase]
 public class MajhongTileView : MonoBehaviour
@@ -74,6 +73,20 @@ public class MajhongTileView : MonoBehaviour
         DestroyImmediate(GetComponent<Collider>());
     }
 
+    public void RaycastDisableEditor()
+    {
+        GetComponent<Collider>().enabled = false;
+    }
+    public void RaycastEnableEditor()
+    {
+        GetComponent<Collider>().enabled = true;
+    }
+
+    [ContextMenu("Neighbors")]
+    private void Neighbors()
+    {
+        Debug.Log(MajhongSolitaireRules.CheckNeighbors(this));
+    }
     public void SetDarkerMaterial()
     {
         statuses[darkerMaterial] = true;
