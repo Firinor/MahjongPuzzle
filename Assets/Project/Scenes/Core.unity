@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26950909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26950910}
+  m_Layer: 0
+  m_Name: TileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26950910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26950909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.2, y: -22.88, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &40056418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3994,7 +4025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &541348367
 Transform:
   m_ObjectHideFlags: 0
@@ -4876,15 +4907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1255066357088913466, guid: 266fa307b4cb40341b38f6c10bc74423, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1255066357088913466, guid: 266fa307b4cb40341b38f6c10bc74423, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1255066357088913466, guid: 266fa307b4cb40341b38f6c10bc74423, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1255066357088913466, guid: 266fa307b4cb40341b38f6c10bc74423, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -12400,7 +12431,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec676baa47e0f1040b537b6fdd1f43f0, type: 2}
   - {fileID: 11400000, guid: fec365c7ca025b0429b06ed2b31c56fc, type: 2}
   desks:
-  - {fileID: 11400000, guid: 03ef9f4105c756c4ca311c98f56aec97, type: 2}
+  - {fileID: 11400000, guid: 84cf4843362d97948995b9f8fbebb385, type: 2}
   - {fileID: 11400000, guid: 77473f53d7070fa46bae49034315821a, type: 2}
   - {fileID: 11400000, guid: 50f7558d755ac0d47a6e24030606939e, type: 2}
   - {fileID: 11400000, guid: 2daae3545506489469898d20a8ea4f5c, type: 2}
@@ -12411,6 +12442,7 @@ MonoBehaviour:
   pool: {fileID: 171712896}
   rules: {fileID: 180524335}
   spells: {fileID: 1736813613}
+  tileStartAnimationPoint: {fileID: 26950910}
   floorMaterials:
   - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
   - {fileID: 2100000, guid: 581ba3c2b2659a0498f9b35860cbd3f0, type: 2}
@@ -17334,7 +17366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1950706765
 Transform:
   m_ObjectHideFlags: 0
@@ -18439,5 +18471,6 @@ SceneRoots:
   - {fileID: 1016418673}
   - {fileID: 1984523978}
   - {fileID: 171712895}
+  - {fileID: 26950910}
   - {fileID: 765960571}
   - {fileID: 1922101026}

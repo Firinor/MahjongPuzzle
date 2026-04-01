@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using FirAnimations;
 using UnityEngine;
 
 public class CoreBootstrap : MonoBehaviour
@@ -18,6 +19,9 @@ public class CoreBootstrap : MonoBehaviour
     private MajhongSolitaireRules rules;
     [SerializeField] 
     private SpellManager spells;
+    
+    [SerializeField] 
+    private Transform tileStartAnimationPoint;
     
     [SerializeField] 
     private Material[] floorMaterials;
@@ -110,12 +114,90 @@ public class CoreBootstrap : MonoBehaviour
         
         //Initialization
         int currentIndex = 0;
-        //tilesToSpawn.Reverse();
         foreach (var tile in tilesToSpawn)
         {
-            tile.gameObject.SetActive(true);
             tile.SetData(listTiles[currentIndex]);
             currentIndex++;
+        }
+
+        //Animations
+        tilesToSpawn = tilesToSpawn
+            .OrderByDescending(t => t.transform.position.z)
+            .ThenByDescending(t => t.transform.position.y)
+            .ThenBy(t => t.transform.position.x)
+            .ToList();
+        
+        AnimationCurve curve = new AnimationCurve(
+            new Keyframe(0f, 0f, 0f, 0f),
+            new Keyframe(1f, 1f, 2f, 2f)
+        );
+        AnimationCurve curveRotation = new AnimationCurve(
+            new Keyframe(0f, 0f, 0f, 0f),
+            new Keyframe(1f, 2f, 2f, 2f)
+        );
+        
+        foreach (var tile in tilesToSpawn)
+        {
+            tile.RaycastDisableEditor();
+            Vector3 startPosition = tile.transform.position;
+            var animation = tile.gameObject.AddComponent<FirPositionAnimation>();
+            animation.OnComplete += () =>
+            {
+                animation.OnComplete = null;
+                Destroy(animation);
+            };
+            animation.Curve = curve;
+            animation.enabled = false;
+            animation.StartPosition = tileStartAnimationPoint.position;
+            animation.EndPosition = startPosition;
+            tile.transform.position = tileStartAnimationPoint.position;
+            tile.gameObject.SetActive(true);
+        }
+        
+        float delta = 0.04f;
+        int tilesCounter = 0;
+        MajhongTileView lastTile = tilesToSpawn[^1];
+        foreach (var tile in tilesToSpawn)
+        {
+            if(tile == lastTile)
+                continue;
+            
+            tile.GetComponent<FirPositionAnimation>().Play();
+            var animationRotation = tile.gameObject.AddComponent<FirRotationAnimation>();
+            animationRotation.StartZoom = Vector3.zero;
+            animationRotation.EndZoom = new Vector3(0,0,180);
+            animationRotation.OnComplete += () =>
+            {
+                animationRotation.OnComplete = null;
+                Destroy(animationRotation);
+                tilesCounter++;
+            };
+            animationRotation.Curve = curveRotation;
+            animationRotation.Play();
+            yield return new WaitForSeconds(delta);
+            delta *= 0.995f;
+        }
+        yield return new WaitForSeconds(1);
+        
+        //lastTile
+        lastTile.GetComponent<FirPositionAnimation>().Play();
+        var lastAnimationRotation = lastTile.gameObject.AddComponent<FirRotationAnimation>();
+        lastAnimationRotation.StartZoom = Vector3.zero;
+        lastAnimationRotation.EndZoom = new Vector3(0,0,180);
+        lastAnimationRotation.OnComplete += () =>
+        {
+            lastAnimationRotation.OnComplete = null;
+            Destroy(lastAnimationRotation);
+            tilesCounter++;
+        };
+        lastAnimationRotation.Curve = curveRotation;
+        lastAnimationRotation.Play();
+        
+        yield return new WaitUntil(() => tilesCounter == tilesToSpawn.Count);
+        
+        foreach (var tile in tilesToSpawn)
+        {
+            tile.RaycastEnableEditor();
         }
 
         List<int> FillListWhisTiles()

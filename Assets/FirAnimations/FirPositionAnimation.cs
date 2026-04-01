@@ -36,7 +36,7 @@ namespace FirAnimations
         protected override void MoveByDelta()
         {
             float curveValue = Curve.Evaluate(Time*_endTime);
-            RectTransform.anchoredPosition = StartPosition + (delta * curveValue);
+            RectTransform.anchoredPosition3D = StartPosition + (delta * curveValue);
         }
     }
 }
