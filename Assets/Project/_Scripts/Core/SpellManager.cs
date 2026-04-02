@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +7,7 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private Button spellShuffle;
     [SerializeField] private Button spellHint;
     [SerializeField] private Button spellSpotlight;
+    [SerializeField] private CoreBootstrap bootstrap;
     [SerializeField] private MajhongSolitaireRules rules;
     [SerializeField] private TilePool pool;
     [SerializeField] private TilesEffects effects;
@@ -35,14 +34,24 @@ public class SpellManager : MonoBehaviour
         spellHint.onClick.AddListener(Hint);
         spellSpotlight.onClick.AddListener(ApplySpotlight);
 
+        spellShuffle.gameObject.SetActive(false);
+        spellHint.gameObject.SetActive(false);
+        spellSpotlight.gameObject.SetActive(false);
+        
         rules.OnTilesChanged += TrySpotlight;
-
         
         ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
         HintCountText.text = GetSpellCount(player.HintSpell);
         SpotLightCountText.text = GetSpellCount(player.SpotLightSpell);
     }
 
+    public void ButtonsOn()
+    {
+        spellShuffle.gameObject.SetActive(true);
+        spellHint.gameObject.SetActive(true);
+        spellSpotlight.gameObject.SetActive(true);
+    }
+    
     private string GetSpellCount(int count)
     {
         return count > 0 ? count.ToString() : "<color=green>+</color>";
@@ -59,18 +68,7 @@ public class SpellManager : MonoBehaviour
         ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
         SaveLoadSystem<ProgressData>.Save("Player", player);
         
-        List<Tile> tiles = new();
-        for (int i = pool.transform.childCount; i > 0; i--)
-        {
-            tiles.Add(pool.transform.GetChild(i-1).GetComponent<MajhongTileView>().Data);
-        }
-                
-        tiles.Shuffle();
-        
-        for (int i = pool.transform.childCount; i > 0; i--)
-        {
-            pool.transform.GetChild(i-1).GetComponent<MajhongTileView>().SetData(tiles[i-1]);
-        }
+        bootstrap.Shuffle();
         
         losePopup.SetActive(false);
     }

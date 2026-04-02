@@ -6,9 +6,11 @@ using UnityEngine;
 public class MajhongTileView : MonoBehaviour
 {
     [SerializeField] 
-    private SpriteRenderer Renderer;
+    private SpriteRenderer face;
     [SerializeField] 
-    private MeshRenderer Cube;
+    private MeshRenderer cube;
+    [SerializeField] 
+    private SpriteRenderer shadow;
     [SerializeField] 
     private Material defaultMaterial;
     [SerializeField] 
@@ -45,27 +47,27 @@ public class MajhongTileView : MonoBehaviour
     public void SetData(Tile data)
     {
         Data = data;
-        Renderer.sprite = data.Sprite;
+        face.sprite = data.Sprite;
     }
 
     private void ResetMaterial()
     {
         if (statuses[errorMaterial])
         {
-            Cube.material = errorMaterial;
+            cube.material = errorMaterial;
             return;
         }
         if (statuses[selectedMaterial])
         {
-            Cube.material = selectedMaterial;
+            cube.material = selectedMaterial;
             return;
         }
         if (statuses[darkerMaterial])
         {
-            Cube.material = darkerMaterial;
+            cube.material = darkerMaterial;
             return;
         }
-        Cube.material = defaultMaterial;
+        cube.material = defaultMaterial;
     }
 
     public void RaycastDisable()
@@ -73,6 +75,19 @@ public class MajhongTileView : MonoBehaviour
         DestroyImmediate(GetComponent<Collider>());
     }
 
+    public void DisableVisual()
+    {
+        face.enabled = false;
+        cube.enabled = false;
+        shadow.enabled = false;
+    }
+    public void EnableVisual()
+    {
+        face.enabled = true;
+        cube.enabled = true;
+        shadow.enabled = true;
+    }
+    
     public void RaycastDisableEditor()
     {
         GetComponent<Collider>().enabled = false;

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TilePool : MonoBehaviour
@@ -37,5 +38,18 @@ public class TilePool : MonoBehaviour
             else
                 Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public List<MajhongTileView> GetAll()
+    {
+        List<MajhongTileView> result = new();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if(!transform.GetChild(i).gameObject.activeSelf)
+                continue;
+
+            result.Add(transform.GetChild(i).GetComponent<MajhongTileView>());
+        }
+        return result;
     }
 }

@@ -89,14 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 099bb866b5fd2b9458fb7aa2dc5a0ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MajhongTileView
-  Renderer: {fileID: 2401620455117687043}
-  Cube: {fileID: 2324041582845605206}
+  face: {fileID: 2401620455117687043}
+  cube: {fileID: 2324041582845605206}
+  shadow: {fileID: 6440851229342274166}
   defaultMaterial: {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
   darkerMaterial: {fileID: 2100000, guid: f57fa412522d14c49a3be11aa7c8b299, type: 2}
   selectedMaterial: {fileID: 2100000, guid: a2b99e28d9292e44d8d45c3dc080afe6, type: 2}
   errorMaterial: {fileID: 2100000, guid: f91fc4a954258f34f951f79675628a93, type: 2}
   zoomAnimation: {fileID: 3219355977072394170}
   rotateAnimation: {fileID: 7380356002608005430}
+  isHint: 0
   RayPoints:
   - {fileID: 8128933698169232317}
   - {fileID: 746422022560031263}
@@ -580,6 +582,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3e68329064bd7f46906cc444d6fadd2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: b3e68329064bd7f46906cc444d6fadd2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b3e68329064bd7f46906cc444d6fadd2, type: 3}
       propertyPath: m_Name

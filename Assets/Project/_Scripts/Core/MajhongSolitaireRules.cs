@@ -106,7 +106,7 @@ public class MajhongSolitaireRules : MonoBehaviour
 
     private void CheckWinCondition()
     {
-        if (pool.transform.childCount == 0)
+        if (pool.transform.childCount <= 2)
         {
             winPopup.SetActive(true);
             winPopupGoldText.text = roundPlayerGold.text;
@@ -117,8 +117,8 @@ public class MajhongSolitaireRules : MonoBehaviour
         for (int i = 0; i < pool.transform.childCount; i++)
         {
             MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            bool openTile = CheckNeighbors(tileView);
-            if(!openTile)
+            bool isClosed = CheckNeighbors(tileView);
+            if(isClosed)
                 continue;
 
             Sprite tileSprite = tileView.Sprite;
@@ -129,7 +129,7 @@ public class MajhongSolitaireRules : MonoBehaviour
         losePopup.SetActive(true);
     }
 
-    private void UnselectTile()
+    public void UnselectTile()
     {
         if (tile != null)
         {
