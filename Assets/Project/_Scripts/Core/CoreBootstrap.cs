@@ -11,6 +11,8 @@ public class CoreBootstrap : MonoBehaviour
     private TilesData[] tiles;
     [SerializeField] 
     private Desk[] desks;
+    [SerializeField] 
+    private Desk2[] desks2;
     //[SerializeField, Min(9)] 
     //private int NumberOfUniqueTiles;
     [SerializeField] 
@@ -28,7 +30,7 @@ public class CoreBootstrap : MonoBehaviour
     
     private ProgressData player;
     private TilesData tileData;
-    private Desk desk;
+    private Desk2 desk;
     
     [ContextMenu("DeckInitialize")]
     private void Awake()
@@ -47,7 +49,7 @@ public class CoreBootstrap : MonoBehaviour
         int lastTileIndex = Math.Min(tileData.Tiles.Length, pairs);
         List<int> possibleTiles = FillListWhisTiles(lastTileIndex);
         
-        while (listTiles.Count < desk.TilesPositions.Count)
+        while(listTiles.Count < desk.TilesPositions.Count)
         {
             int randomTile = possibleTiles.PullRandom();
             if (possibleTiles.Count <= 0)
@@ -59,20 +61,48 @@ public class CoreBootstrap : MonoBehaviour
 
         //Empty Desk
         List<MajhongTileView> tilesView = new();
+        Dictionary<MajhongTileView, DeckTile> dictionaryViewTile = new();
+        Dictionary<Vector3, MajhongTileView> dictionaryTileView = new();
         int index = 0;
-        foreach (var position in desk.TilesPositions)
+        foreach(var deckTile in desk.TilesPositions)
         {
             MajhongTileView tile = pool.Get();
             tile.DisableVisual();
             tile.gameObject.name = "Tile" + tilesView.Count;
-            tile.transform.position = position;
-            int floor = (int)(position.z / -1.6f);
+            tile.transform.position = deckTile.position;
+            int floor = (int)(deckTile.position.z / -1.6f);
             tile.SetData(listTiles[index]);
             index++;
             tile.SetDefaultMaterial(floorMaterials[floor]);
             tilesView.Add(tile);
+            dictionaryViewTile.Add(tile, deckTile);
+            dictionaryTileView.Add(deckTile.position, tile);
         }
+        
+        foreach(MajhongTileView tileView in tilesView)
+        {
+            DeckTile deckTile = dictionaryViewTile[tileView];
+            tileView.IsOpenOnStart = deckTile.IsOpenOnStart;
+            if(tileView.IsOpenOnStart)
+                continue;
 
+            tileView.UpNeighbors = new(4);
+            foreach (Vector3 tile in deckTile.UpNeighbors)
+            {
+                tileView.UpNeighbors.Add(dictionaryTileView[tile]);
+            }
+            tileView.LeftNeighbors = new(2);
+            foreach (Vector3 tile in deckTile.LeftNeighbors)
+            {
+                tileView.LeftNeighbors.Add(dictionaryTileView[tile]);
+            }
+            tileView.RightNeighbors = new(2);
+            foreach (Vector3 tile in deckTile.RightNeighbors)
+            {
+                tileView.RightNeighbors.Add(dictionaryTileView[tile]);
+            }
+        }
+        
         return tilesView;
     }
     private List<int> FillListWhisTiles(int lastTileIndex)
@@ -91,7 +121,7 @@ public class CoreBootstrap : MonoBehaviour
     {
         player = SaveLoadSystem<ProgressData>.Load("Player", Default: new());
         tileData = tiles.First(t => string.Equals(t.ID, player.tilesID));
-        desk = desks.First(d => string.Equals(d.ID, player.deskID));
+        desk = desks2.First(d => string.Equals(d.ID, player.deskID));
     }
 
     public void Shuffle()

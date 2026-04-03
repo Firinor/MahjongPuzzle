@@ -1132,6 +1132,7 @@ MonoBehaviour:
   winPopupGoldText: {fileID: 853619252}
   allPlayerGold: {fileID: 1039507820}
   roundPlayerGold: {fileID: 568475439}
+  tile: {fileID: 0}
 --- !u!1 &196009205
 GameObject:
   m_ObjectHideFlags: 0
@@ -9742,7 +9743,7 @@ Transform:
   m_GameObject: {fileID: 1054520700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.57, z: 0}
+  m_LocalPosition: {x: 0, y: -4.57, z: -3.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12431,7 +12432,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec676baa47e0f1040b537b6fdd1f43f0, type: 2}
   - {fileID: 11400000, guid: fec365c7ca025b0429b06ed2b31c56fc, type: 2}
   desks:
-  - {fileID: 11400000, guid: 03ef9f4105c756c4ca311c98f56aec97, type: 2}
+  - {fileID: 11400000, guid: 84cf4843362d97948995b9f8fbebb385, type: 2}
   - {fileID: 11400000, guid: 77473f53d7070fa46bae49034315821a, type: 2}
   - {fileID: 11400000, guid: 50f7558d755ac0d47a6e24030606939e, type: 2}
   - {fileID: 11400000, guid: 2daae3545506489469898d20a8ea4f5c, type: 2}
@@ -12439,6 +12440,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e5bbffe247f287f4f80616302bdd42f7, type: 2}
   - {fileID: 11400000, guid: b5c7f3130eb1f1e4eb85dc3272dd8256, type: 2}
   - {fileID: 11400000, guid: f3d9afad970a2ac4793844c5fa2ea559, type: 2}
+  desks2:
+  - {fileID: 11400000, guid: b7846c6d4b2b499499c76bf1a363ba96, type: 2}
   pool: {fileID: 171712896}
   rules: {fileID: 180524335}
   spells: {fileID: 1736813613}

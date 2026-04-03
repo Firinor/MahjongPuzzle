@@ -8,4 +8,3 @@ public class Desk : ScriptableObject
     [SerializeField]
     public List<Vector3> TilesPositions = new();
 }
-

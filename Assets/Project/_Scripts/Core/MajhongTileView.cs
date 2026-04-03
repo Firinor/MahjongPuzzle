@@ -32,8 +32,12 @@ public class MajhongTileView : MonoBehaviour
     public Tile Data { get; private set; }
     public Sprite Sprite => Data.Sprite;
     
-    public Transform[] RayPoints;
-
+    public bool IsPlayable = true;
+    public bool IsOpenOnStart;
+    public List<MajhongTileView> UpNeighbors;
+    public List<MajhongTileView> LeftNeighbors;
+    public List<MajhongTileView> RightNeighbors;
+    
     private void Awake()
     {
         statuses = new();

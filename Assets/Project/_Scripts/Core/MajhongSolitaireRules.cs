@@ -24,12 +24,10 @@ public class MajhongSolitaireRules : MonoBehaviour
     private TextMeshProUGUI roundPlayerGold;
 
     private ProgressData player;
+    [SerializeField]
     private MajhongTileView tile;
 
     private int roundScores;
-    
-    private const float TileWidth = 2.2f;
-    private const float TileThickness = 1.6f;
 
     public event Action OnTilesChanged;
 
@@ -85,7 +83,9 @@ public class MajhongSolitaireRules : MonoBehaviour
         
         MajhongTileView tile1 = this.tile;
         tile1.RaycastDisable();
+        tile1.IsPlayable = false;
         tile.RaycastDisable();
+        tile.IsPlayable = false;
     
         OnTilesChanged?.Invoke();
     
@@ -141,6 +141,9 @@ public class MajhongSolitaireRules : MonoBehaviour
 
     public static bool CheckNeighbors(MajhongTileView tile)
     {
+        if (tile.IsOpenOnStart)
+            return false;
+        
         if (ChechTilesLyingOnTop(tile))
             return true;
 
@@ -156,42 +159,38 @@ public class MajhongSolitaireRules : MonoBehaviour
     }
     private static bool ChechTilesLyingOnRight(MajhongTileView tile)
     {
-        if (Physics.Raycast(tile.RayPoints[2].position,
-                Vector3.right,
-                out RaycastHit hit,
-                TileWidth))
-            return true;
-        if (Physics.Raycast(tile.RayPoints[3].position,
-                Vector3.right,
-                out RaycastHit hit2,
-                TileWidth))
-            return true;
+        if (tile.RightNeighbors == null)
+            return false;
+        
+        foreach (var tileToCheck in tile.RightNeighbors)
+        {
+            if (tileToCheck.IsPlayable)
+                return true;
+        }
 
         return false;
     }
     private static bool ChechTilesLyingOnLeft(MajhongTileView tile)
     {
-        if (Physics.Raycast(tile.RayPoints[0].position,
-                Vector3.left,
-                out RaycastHit hit,
-                TileWidth))
-            return true;
-        if (Physics.Raycast(tile.RayPoints[1].position,
-                Vector3.left,
-                out RaycastHit hit2,
-                TileWidth))
-            return true;
+        if (tile.LeftNeighbors == null)
+            return false;
+        
+        foreach (var tileToCheck in tile.LeftNeighbors)
+        {
+            if (tileToCheck.IsPlayable)
+                return true;
+        }
 
         return false;
     }
     private static bool ChechTilesLyingOnTop(MajhongTileView tile)
     {
-        foreach (var tileRayPoint in tile.RayPoints)
+        if (tile.UpNeighbors == null)
+            return false;
+        
+        foreach (var tileToCheck in tile.UpNeighbors)
         {
-            if (Physics.Raycast(tileRayPoint.position,
-                    Vector3.back,
-                    out RaycastHit hit,
-                    TileThickness))
+            if (tileToCheck.IsPlayable)
                 return true;
         }
 
