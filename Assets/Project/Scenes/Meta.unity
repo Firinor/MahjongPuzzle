@@ -4436,7 +4436,7 @@ PrefabInstance:
     - target: {fileID: 1116119878229171349, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7830409045383036483, guid: 13f274441bcae694a82fae6a9e665f5d, type: 3}
+      objectReference: {fileID: 6485891002748515132, guid: ea74139418940544a90b6a7424af763d, type: 3}
     - target: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: ID
       value: Classic
@@ -4538,12 +4538,28 @@ PrefabInstance:
       value: 487.05215
       objectReference: {fileID: 0}
     - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8781628182525287506, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_IsOn
