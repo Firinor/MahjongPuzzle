@@ -99,11 +99,11 @@ MonoBehaviour:
   zoomAnimation: {fileID: 3219355977072394170}
   rotateAnimation: {fileID: 7380356002608005430}
   isHint: 0
-  RayPoints:
-  - {fileID: 8128933698169232317}
-  - {fileID: 746422022560031263}
-  - {fileID: 6274173922749184810}
-  - {fileID: 6909988510202205666}
+  IsPlayable: 1
+  IsOpenOnStart: 0
+  UpNeighbors: []
+  LeftNeighbors: []
+  RightNeighbors: []
 --- !u!65 &9043137046906613206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.08
+      time: 0.05
       value: 0
       inSlope: 0
       outSlope: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.6
+      time: 0.4
       value: 1
       inSlope: 0
       outSlope: 0

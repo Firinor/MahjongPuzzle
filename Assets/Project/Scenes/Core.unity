@@ -12435,13 +12435,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 84cf4843362d97948995b9f8fbebb385, type: 2}
   - {fileID: 11400000, guid: 77473f53d7070fa46bae49034315821a, type: 2}
   - {fileID: 11400000, guid: 50f7558d755ac0d47a6e24030606939e, type: 2}
-  - {fileID: 11400000, guid: 2daae3545506489469898d20a8ea4f5c, type: 2}
   - {fileID: 11400000, guid: 7644614cce76602438b2f6a843f1a285, type: 2}
   - {fileID: 11400000, guid: e5bbffe247f287f4f80616302bdd42f7, type: 2}
   - {fileID: 11400000, guid: b5c7f3130eb1f1e4eb85dc3272dd8256, type: 2}
   - {fileID: 11400000, guid: f3d9afad970a2ac4793844c5fa2ea559, type: 2}
   desks2:
+  - {fileID: 11400000, guid: 8572194d63e66454686856431d8f2e0c, type: 2}
   - {fileID: 11400000, guid: b7846c6d4b2b499499c76bf1a363ba96, type: 2}
+  - {fileID: 11400000, guid: 5dd0c0155c652044784947232c640715, type: 2}
+  - {fileID: 11400000, guid: d6fdfc52181e11548a3a868d383bb63d, type: 2}
+  - {fileID: 11400000, guid: 4a58fc8f7e294c54194ec2235d5f0fa5, type: 2}
+  - {fileID: 11400000, guid: 2b7d83509df445b42b1c0bf6ca553b0c, type: 2}
+  - {fileID: 11400000, guid: 0567a2ecc7a22464a95e09655a42ea7c, type: 2}
+  - {fileID: 11400000, guid: 296fa48a1aecdd04a8acfe0e029f32f5, type: 2}
   pool: {fileID: 171712896}
   rules: {fileID: 180524335}
   spells: {fileID: 1736813613}

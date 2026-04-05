@@ -241,6 +241,7 @@ public class CoreBootstrap : MonoBehaviour
             animationRotation.EndZoom = new Vector3(0,0,180);
             animationRotation.OnComplete += () =>
             {
+                tile.GetComponent<FirZoomAnimation>().Play();
                 animationRotation.OnComplete = null;
                 Destroy(animationRotation);
                 tilesCounter++;
@@ -259,6 +260,7 @@ public class CoreBootstrap : MonoBehaviour
         lastAnimationRotation.EndZoom = new Vector3(0,0,180);
         lastAnimationRotation.OnComplete += () =>
         {
+            lastTile.GetComponent<FirZoomAnimation>().Play();
             lastAnimationRotation.OnComplete = null;
             Destroy(lastAnimationRotation);
             tilesCounter++;
