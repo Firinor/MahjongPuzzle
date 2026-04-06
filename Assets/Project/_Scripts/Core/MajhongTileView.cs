@@ -29,8 +29,7 @@ public class MajhongTileView : MonoBehaviour
     
     public bool isHint;
     
-    public Tile Data { get; private set; }
-    public Sprite Sprite => Data.Sprite;
+    public Sprite Sprite => face.sprite;
     
     public bool IsPlayable = true;
     public bool IsOpenOnStart;
@@ -48,10 +47,9 @@ public class MajhongTileView : MonoBehaviour
         statuses.Add(errorMaterial, false);
     }
     
-    public void SetData(Tile data)
+    public void SetData(Sprite tile)
     {
-        Data = data;
-        face.sprite = data.Sprite;
+        face.sprite = tile;
     }
 
     private void ResetMaterial()

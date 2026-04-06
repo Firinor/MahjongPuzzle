@@ -44,7 +44,7 @@ public class CoreBootstrap : MonoBehaviour
 
     private List<MajhongTileView> EmptyDesk()
     {
-        List<Tile> listTiles = new(desk.TilesPositions.Count);
+        List<Sprite> listTiles = new(desk.TilesPositions.Count);
         int pairs = desk.TilesPositions.Count / 2;
         int lastTileIndex = Math.Min(tileData.Tiles.Length, pairs);
         List<int> possibleTiles = FillListWhisTiles(lastTileIndex);
@@ -136,7 +136,7 @@ public class CoreBootstrap : MonoBehaviour
         yield return null;
         
         List<MajhongTileView> tilesToSpawn = new();
-        List<Tile> tilesShuffled = GetShuffeledDatas(listTiles);
+        List<Sprite> tilesShuffled = GetShuffeledDatas(listTiles);
         
         //Decomposition
         int Count = listTiles.Count;
@@ -277,19 +277,19 @@ public class CoreBootstrap : MonoBehaviour
         spells.ButtonsOn();
     }
 
-    private List<Tile> GetShuffeledDatas(List<MajhongTileView> listTiles)
+    private List<Sprite> GetShuffeledDatas(List<MajhongTileView> listTiles)
     {
-        List<Tile> result = new();
+        List<Sprite> result = new();
         foreach (var tileView in listTiles)
         {
-            result.Add(tileView.Data);
+            result.Add(tileView.Sprite);
         }
 
         var sorted = result
-            .OrderBy(t => t.Sprite.GetHashCode())
+            .OrderBy(t => t.GetHashCode())
             .ToList();
         
-        var pairs = new List<List<Tile>>();
+        var pairs = new List<List<Sprite>>();
         for (int i = 0; i < sorted.Count; i += 2)
         {
             pairs.Add(new(){sorted[i], sorted[i+1]});

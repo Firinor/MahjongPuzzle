@@ -31,6 +31,16 @@ public class MajhongSolitaireRules : MonoBehaviour
 
     public event Action OnTilesChanged;
 
+    private DateTime lastComboTime;
+    [SerializeField] 
+    private int defaultPoints = 10;
+    [SerializeField] 
+    private int comboBonusPoints = 5;
+    [SerializeField] 
+    private float comboTimePeriod = 10;
+    private int comboCounter;
+    
+
     public void Initialize(ProgressData player)
     {
         this.player = player;
@@ -88,11 +98,23 @@ public class MajhongSolitaireRules : MonoBehaviour
         tile.IsPlayable = false;
     
         OnTilesChanged?.Invoke();
-    
-        effects.FlyTiles(tile1, tile, tile1.Data.Points, () =>
+
+        if ((DateTime.Now - lastComboTime).TotalSeconds > comboTimePeriod)
         {
-            player.AddGold(tile1.Data.Points);
-            roundScores += tile1.Data.Points;
+            comboCounter = 0;
+        }
+        else //combo
+        {
+            comboCounter++;
+        }
+
+        lastComboTime = DateTime.Now;
+        int scores = defaultPoints + comboBonusPoints * comboCounter;
+        
+        effects.FlyTiles(tile1, tile, scores, () =>
+        {
+            player.AddGold(scores);
+            roundScores += scores;
             roundPlayerGold.text = "+" + roundScores;
             pool.Release(tile1);
             pool.Release(tile);

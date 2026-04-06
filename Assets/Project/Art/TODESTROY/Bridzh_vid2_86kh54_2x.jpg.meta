@@ -1,0 +1,1405 @@
+fileFormatVersion: 2
+guid: fc6a4ca4ab3c28c4a9a28f32f8b00022
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8082380123748846406
+    second: Bridzh_vid2_86kh54_2x_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b4ab776e16a2070800000000000000
+      internalID: 8082380123748846406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea57ea3660c6ab74fb489daca11d8e2b
+      internalID: -34209287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cc7c7a67f671e41976e1c1b4602760
+      internalID: 814568349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5094bcd1358f77c49a103526ff6b3bf1
+      internalID: -991613032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1991df9bc770c034fa8238123308c260
+      internalID: 1269064233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_5
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563e6233e4774564c838510c0025c606
+      internalID: 1742842851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_6
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4e58fb076f9154cba87be51e6b5f46
+      internalID: -1685175441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_7
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce10d185490a59d4fa5b72601bda1f36
+      internalID: 895719818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_8
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9821d8f21b42a45a92a442bfc2abab
+      internalID: 541393873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_9
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f6669598d92224c9cf2fdfc36e2d69
+      internalID: -1541408017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_10
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab02a5b0df0829d448c8bd6be42912c8
+      internalID: 965204309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_11
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebec15a17ad5904190ba0edda238e7f
+      internalID: -1136235860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_12
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3731b42784de44e99fdebef675a299
+      internalID: 1726271870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_13
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 534
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb837e7d3552fb944855871f2f0a3d0e
+      internalID: -554558490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6d70c4d86081941baf9e4168be3a5b
+      internalID: -576653243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_15
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83750b346f7554448d94d6e6f67a579
+      internalID: 1748961791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_16
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdf06662138d1e4593e6ddfb5cb0865
+      internalID: -1832464724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770b5ff3ae195cc438c058ff40d719ea
+      internalID: 99549458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_18
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020f7038bd82bc94eb052229574ddbd6
+      internalID: 2036997368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_19
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02093ca856447d847a17bf53c1cf38fd
+      internalID: 1511087602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_20
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d7c1b37e887c64984aa85c55dfc114
+      internalID: -652071013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_21
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf01bfdfce5ac2d45a569764ff96474d
+      internalID: -2016118466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_22
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7263137aebc806a4bb792824d79989a3
+      internalID: -64542577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_23
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682f49a007c43f8468e8b0a9edc8774b
+      internalID: -1302308226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_24
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb136a39112bd994fb90defe1ea11b01
+      internalID: 830564869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_25
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a389ab251915e4ea6e4fceea7fd4ce
+      internalID: -1115327775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_26
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761d64c0853522f41a5f8fe44e9b8e50
+      internalID: -54344054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_27
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 356
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ef6a604b887e841b1494e1bbac092b
+      internalID: 1233047950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a9d5401b0b8e94ab0bb1770e45b32d
+      internalID: -663386928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_29
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6a5a454eb2d4e47a2ded8eca6bffae
+      internalID: -938134135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_30
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28e7db723776bb4cbfc4de63f05baf6
+      internalID: 2091414671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_31
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c05d53678e1cbc45b7be82d4ab0f7d0
+      internalID: 346964911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_32
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394b9a65126d0ee4ebc96f18c9672084
+      internalID: 997232252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_33
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e262b232b8fcb64c9ad9bb8fa2fa5a7
+      internalID: 1313748474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_34
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e566f7d9a0de94589b8a090c899693
+      internalID: -479476489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_35
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f184f397145779045a59d5931dcfd939
+      internalID: 393013778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_36
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067eb346facb50048bc59fb4768554a0
+      internalID: -1039180776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_37
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dade44c236ceb4e86ba4ad70b40fba
+      internalID: -754762634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_38
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48173c78a9a721e47aebac58f716f9c3
+      internalID: -125340478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_39
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c5ad3cb9786574f9d586e35ec73e22
+      internalID: 994484162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_40
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 178
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a403bd1e716c7d45a7dea94a02ab4d0
+      internalID: 331748945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c460f9389831bb549a9a7ea8e91f6166
+      internalID: 1479597446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_43
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd75c3ef1d377d49a13a42fa386c15b
+      internalID: -1036967306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_44
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127e2b09fe9a0e149962c1f3b13c976d
+      internalID: -1411672068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_45
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ee1d94bd6b89b4cb7fdaa52eed1ea2
+      internalID: -1771035862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_46
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83630dfb8d0075845903f911e2714e55
+      internalID: 654482495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_47
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3a29522e6c29e40aa30a49acbf139f
+      internalID: -1618877526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_48
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf904a88544f2c4c9410673d5cba28e
+      internalID: 1716579938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_49
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd331ad2ec79b642b7c3a759ad727a4
+      internalID: 616380679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_50
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c55608a9d42874499a6d26117bf6a0b
+      internalID: 1624385501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_51
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c274e85ee0c431448868210dbf958be
+      internalID: -1219654324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_52
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81a82f58a38f9d4196c75c7a07eeec5
+      internalID: -426614552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_53
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b572483ddb08df247b47df122bcae2f6
+      internalID: 1601939739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridzh_vid2_86kh54_2x_54
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 0
+        width: 97
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf8e1c8e25517d48b18eb10edf11bc6
+      internalID: -1474086028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2809f8435b3ca1e409d9ced194c73fe8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":14.0,"y":4.0},"gridSpriteSize":{"x":97.0,"y":162.0},"gridSpriteOffset":{"x":3.0,"y":3.0},"gridSpritePadding":{"x":18.0,"y":16.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bridzh_vid2_86kh54_2x_0: 8082380123748846406
+      Bridzh_vid2_86kh54_2x_1: -34209287
+      Bridzh_vid2_86kh54_2x_10: 965204309
+      Bridzh_vid2_86kh54_2x_11: -1136235860
+      Bridzh_vid2_86kh54_2x_12: 1726271870
+      Bridzh_vid2_86kh54_2x_13: -554558490
+      Bridzh_vid2_86kh54_2x_14: -576653243
+      Bridzh_vid2_86kh54_2x_15: 1748961791
+      Bridzh_vid2_86kh54_2x_16: -1832464724
+      Bridzh_vid2_86kh54_2x_17: 99549458
+      Bridzh_vid2_86kh54_2x_18: 2036997368
+      Bridzh_vid2_86kh54_2x_19: 1511087602
+      Bridzh_vid2_86kh54_2x_2: 814568349
+      Bridzh_vid2_86kh54_2x_20: -652071013
+      Bridzh_vid2_86kh54_2x_21: -2016118466
+      Bridzh_vid2_86kh54_2x_22: -64542577
+      Bridzh_vid2_86kh54_2x_23: -1302308226
+      Bridzh_vid2_86kh54_2x_24: 830564869
+      Bridzh_vid2_86kh54_2x_25: -1115327775
+      Bridzh_vid2_86kh54_2x_26: -54344054
+      Bridzh_vid2_86kh54_2x_27: 1233047950
+      Bridzh_vid2_86kh54_2x_28: -663386928
+      Bridzh_vid2_86kh54_2x_29: -938134135
+      Bridzh_vid2_86kh54_2x_3: -991613032
+      Bridzh_vid2_86kh54_2x_30: 2091414671
+      Bridzh_vid2_86kh54_2x_31: 346964911
+      Bridzh_vid2_86kh54_2x_32: 997232252
+      Bridzh_vid2_86kh54_2x_33: 1313748474
+      Bridzh_vid2_86kh54_2x_34: -479476489
+      Bridzh_vid2_86kh54_2x_35: 393013778
+      Bridzh_vid2_86kh54_2x_36: -1039180776
+      Bridzh_vid2_86kh54_2x_37: -754762634
+      Bridzh_vid2_86kh54_2x_38: -125340478
+      Bridzh_vid2_86kh54_2x_39: 994484162
+      Bridzh_vid2_86kh54_2x_4: 1269064233
+      Bridzh_vid2_86kh54_2x_40: 331748945
+      Bridzh_vid2_86kh54_2x_41: -1068771085
+      Bridzh_vid2_86kh54_2x_42: 1479597446
+      Bridzh_vid2_86kh54_2x_43: -1036967306
+      Bridzh_vid2_86kh54_2x_44: -1411672068
+      Bridzh_vid2_86kh54_2x_45: -1771035862
+      Bridzh_vid2_86kh54_2x_46: 654482495
+      Bridzh_vid2_86kh54_2x_47: -1618877526
+      Bridzh_vid2_86kh54_2x_48: 1716579938
+      Bridzh_vid2_86kh54_2x_49: 616380679
+      Bridzh_vid2_86kh54_2x_5: 1742842851
+      Bridzh_vid2_86kh54_2x_50: 1624385501
+      Bridzh_vid2_86kh54_2x_51: -1219654324
+      Bridzh_vid2_86kh54_2x_52: -426614552
+      Bridzh_vid2_86kh54_2x_53: 1601939739
+      Bridzh_vid2_86kh54_2x_54: -1474086028
+      Bridzh_vid2_86kh54_2x_55: -1176706512
+      Bridzh_vid2_86kh54_2x_6: -1685175441
+      Bridzh_vid2_86kh54_2x_7: 895719818
+      Bridzh_vid2_86kh54_2x_8: 541393873
+      Bridzh_vid2_86kh54_2x_9: -1541408017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

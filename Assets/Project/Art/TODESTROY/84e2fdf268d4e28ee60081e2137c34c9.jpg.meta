@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0a052808ec1cd2943b50fe1f165bd62e
+guid: dd4c3a9b4fc63c640b6745b5d543c924
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2978653956524333172
-    second: icons_0
+      213: 7593906178664015395
+    second: 84e2fdf268d4e28ee60081e2137c34c9_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,6 +110,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,67 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons_0
+      name: 84e2fdf268d4e28ee60081e2137c34c9_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 309
-        width: 72
-        height: 72
+        x: 0
+        y: 0
+        width: 1180
+        height: 553
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c872e841202b9a6d0800000000000000
-      internalID: -2978653956524333172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons_1
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 196
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 885099b350283f44dab052a5cee5439c
-      internalID: -1879274440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: icons_2
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 83
-        width: 72
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e1fdd98449392242b69f2fe9622d4e7
-      internalID: 2034680275
+      spriteID: 326a9ec6f69f26960800000000000000
+      internalID: 7593906178664015395
       vertices: []
       indices: 
       edges: []
@@ -195,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: db35454416a1f894e818a5f1c028cc5b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icons_0: -2978653956524333172
-      icons_1: -1879274440
-      icons_2: 2034680275
+      84e2fdf268d4e28ee60081e2137c34c9_0: 7593906178664015395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

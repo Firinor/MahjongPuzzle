@@ -817,10 +817,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -863,6 +863,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 743919012}
   - {fileID: 923589344}
   - {fileID: 1872427580}
   - {fileID: 216322952}
@@ -1691,6 +1692,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48322119b949cc24c9237982d782ceb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheatGoldToDestroy
+--- !u!1 &743919011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743919012}
+  - component: {fileID: 743919014}
+  - component: {fileID: 743919013}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &743919012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743919011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 219443812}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &743919013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743919011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7593906178664015395, guid: dd4c3a9b4fc63c640b6745b5d543c924, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &743919014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743919011}
+  m_CullTransparentMesh: 1
 --- !u!1 &760879927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1985,6 @@ MonoBehaviour:
   - {fileID: 8159909750896466614}
   - {fileID: 1324587391}
   - {fileID: 208876397}
-  - {fileID: 1398495111}
   desks:
   - {fileID: 1253183975501331049}
   - {fileID: 1266735514}
@@ -2966,7 +3041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2974,7 +3049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3014,11 +3089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1246.4601
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3035,6 +3110,10 @@ PrefabInstance:
     - target: {fileID: 5918124313891470069, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_Name
       value: TileToggle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918124313891470069, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8014460324261374071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3098,17 +3177,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2678937762825196071, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
   m_PrefabInstance: {fileID: 1398495109}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1398495111 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2118569818280520770, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
-  m_PrefabInstance: {fileID: 1398495109}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7def359ec98bb409ed2a10e0f675fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileToggle
 --- !u!1 &1421133339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,10 +3325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

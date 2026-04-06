@@ -492,7 +492,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 130
@@ -1278,7 +1278,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2598
-        y: 594
+        y: 610
         width: 433
         height: 590
       alignment: 0

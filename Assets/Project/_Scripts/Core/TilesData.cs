@@ -4,6 +4,5 @@ using UnityEngine;
 public class TilesData : ScriptableObject
 {
     public string ID;
-    public Sprite TileBase;
-    public Tile[] Tiles;
+    public Sprite[] Tiles;
 }
