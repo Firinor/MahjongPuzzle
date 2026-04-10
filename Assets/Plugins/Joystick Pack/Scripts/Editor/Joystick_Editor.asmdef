@@ -1,0 +1,18 @@
+{
+    "name": "Joystick_Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4548ca55966f28d458ca91c7d5b0d763"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
