@@ -3,6 +3,10 @@
 [CreateAssetMenu(menuName = "Configs/Audio")]
 public class AudioConfig : ScriptableObject
 {
-    [Header("Gem")] 
-    public ClipSettings gemTink;
+    [Header("Buttons")] 
+    public ClipSettings ButtonClick;
+    [Header("Tiles")] 
+    public ClipSettings StartCollide;
+    public ClipSettings EndCollide;
+    public ClipSettings TileSelect;
 }

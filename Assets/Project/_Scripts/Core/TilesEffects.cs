@@ -28,6 +28,7 @@ public class TilesEffects : MonoBehaviour
     private IEnumerator FlyTilesCoroutine(MajhongTileView tile1, MajhongTileView tile2,
         int scores, Action callback)
     {
+        SoundManager.Instance.PlayTileStartCollide(tile2.transform.position);
         Vector3 tile1StartPoint = tile1.transform.position;
         Vector3 tile2StartPoint = tile2.transform.position;
         Vector3 collidePoint = (tile1StartPoint + tile2StartPoint) / 2;
@@ -52,6 +53,8 @@ public class TilesEffects : MonoBehaviour
 
         Vector3 delta1 = tile1CollidePoint - tile1StartPoint;
         Vector3 delta2 = tile2CollidePoint - tile2StartPoint;
+
+        bool sound = false;
         
         while (timer < 1)
         {
@@ -70,7 +73,13 @@ public class TilesEffects : MonoBehaviour
             nexPosition2.y += delta2.y * path + (isUp ? XYpath : -XYpath);
             nexPosition2.z += delta2.z * Zpath;
             tile2.transform.position = nexPosition2;
-                
+
+            if (!sound && path >= 1)
+            {
+                SoundManager.Instance.PlayTileEndCollide(collidePoint);
+                sound = true;
+            }
+            
             yield return null;
             
             timer += Time.deltaTime;

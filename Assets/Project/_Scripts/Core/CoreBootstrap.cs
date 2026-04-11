@@ -16,6 +16,8 @@ public class CoreBootstrap : MonoBehaviour
     //[SerializeField, Min(9)] 
     //private int NumberOfUniqueTiles;
     [SerializeField] 
+    private Settings settings;
+    [SerializeField] 
     private TilePool pool;
     [SerializeField] 
     private MajhongSolitaireRules rules;
@@ -40,6 +42,7 @@ public class CoreBootstrap : MonoBehaviour
         StartCoroutine(DeckInitialize(EmptyDesk()));
         rules.Initialize(player);
         spells.Initialize(player);
+        settings.Initialize();
     }
 
     private List<MajhongTileView> EmptyDesk()
@@ -208,7 +211,8 @@ public class CoreBootstrap : MonoBehaviour
             new Keyframe(0f, 0f, 0f, 0f),
             new Keyframe(1f, 2f, 2f, 2f)
         );
-        
+        int index = 0;
+        float tileOffset = 0.001f;
         foreach (var tile in tilesToSpawn)
         {
             tile.RaycastDisableEditor();
@@ -221,9 +225,11 @@ public class CoreBootstrap : MonoBehaviour
             };
             animation.Curve = curve;
             animation.enabled = false;
-            animation.StartPosition = tileStartAnimationPoint.position;
+            Vector3 _startAnimationPosition = tileStartAnimationPoint.position + Vector3.forward * tileOffset * index;
+            index++;
+            animation.StartPosition = _startAnimationPosition;
             animation.EndPosition = startPosition;
-            tile.transform.position = tileStartAnimationPoint.position;
+            tile.transform.position = _startAnimationPosition;
             tile.gameObject.SetActive(true);
         }
         
@@ -244,6 +250,7 @@ public class CoreBootstrap : MonoBehaviour
                 tile.GetComponent<FirZoomAnimation>().Play();
                 animationRotation.OnComplete = null;
                 Destroy(animationRotation);
+                SoundManager.Instance.PlayTileSelect(transform.position);
                 tilesCounter++;
             };
             animationRotation.Curve = curveRotation;
@@ -263,6 +270,7 @@ public class CoreBootstrap : MonoBehaviour
             lastTile.GetComponent<FirZoomAnimation>().Play();
             lastAnimationRotation.OnComplete = null;
             Destroy(lastAnimationRotation);
+            SoundManager.Instance.PlayTileSelect(transform.position);
             tilesCounter++;
         };
         lastAnimationRotation.Curve = curveRotation;

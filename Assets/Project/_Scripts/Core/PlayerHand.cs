@@ -1,27 +1,24 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.UI;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerHand : MonoBehaviour
 {
     private InputActionAsset action;
+    [SerializeField]
+    private Button playerInput;
 
     public Action<MajhongTileView> OnTileClick;
 
     private void Start()
     {
-        action = InputSystem.actions;
-        EnhancedTouchSupport.Enable();
-        action.FindAction("Click").performed += FindTile;
+        playerInput.onClick.AddListener(FindTile);
     }
 
-    private void FindTile(InputAction.CallbackContext obj)
+    private void FindTile()
     {
-        if (!obj.control.IsPressed())
-            return;
-        
         MajhongTileView tile = GetRayHitTile();
         
         if(tile == null)
@@ -50,6 +47,6 @@ public class PlayerHand : MonoBehaviour
 
     private void OnDestroy()
     {
-        action.FindAction("Click").performed -= FindTile;
+        playerInput.onClick.RemoveAllListeners();
     }
 }

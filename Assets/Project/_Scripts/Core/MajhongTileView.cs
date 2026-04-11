@@ -137,6 +137,7 @@ public class MajhongTileView : MonoBehaviour
     {
         StopAnimation();
         statuses[selectedMaterial] = true;
+        SoundManager.Instance.PlayTileSelect(transform.position);
         zoomAnimation.Play();
         ResetMaterial();
     }
@@ -163,6 +164,7 @@ public class MajhongTileView : MonoBehaviour
     {
         StopAnimation();
         statuses[selectedMaterial] = false;
+        SoundManager.Instance.PlayTileSelect(transform.position);
         zoomAnimation.Play();
         ResetMaterial();
     }

@@ -96,7 +96,7 @@ public class MajhongSolitaireRules : MonoBehaviour
         tile1.IsPlayable = false;
         tile.RaycastDisable();
         tile.IsPlayable = false;
-    
+        
         OnTilesChanged?.Invoke();
 
         if ((DateTime.Now - lastComboTime).TotalSeconds > comboTimePeriod)

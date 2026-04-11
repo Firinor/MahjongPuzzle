@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -10,11 +9,6 @@ public class Settings : MonoBehaviour
     public SettingsData data;
 
     [SerializeField] private AudioMixer mixer;
-
-    [SerializeField] private Sprite MusicOnSprite;
-    [SerializeField] private Sprite MusicOffSprite;
-    [SerializeField] private Sprite SoundOnSprite;
-    [SerializeField] private Sprite SoundOffSprite;
     
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Toggle musicToggle;
