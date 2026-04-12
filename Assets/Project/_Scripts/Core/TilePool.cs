@@ -27,7 +27,7 @@ public class TilePool : MonoBehaviour
     
     public void Release(MajhongTileView tile)
     {
-        Destroy(tile.gameObject);
+        DestroyImmediate(tile.gameObject);
     }
     public void ClearAll(bool instant = false)
     {

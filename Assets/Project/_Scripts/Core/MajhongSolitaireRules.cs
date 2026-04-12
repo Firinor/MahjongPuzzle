@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using FirAnimations;
 using TMPro;
 using UnityEngine;
 
@@ -12,9 +13,9 @@ public class MajhongSolitaireRules : MonoBehaviour
     [SerializeField] 
     private TilePool pool;
     [SerializeField] 
-    private GameObject winPopup;
+    private FirAnimationsManager winPopup;
     [SerializeField] 
-    private GameObject losePopup;
+    private FirAnimationsManager losePopup;
     
     [SerializeField] 
     private TextMeshProUGUI winPopupGoldText;
@@ -22,7 +23,9 @@ public class MajhongSolitaireRules : MonoBehaviour
     private TextMeshProUGUI allPlayerGold;
     [SerializeField] 
     private TextMeshProUGUI roundPlayerGold;
-
+    [SerializeField] 
+    private TextMeshProUGUI openPairs;
+    
     private ProgressData player;
     [SerializeField]
     private MajhongTileView tile;
@@ -130,7 +133,9 @@ public class MajhongSolitaireRules : MonoBehaviour
     {
         if (pool.transform.childCount <= 2)
         {
-            winPopup.SetActive(true);
+            winPopup.gameObject.SetActive(true);
+            winPopup.ToStartPoint();
+            winPopup.StartAnimations();
             winPopupGoldText.text = roundPlayerGold.text;
             return;
         }
@@ -149,13 +154,13 @@ public class MajhongSolitaireRules : MonoBehaviour
                 pairs++;
         }
 
+        openPairs.text = "Возможные пары: " + pairs;
         if (pairs > 0)
-        {
-            Debug.Log("Pairs " + pairs);
             return;
-        }
         
-        losePopup.SetActive(true);
+        losePopup.gameObject.SetActive(true);
+        losePopup.ToStartPoint();
+        losePopup.StartAnimations();
     }
 
     public void UnselectTile()
