@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FirAnimations;
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;

@@ -11,10 +11,20 @@ public class TileCollideEffect : MonoBehaviour
     private FirAnimation color;
     [SerializeField] 
     private TextMeshProUGUI text;
-    
+
     private void Awake()
     {
-        color.OnComplete += () => Destroy(gameObject);
+        color.OnComplete += () => gameObject.SetActive(false);
+    }
+
+    public void StopAnimations()
+    {
+        gameObject.SetActive(false);
+        position.Stop();
+        color.Stop();
+    }
+    private void OnEnable()
+    {
         position.Play();
         color.Play();
     }

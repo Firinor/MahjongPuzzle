@@ -69,6 +69,7 @@ namespace FirAnimations
                 {
                     Time = 1;
                     enabled = false;
+                    MoveByDelta();
                     OnComplete?.Invoke();
                     return;
                 }

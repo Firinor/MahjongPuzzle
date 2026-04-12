@@ -16,7 +16,7 @@ public class TilesEffects : MonoBehaviour
     [SerializeField] 
     private Transform tileCollideEffectParent;
     [SerializeField] 
-    private TileCollideEffect tileCollideEffectPrefab;
+    private TileCollideEffect tileCollideEffect;
     
     private const float halfTile3 = 1.1f;
     public void FlyTiles(MajhongTileView tile1, MajhongTileView tile2, 
@@ -74,7 +74,7 @@ public class TilesEffects : MonoBehaviour
             nexPosition2.z += delta2.z * Zpath;
             tile2.transform.position = nexPosition2;
 
-            if (!sound && path >= 1)
+            if (!sound && path >= 0.9f)
             {
                 SoundManager.Instance.PlayTileEndCollide(collidePoint);
                 sound = true;
@@ -85,12 +85,10 @@ public class TilesEffects : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        Vector3 effectPosition = Camera.main.WorldToScreenPoint(collidePoint);
-        var effect = Instantiate(tileCollideEffectPrefab,
-            collidePoint,
-            Quaternion.identity,
-            tileCollideEffectParent);
-        effect.SetText(scores);
+        tileCollideEffect.StopAnimations();
+        tileCollideEffect.transform.position = collidePoint;
+        tileCollideEffect.SetText(scores);
+        tileCollideEffect.gameObject.SetActive(true);
         callback?.Invoke();
     }
 

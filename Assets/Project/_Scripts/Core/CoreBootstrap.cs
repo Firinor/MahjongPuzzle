@@ -250,7 +250,8 @@ public class CoreBootstrap : MonoBehaviour
                 tile.GetComponent<FirZoomAnimation>().Play();
                 animationRotation.OnComplete = null;
                 Destroy(animationRotation);
-                SoundManager.Instance.PlayTileSelect(transform.position);
+                if(tilesCounter % 2 == 0)
+                    SoundManager.Instance.PlayTileSelect(transform.position);
                 tilesCounter++;
             };
             animationRotation.Curve = curveRotation;

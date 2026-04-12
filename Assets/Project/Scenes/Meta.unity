@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1c810ffaedea65648aae5236925aac5a, type: 3}
+  m_Sprite: {fileID: -8171958947958391838, guid: 2e46967d9f11e7a4393b4ee7c89cabc0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4196,6 +4196,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5443790c6574b73869c3cbbfb23483e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeckToggle
+--- !u!1001 &1804230747621332422
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5953344943314002560, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_Name
+      value: BackgroundMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743192832309488886, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5953344943314002560, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1804230747621332424}
+  m_SourcePrefab: {fileID: 100100000, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+--- !u!1 &1804230747621332423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5953344943314002560, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+  m_PrefabInstance: {fileID: 1804230747621332422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1804230747621332424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804230747621332423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf3158be2682f74981bce08b4c2534b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoNotDestroyOnLoadMusic
 --- !u!224 &2678937763734558176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7703560786967402551, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
@@ -4669,3 +4746,4 @@ SceneRoots:
   - {fileID: 171440992}
   - {fileID: 219443812}
   - {fileID: 1982735050}
+  - {fileID: 1804230747621332422}

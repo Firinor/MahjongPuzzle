@@ -53,7 +53,11 @@ namespace FirAnimations
                 }
                 else
                 {
-                    _time %= 1;
+                    if (_time > 1)
+                    {
+                        ToStartPoint();
+                        _time %= 1;
+                    }
                 }
 #else
                 _time = 1;

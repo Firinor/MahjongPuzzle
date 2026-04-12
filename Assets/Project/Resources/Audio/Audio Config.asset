@@ -18,12 +18,12 @@ MonoBehaviour:
     Volume: 1
   StartCollide:
     Clips:
-    - {fileID: 8300000, guid: 6a8cb7315a513af47bbb15c01510cde0, type: 3}
-    Volume: 0.8
+    - {fileID: 8300000, guid: 64e5101a5cc7940488caeea1d4770fec, type: 3}
+    Volume: 0.5
   EndCollide:
     Clips:
-    - {fileID: 8300000, guid: 64e5101a5cc7940488caeea1d4770fec, type: 3}
-    Volume: 0.8
+    - {fileID: 8300000, guid: 6a8cb7315a513af47bbb15c01510cde0, type: 3}
+    Volume: 1
   TileSelect:
     Clips:
     - {fileID: 8300000, guid: a6c3886bb4973184ea413f7c9f9dd271, type: 3}

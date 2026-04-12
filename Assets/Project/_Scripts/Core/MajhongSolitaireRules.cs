@@ -135,6 +135,7 @@ public class MajhongSolitaireRules : MonoBehaviour
             return;
         }
 
+        int pairs = 0;
         HashSet<Sprite> openTiles = new();
         for (int i = 0; i < pool.transform.childCount; i++)
         {
@@ -144,8 +145,14 @@ public class MajhongSolitaireRules : MonoBehaviour
                 continue;
 
             Sprite tileSprite = tileView.Sprite;
-            if(!openTiles.Add(tileSprite))
-                return;
+            if (!openTiles.Add(tileSprite))
+                pairs++;
+        }
+
+        if (pairs > 0)
+        {
+            Debug.Log("Pairs " + pairs);
+            return;
         }
         
         losePopup.SetActive(true);
