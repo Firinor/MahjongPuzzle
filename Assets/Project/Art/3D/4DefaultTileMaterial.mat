@@ -243,7 +243,7 @@ Material:
     - _GlossyReflections: 1
     - _HeightTransition: 0
     - _LightingEnabled: 0
-    - _Metallic: 0
+    - _Metallic: 0.15
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -256,7 +256,7 @@ Material:
     - _ReceiveShadows: 1
     - _SampleGI: 0
     - _Shininess: 0.2
-    - _Smoothness: 0.5
+    - _Smoothness: 0.85
     - _Smoothness0: 0.5
     - _Smoothness1: 0.5
     - _Smoothness2: 0.5
@@ -283,9 +283,9 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.78431374, g: 0.9607843, b: 0.9019608, a: 1}
+    - _BaseColor: {r: 0.80444044, g: 0.9607843, b: 0.78431374, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.78431374, g: 0.96078426, b: 0.9019608, a: 1}
+    - _Color: {r: 0.80444044, g: 0.96078426, b: 0.78431374, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 0}

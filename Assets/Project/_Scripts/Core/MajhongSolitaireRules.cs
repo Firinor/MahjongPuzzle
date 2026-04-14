@@ -133,9 +133,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     {
         if (pool.transform.childCount <= 2)
         {
-            winPopup.gameObject.SetActive(true);
-            winPopup.ToStartPoint();
-            winPopup.StartAnimations();
+            Win();
             winPopupGoldText.text = roundPlayerGold.text;
             return;
         }
@@ -157,11 +155,25 @@ public class MajhongSolitaireRules : MonoBehaviour
         openPairs.text = "Возможные пары: " + pairs;
         if (pairs > 0)
             return;
-        
+
+        Lose();
+    }
+
+    [ContextMenu("Win")]
+    private void Win()
+    {
+        winPopup.gameObject.SetActive(true);
+        winPopup.ToStartPoint();
+        winPopup.StartAnimations();
+    }
+    [ContextMenu("Lose")]
+    private void Lose()
+    {
         losePopup.gameObject.SetActive(true);
         losePopup.ToStartPoint();
         losePopup.StartAnimations();
     }
+    
 
     public void UnselectTile()
     {

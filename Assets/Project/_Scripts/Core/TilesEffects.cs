@@ -76,6 +76,10 @@ public class TilesEffects : MonoBehaviour
 
             if (!sound && path >= 0.9f)
             {
+                tileCollideEffect.StopAnimations();
+                tileCollideEffect.transform.position = collidePoint;
+                tileCollideEffect.SetText(scores);
+                tileCollideEffect.gameObject.SetActive(true);
                 SoundManager.Instance.PlayTileEndCollide(collidePoint);
                 sound = true;
             }
@@ -84,11 +88,7 @@ public class TilesEffects : MonoBehaviour
             
             timer += Time.deltaTime;
         }
-
-        tileCollideEffect.StopAnimations();
-        tileCollideEffect.transform.position = collidePoint;
-        tileCollideEffect.SetText(scores);
-        tileCollideEffect.gameObject.SetActive(true);
+        
         callback?.Invoke();
     }
 
