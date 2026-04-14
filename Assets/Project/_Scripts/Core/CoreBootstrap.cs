@@ -244,7 +244,7 @@ public class CoreBootstrap : MonoBehaviour
             tile.GetComponent<FirPositionAnimation>().Play();
             var animationRotation = tile.gameObject.AddComponent<FirRotationAnimation>();
             animationRotation.StartZoom = Vector3.zero;
-            animationRotation.EndZoom = new Vector3(0,0,180);
+            animationRotation.EndZoom = new Vector3(0,180,180);
             animationRotation.OnComplete += () =>
             {
                 tile.GetComponent<FirZoomAnimation>().Play();
@@ -265,7 +265,7 @@ public class CoreBootstrap : MonoBehaviour
         lastTile.GetComponent<FirPositionAnimation>().Play();
         var lastAnimationRotation = lastTile.gameObject.AddComponent<FirRotationAnimation>();
         lastAnimationRotation.StartZoom = Vector3.zero;
-        lastAnimationRotation.EndZoom = new Vector3(0,0,180);
+        lastAnimationRotation.EndZoom = new Vector3(0,180,180);
         lastAnimationRotation.OnComplete += () =>
         {
             lastTile.GetComponent<FirZoomAnimation>().Play();

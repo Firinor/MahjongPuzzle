@@ -6,7 +6,6 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class PlayerHand : MonoBehaviour
 {
-    private InputActionAsset action;
     [SerializeField]
     private Button playerInput;
 

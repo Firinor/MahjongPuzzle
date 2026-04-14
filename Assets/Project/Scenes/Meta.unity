@@ -1265,6 +1265,7 @@ GameObject:
   - component: {fileID: 441287964}
   - component: {fileID: 441287966}
   - component: {fileID: 441287965}
+  - component: {fileID: 441287967}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1391,6 +1392,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441287963}
   m_CullTransparentMesh: 1
+--- !u!114 &441287967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441287963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 1651850797056
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 441287965}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &462062106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,18 +4462,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 219443812}
     m_Modifications:
-    - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.52395236
-      objectReference: {fileID: 0}
-    - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2692341582520316626, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3326780654621372571, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4517,37 +4546,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
-    - target: {fileID: 6155081808971794475, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.52395236
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155081808971794475, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6155081808971794475, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.52395236
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519639468631344583, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.52395236
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519639468631344583, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785716608361402585, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.52395236
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785716608361402585, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785716608361402585, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.52395236
+    - target: {fileID: 9053499683934096176, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: m_Color.a
+      value: 0.11985799
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
