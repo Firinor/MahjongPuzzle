@@ -129,9 +129,9 @@ public class MajhongSolitaireRules : MonoBehaviour
         UnselectTile();
     }
 
-    private void CheckWinCondition()
+    public void CheckWinCondition()
     {
-        if (pool.transform.childCount <= 2)
+        if (pool.transform.childCount <= 0)
         {
             Win();
             winPopupGoldText.text = roundPlayerGold.text;
@@ -152,7 +152,7 @@ public class MajhongSolitaireRules : MonoBehaviour
                 pairs++;
         }
 
-        openPairs.text = "Возможные пары: " + pairs;
+        openPairs.text = pairs.ToString();
         if (pairs > 0)
             return;
 

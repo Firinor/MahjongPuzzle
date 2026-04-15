@@ -283,6 +283,8 @@ public class CoreBootstrap : MonoBehaviour
         {
             tile.RaycastEnableEditor();
         }
+
+        rules.CheckWinCondition();
         spells.ButtonsOn();
     }
 
