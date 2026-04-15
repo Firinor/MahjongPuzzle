@@ -1,3 +1,4 @@
+using FirAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private MajhongSolitaireRules rules;
     [SerializeField] private TilePool pool;
     [SerializeField] private TilesEffects effects;
+    [SerializeField] private FirAnimationsManager animations;
     
     [SerializeField] private GameObject losePopup;
     [SerializeField] private Button spellShuffle2;
@@ -23,6 +25,7 @@ public class SpellManager : MonoBehaviour
 
     private ProgressData player;
 
+    private bool isAnimationComplete;
     private bool isSpotLightOn = false;
     
     public void Initialize(ProgressData progress)
@@ -50,6 +53,13 @@ public class SpellManager : MonoBehaviour
         spellShuffle.gameObject.SetActive(true);
         spellHint.gameObject.SetActive(true);
         spellSpotlight.gameObject.SetActive(true);
+        
+        if(isAnimationComplete)
+            return;
+        
+        animations.Initialize();
+        animations.StartAnimations();
+        isAnimationComplete = true;
     }
     
     private string GetSpellCount(int count)
@@ -95,7 +105,6 @@ public class SpellManager : MonoBehaviour
                 
                 if (data1.Sprite == data2.Sprite)
                 {
-                    //player.HintSpell--;//TODO
                     HintCountText.text = GetSpellCount(player.HintSpell);
                     SaveLoadSystem<ProgressData>.Save("Player", player);
 

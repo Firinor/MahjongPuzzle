@@ -77,7 +77,7 @@ public class TilesEffects : MonoBehaviour
             if (!sound && path >= 0.9f)
             {
                 tileCollideEffect.StopAnimations();
-                tileCollideEffect.transform.position = collidePoint;
+                tileCollideEffect.transform.position = collidePoint + Vector3.back * 2;
                 tileCollideEffect.SetText(scores);
                 tileCollideEffect.gameObject.SetActive(true);
                 SoundManager.Instance.PlayTileEndCollide(collidePoint);

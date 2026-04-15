@@ -14,17 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioConfig
   ButtonClick:
     Clips:
-    - {fileID: 8300000, guid: e39d34a03bfd90b46a942e46993f6937, type: 3}
+    - {fileID: 8300000, guid: a9b05da1c29828b49bcc528dd3867e5c, type: 3}
     Volume: 1
   StartCollide:
     Clips:
-    - {fileID: 8300000, guid: 64e5101a5cc7940488caeea1d4770fec, type: 3}
-    Volume: 0.5
+    - {fileID: 8300000, guid: 02d50e61e387b694eb6ef7ada54153d6, type: 3}
+    Volume: 0.9
   EndCollide:
     Clips:
-    - {fileID: 8300000, guid: 6a8cb7315a513af47bbb15c01510cde0, type: 3}
-    Volume: 1
+    - {fileID: 8300000, guid: 052158e6497e2de4399b2a5a6a14f6d8, type: 3}
+    Volume: 0.35
   TileSelect:
     Clips:
-    - {fileID: 8300000, guid: a6c3886bb4973184ea413f7c9f9dd271, type: 3}
-    Volume: 0.5
+    - {fileID: 8300000, guid: 775f0ac5f06a8f84d89e28f9e6a77253, type: 3}
+    Volume: 0.8
+  TileError:
+    Clips:
+    - {fileID: 8300000, guid: 460f7456836e2b34eb8b87e33025cce8, type: 3}
+    Volume: 1

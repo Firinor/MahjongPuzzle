@@ -1,4 +1,4 @@
-﻿using FirAnimations;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Localization;
@@ -22,24 +22,27 @@ public class Settings : MonoBehaviour
     public void Initialize()
     {
         data = SaveLoadSystem<SettingsData>.Load("Settings", new ());
-
-        SetSounds();
-        SetLanguage();
-
+        
         Subscribe();
+    }
+
+    private void Awake()
+    {
+        SetSounds();
+        StartCoroutine(SetLanguage());
     }
 
     private void Subscribe()
     {
         musicToggle.onValueChanged.AddListener(v =>
         {
-            if(v)
+            if(!v)
                 mixer.SetFloat("MusicVolume", Mathf.Log10(data.MusicValue) * 20);
             else
                 mixer.SetFloat("MusicVolume", -80);
 
             //musicToggle.GetComponent<Image>().sprite = v ? MusicOnSprite : MusicOffSprite;
-            data.IsMusicOn = v;
+            data.IsMusicOn = !v;
             SaveLoadSystem<SettingsData>.Save("Settings", data);
         });
         musicSlider.onValueChanged.AddListener(value =>
@@ -54,13 +57,13 @@ public class Settings : MonoBehaviour
         });
         sfxToggle.onValueChanged.AddListener(v =>
         {
-            if(v)
+            if(!v)
                 mixer.SetFloat("SFXVolume", Mathf.Log10(data.SFXValue) * 20);
             else
                 mixer.SetFloat("SFXVolume", -80);
             
             //sfxToggle.GetComponent<Image>().sprite = v ? SoundOnSprite : SoundOffSprite;
-            data.IsSFXOn = v;
+            data.IsSFXOn = !v;
             SaveLoadSystem<SettingsData>.Save("Settings", data);
         });
         sfxSlider.onValueChanged.AddListener(value =>
@@ -97,8 +100,10 @@ public class Settings : MonoBehaviour
         });
     }
 
-    private void SetLanguage()
+    private IEnumerator SetLanguage()
     {
+        yield return LocalizationSettings.InitializationOperation;
+        
         if (data.Language == "ru")
             ruLanguageToggle.isOn = true;
         else
@@ -108,10 +113,10 @@ public class Settings : MonoBehaviour
     private void SetSounds()
     {
         musicSlider.value = data.MusicValue;
-        musicToggle.isOn = data.IsMusicOn;
+        musicToggle.isOn = !data.IsMusicOn;
         //musicToggle.GetComponent<Image>().sprite = data.IsMusicOn ? MusicOnSprite : MusicOffSprite;
         sfxSlider.value = data.SFXValue;
-        sfxToggle.isOn = data.IsSFXOn;
+        sfxToggle.isOn = !data.IsSFXOn;
         //sfxToggle.GetComponent<Image>().sprite = data.IsSFXOn ? SoundOnSprite : SoundOffSprite;
     }
 

@@ -33,6 +33,10 @@ public class SoundManager : MonoBehaviour
    {
       Play(position, config.TileSelect);
    }
+   public void PlayTileError(Vector3 position = default)
+   {
+      Play(position, config.TileError);
+   }
    
    public void Play(Vector3 position, ClipSettings clipData, bool isPriority = false)
    {

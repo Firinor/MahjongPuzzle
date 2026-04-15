@@ -118,6 +118,7 @@ public class MajhongTileView : MonoBehaviour
     {
         StopAnimation();
         statuses[errorMaterial] = true;
+        SoundManager.Instance.PlayTileError(transform.position);
         rotateAnimation.OnComplete = () =>
         {
             statuses[errorMaterial] = false;

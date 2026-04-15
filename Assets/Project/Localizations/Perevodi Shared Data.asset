@@ -15,8 +15,12 @@ MonoBehaviour:
   m_TableCollectionName: Perevodi
   m_TableCollectionNameGuidString: e3d8b332123a7c34c8a0574c8dcbff1e
   m_Entries:
-  - m_Id: 1651850797056
-    m_Key: PlayButton
+  - m_Id: 349057377296384
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3244046344192
+    m_Key: SettingsLanguage
     m_Metadata:
       m_Items: []
   - m_Id: 2186574225408
@@ -27,8 +31,20 @@ MonoBehaviour:
     m_Key: SettingsSound
     m_Metadata:
       m_Items: []
-  - m_Id: 3244046344192
-    m_Key: SettingsLanguage
+  - m_Id: 1651850797056
+    m_Key: TutorialRules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349143834484736
+    m_Key: Tutorial1Collect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349224000217088
+    m_Key: Tutorial2FreeSide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349290865811456
+    m_Key: Tutorial3NotCovered
     m_Metadata:
       m_Items: []
   m_Metadata:

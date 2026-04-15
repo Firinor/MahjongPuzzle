@@ -31,7 +31,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1651850797056
-    m_Localized: PLAY
+    m_Localized: RULES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349143834484736
+    m_Localized: "collect \nidentical tiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349224000217088
+    m_Localized: "which are free on \nat least one side"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 349290865811456
+    m_Localized: "and not \ncovered"
     m_Metadata:
       m_Items: []
   references:

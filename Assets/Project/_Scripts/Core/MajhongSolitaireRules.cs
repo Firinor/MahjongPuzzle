@@ -173,7 +173,6 @@ public class MajhongSolitaireRules : MonoBehaviour
         losePopup.ToStartPoint();
         losePopup.StartAnimations();
     }
-    
 
     public void UnselectTile()
     {

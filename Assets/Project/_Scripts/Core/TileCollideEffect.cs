@@ -1,4 +1,3 @@
-using System;
 using FirAnimations;
 using TMPro;
 using UnityEngine;

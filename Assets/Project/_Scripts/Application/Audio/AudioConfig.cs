@@ -9,4 +9,5 @@ public class AudioConfig : ScriptableObject
     public ClipSettings StartCollide;
     public ClipSettings EndCollide;
     public ClipSettings TileSelect;
+    public ClipSettings TileError;
 }
