@@ -10,24 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Assets-Shared
+  m_Name: Localization-Assets-Russian (ru)
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Localization-Assets-Shared
-  m_GUID: 8f135cfaa98553042aa4e25f8c7265c2
+  m_GroupName: Localization-Assets-Russian (ru)
+  m_GUID: 3ed7b80d7dd136d4f9c24d6fce13a6bd
   m_SerializeEntries:
-  - m_GUID: cb8059fed1637ac459352e50a873b948
-    m_Address: Assets/Project/Localizations/TranslateImages Shared Data.asset
+  - m_GUID: a8be7547ea1590c40a4e22ced5de0dff
+    m_Address: RuWin
     m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e3d8b332123a7c34c8a0574c8dcbff1e
-    m_Address: Assets/Project/Localizations/Perevodi Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b51a3c8838f4df245803ddcbbd942738, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 04487e9f6fcd29d4aa96d29c813ef00b, type: 2}
-    - {fileID: 11400000, guid: 74f6615609aeca94d9d772dc7927d2da, type: 2}
+    - {fileID: 11400000, guid: bf5630c87fcd2134895594dbbdfa4c75, type: 2}
+    - {fileID: 11400000, guid: fd125c26734eecd418316db6b772589c, type: 2}
