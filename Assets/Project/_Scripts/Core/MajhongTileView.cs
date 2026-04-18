@@ -87,6 +87,9 @@ public class MajhongTileView : MonoBehaviour
     {
         face.enabled = true;
         cube.enabled = true;
+    }
+    public void EnableShadow()
+    {
         shadow.enabled = true;
     }
     

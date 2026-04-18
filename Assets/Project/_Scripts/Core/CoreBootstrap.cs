@@ -10,8 +10,6 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private TilesData[] tiles;
     [SerializeField] 
-    private Desk[] desks;
-    [SerializeField] 
     private Desk2[] desks2;
     //[SerializeField, Min(9)] 
     //private int NumberOfUniqueTiles;
@@ -248,6 +246,7 @@ public class CoreBootstrap : MonoBehaviour
             animationRotation.OnComplete += () =>
             {
                 tile.GetComponent<FirZoomAnimation>().Play();
+                tile.EnableShadow();
                 animationRotation.OnComplete = null;
                 Destroy(animationRotation);
                 if(tilesCounter % 2 == 0)
@@ -269,6 +268,7 @@ public class CoreBootstrap : MonoBehaviour
         lastAnimationRotation.OnComplete += () =>
         {
             lastTile.GetComponent<FirZoomAnimation>().Play();
+            lastTile.EnableShadow();
             lastAnimationRotation.OnComplete = null;
             Destroy(lastAnimationRotation);
             SoundManager.Instance.PlayTileSelect(transform.position);
@@ -287,7 +287,7 @@ public class CoreBootstrap : MonoBehaviour
         rules.CheckWinCondition();
         spells.ButtonsOn();
     }
-
+    
     private List<Sprite> GetShuffeledDatas(List<MajhongTileView> listTiles)
     {
         List<Sprite> result = new();
