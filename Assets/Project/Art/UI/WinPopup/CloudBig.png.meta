@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33c8d89a3dda46c4fb213244f4dffc92
+guid: 748c5e7d2f0500b46841e8638c5472a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2330622252861330509
-    second: "\u0420\u0435\u0441\u0443\u0440\u0441 3_0"
+      213: -5445426738766439739
+    second: CloudBig_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 280, y: 0, z: 280, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 3_0"
+      name: CloudBig_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1026
-        height: 512
+        width: 371
+        height: 209
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bb6490c867f7afd0800000000000000
-      internalID: -2330622252861330509
+      spriteID: 5ca99617b35fd64b0800000000000000
+      internalID: -5445426738766439739
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0420\u0435\u0441\u0443\u0440\u0441 3_0": -2330622252861330509
+      CloudBig_0: -5445426738766439739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

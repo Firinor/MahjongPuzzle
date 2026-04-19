@@ -160,14 +160,14 @@ public class MajhongSolitaireRules : MonoBehaviour
     }
 
     [ContextMenu("Win")]
-    private void Win()
+    public void Win()
     {
         winPopup.gameObject.SetActive(true);
         winPopup.ToStartPoint();
         winPopup.StartAnimations();
     }
     [ContextMenu("Lose")]
-    private void Lose()
+    public void Lose()
     {
         losePopup.gameObject.SetActive(true);
         losePopup.ToStartPoint();

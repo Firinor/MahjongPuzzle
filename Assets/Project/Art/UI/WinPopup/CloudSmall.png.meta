@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6b2a6b61a3b7bdf439ac8c556dc6491a
+guid: 47629afeaf6d5794eb7de155dec7ae5d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8279287187703023987
-    second: LosePopup 1_0
+      213: -5159400526332108326
+    second: CloudSmall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 330, y: 0, z: 330, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LosePopup 1_0
+      name: CloudSmall_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 26
-        width: 1094
-        height: 564
+        x: 0
+        y: 0
+        width: 263
+        height: 82
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3794b78e4dfe5e270800000000000000
-      internalID: 8279287187703023987
+      spriteID: ad1e2069e802668b0800000000000000
+      internalID: -5159400526332108326
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LosePopup 1_0: 8279287187703023987
+      CloudSmall_0: -5159400526332108326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
