@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1ad531c0a48a39c41b4decafb7186a87
+guid: a0be98e6f36a06e42a2037ed7dfe30e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4093480436322176185
-    second: Shadow_0
+      213: 7826207155833773862
+    second: "\u0421\u043D\u0438wqeqwew\u043C\u043E\u043A_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 25, y: 25, z: 25, w: 25}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow_0
+      name: "\u0421\u043D\u0438wqeqwew\u043C\u043E\u043A_0"
       rect:
         serializedVersion: 2
-        x: 30
-        y: 31
-        width: 120
-        height: 158
+        x: 0
+        y: 0
+        width: 1247
+        height: 705
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bc8ef5c4c6fec830800000000000000
-      internalID: 4093480436322176185
+      spriteID: 62f971671f54c9c60800000000000000
+      internalID: 7826207155833773862
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shadow_0: 4093480436322176185
+      "\u0421\u043D\u0438wqeqwew\u043C\u043E\u043A_0": 7826207155833773862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
