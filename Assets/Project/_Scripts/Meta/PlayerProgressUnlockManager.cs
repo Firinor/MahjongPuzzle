@@ -1,8 +1,36 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
+public static class Unlocks
+{
+    public static readonly int[] Levels =
+    {
+        3000,//Cat
+        4000,//Euro
+        5000,//Flower
+        7000,//Plane
+        9000,//Gems
+        11000,//Mountain
+        13000,//Rabbit
+        15000,//Castle
+        17000,//Batterfly
+        99999
+    };
+    public static readonly string[] KeyWords =
+    {
+        "Cat",
+        "Euro",
+        "Flower",
+        "Plane",
+        "Gems",
+        "Mountain",
+        "Rabbit",
+        "Castle",
+        "Batterfly",
+    };
+}
 
 public class PlayerProgressUnlockManager : MonoBehaviour
 {
@@ -15,39 +43,137 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private List<TileToggle> tiles;
     [SerializeField] 
     private List<DeskToggle> desks;
+    [SerializeField] 
+    private List<Sprite> deskSprites;
+    [SerializeField] 
+    private Button ScrollDesksUp;
+    [SerializeField] 
+    private Button ScrollDesksDown;
 
+    private int scrollDeskIndex = 0;
+    private readonly List<string> unlockedDesks = new(){"ClassicDesk"};
+    
     public void Initialize(ProgressData progressData)
     {
         player = progressData;
 
         playerGold.text = player.GoldCoins.ToString();
 
-        if (player.TilesPacks != null)
-        {
-            foreach (var tileID in player.TilesPacks)
-            {
-                tiles.Find(t => t.ID == tileID).Unlock();
-            }
+        UnlocksProgress();
+        UnlockedDesk(player.deskID);
 
-        }
-        var selectedTiles = tiles.Find(t => t.ID == player.tilesID);
         tiles[0].Toggle.isOn = false;
-        selectedTiles.Toggle.isOn = true;
-        if (player.Desks != null)
-        {
-            foreach (var deckID in player.Desks)
-            {
-                desks.Find(d => d.ID == deckID).Unlock();
-            }
-        }
-        desks.Find(d => d.ID == player.deskID).Toggle.isOn = true;
-
+        var toggle = tiles.Find(d => d.ID.Equals(player.tilesID));
+        toggle.Toggle.isOn = true;
+        
         Subscriptions();
+    }
+
+    private void UnlockedDesk(string playerDesk)
+    {
+        scrollDeskIndex = unlockedDesks.IndexOf(playerDesk);
+        int scrollIndex = scrollDeskIndex;
+        if (scrollIndex % 2 != 0)
+            scrollIndex--;
+        if (scrollIndex >= deskSprites.Count - 4)
+            scrollIndex = deskSprites.Count - 4;
+        scrollDeskIndex = scrollIndex;
+
+        foreach (var deskToggle in desks)
+        {
+            if(scrollIndex >= unlockedDesks.Count)
+                break;
+
+            deskToggle.ID = unlockedDesks[scrollIndex];
+            deskToggle.Unlock(deskSprites[scrollIndex]);
+            scrollIndex++;
+        }
+        
+        var desk = desks.Find(d => d.ID == player.deskID);
+        desk.Checkmark.enabled = true;
+    }
+
+    public void DeskUp()
+    {
+        if(scrollDeskIndex <= 1)
+            return;
+        scrollDeskIndex-=2;
+        
+        UnselectAll();
+        FillDesks();
+    }
+    public void DeckDown()
+    {
+        if(scrollDeskIndex >= deskSprites.Count - 4)
+            return;
+        scrollDeskIndex+=2;
+        
+        UnselectAll();
+        FillDesks();
+    }
+
+    private void FillDesks()
+    {
+        int scrollIndex = scrollDeskIndex;
+        foreach (var deskToggle in desks)
+        {
+            if(scrollIndex >= unlockedDesks.Count)
+                break;
+            
+            deskToggle.ID = unlockedDesks[scrollIndex];
+            deskToggle.Unlock(deskSprites[scrollIndex]);
+            scrollIndex++;
+            
+            if(deskToggle.ID.Equals(player.deskID))
+                deskToggle.Checkmark.enabled = true;
+        }
+    }
+
+    private void UnselectAll()
+    {
+        foreach (var desk in desks)
+        {
+            desk.Lock();
+            desk.Checkmark.enabled = false;
+        }
+    }
+
+    private void UnlocksProgress()
+    {
+        int coins = player.GoldCoins;
+        int index = 0;
+        while (true)
+        {
+            if(index >= Unlocks.Levels.Length
+               || index >= Unlocks.KeyWords.Length) 
+                break;
+            
+            if (coins < Unlocks.Levels[index])
+                break;
+            
+            coins -= Unlocks.Levels[index];
+            string unlockKey = Unlocks.KeyWords[index];
+
+            if (unlockKey.Equals(tiles[1].ID))
+            {
+                tiles[1].Unlock();
+                index++;
+                continue;
+            }
+            if (unlockKey.Equals(tiles[2].ID))
+            {
+                tiles[2].Unlock(); 
+                index++;
+                continue;
+            }
+            
+            unlockedDesks.Add(unlockKey);
+            index++;
+        }
     }
 
     private void Subscriptions()
     {
-        player.OnGoldChange += GoldChanged;
         foreach (var tileToggle in tiles)
         {
             tileToggle.Toggle.onValueChanged.AddListener(v =>
@@ -56,23 +182,13 @@ public class PlayerProgressUnlockManager : MonoBehaviour
                     return;
                 SelectTiles(tileToggle.ID);
             });
-            if(tileToggle.UnlockButton == null)
-                continue;
-                    
-            tileToggle.UnlockButton.onClick.AddListener(() => TryUnlockTile(tileToggle));
         }
-        foreach (var deskToggle in desks)
+        foreach (var desk in desks)
         {
-            deskToggle.Toggle.onValueChanged.AddListener(v =>
+            desk.Button.onClick.AddListener(() =>
             {
-                if(!v)
-                    return;
-                SelectDesk(deskToggle.ID);
+                SelectDesk(desk.ID);
             });
-            if(deskToggle.UnlockButton == null)
-                continue;
-                    
-            deskToggle.UnlockButton.onClick.AddListener(() => TryUnlockDesk(deskToggle));
         }
     }
 
@@ -84,60 +200,23 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private void SelectDesk(string ID)
     {
         player.deskID = ID;
-        SaveLoadSystem<ProgressData>.Save("Player", player);
-    }
-
-    private void GoldChanged(int coins)
-    {
-        playerGold.text = player.GoldCoins.ToString();
-    }
-
-    private void TryUnlockDesk(DeskToggle desk)
-    {
-        if(!player.TrySpendGold(desk.UnlockCost))
-            return;
-        
-        desk.Unlock();
-        List<string> newPlayerDesks = new();
-        if(player.Desks != null)
-            newPlayerDesks = player.Desks.ToList();
-        newPlayerDesks.Add(desk.ID);
-        player.Desks = newPlayerDesks.ToArray();
-        SaveLoadSystem<ProgressData>.Save("Player", player);
-    }
-
-    private void TryUnlockTile(TileToggle tile)
-    {
-        if(!player.TrySpendGold(tile.UnlockCost))
-            return;
-        
-        tile.Unlock();
-        List<string> newPlayerTiles = new();
-        if(player.TilesPacks != null)
-            newPlayerTiles = player.TilesPacks.ToList();
-        newPlayerTiles.Add(tile.ID);
-        player.TilesPacks = newPlayerTiles.ToArray();
+        foreach (var desk in desks)
+        {
+            bool v = desk.ID.Equals(ID);
+            desk.Checkmark.enabled = v;
+        }
         SaveLoadSystem<ProgressData>.Save("Player", player);
     }
 
     private void OnDestroy()
     {
-        player.OnGoldChange -= GoldChanged;
         foreach (var tileToggle in tiles)
         {
             tileToggle.Toggle.onValueChanged.RemoveAllListeners();
-            if(tileToggle.UnlockButton == null)
-                continue;
-                    
-            tileToggle.UnlockButton.onClick.RemoveAllListeners();
         }
         foreach (var deskToggle in desks)
         {
-            deskToggle.Toggle.onValueChanged.RemoveAllListeners();
-            if(deskToggle.UnlockButton == null)
-                continue;
-                    
-            deskToggle.UnlockButton.onClick.RemoveAllListeners();
+            deskToggle.Button.onClick.RemoveAllListeners();
         }
     }
 }

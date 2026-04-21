@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ce121a65f7b27b48b22e3ed86a2561e
+guid: 335b634d32d391d4c98386738a7f2be1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7981392428395470430
-    second: batterflywtf_0
+      213: -8427860237896154161
+    second: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,17 +122,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: batterflywtf_0
+      name: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 730
-        height: 415
+        width: 1100
+        height: 794
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a1ee74afd56c3190800000000000000
-      internalID: -7981392428395470430
+      spriteID: fc38f8f24c93a0b80800000000000000
+      internalID: -8427860237896154161
       vertices: []
       indices: 
       edges: []
@@ -151,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      batterflywtf_0: -7981392428395470430
+      "\u0421\u043D\u0438\u043C\u043E\u043A_0": -8427860237896154161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

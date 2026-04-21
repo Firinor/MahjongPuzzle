@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: "and not \ncovered"
     m_Metadata:
       m_Items: []
+  - m_Id: 349057377296384
+    m_Localized: PLAY
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

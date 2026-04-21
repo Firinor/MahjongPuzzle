@@ -4,17 +4,20 @@ using UnityEngine.UI;
 public class DeskToggle : MonoBehaviour
 {
     public string ID;
-    public int UnlockCost;
+    public Image Image;
+    public Button Button;
+    public Image Checkmark;
+    public GameObject UnlockButton;
 
-    public Toggle Toggle;
-    public Button UnlockButton;
-
-    public void Unlock()
+    public void Unlock(Sprite image)
     {
-        if(UnlockButton == null)
-            return;
-        
-        Destroy(UnlockButton.gameObject);
-        UnlockButton = null;
+        Image.enabled = true;
+        Image.sprite = image;
+        UnlockButton.SetActive(false);
+    }
+    public void Lock()
+    {
+        Image.enabled = false;
+        UnlockButton.SetActive(true);
     }
 }
