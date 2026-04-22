@@ -4,11 +4,11 @@ using UnityEditor;
 //[CustomEditor(typeof(EditorTools))]
 public static class EditorTools
 {
-    private const float TileDelta = .2f;
-    private const float TileWidth = 2.2f;
-    private const float TileWidthZone = 1.3f;
-    private const float TileHeightZone = 1.6f;
-    private const float TileThickness = 1.6f;
+    private const float TileDelta = .1f;
+    private const float TileWidth = 2.2f/.38f;
+    private const float TileWidthZone = 1.3f/.38f;
+    private const float TileHeightZone = 1.6f/.38f;
+    private const float TileThickness = 1.6f/.38f;
 
     private static Desk2 desk;
     

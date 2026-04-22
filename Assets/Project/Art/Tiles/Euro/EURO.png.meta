@@ -1,0 +1,1358 @@
+fileFormatVersion: 2
+guid: c667e5da2625bc243bcaa312eaf11895
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9113677822686282764
+    second: Majong vector set2 02_2_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 130
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04429281b94a7e70800000000000000
+      internalID: 9113677822686282764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12deeaa0479ca944a6bc96c23d07066
+      internalID: -397145456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_2
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4493b4a08d1c14baf1c9c359bd7901
+      internalID: -1495894683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_3
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c688dfe1686daa645933acb8e09ddcb8
+      internalID: -1865096587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_4
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d03dd4d80324e44cbeba1d710a365ba
+      internalID: -2011059683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_5
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d008cc24b5d9d479402ab4460d4678
+      internalID: -1816160558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_6
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88f3997354fb649bd74f06b4ec347d
+      internalID: 1163649245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_7
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d4ddb8b00879546859887a576c0196
+      internalID: 1080482138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_8
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 2952
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52506231d662ca4fb24534e2658bdca
+      internalID: 1065163340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c145f60a24efe5458da525bdb2cd6df
+      internalID: -711981562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_10
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5aad61571bd3e346b2a695b38b6224e
+      internalID: 450947811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_11
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023c9f9d95623ed4983468e869898d55
+      internalID: 997482794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_12
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b56007b18e2bad41bb504e423081349
+      internalID: 2071849236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_13
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b8cad2f0353d14e9e8361c9a11f885
+      internalID: -2029899194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_14
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03470fd15b469c46b40d0614e5c7440
+      internalID: 778813367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_15
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e76ad5e3e71a148bfbdc98fbfac55b
+      internalID: 502709126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_16
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acbba777075ce3468bb3007b1b4082a
+      internalID: -446891198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_17
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 2362
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba4c006ceb2c1a4d85ac6c634abe824
+      internalID: 220682737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84c9625d04e24c489a1c3e738b00c87
+      internalID: -444077822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_19
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c557305fe774f45a4bb1af30521c6b
+      internalID: 146325764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_20
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4914bbcfa05a34b8ba27dc6a1d2ded
+      internalID: 584157737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_21
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cb4b3ca6dc6c8498e052e6c177d89b
+      internalID: -852541629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_22
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d670028c94ab7dc4aa87c93650331657
+      internalID: -1601825561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_23
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db94412a60a78434c8d6badd8a81e5c6
+      internalID: -961800389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_24
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f9d49888c7a0245b3e695233bcd3c4
+      internalID: 911480276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_25
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80197228abeae184f9f5ad8b86675a43
+      internalID: -1566477479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_26
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 1772
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101da44033057fe4fa2c4b2272a62432
+      internalID: 960313810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaca642d43b09c4eafd6b61efa06638
+      internalID: -27129654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_28
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63de3f57a65d0d14d93343583fbe52b0
+      internalID: 998157302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_29
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdca8b008f2f95b49945b287110aac79
+      internalID: -767143765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_30
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccdfe76e2b2a2d44af532a7cb643dbc
+      internalID: 938840414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_31
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be62e39241a7f54aa762c2b8fdf349c
+      internalID: 148532054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_32
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e8c2bfbbffb1f4b99c3b34907e12dd
+      internalID: -1767192176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_33
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467a2a59010f03f499fef9097b184b63
+      internalID: 1501047550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_34
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a6736dbe9a6ae4896f4ba7672c605a
+      internalID: 2021150377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_35
+      rect:
+        serializedVersion: 2
+        x: 3464
+        y: 1182
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e24d26a816782940a6f064a039c80eb
+      internalID: 62162865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1db5b8e33796b247adc5fa772a008a3
+      internalID: -33896135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_37
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8d9247bfff70348a66aca09e0ebee7
+      internalID: -1525083480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_38
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a013ea983823834b966f8248d8b2787
+      internalID: -684631846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_39
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91247343152d25e4eab68fcdeaa04429
+      internalID: 1120558988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_40
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdfe72884260124faf21ada58e65b17
+      internalID: 889108731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_41
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab01c8f6a60a4b44b4156b3ce1618cc
+      internalID: -606453599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_42
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75001eb44c25ef44385d1e3d3da6ad26
+      internalID: 2091152179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_43
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 592
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fcaeca317e537409a1fb837be695f4
+      internalID: -1818663883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461629b5fa822954aba160e3b4c1b3db
+      internalID: 705435210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_45
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb4ed6c100dc2045a575a00b94f620a
+      internalID: 1546777850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_46
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29572cec8714e8d4a8259d55a18084a9
+      internalID: -2045872134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_47
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c500d2314c42ee47aa10d9314aeef71
+      internalID: -278676876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_48
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305e720c8406f484090f1b329511198c
+      internalID: 921855822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_49
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c362927582e146e499243db2b751b2a7
+      internalID: -988206062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_50
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb8e897e0b84bf4799534be3267fed9
+      internalID: -299689759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Majong vector set2 02_2_51
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 2
+        width: 433
+        height: 590
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1767b74afa6c8534ea693158d8d57017
+      internalID: 1813321593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 389509e448037224d8b59c37f027284a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":433.0,"y":590.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Majong vector set2 02_2_0: 9113677822686282764
+      Majong vector set2 02_2_1: -397145456
+      Majong vector set2 02_2_10: 450947811
+      Majong vector set2 02_2_11: 997482794
+      Majong vector set2 02_2_12: 2071849236
+      Majong vector set2 02_2_13: -2029899194
+      Majong vector set2 02_2_14: 778813367
+      Majong vector set2 02_2_15: 502709126
+      Majong vector set2 02_2_16: -446891198
+      Majong vector set2 02_2_17: 220682737
+      Majong vector set2 02_2_18: -444077822
+      Majong vector set2 02_2_19: 146325764
+      Majong vector set2 02_2_2: -1495894683
+      Majong vector set2 02_2_20: 584157737
+      Majong vector set2 02_2_21: -852541629
+      Majong vector set2 02_2_22: -1601825561
+      Majong vector set2 02_2_23: -961800389
+      Majong vector set2 02_2_24: 911480276
+      Majong vector set2 02_2_25: -1566477479
+      Majong vector set2 02_2_26: 960313810
+      Majong vector set2 02_2_27: -27129654
+      Majong vector set2 02_2_28: 998157302
+      Majong vector set2 02_2_29: -767143765
+      Majong vector set2 02_2_3: -1865096587
+      Majong vector set2 02_2_30: 938840414
+      Majong vector set2 02_2_31: 148532054
+      Majong vector set2 02_2_32: -1767192176
+      Majong vector set2 02_2_33: 1501047550
+      Majong vector set2 02_2_34: 2021150377
+      Majong vector set2 02_2_35: 62162865
+      Majong vector set2 02_2_36: -33896135
+      Majong vector set2 02_2_37: -1525083480
+      Majong vector set2 02_2_38: -684631846
+      Majong vector set2 02_2_39: 1120558988
+      Majong vector set2 02_2_4: -2011059683
+      Majong vector set2 02_2_40: 889108731
+      Majong vector set2 02_2_41: -606453599
+      Majong vector set2 02_2_42: 2091152179
+      Majong vector set2 02_2_43: -1818663883
+      Majong vector set2 02_2_44: 705435210
+      Majong vector set2 02_2_45: 1546777850
+      Majong vector set2 02_2_46: -2045872134
+      Majong vector set2 02_2_47: -278676876
+      Majong vector set2 02_2_48: 921855822
+      Majong vector set2 02_2_49: -988206062
+      Majong vector set2 02_2_5: -1816160558
+      Majong vector set2 02_2_50: -299689759
+      Majong vector set2 02_2_51: 1813321593
+      Majong vector set2 02_2_52: -725481943
+      Majong vector set2 02_2_6: 1163649245
+      Majong vector set2 02_2_7: 1080482138
+      Majong vector set2 02_2_8: 1065163340
+      Majong vector set2 02_2_9: -711981562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

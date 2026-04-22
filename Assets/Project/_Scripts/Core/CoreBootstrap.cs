@@ -71,7 +71,7 @@ public class CoreBootstrap : MonoBehaviour
             tile.DisableVisual();
             tile.gameObject.name = "Tile" + tilesView.Count;
             tile.transform.position = deckTile.position;
-            int floor = (int)(deckTile.position.z / -1.6f);
+            int floor = (int)(deckTile.position.z / -0.607f);
             tile.SetData(listTiles[index]);
             index++;
             tile.SetDefaultMaterial(floorMaterials[floor]);
@@ -135,64 +135,13 @@ public class CoreBootstrap : MonoBehaviour
         rules.UnselectTile();
         
         yield return null;
-        
-        List<MajhongTileView> tilesToSpawn = new();
-        List<Sprite> tilesShuffled = GetShuffeledDatas(listTiles);
-        
-        //Decomposition
-        int Count = listTiles.Count;
-        while (tilesToSpawn.Count < Count)
+
+        List<MajhongTileView> tilesToSpawn = (player.Difficulty) switch
         {
-            List<MajhongTileView> tilesToCheck = new(listTiles);
-            MajhongTileView randomTile1 = null;
-            while(randomTile1 == null)
-            {
-                if (tilesToCheck.Count > 0)
-                {
-                    MajhongTileView randomTile = tilesToCheck.PullRandom();
-                    if (MajhongSolitaireRules.CheckNeighbors(randomTile))
-                        continue;
-                    randomTile1 = randomTile;
-                    listTiles.Remove(randomTile1);
-                }
-                else
-                {
-                    MajhongTileView randomTile = listTiles.PullRandom();
-                    randomTile1 = randomTile;
-                }
-                tilesToSpawn.Add(randomTile1);
-            }
-            MajhongTileView randomTile2 = null;
-            while(randomTile2 == null)
-            {
-                if (tilesToCheck.Count > 0)
-                {
-                    MajhongTileView randomTile = tilesToCheck.PullRandom();
-                    if (MajhongSolitaireRules.CheckNeighbors(randomTile))
-                        continue;
-                    randomTile2 = randomTile;
-                    listTiles.Remove(randomTile2);
-                }
-                else
-                {
-                    MajhongTileView randomTile = listTiles.PullRandom();
-                    randomTile2 = randomTile;
-                }
-                tilesToSpawn.Add(randomTile2);
-            }
-            randomTile1.gameObject.SetActive(false);
-            randomTile2.gameObject.SetActive(false);
-        }
-        
-        //Initialization
-        int currentIndex = 0;
-        foreach (var tile in tilesToSpawn)
-        {
-            tile.EnableVisual();
-            tile.SetData(tilesShuffled[currentIndex]);
-            tile.Unselect();
-            currentIndex++;
-        }
+            //0 => DifficultyShuffle.ShuffleEasy(listTiles),
+            //2 => DifficultyShuffle.ShuffleHard(listTiles),
+            _ => DifficultyShuffle.ShuffleNormal(listTiles),
+        };
 
         //Animations
         tilesToSpawn = tilesToSpawn
@@ -286,28 +235,5 @@ public class CoreBootstrap : MonoBehaviour
 
         rules.CheckWinCondition();
         spells.ButtonsOn();
-    }
-    
-    private List<Sprite> GetShuffeledDatas(List<MajhongTileView> listTiles)
-    {
-        List<Sprite> result = new();
-        foreach (var tileView in listTiles)
-        {
-            result.Add(tileView.Sprite);
-        }
-
-        var sorted = result
-            .OrderBy(t => t.GetHashCode())
-            .ToList();
-        
-        var pairs = new List<List<Sprite>>();
-        for (int i = 0; i < sorted.Count; i += 2)
-        {
-            pairs.Add(new(){sorted[i], sorted[i+1]});
-        }
-        
-        pairs.Shuffle();
-        
-        return pairs.SelectMany(p => p).ToList();
     }
 }

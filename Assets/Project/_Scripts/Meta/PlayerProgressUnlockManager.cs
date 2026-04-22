@@ -28,7 +28,7 @@ public static class Unlocks
         "Mountain",
         "Rabbit",
         "Castle",
-        "Batterfly",
+        "Butterfly",
     };
 }
 
@@ -41,6 +41,8 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     [SerializeField] 
     private List<TileToggle> tiles;
+    [SerializeField] 
+    private List<Toggle> difficulty;
     [SerializeField] 
     private List<DeskToggle> desks;
     [SerializeField] 
@@ -65,6 +67,9 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         tiles[0].Toggle.isOn = false;
         var toggle = tiles.Find(d => d.ID.Equals(player.tilesID));
         toggle.Toggle.isOn = true;
+        
+        difficulty[0].isOn = false;
+        difficulty[player.Difficulty].isOn = true;
         
         Subscriptions();
     }
@@ -174,6 +179,15 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     private void Subscriptions()
     {
+        foreach (var d in difficulty)
+        {
+            d.onValueChanged.AddListener(v =>
+            {
+                if(!v)
+                    return;
+                SelectDifficulty(difficulty.IndexOf(d));
+            });
+        }
         foreach (var tileToggle in tiles)
         {
             tileToggle.Toggle.onValueChanged.AddListener(v =>
@@ -190,6 +204,12 @@ public class PlayerProgressUnlockManager : MonoBehaviour
                 SelectDesk(desk.ID);
             });
         }
+    }
+
+    private void SelectDifficulty(int value)
+    {
+        player.Difficulty = value;
+        SaveLoadSystem<ProgressData>.Save("Player", player);
     }
 
     private void SelectTiles(string ID)
@@ -210,13 +230,17 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        foreach (var tileToggle in tiles)
+        foreach (var t in tiles)
         {
-            tileToggle.Toggle.onValueChanged.RemoveAllListeners();
+            t.Toggle.onValueChanged.RemoveAllListeners();
         }
-        foreach (var deskToggle in desks)
+        foreach (var d in difficulty)
         {
-            deskToggle.Button.onClick.RemoveAllListeners();
+            d.onValueChanged.RemoveAllListeners();
+        }
+        foreach (var d in desks)
+        {
+            d.Button.onClick.RemoveAllListeners();
         }
     }
 }

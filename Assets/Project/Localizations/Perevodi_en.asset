@@ -50,6 +50,18 @@ MonoBehaviour:
     m_Localized: PLAY
     m_Metadata:
       m_Items: []
+  - m_Id: 2541832768249856
+    m_Localized: EASY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541908928421888
+    m_Localized: NORM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541956210810880
+    m_Localized: HARD
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

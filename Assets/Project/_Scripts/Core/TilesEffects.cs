@@ -18,7 +18,7 @@ public class TilesEffects : MonoBehaviour
     [SerializeField] 
     private TileCollideEffect tileCollideEffect;
     
-    private const float halfTile3 = 1.1f;
+    private const float halfTile3 = .418f;
     public void FlyTiles(MajhongTileView tile1, MajhongTileView tile2, 
         int scores, Action callback)
     {

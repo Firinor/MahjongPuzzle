@@ -47,6 +47,18 @@ MonoBehaviour:
     m_Key: Tutorial3NotCovered
     m_Metadata:
       m_Items: []
+  - m_Id: 2541832768249856
+    m_Key: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541908928421888
+    m_Key: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541956210810880
+    m_Key: Hard
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
