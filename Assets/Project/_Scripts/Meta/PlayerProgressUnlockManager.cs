@@ -3,35 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public static class Unlocks
-{
-    public static readonly int[] Levels =
-    {
-        3000,//Cat
-        4000,//Euro
-        5000,//Flower
-        7000,//Plane
-        9000,//Gems
-        11000,//Mountain
-        13000,//Rabbit
-        15000,//Castle
-        17000,//Batterfly
-        99999
-    };
-    public static readonly string[] KeyWords =
-    {
-        "Cat",
-        "Euro",
-        "Flower",
-        "Plane",
-        "Gems",
-        "Mountain",
-        "Rabbit",
-        "Castle",
-        "Butterfly",
-    };
-}
-
 public class PlayerProgressUnlockManager : MonoBehaviour
 {
     [SerializeField] 

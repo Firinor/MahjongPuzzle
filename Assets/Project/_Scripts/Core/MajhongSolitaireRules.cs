@@ -15,6 +15,10 @@ public class MajhongSolitaireRules : MonoBehaviour
     [SerializeField] 
     private FirAnimationsManager winPopup;
     [SerializeField] 
+    private WinLevelUnlockAnimations winAnimations;
+    [SerializeField] 
+    private float winAnimationsDelay;
+    [SerializeField] 
     private FirAnimationsManager losePopup;
     
     [SerializeField] 
@@ -116,7 +120,6 @@ public class MajhongSolitaireRules : MonoBehaviour
         
         effects.FlyTiles(tile1, tile, scores, () =>
         {
-            player.AddGold(scores);
             roundScores += scores;
             roundPlayerGold.text = "+" + roundScores;
             pool.Release(tile1);
@@ -162,9 +165,19 @@ public class MajhongSolitaireRules : MonoBehaviour
     [ContextMenu("Win")]
     public void Win()
     {
+        int bonus = player.Difficulty switch
+        {
+            1 => 1000,
+            2 => 5000,
+            _ => 0
+        };
+        
+        winAnimations.Initialize(player, roundScores, bonus);
+        player.AddGold(roundScores + bonus);
         winPopup.gameObject.SetActive(true);
         winPopup.ToStartPoint();
         winPopup.StartAnimations();
+        winAnimations.Play(delay: winAnimationsDelay);
     }
     [ContextMenu("Lose")]
     public void Lose()
