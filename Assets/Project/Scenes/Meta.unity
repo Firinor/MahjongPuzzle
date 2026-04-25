@@ -1998,6 +1998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProgressUnlockManager
   playerGold: {fileID: 216322953}
+  unlocks: {fileID: 11400000, guid: dd449b549beae0e468c4de99e1269b31, type: 2}
   tiles:
   - {fileID: 8159909750896466614}
   - {fileID: 1324587391}
@@ -4899,6 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 1
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -5561,7 +5563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 208150597520311089, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 1250
       objectReference: {fileID: 0}
     - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5569,6 +5571,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686405483283043385, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: EditorEnable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2692341582520316626, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
@@ -5677,6 +5683,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6519639468631344583, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529874367442985623, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: EditorEnable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7934380919578498716, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}

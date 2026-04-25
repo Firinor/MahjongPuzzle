@@ -62,6 +62,34 @@ MonoBehaviour:
     m_Localized: HARD
     m_Metadata:
       m_Items: []
+  - m_Id: 3866335490269184
+    m_Localized: REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866500271890432
+    m_Localized: BONUS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866586745856000
+    m_Localized: REPEAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866717377454080
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866804644143104
+    m_Localized: NEW MODE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3867008793501696
+    m_Localized: "NO TURNS \nLEFT"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3867268135706624
+    m_Localized: Shuffle
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

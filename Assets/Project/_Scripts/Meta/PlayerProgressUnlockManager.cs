@@ -10,6 +10,9 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     
     private ProgressData player;
 
+    [SerializeField]
+    private Unlocks unlocks;
+    
     [SerializeField] 
     private List<TileToggle> tiles;
     [SerializeField] 
@@ -120,15 +123,15 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         int index = 0;
         while (true)
         {
-            if(index >= Unlocks.Levels.Length
-               || index >= Unlocks.KeyWords.Length) 
+            if(index >= unlocks.Levels.Length
+               || index >= unlocks.KeyWords.Length) 
                 break;
             
-            if (coins < Unlocks.Levels[index])
+            if (coins < unlocks.Levels[index])
                 break;
             
-            coins -= Unlocks.Levels[index];
-            string unlockKey = Unlocks.KeyWords[index];
+            coins -= unlocks.Levels[index];
+            string unlockKey = unlocks.KeyWords[index];
 
             if (unlockKey.Equals(tiles[1].ID))
             {

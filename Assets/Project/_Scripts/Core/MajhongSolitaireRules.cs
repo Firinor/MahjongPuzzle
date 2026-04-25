@@ -17,8 +17,6 @@ public class MajhongSolitaireRules : MonoBehaviour
     [SerializeField] 
     private WinLevelUnlockAnimations winAnimations;
     [SerializeField] 
-    private float winAnimationsDelay;
-    [SerializeField] 
     private FirAnimationsManager losePopup;
     
     [SerializeField] 
@@ -177,7 +175,7 @@ public class MajhongSolitaireRules : MonoBehaviour
         winPopup.gameObject.SetActive(true);
         winPopup.ToStartPoint();
         winPopup.StartAnimations();
-        winAnimations.Play(delay: winAnimationsDelay);
+        winAnimations.Play();
     }
     [ContextMenu("Lose")]
     public void Lose()

@@ -59,6 +59,34 @@ MonoBehaviour:
     m_Key: Hard
     m_Metadata:
       m_Items: []
+  - m_Id: 3866335490269184
+    m_Key: WinPopupReward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866500271890432
+    m_Key: WinPopupBonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866586745856000
+    m_Key: WinPopupRepeat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866717377454080
+    m_Key: WinPopupExit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3866804644143104
+    m_Key: WinPopupNewMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3867008793501696
+    m_Key: LosePopupNoTurn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3867268135706624
+    m_Key: LosePopupShuffle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

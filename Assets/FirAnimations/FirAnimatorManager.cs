@@ -9,6 +9,7 @@ namespace FirAnimations
 {
     public class FirAnimationsManager : MonoBehaviour
     {
+        public bool EditorEnable = true;
         [SerializeField, Range(0, 1)]
         private float _time;
         public float _timeLimit;

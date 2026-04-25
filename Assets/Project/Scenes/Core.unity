@@ -390,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499639040905706711, guid: 51532a7ee1897324aa57ad900b2ce12e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -842,7 +842,6 @@ MonoBehaviour:
   pool: {fileID: 171712896}
   winPopup: {fileID: 1536897799}
   winAnimations: {fileID: 1536897800}
-  winAnimationsDelay: 2
   losePopup: {fileID: 1583292495}
   winPopupGoldText: {fileID: 853619252}
   allPlayerGold: {fileID: 1039507820}
@@ -1609,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -1844,6 +1844,7 @@ GameObject:
   - component: {fileID: 363697086}
   - component: {fileID: 363697088}
   - component: {fileID: 363697087}
+  - component: {fileID: 363697089}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1970,6 +1971,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363697085}
   m_CullTransparentMesh: 1
+--- !u!114 &363697089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363697085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866717377454080
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 363697087}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &368802416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2023,7 @@ GameObject:
   - component: {fileID: 368802420}
   - component: {fileID: 368802419}
   - component: {fileID: 368802418}
+  - component: {fileID: 368802421}
   m_Layer: 5
   m_Name: BonusText (TMP) (2)
   m_TagString: Untagged
@@ -2020,6 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -2076,7 +2119,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281149377
+    rgba: 2959297
   m_fontColor: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2147,6 +2190,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368802416}
   m_CullTransparentMesh: 1
+--- !u!114 &368802421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368802416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866500271890432
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 368802419}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &392849286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -2384,6 +2468,7 @@ GameObject:
   - component: {fileID: 438296452}
   - component: {fileID: 438296454}
   - component: {fileID: 438296453}
+  - component: {fileID: 438296455}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2430,7 +2515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Repeat
+  m_text: "\u0415\u0449\u0451 \u0440\u0430\u0437"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42af12a364dbffe498b132f93206a952, type: 2}
   m_sharedMaterial: {fileID: 2053408797042377856, guid: 42af12a364dbffe498b132f93206a952, type: 2}
@@ -2474,7 +2559,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -2510,6 +2595,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438296451}
   m_CullTransparentMesh: 1
+--- !u!114 &438296455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438296451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866586745856000
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 438296453}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &448367823 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3788540492525088987, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -2533,6 +2658,7 @@ GameObject:
   - component: {fileID: 503561919}
   - component: {fileID: 503561918}
   - component: {fileID: 503561920}
+  - component: {fileID: 503561921}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2671,6 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -2698,6 +2825,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
   EndPosition: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+--- !u!114 &503561921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503561916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866717377454080
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 503561918}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &514900070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,6 +3505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -3484,7 +3652,7 @@ RectTransform:
   m_GameObject: {fileID: 563138749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3648, y: 1.3647999, z: 1}
+  m_LocalScale: {x: -1.3652804, y: 1.3652803, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -3506,6 +3674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -3728,6 +3897,7 @@ GameObject:
   - component: {fileID: 578999398}
   - component: {fileID: 578999402}
   - component: {fileID: 578999401}
+  - component: {fileID: 578999403}
   m_Layer: 5
   m_Name: BonusCounterText (TMP)
   m_TagString: Untagged
@@ -3774,7 +3944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +0
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42af12a364dbffe498b132f93206a952, type: 2}
   m_sharedMaterial: {fileID: 2053408797042377856, guid: 42af12a364dbffe498b132f93206a952, type: 2}
@@ -3783,8 +3953,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281149377
-  m_fontColor: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
+    rgba: 2959297
+  m_fontColor: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3854,6 +4024,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578999397}
   m_CullTransparentMesh: 1
+--- !u!114 &578999403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578999397}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
+  Loop: 0
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartPosition: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 0}
+  EndPosition: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
 --- !u!1 &579295895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +4156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b312d9cb6ae4396b1b4be4621228d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirSizeAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -3985,6 +4196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -4100,6 +4312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc4dc8aa48347c41b29bcf5d6a52eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirShaderFieldAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -4390,7 +4603,7 @@ RectTransform:
   m_GameObject: {fileID: 615374418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3972, y: 1.3972, z: 1}
+  m_LocalScale: {x: -1.3970169, y: 1.3970169, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -4412,6 +4625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -5331,7 +5545,7 @@ RectTransform:
   m_GameObject: {fileID: 751581594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3351997, y: 1.3351997, z: 1}
+  m_LocalScale: {x: 1.3347193, y: 1.3347193, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -5353,6 +5567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -6093,6 +6308,7 @@ GameObject:
   - component: {fileID: 853619253}
   - component: {fileID: 853619252}
   - component: {fileID: 853619254}
+  - component: {fileID: 853619255}
   m_Layer: 5
   m_Name: RewardText (TMP) (1)
   m_TagString: Untagged
@@ -6231,6 +6447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -6258,6 +6475,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartZoom: {x: 0, y: 0, z: 0}
   EndZoom: {x: 1, y: 1, z: 1}
+--- !u!114 &853619255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853619250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866335490269184
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 853619252}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &865444267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6419,6 +6676,7 @@ GameObject:
   - component: {fileID: 880620188}
   - component: {fileID: 880620187}
   - component: {fileID: 880620189}
+  - component: {fileID: 880620190}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6557,6 +6815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -6584,6 +6843,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
   EndPosition: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+--- !u!114 &880620190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880620185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3867268135706624
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 880620187}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &887737655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6672,6 +6971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -6975,7 +7275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7012,6 +7312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -7051,6 +7352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b312d9cb6ae4396b1b4be4621228d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirSizeAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -7238,6 +7540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -7293,6 +7596,7 @@ GameObject:
   - component: {fileID: 975789375}
   - component: {fileID: 975789374}
   - component: {fileID: 975789376}
+  - component: {fileID: 975789377}
   m_Layer: 5
   m_Name: HeaderText (TMP)
   m_TagString: Untagged
@@ -7432,6 +7736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -7459,6 +7764,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {r: 0.2, g: 0.26666668, b: 0.23921569, a: 0}
   EndPosition: {r: 0.2, g: 0.26666668, b: 0.23921569, a: 1}
+--- !u!114 &975789377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975789372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3867008793501696
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 975789374}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &978219988
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,7 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7547,6 +7892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -7906,6 +8252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fd95133ad84bceb410ada04985dbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirPositionAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -8197,6 +8544,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039507818}
   m_CullTransparentMesh: 1
+--- !u!1 &1078460093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6919313930098297999, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+  m_PrefabInstance: {fileID: 3068807200501766586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1078460096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4946867487196004838, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+  m_PrefabInstance: {fileID: 3068807200501766586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078460093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1078460098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078460093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:e3d8b332123a7c34c8a0574c8dcbff1e
+    m_TableEntryReference:
+      m_KeyId: 3866804644143104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078460096}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1095990311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8717,6 +9120,7 @@ GameObject:
   - component: {fileID: 1147672024}
   - component: {fileID: 1147672028}
   - component: {fileID: 1147672027}
+  - component: {fileID: 1147672029}
   m_Layer: 5
   m_Name: RewardCounterText (TMP)
   m_TagString: Untagged
@@ -8763,7 +9167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +0
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42af12a364dbffe498b132f93206a952, type: 2}
   m_sharedMaterial: {fileID: 2053408797042377856, guid: 42af12a364dbffe498b132f93206a952, type: 2}
@@ -8772,8 +9176,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281149377
-  m_fontColor: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
+    rgba: 2959297
+  m_fontColor: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8843,6 +9247,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147672023}
   m_CullTransparentMesh: 1
+--- !u!114 &1147672029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147672023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9b8826351acb643a0ebd7230b090c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirTextColorAnimation
+  EditorEnable: 0
+  Loop: 0
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartPosition: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 0}
+  EndPosition: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
 --- !u!1 &1154044738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9075,6 +9519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -9361,6 +9806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -9436,6 +9882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -9691,6 +10138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -10032,7 +10480,7 @@ RectTransform:
   m_GameObject: {fileID: 1391776787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3027996, y: 1.3027996, z: 1}
+  m_LocalScale: {x: 1.3029827, y: 1.3029827, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -10092,6 +10540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -10315,6 +10764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -10467,6 +10917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74004faf8130b4c4daff6b8f96961403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirAnimationsManager
+  EditorEnable: 1
   _time: 0
   _timeLimit: 4
   animations_and_startTime:
@@ -10636,6 +11087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a0c14a05ce4b51b8e0862d21b5847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirZoomAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -10848,7 +11300,7 @@ RectTransform:
   - {fileID: 1659800385}
   - {fileID: 89939118}
   - {fileID: 579295896}
-  - {fileID: 1617217747}
+  - {fileID: 1785287387}
   m_Father: {fileID: 765960571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10876,6 +11328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74004faf8130b4c4daff6b8f96961403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirAnimationsManager
+  EditorEnable: 1
   _time: 1
   _timeLimit: 20
   animations_and_startTime:
@@ -10888,13 +11341,13 @@ MonoBehaviour:
   - Animation: {fileID: 579295899}
     StartTime: 1
   - Animation: {fileID: 2017609759}
-    StartTime: 0.9
+    StartTime: 1
   - Animation: {fileID: 392849291}
     StartTime: 2
   - Animation: {fileID: 1308338960}
     StartTime: 3
   - Animation: {fileID: 1457917104}
-    StartTime: 4
+    StartTime: 3.5
   - Animation: {fileID: 751581596}
     StartTime: 2
   - Animation: {fileID: 615374420}
@@ -10915,18 +11368,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b238ed25c19c3f4da2524c7d9c28152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinLevelUnlockAnimations
-  numeratorSpeed: 1000
+  numeratorSpeed: 200
+  delay: 4
   currentSlider: {fileID: 1551384823}
   inLevelSlider: {fileID: 741541768}
   bonusSlider: {fileID: 557628159}
   sliderZoomAnimation: {fileID: 1198666809}
   rewardText: {fileID: 1147672027}
   rewardTextAnimation: {fileID: 853619254}
+  rewardTextAnimation2: {fileID: 1147672029}
   bonusText: {fileID: 578999401}
   bonusTextAnimation: {fileID: 368802418}
+  bonusTextAnimation2: {fileID: 578999403}
   startText: {fileID: 1955673766}
   endText: {fileID: 2140868872}
-  unlockView: {fileID: 0}
+  unlocks: {fileID: 11400000, guid: dd449b549beae0e468c4de99e1269b31, type: 2}
+  unlockView: {fileID: 1785287389}
 --- !u!1001 &1550485702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11136,7 +11593,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 208150597520311089, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1250
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11145,6 +11602,10 @@ PrefabInstance:
     - target: {fileID: 549930120511573523, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686405483283043385, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: EditorEnable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2692341582520316626, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_IsActive
@@ -11254,9 +11715,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6529874367442985623, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: EditorEnable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7934380919578498716, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: _time
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934380919578498716, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: EditorEnable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8785716608361402585, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11460,6 +11929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74004faf8130b4c4daff6b8f96961403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirAnimationsManager
+  EditorEnable: 1
   _time: 0
   _timeLimit: 6
   animations_and_startTime:
@@ -11558,81 +12028,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1482536227358839914, guid: 8fc29ed3fdf331d49961df10c1ba00ae, type: 3}
   m_PrefabInstance: {fileID: 1589420105}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1617217746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1617217747}
-  - component: {fileID: 1617217749}
-  - component: {fileID: 1617217748}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1617217747
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617217746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1536897796}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1094, y: 617}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1617217748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617217746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.49019608}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 4956841010941923622, guid: f59a11297a97a7e479094b31bf8f7b41, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1617217749
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617217746}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1619948480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12593,6 +12988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 0
   Loop: 1
   Curve:
     serializedVersion: 2
@@ -12670,6 +13066,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &1785287387 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+  m_PrefabInstance: {fileID: 3068807200501766586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1785287389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7438317841455028412, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+  m_PrefabInstance: {fileID: 3068807200501766586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d0a122a37d4e4fa69eb062639878de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnlockView
 --- !u!224 &1835009417 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -12932,6 +13344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -13404,6 +13817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -13444,7 +13858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13503,6 +13917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fd95133ad84bceb410ada04985dbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirPositionAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -13646,6 +14061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b312d9cb6ae4396b1b4be4621228d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirSizeAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -13702,6 +14118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fd95133ad84bceb410ada04985dbc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirPositionAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -14308,6 +14725,154 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 2513329884203442546, guid: 38e121ff3cfa7984990a7666e43d7906, type: 3}
   m_PrefabInstance: {fileID: 2239636051237845596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3068807200501766586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1536897796}
+    m_Modifications:
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2544202109498209677, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_Name
+      value: UnlockView
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569693311699812484, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569693311699812484, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569693311699812484, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.016838092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.016838092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.016838092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6919313930098297999, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1078460098}
+  m_SourcePrefab: {fileID: 100100000, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
 --- !u!1001 &4256087327417989004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14499,7 +15064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -118.37338
+      value: -118.33035
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.y

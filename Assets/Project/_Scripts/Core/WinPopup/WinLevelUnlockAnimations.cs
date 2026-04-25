@@ -1,14 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using FirAnimations;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class WinLevelUnlockAnimations : MonoBehaviour
 {
     [SerializeField]
-    private float numeratorSpeed = 1000;
+    private float numeratorSpeed = 200;
+    [SerializeField]
+    private float delay = 4;
     [SerializeField]
     private Slider currentSlider;
     [SerializeField]
@@ -22,13 +24,19 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     [SerializeField]
     private FirAnimation rewardTextAnimation;
     [SerializeField]
+    private FirAnimation rewardTextAnimation2;
+    [SerializeField]
     private TextMeshProUGUI bonusText;
     [SerializeField]
     private FirAnimation bonusTextAnimation;
     [SerializeField]
+    private FirAnimation bonusTextAnimation2;
+    [SerializeField]
     private TextMeshProUGUI startText;
     [SerializeField]
     private TextMeshProUGUI endText;
+    [SerializeField]
+    private Unlocks unlocks;
     [SerializeField]
     private UnlockView unlockView;
     
@@ -41,12 +49,13 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     private float currentBonus;
 
     private int playerLevelIndex;
+
+    private List<Sprite> levelRewards = new(); 
     
     public void Initialize(ProgressData player, int reward, int bonus = 0)
     {
         //this.player = player;
         this.reward = reward;
-        this.reward = 10000;
         this.bonus = bonus;
         
         playerLevelIndex = 0;
@@ -54,14 +63,14 @@ public class WinLevelUnlockAnimations : MonoBehaviour
         int currentPlayerGold = startGold;
         while (true)
         {
-            if(playerLevelIndex >= Unlocks.Levels.Length
-               || playerLevelIndex >= Unlocks.KeyWords.Length) 
+            if(playerLevelIndex >= unlocks.Levels.Length
+               || playerLevelIndex >= unlocks.KeyWords.Length) 
                 break;
             
-            if (currentPlayerGold < Unlocks.Levels[playerLevelIndex])
+            if (currentPlayerGold < unlocks.Levels[playerLevelIndex])
                 break;
             
-            currentPlayerGold -= Unlocks.Levels[playerLevelIndex];
+            currentPlayerGold -= unlocks.Levels[playerLevelIndex];
             playerLevelIndex++;
         }
 
@@ -76,12 +85,12 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     {
         int lastLevelGold = 0;
         if (playerLevelIndex > 0
-            && playerLevelIndex < Unlocks.Levels.Length)
-            lastLevelGold = Unlocks.Levels[playerLevelIndex-1];
+            && playerLevelIndex < unlocks.Levels.Length)
+            lastLevelGold = unlocks.Levels[playerLevelIndex-1];
 
         int nextLevelGold = 1;
-        if (playerLevelIndex < Unlocks.Levels.Length)
-            nextLevelGold = Unlocks.Levels[playerLevelIndex];
+        if (playerLevelIndex < unlocks.Levels.Length)
+            nextLevelGold = unlocks.Levels[playerLevelIndex];
         
         SlidersSetValues(lastLevelGold, nextLevelGold);
     }
@@ -98,17 +107,18 @@ public class WinLevelUnlockAnimations : MonoBehaviour
         endText.text = max.ToString();
     }
 
-    public void Play(float delay = 0)
+    public void Play()
     {
-        StartCoroutine(WinAnlockAnimations(delay));
+        StartCoroutine(WinAnlockAnimations());
     }
 
-    private IEnumerator WinAnlockAnimations(float delay)
+    private IEnumerator WinAnlockAnimations()
     {
         yield return new WaitForSeconds(delay);
 
         rewardTextAnimation.OnComplete = () => StartCoroutine(RewardCounter());
         rewardTextAnimation.Play();
+        rewardTextAnimation2.Play();
     }
 
     private IEnumerator RewardCounter()
@@ -129,6 +139,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
         {
             bonusTextAnimation.OnComplete = () => StartCoroutine(BonusCounter());
             bonusTextAnimation.Play();
+            bonusTextAnimation2.Play();
         }
         else
         {
@@ -155,7 +166,22 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private IEnumerator ShowUnlocks()
     {
-        throw new System.NotImplementedException();
+        if(levelRewards.Count <= 0)
+            yield break;
+
+        bool buttonClick = false;
+        unlockView.CloseButton.onClick.RemoveAllListeners();
+        unlockView.CloseButton.onClick.AddListener(() => buttonClick = true);
+        foreach (var sprite in levelRewards)
+        {
+            unlockView.Content.sprite = sprite;
+            unlockView.FirRotate.Play();
+            unlockView.Animations.ToStartPoint();
+            unlockView.Animations.StartAnimations();
+            unlockView.gameObject.SetActive(true);
+            yield return new WaitUntil(() => buttonClick);
+            buttonClick = false;
+        }
     }
     
     private void SetBonusSlider()
@@ -176,8 +202,14 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private void NextLevel()
     {
+        levelRewards.Add(unlocks.Sprites[playerLevelIndex]);
         playerLevelIndex++;
         sliderZoomAnimation.Play();
         SlidersByLevel();
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

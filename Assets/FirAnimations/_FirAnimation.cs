@@ -8,6 +8,7 @@ namespace FirAnimations
 {
     public abstract class FirAnimation : MonoBehaviour
     {
+        public bool EditorEnable = true;
         [Range(0, 1)]
         protected float Time;
         public bool Loop;

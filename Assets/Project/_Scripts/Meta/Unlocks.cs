@@ -1,6 +1,9 @@
-﻿public static class Unlocks
+﻿using UnityEngine;
+
+[CreateAssetMenu(fileName = "Unlocks", menuName = "Majhong/Unlocks")]
+public class Unlocks : ScriptableObject
 {
-    public static readonly int[] Levels =
+    public int[] Levels =
     {
         3000,//Cat
         7000,//Euro
@@ -12,7 +15,7 @@
         68000,//Castle
         85000,//Batterfly
     };
-    public static readonly string[] KeyWords =
+    public string[] KeyWords =
     {
         "Cat",
         "Euro",
@@ -24,4 +27,5 @@
         "Castle",
         "Butterfly",
     };
+    public Sprite[] Sprites;
 }

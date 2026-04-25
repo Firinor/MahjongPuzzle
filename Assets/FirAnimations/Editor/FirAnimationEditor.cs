@@ -32,13 +32,17 @@ namespace FirAnimations
                 {
                     Off();
                 }
-                else
+                else if(script.EditorEnable)
                 {
                     EditorApplication.update += script.Update;
                     isPlaying = true;
                     script.OnComplete += Off;
                     script.Initialize();
                     script.ToStartPoint();
+                }
+                else
+                {
+                    Off();
                 }
             }
 
@@ -83,13 +87,17 @@ namespace FirAnimations
                 {
                     Off();
                 }
-                else
+                else if(script.EditorEnable)
                 {
                     EditorApplication.update += script.Update;
                     isPlaying = true;
                     script.OnComplete += Off;
                     script.Initialize();
                     script.ToStartPoint();
+                }
+                else
+                {
+                    Off();
                 }
             }
             ActiveFields();
@@ -99,6 +107,7 @@ namespace FirAnimations
         {
             FirRotate script = (FirRotate)target;
             
+            script.EditorEnable = EditorGUILayout.Toggle(label: nameof(script.EditorEnable), script.EditorEnable);
             script.StartPosition = EditorGUILayout.FloatField(label: nameof(script.StartPosition), script.StartPosition);
             script.Speed = EditorGUILayout.FloatField(label: nameof(script.Speed), script.Speed);
         }

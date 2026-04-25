@@ -32,13 +32,17 @@ namespace FirAnimations
                 {
                     Off();
                 }
-                else
+                else if(script.EditorEnable)
                 {
                     EditorApplication.update += script.Update;
                     isPlaying = true;
                     script.OnEndAllAnimations += Off;
                     script.Initialize();
                     script.StartAnimations();
+                }
+                else
+                {
+                    Off();
                 }
             }
 
