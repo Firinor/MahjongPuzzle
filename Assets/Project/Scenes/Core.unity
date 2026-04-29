@@ -3652,7 +3652,7 @@ RectTransform:
   m_GameObject: {fileID: 563138749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3652804, y: 1.3652803, z: 1}
+  m_LocalScale: {x: -1.3651482, y: 1.3651481, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -4603,7 +4603,7 @@ RectTransform:
   m_GameObject: {fileID: 615374418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3970169, y: 1.3970169, z: 1}
+  m_LocalScale: {x: -1.3970679, y: 1.3970678, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -5545,7 +5545,7 @@ RectTransform:
   m_GameObject: {fileID: 751581594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3347193, y: 1.3347193, z: 1}
+  m_LocalScale: {x: 1.3348515, y: 1.3348515, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -7275,7 +7275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00043597355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7855,7 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00043597355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10480,7 +10480,7 @@ RectTransform:
   m_GameObject: {fileID: 1391776787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3029827, y: 1.3029827, z: 1}
+  m_LocalScale: {x: 1.3029318, y: 1.3029318, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -13858,7 +13858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0008279165}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00043597355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14843,15 +14843,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.016838092
+      value: 0.016918069
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.016838092
+      value: 0.016918069
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.016838092
+      value: 0.016918069
       objectReference: {fileID: 0}
     - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
@@ -14924,6 +14924,10 @@ PrefabInstance:
     - target: {fileID: 7494822799541560751, guid: 5d057c8a4fe93854195d677bcad04a64, type: 3}
       propertyPath: m_Name
       value: BackgroundSquare (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494822799541560751, guid: 5d057c8a4fe93854195d677bcad04a64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15064,7 +15068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -118.33035
+      value: -130
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.y
