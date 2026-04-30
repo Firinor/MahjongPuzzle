@@ -90,7 +90,7 @@ public class MajhongTileView : MonoBehaviour
     }
     public void EnableShadow()
     {
-        shadow.enabled = true;
+        //shadow.enabled = true;
     }
     
     public void RaycastDisableEditor()

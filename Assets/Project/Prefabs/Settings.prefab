@@ -33,7 +33,7 @@ RectTransform:
   m_Father: {fileID: 8368033608510036782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -720,14 +720,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f070c3bb05439a84dbeb270c2c8cccc8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 088375d970fa7e14789ebc877201f4ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1115,6 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74004faf8130b4c4daff6b8f96961403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirAnimationsManager
+  EditorEnable: 0
   _time: 0
   _timeLimit: 1.5
   animations_and_startTime:
@@ -1442,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.75539994}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.009038696}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1471,6 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ed23fd22e24fa783ff0e2856e21fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirColorAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -1510,6 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b312d9cb6ae4396b1b4be4621228d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirSizeAnimation
+  EditorEnable: 0
   Loop: 0
   Curve:
     serializedVersion: 2
@@ -1644,8 +1647,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5446316645960634919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6809681, y: 0}
-  m_AnchorMax: {x: 0.6809681, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 79, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1700,6 +1703,7 @@ GameObject:
   - component: {fileID: 6836222640519491096}
   - component: {fileID: 3131619945435424670}
   - component: {fileID: 6524987662201418127}
+  - component: {fileID: 9032866093740058634}
   m_Layer: 5
   m_Name: SFXToggle
   m_TagString: Untagged
@@ -1811,8 +1815,20 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 0
+      m_Calls:
+      - m_Target: {fileID: 9032866093740058634}
+        m_TargetAssemblyTypeName: DisableImageToggleSettings, Assembly-CSharp
+        m_MethodName: SwitchImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 1
 --- !u!114 &6524987662201418127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,6 +1841,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+--- !u!114 &9032866093740058634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565200795168295887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8a933164d4e1d4ea7f6bc71e8b4efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableImageToggleSettings
+  image: {fileID: 6836222640519491096}
 --- !u!1 &5623941786932652265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +2014,7 @@ RectTransform:
   m_Father: {fileID: 7227661022502458155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2157,8 +2186,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4890937344775072426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.90199023, y: 0}
-  m_AnchorMax: {x: 0.90199023, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 79, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2659,6 +2688,7 @@ GameObject:
   - component: {fileID: 2628615571220134564}
   - component: {fileID: 8939182254189325838}
   - component: {fileID: 1058140407571892433}
+  - component: {fileID: 7017681734550094411}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -2770,7 +2800,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7017681734550094411}
+        m_TargetAssemblyTypeName: DisableImageToggleSettings, Assembly-CSharp
+        m_MethodName: SwitchImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!114 &1058140407571892433
 MonoBehaviour:
@@ -2784,6 +2826,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+--- !u!114 &7017681734550094411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8238001762765745261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8a933164d4e1d4ea7f6bc71e8b4efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DisableImageToggleSettings
+  image: {fileID: 2628615571220134564}
 --- !u!1 &8797673510829390706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,14 +2897,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.75686276, g: 0.15294118, b: 0.1764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 009adb2fed92aa74da7e0dedc38ff63a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 160a4cc369be0c44e92be61d52bbfcc7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

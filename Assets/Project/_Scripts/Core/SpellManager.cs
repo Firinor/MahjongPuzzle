@@ -64,7 +64,8 @@ public class SpellManager : MonoBehaviour
     
     private string GetSpellCount(int count)
     {
-        return count > 0 ? count.ToString() : "<color=green>+</color>";
+        return count.ToString();
+        //return count > 0 ? count.ToString() : "<color=green>+</color>";
     }
     private void Shuffle()
     {

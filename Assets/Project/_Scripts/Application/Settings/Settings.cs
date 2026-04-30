@@ -19,17 +19,41 @@ public class Settings : MonoBehaviour
     [SerializeField] private Toggle enLanguageToggle;
     [SerializeField] private Toggle ruLanguageToggle;
     
-    public void Initialize()
+    public void Initialize(bool bootstrap = false)
     {
         data = SaveLoadSystem<SettingsData>.Load("Settings", new ());
-        
-        Subscribe();
+
+        if (bootstrap)
+        {
+            SetMixerValues();
+        }
+        else
+        {
+            Subscribe();
+            SetSounds();
+            StartCoroutine(SetLanguage());
+        }
     }
 
-    private void Awake()
+    private void SetMixerValues()
     {
-        SetSounds();
-        StartCoroutine(SetLanguage());
+        if(data.IsMusicOn)
+            mixer.SetFloat("MusicVolume", Mathf.Log10(data.MusicValue) * 20);
+        else
+            mixer.SetFloat("MusicVolume", -80);
+        
+        if(data.IsSFXOn)
+            mixer.SetFloat("SFXVolume", Mathf.Log10(data.SFXValue) * 20);
+        else
+            mixer.SetFloat("SFXVolume", -80);
+        
+        
+        Locale locale;
+        if(data.Language.Equals("ru-RU"))
+            locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
+        else
+            locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+        LocalizationSettings.SelectedLocale = locale;
     }
 
     private void Subscribe()
@@ -104,7 +128,7 @@ public class Settings : MonoBehaviour
     {
         yield return LocalizationSettings.InitializationOperation;
         
-        if (data.Language == "ru")
+        if (data.Language == "ru-RU")
             ruLanguageToggle.isOn = true;
         else
             enLanguageToggle.isOn = true;
@@ -119,19 +143,15 @@ public class Settings : MonoBehaviour
         sfxToggle.isOn = !data.IsSFXOn;
         //sfxToggle.GetComponent<Image>().sprite = data.IsSFXOn ? SoundOnSprite : SoundOffSprite;
     }
-
-    public void DeleteSaves()
-    {
-        PlayerPrefs.DeleteAll();
-    }
+    
     private void OnDestroy()
     {
-        musicToggle.onValueChanged.RemoveAllListeners();
-        musicSlider.onValueChanged.RemoveAllListeners();
-        sfxToggle.onValueChanged.RemoveAllListeners();
-        sfxSlider.onValueChanged.RemoveAllListeners();
+        musicToggle?.onValueChanged.RemoveAllListeners();
+        musicSlider?.onValueChanged.RemoveAllListeners();
+        sfxToggle?.onValueChanged.RemoveAllListeners();
+        sfxSlider?.onValueChanged.RemoveAllListeners();
         
-        ruLanguageToggle.onValueChanged.RemoveAllListeners();
-        enLanguageToggle.onValueChanged.RemoveAllListeners();
+        ruLanguageToggle?.onValueChanged.RemoveAllListeners();
+        enLanguageToggle?.onValueChanged.RemoveAllListeners();
     }
 }

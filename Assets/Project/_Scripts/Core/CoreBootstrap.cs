@@ -36,11 +36,11 @@ public class CoreBootstrap : MonoBehaviour
     private void Awake()
     {
         LoadSaves();
+        settings.Initialize();
         pool.ClearAll(instant: true);
         StartCoroutine(DeckInitialize(EmptyDesk()));
         rules.Initialize(player);
         spells.Initialize(player);
-        settings.Initialize();
     }
 
     private List<MajhongTileView> EmptyDesk()
