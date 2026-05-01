@@ -16,9 +16,4 @@ public class BOOTSTRAP : MonoBehaviour
         
         nextScene.SwitchToScene();
     }
-
-    private void LoadSettings()
-    {
-        throw new System.NotImplementedException();
-    }
 }

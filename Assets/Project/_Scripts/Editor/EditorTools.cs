@@ -1,16 +1,11 @@
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
-//[CustomEditor(typeof(EditorTools))]
 public static class EditorTools
 {
-    private const float TileDelta = .1f;
-    private const float TileWidth = 2.2f/.38f;
-    private const float TileWidthZone = 1.3f/.38f;
-    private const float TileHeightZone = 1.6f/.38f;
-    private const float TileThickness = 1.6f/.38f;
-
     private static Desk2 desk;
+    private static int mask = LayerMask.NameToLayer("Default");
     
     [MenuItem("Tool/SaveDesk")]
     public static void SaveDesk()
@@ -27,11 +22,14 @@ public static class EditorTools
             DeckTile deckTile = new();
             deckTile.position = tile.transform.position;
             desk.TilesPositions.Add(deckTile);
+            SetNeighbors(tile, deckTile);
+
         }
-        foreach (DeckTile tile in desk.TilesPositions)
-        {
-            SetNeighbors(tile);
-        }
+        desk.TilesPositions = desk.TilesPositions
+            .OrderByDescending(t => t.position.z)
+            .ThenByDescending(t => t.position.y)
+            .ThenBy(t => t.position.x)
+            .ToList();
         
         AssetDatabase.CreateAsset(desk, "Assets/Project/Resources/Desks/NewDesk.asset");
         AssetDatabase.SaveAssets();
@@ -41,72 +39,46 @@ public static class EditorTools
         Selection.activeObject = desk;
     }
     
-    private static void SetNeighbors(DeckTile tile)
+    private static void SetNeighbors(MajhongTileView tileView, DeckTile tile)
     {
-        ChechTilesLyingOnTopRaycast(tile);
-        ChechTilesLyingOnLeftRaycast(tile);
-        ChechTilesLyingOnRightRaycast(tile);
+        Collider[] results = new Collider[4];
+        Bounds bounds = tileView.FrontTrigger.bounds;
+        int size = Physics.OverlapBoxNonAlloc(bounds.center, bounds.extents, results, Quaternion.identity);
+        if (size > 0)
+            for (int i = 0; i < size; i++)
+            {
+                if (results[i].gameObject.layer == mask)
+                {
+                    Debug.Log("UpNeighbors" + results[i].name);   
+                    tile.UpNeighbors.Add(results[i].transform.position);
+                }
+            }
+        bounds = tileView.LeftTrigger.bounds;
+        size = Physics.OverlapBoxNonAlloc(bounds.center, bounds.extents, results, Quaternion.identity);
+        if (size > 0)
+            for (int i = 0; i < size; i++)
+            {
+                if (results[i].gameObject.layer == mask)
+                {
+                    Debug.Log("LeftNeighbors" + results[i].name);   
+                    tile.LeftNeighbors.Add(results[i].transform.position);
+                }
+            }
+        bounds = tileView.RightTrigger.bounds;
+        size = Physics.OverlapBoxNonAlloc(bounds.center, bounds.extents, results, Quaternion.identity);
+        if (size > 0)
+            for (int i = 0; i < size; i++)
+            {
+                if (results[i].gameObject.layer == mask)
+                {
+                    Debug.Log("RightNeighbors" + results[i].name);   
+                    tile.RightNeighbors.Add(results[i].transform.position);
+                }
+            }
 
         tile.IsOpenOnStart = tile.RightNeighbors.Count == 0
                              && tile.LeftNeighbors.Count == 0
                              && tile.UpNeighbors.Count == 0;
 
-    }
-    
-    private static bool ChechTilesLyingOnRightRaycast(DeckTile tile)
-    {
-        tile.RightNeighbors = new(2);
-        foreach (DeckTile otherTile in desk.TilesPositions)
-        {
-            if(tile == otherTile)
-                continue;
-            
-            if (Mathf.Approximately(otherTile.position.z, tile.position.z)
-                && Mathf.Abs(otherTile.position.x - (tile.position.x + TileWidth)) < TileDelta
-                && Mathf.Abs(otherTile.position.y - tile.position.y) <  TileHeightZone)
-            {
-                
-                tile.RightNeighbors.Add(otherTile.position);
-            }
-        }
-        return tile.RightNeighbors.Count > 0;
-    }
-    private static bool ChechTilesLyingOnLeftRaycast(DeckTile tile)
-    {
-        tile.LeftNeighbors = new(2);
-        foreach (DeckTile otherTile in desk.TilesPositions)
-        {
-            if(tile == otherTile)
-                continue;
-            
-            if (Mathf.Approximately(otherTile.position.z, tile.position.z)
-                && Mathf.Abs(otherTile.position.x - (tile.position.x - TileWidth)) < TileDelta
-                && Mathf.Abs(otherTile.position.y - tile.position.y) <  TileHeightZone)
-            {
-                
-                tile.LeftNeighbors.Add(otherTile.position);
-            }
-        }
-        return tile.LeftNeighbors.Count > 0;
-    }
-
-    private static bool ChechTilesLyingOnTopRaycast(DeckTile tile)
-    {
-        tile.UpNeighbors = new(4);
-        
-        foreach (DeckTile otherTile in desk.TilesPositions)
-        {
-            if(tile == otherTile)
-                continue;
-            
-            if (Mathf.Approximately(otherTile.position.z, tile.position.z - TileThickness)
-                && Mathf.Abs(otherTile.position.x - tile.position.x) <  TileWidthZone
-                && Mathf.Abs(otherTile.position.y - tile.position.y) <  TileHeightZone)
-            {
-                
-                tile.UpNeighbors.Add(otherTile.position);
-            }
-        }
-        return tile.UpNeighbors.Count > 0;
     }
 }

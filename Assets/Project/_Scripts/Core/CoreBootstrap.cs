@@ -65,13 +65,14 @@ public class CoreBootstrap : MonoBehaviour
         Dictionary<MajhongTileView, DeckTile> dictionaryViewTile = new();
         Dictionary<Vector3, MajhongTileView> dictionaryTileView = new();
         int index = 0;
+        
         foreach(var deckTile in desk.TilesPositions)
         {
             MajhongTileView tile = pool.Get();
             tile.DisableVisual();
-            tile.gameObject.name = "Tile" + tilesView.Count;
-            tile.transform.position = deckTile.position;
             int floor = (int)(deckTile.position.z / -0.607f);
+            tile.gameObject.name = "Tile z" + floor + "x" + (int)deckTile.position.x + "y" + (int)deckTile.position.y;
+            tile.transform.position = deckTile.position;
             tile.SetData(listTiles[index]);
             index++;
             tile.SetDefaultMaterial(floorMaterials[floor]);
@@ -159,7 +160,7 @@ public class CoreBootstrap : MonoBehaviour
             new Keyframe(1f, 2f, 2f, 2f)
         );
         int index = 0;
-        float tileOffset = 0.001f;
+        float tileOffset = 0.003f;
         foreach (var tile in tilesToSpawn)
         {
             tile.RaycastDisableEditor();
@@ -205,7 +206,7 @@ public class CoreBootstrap : MonoBehaviour
             animationRotation.Curve = curveRotation;
             animationRotation.Play();
             yield return new WaitForSeconds(delta);
-            delta *= 0.995f;
+            delta *= 0.996f;
         }
         yield return new WaitForSeconds(1);
         

@@ -15,7 +15,7 @@ public class DeckTile
 {
     public Vector3 position;
     public bool IsOpenOnStart;
-    public List<Vector3> UpNeighbors;
-    public List<Vector3> LeftNeighbors;
-    public List<Vector3> RightNeighbors;
+    public List<Vector3> UpNeighbors = new List<Vector3>(4);
+    public List<Vector3> LeftNeighbors = new List<Vector3>(2);
+    public List<Vector3> RightNeighbors = new List<Vector3>(2);
 }

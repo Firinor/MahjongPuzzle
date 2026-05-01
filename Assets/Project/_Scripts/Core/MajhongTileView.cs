@@ -20,6 +20,15 @@ public class MajhongTileView : MonoBehaviour
     [SerializeField] 
     private Material errorMaterial;
 
+    [SerializeField] 
+    private GameObject selectionFramel;
+
+#if UNITY_EDITOR
+    public BoxCollider FrontTrigger;
+    public BoxCollider LeftTrigger;
+    public BoxCollider RightTrigger;
+#endif
+
     private Dictionary<Material, bool> statuses;
     
     [SerializeField] 
@@ -90,7 +99,7 @@ public class MajhongTileView : MonoBehaviour
     }
     public void EnableShadow()
     {
-        //shadow.enabled = true;
+        shadow.enabled = true;
     }
     
     public void RaycastDisableEditor()
