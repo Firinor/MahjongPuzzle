@@ -3486,7 +3486,7 @@ RectTransform:
   m_GameObject: {fileID: 563138749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3653573, y: 1.3653572, z: 1}
+  m_LocalScale: {x: -1.3652289, y: 1.3652289, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -4445,7 +4445,7 @@ RectTransform:
   m_GameObject: {fileID: 615374418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: -1.3969871, y: 1.3969871, z: 1}
+  m_LocalScale: {x: -1.3970368, y: 1.3970368, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -5387,7 +5387,7 @@ RectTransform:
   m_GameObject: {fileID: 751581594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3346424, y: 1.3346424, z: 1}
+  m_LocalScale: {x: 1.3347707, y: 1.3347707, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -7117,7 +7117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0011126178}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00066070096}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7697,7 +7697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0011126178}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00066070096}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9809,11 +9809,11 @@ MonoBehaviour:
   tileStartAnimationPoint: {fileID: 26950910}
   floorMaterials:
   - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
-  - {fileID: 2100000, guid: 581ba3c2b2659a0498f9b35860cbd3f0, type: 2}
-  - {fileID: 2100000, guid: c51cc003a50e7944986eae2858fc0a70, type: 2}
-  - {fileID: 2100000, guid: 489b49c31fa3b154c93a8c8b652dd2af, type: 2}
+  - {fileID: 2100000, guid: 526638bdf423a3c44b89ad50e43c9f69, type: 2}
   - {fileID: 2100000, guid: 4ed364265bf23f74fbd38596fe6931a0, type: 2}
-  - {fileID: 2100000, guid: 4f8e84f00bf33b54780df037321e9f03, type: 2}
+  - {fileID: 2100000, guid: 2c10dc143610683438afbf8e6c6e7571, type: 2}
+  - {fileID: 2100000, guid: 489b49c31fa3b154c93a8c8b652dd2af, type: 2}
+  - {fileID: 2100000, guid: 73cc57ba7039742438d0b111c5ae8c2a, type: 2}
   - {fileID: 2100000, guid: 526638bdf423a3c44b89ad50e43c9f69, type: 2}
 --- !u!4 &1325497669
 Transform:
@@ -9990,7 +9990,7 @@ RectTransform:
   m_GameObject: {fileID: 1391776787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1.3030125, y: 1.3030125, z: 1}
+  m_LocalScale: {x: 1.3029628, y: 1.3029628, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2017609755}
@@ -10696,7 +10696,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 15
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42af12a364dbffe498b132f93206a952, type: 2}
   m_sharedMaterial: {fileID: 2053408797042377856, guid: 42af12a364dbffe498b132f93206a952, type: 2}
@@ -13280,7 +13282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.0011126178}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.00066070096}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14159,15 +14161,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.016852306
+      value: 0.016933685
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.016852306
+      value: 0.016933685
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.016852306
+      value: 0.016933685
       objectReference: {fileID: 0}
     - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
