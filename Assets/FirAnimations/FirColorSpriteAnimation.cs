@@ -1,32 +1,31 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace FirAnimations
 {
-    [RequireComponent(typeof(Image))]
-    public class FirColorAnimation : FirAnimation
+    [RequireComponent(typeof(SpriteRenderer))]
+    public class FirColorSpriteAnimation : FirAnimation
     {
         public Color StartPosition = new Color(1,1,1,0);
         public Color EndPosition = Color.white;
         private Color delta => EndPosition - StartPosition;
 
-        private Image _image;
-        private Image image
+        private SpriteRenderer _sprite;
+        private SpriteRenderer sprite
         {
             get
             {
-                if (_image == null)
+                if (_sprite == null)
                 {
-                    _image = GetComponent<Image>();
+                    _sprite = GetComponent<SpriteRenderer>();
                 }
 
-                return _image;
+                return _sprite;
             }
         }
         
         private void Reset()
         {
-            StartPosition = image.color;
+            StartPosition = sprite.color;
             EndPosition = StartPosition;
         }
         
@@ -37,10 +36,7 @@ namespace FirAnimations
         protected override void MoveByDelta()
         {
             float curveValue = Curve.Evaluate(Time*_endTime);
-            image.color = Color.LerpUnclamped(StartPosition, EndPosition, curveValue);
+            sprite.color = Color.LerpUnclamped(StartPosition, EndPosition, curveValue);
         }
     }
-}
-namespace FirAnimations
-{
 }

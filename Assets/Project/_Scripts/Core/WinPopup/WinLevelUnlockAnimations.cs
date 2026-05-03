@@ -39,6 +39,8 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     private Unlocks unlocks;
     [SerializeField]
     private UnlockView unlockView;
+    [SerializeField]
+    private WinFlashlight[] flashlights;
     
     //private ProgressData player;
     private int startGold;
@@ -104,18 +106,23 @@ public class WinLevelUnlockAnimations : MonoBehaviour
         bonusSlider.maxValue = max;
         bonusSlider.minValue = min;
         startText.text = min.ToString();
-        endText.text = max.ToString();
+        endText.text = max == 1? "MAX" : max.ToString();
     }
 
     public void Play()
     {
         StartCoroutine(WinAnlockAnimations());
+        foreach (var flashlight in flashlights)
+        {
+            flashlight.Play();
+        }
     }
 
     private IEnumerator WinAnlockAnimations()
     {
         yield return new WaitForSeconds(delay);
 
+        rewardTextAnimation.OnComplete = null;
         rewardTextAnimation.OnComplete = () => StartCoroutine(RewardCounter());
         rewardTextAnimation.Play();
         rewardTextAnimation2.Play();
@@ -186,6 +193,12 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     
     private void SetBonusSlider()
     {
+        if (Mathf.Approximately(inLevelSlider.maxValue, 1))
+        {
+            bonusSlider.value = bonusSlider.maxValue;
+            return;
+        }
+        
         if (startGold + currentReward + currentBonus < inLevelSlider.maxValue)
             bonusSlider.value = startGold + currentReward + currentBonus;
         else
@@ -194,6 +207,12 @@ public class WinLevelUnlockAnimations : MonoBehaviour
     
     private void SetInLevelSlider()
     {
+        if (Mathf.Approximately(inLevelSlider.maxValue, 1))
+        {
+            inLevelSlider.value = inLevelSlider.maxValue;
+            return;
+        }
+        
         if (startGold + currentReward < inLevelSlider.maxValue)
             inLevelSlider.value = startGold + currentReward;
         else
