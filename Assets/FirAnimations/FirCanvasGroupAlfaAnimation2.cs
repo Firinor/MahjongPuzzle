@@ -2,8 +2,8 @@
 
 namespace FirAnimations
 {
-    [RequireComponent(typeof(CanvasGroup))]
-    public class FirCanvasGroupAlfaAnimation : FirAnimation
+    /*[RequireComponent(typeof(CanvasGroup))]
+    public class FirCanvasGroupAlfaAnimation2 : FirAnimation
     {
         public float StartAlfa = 0;
         public float EndAlfa = 1;
@@ -36,8 +36,9 @@ namespace FirAnimations
         }
         protected override void MoveByDelta()
         {
+            Debug.Log("UnityEngine.Time.unscaledDeltaTime" + UnityEngine.Time.unscaledDeltaTime + " Time" + Time);
             float curveValue = Curve.Evaluate(Time*_endTime);
             group.alpha = StartAlfa + (delta * curveValue);
         }
-    }
+    }*/
 }

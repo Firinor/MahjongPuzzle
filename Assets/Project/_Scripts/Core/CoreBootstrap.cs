@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class CoreBootstrap : MonoBehaviour
 {
+    public FirAnimation closeСurtain;  
+    
     [SerializeField] 
     private TilesData[] tiles;
     [SerializeField] 
@@ -33,8 +35,14 @@ public class CoreBootstrap : MonoBehaviour
     private Desk2 desk;
     
     [ContextMenu("DeckInitialize")]
-    private void Awake()
+    private IEnumerator Start()
     {
+        closeСurtain.Initialize();
+        
+        yield return null;
+        
+        closeСurtain.Play();//OpenScene
+        
         LoadSaves();
         settings.Initialize();
         pool.ClearAll(instant: true);

@@ -1,8 +1,12 @@
+using System.Collections;
+using FirAnimations;
 using UnityEngine;
 
 [DefaultExecutionOrder(-1)]
 public class MetaBootstrap : MonoBehaviour
 {
+    public FirAnimation closeСurtain;  
+    
     [SerializeField] 
     private Settings settings;
 
@@ -13,8 +17,14 @@ public class MetaBootstrap : MonoBehaviour
     
     private ProgressData player;
     
-    private void Awake()
+    private IEnumerator Start()
     {
+        closeСurtain.Initialize();
+        
+        yield return null;
+        
+        closeСurtain.Play();//OpenScene
+        
         settings.Initialize();
         
         LoadPlayerData();

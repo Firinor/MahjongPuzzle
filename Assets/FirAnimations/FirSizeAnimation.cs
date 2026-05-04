@@ -31,7 +31,8 @@ namespace FirAnimations
         
         private void OnValidate()
         {
-            MoveByDelta();
+            if(EditorEnable)
+                MoveByDelta();
         }
         protected override void MoveByDelta()
         {

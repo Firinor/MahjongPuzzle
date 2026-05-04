@@ -26,7 +26,8 @@ namespace FirAnimations
         
         private void OnValidate()
         {
-            MoveByDelta();
+            if(EditorEnable)
+                MoveByDelta();
         }
 
         public void StartAnimations()
