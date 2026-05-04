@@ -69,7 +69,7 @@ public class SpellManager : MonoBehaviour
     }
     private void Shuffle()
     {
-        if (player.ShuffleSpell <= 0)
+        /*if (player.ShuffleSpell <= 0)
         {
             SpellSupply.SetActive(true);
             return;
@@ -77,7 +77,7 @@ public class SpellManager : MonoBehaviour
 
         player.ShuffleSpell--;
         ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        SaveLoadSystem<ProgressData>.Save("Player", player);*/
         
         bootstrap.Shuffle();
         
@@ -86,11 +86,11 @@ public class SpellManager : MonoBehaviour
 
     private void Hint()
     {
-        if (player.HintSpell <= 0)
+        /*if (player.HintSpell <= 0)
         {
             SpellSupply.SetActive(true);
             return;
-        }
+        }*/
         
         for (int i = 0; i < pool.transform.childCount-1; i++)
         {
@@ -131,7 +131,7 @@ public class SpellManager : MonoBehaviour
             return;
         }
         
-        if (player.SpotLightSpell <= 0)
+        /*if (player.SpotLightSpell <= 0)
         {
             SpellSupply.SetActive(true);
             return;
@@ -139,7 +139,7 @@ public class SpellManager : MonoBehaviour
         
         player.SpotLightSpell--;
         SpotLightCountText.text = GetSpellCount(player.SpotLightSpell);
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        SaveLoadSystem<ProgressData>.Save("Player", player);*/
         
         Spotlight();
     }

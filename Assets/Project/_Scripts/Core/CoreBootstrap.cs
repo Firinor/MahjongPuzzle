@@ -142,13 +142,18 @@ public class CoreBootstrap : MonoBehaviour
     private IEnumerator DeckInitialize(List<MajhongTileView> listTiles)
     {
         rules.UnselectTile();
-        
+
+        foreach (var tile in listTiles)
+        {
+            tile.isHint = false;
+        }
+
         yield return null;
 
         List<MajhongTileView> tilesToSpawn = (player.Difficulty) switch
         {
-            //0 => DifficultyShuffle.ShuffleEasy(listTiles),
-            //2 => DifficultyShuffle.ShuffleHard(listTiles),
+            0 => DifficultyShuffle.ShuffleEasy(listTiles),
+            2 => DifficultyShuffle.ShuffleHard(listTiles),
             _ => DifficultyShuffle.ShuffleNormal(listTiles),
         };
 

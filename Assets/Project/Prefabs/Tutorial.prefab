@@ -555,18 +555,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8911015641583092936}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 9014099105718992272}
         m_TargetAssemblyTypeName: FirAnimations.FirCanvasGroupAlfaAnimation, Assembly-CSharp
         m_MethodName: ToEndPoint
@@ -579,20 +567,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 732047213980772103}
-        m_TargetAssemblyTypeName: FirAnimations.FirCanvasGroupAlfaAnimation2, Assembly-CSharp
-        m_MethodName: ToStartPoint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 732047213980772103}
-        m_TargetAssemblyTypeName: FirAnimations.FirCanvasGroupAlfaAnimation2, Assembly-CSharp
+      - m_Target: {fileID: 7164814310515742436}
+        m_TargetAssemblyTypeName: FirAnimations.FirCanvasGroupAlfaAnimation, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -985,7 +961,7 @@ GameObject:
   - component: {fileID: 8200830588986200333}
   - component: {fileID: 2513329884203442546}
   - component: {fileID: 9014099105718992272}
-  - component: {fileID: 732047213980772103}
+  - component: {fileID: 7164814310515742436}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1022,7 +998,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8911015641583092936}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -1066,7 +1042,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartAlfa: 0
   EndAlfa: 1
---- !u!114 &732047213980772103
+--- !u!114 &7164814310515742436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1075,9 +1051,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8911015641583092936}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481c913c785940ab9f1a8a5873499d66, type: 3}
+  m_Script: {fileID: 11500000, guid: 84f3044b5a1b4cb43bfab983cffdb2ca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirCanvasGroupAlfaAnimation2
+  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirCanvasGroupAlfaAnimation
   EditorEnable: 0
   Loop: 0
   Curve:
