@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a05709805de4476a1bd5dd9c3ed66cb, type: 3}
   m_Name: Unlocks
   m_EditorClassIdentifier: Assembly-CSharp::Unlocks
-  Levels: b80b0000581b0000c8320000204e000048710000409c000008cf0000a0090100084c0100
+  Levels: b80b0000581b0000c8320000204e000048710000409c000008cf0000a0090100
   KeyWords:
   - Cat
   - Euro
   - Flower
   - Plane
-  - Gems
   - Mountain
   - Rabbit
   - Castle
@@ -28,7 +27,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2c4b2f75d7d2d1942aff7cf547ba99ca, type: 3}
   - {fileID: 21300000, guid: ec3a4a4294ed1d9428eb2882aaf97cc7, type: 3}
   - {fileID: 21300000, guid: 1298d09ba0c27cc45ab6a0134aa44e9a, type: 3}
-  - {fileID: 4927759579659169254, guid: 372187b1486f68044801782d48978c02, type: 3}
   - {fileID: 21300000, guid: 335b634d32d391d4c98386738a7f2be1, type: 3}
   - {fileID: 21300000, guid: 7fd9b269eeae6fb42b69fbbbc58c29c3, type: 3}
   - {fileID: 21300000, guid: 79b13226f52937048b6c45a4bb2b686b, type: 3}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using FirAnimations;
 using UnityEngine;
@@ -28,8 +29,18 @@ public class MajhongTileView : MonoBehaviour
     public BoxCollider LeftTrigger;
     public BoxCollider RightTrigger;
 #endif
+    
+    private TileStatuses statuses;//flags
 
-    private Dictionary<Material, bool> statuses;
+    [Flags]
+    private enum TileStatuses
+    {
+        Default = 0,
+        Darker = 1,
+        Hint = 2,
+        Selected = 4,
+        Error = 8,
+    }
     
     [SerializeField] 
     private FirAnimation zoomAnimation;
@@ -48,12 +59,7 @@ public class MajhongTileView : MonoBehaviour
     
     private void Awake()
     {
-        statuses = new();
-        statuses.Add(defaultMaterial, true);
-        statuses.Add(darkerMaterial, false);
-        //statuses.Add(selectedMaterial, false);//Hint spell
-        statuses.Add(selectedMaterial, false);//Player click
-        statuses.Add(errorMaterial, false);
+        statuses = TileStatuses.Default;
     }
     
     public void SetData(Sprite tile)
@@ -63,17 +69,24 @@ public class MajhongTileView : MonoBehaviour
 
     private void ResetMaterial()
     {
-        if (statuses[errorMaterial])
+        selectionFramel.SetActive(false);
+        if (statuses.HasFlag(TileStatuses.Error))
         {
             cube.material = errorMaterial;
             return;
         }
-        if (statuses[selectedMaterial])
+        if (statuses.HasFlag(TileStatuses.Selected))
         {
             cube.material = selectedMaterial;
             return;
         }
-        if (statuses[darkerMaterial])
+        if (statuses.HasFlag( TileStatuses.Hint))
+        {
+            selectionFramel.SetActive(true);
+            cube.material = defaultMaterial;
+            return;
+        }
+        if (statuses.HasFlag(TileStatuses.Darker))
         {
             cube.material = darkerMaterial;
             return;
@@ -118,22 +131,22 @@ public class MajhongTileView : MonoBehaviour
     }
     public void SetDarkerMaterial()
     {
-        statuses[darkerMaterial] = true;
+        statuses |= TileStatuses.Darker;
         ResetMaterial();
     }
     public void DisableDarkerMaterial()
     {
-        statuses[darkerMaterial] = false;
+        statuses &= ~TileStatuses.Darker;
         ResetMaterial();
     }
     public void ErrorAnimation()
     {
         StopAnimation();
-        statuses[errorMaterial] = true;
+        statuses |= TileStatuses.Error;
         SoundManager.Instance.PlayTileError(transform.position);
         rotateAnimation.OnComplete = () =>
         {
-            statuses[errorMaterial] = false;
+            statuses &= ~TileStatuses.Error;
             ResetMaterial();
         };
         rotateAnimation.Play();
@@ -142,14 +155,14 @@ public class MajhongTileView : MonoBehaviour
     public void HintAnimation()
     {
         StopAnimation();
-        statuses[selectedMaterial] = true;
+        statuses |= TileStatuses.Hint;
         rotateAnimation.Play();
         ResetMaterial();
     }
     public void SelectedAnimation()
     {
         StopAnimation();
-        statuses[selectedMaterial] = true;
+        statuses |= TileStatuses.Selected;
         SoundManager.Instance.PlayTileSelect(transform.position);
         zoomAnimation.Play();
         ResetMaterial();
@@ -170,13 +183,13 @@ public class MajhongTileView : MonoBehaviour
 
     public void Unselect()
     {
-        statuses[selectedMaterial] = false;
+        statuses &= ~(TileStatuses.Selected|TileStatuses.Hint);
         ResetMaterial();
     }
     public void ClickUnselect()
     {
         StopAnimation();
-        statuses[selectedMaterial] = false;
+        statuses &= ~TileStatuses.Selected;
         SoundManager.Instance.PlayTileSelect(transform.position);
         zoomAnimation.Play();
         ResetMaterial();

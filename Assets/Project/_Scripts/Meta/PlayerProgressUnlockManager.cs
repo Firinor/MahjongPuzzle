@@ -130,7 +130,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             if (coins < unlocks.Levels[index])
                 break;
             
-            coins -= unlocks.Levels[index];
+            //coins -= unlocks.Levels[index];
             string unlockKey = unlocks.KeyWords[index];
 
             if (unlockKey.Equals(tiles[1].ID))

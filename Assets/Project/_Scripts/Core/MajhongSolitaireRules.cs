@@ -20,8 +20,6 @@ public class MajhongSolitaireRules : MonoBehaviour
     private FirAnimationsManager losePopup;
     
     [SerializeField] 
-    private TextMeshProUGUI winPopupGoldText;
-    [SerializeField] 
     private TextMeshProUGUI allPlayerGold;
     [SerializeField] 
     private TextMeshProUGUI roundPlayerGold;
@@ -110,7 +108,8 @@ public class MajhongSolitaireRules : MonoBehaviour
         }
         else //combo
         {
-            comboCounter++;
+            if(player.Difficulty > 0) //on Easy-mode no combo bonus
+                comboCounter++;
         }
 
         lastComboTime = DateTime.Now;
@@ -135,7 +134,6 @@ public class MajhongSolitaireRules : MonoBehaviour
         if (pool.transform.childCount <= 0)
         {
             Win();
-            winPopupGoldText.text = roundPlayerGold.text;
             return;
         }
 

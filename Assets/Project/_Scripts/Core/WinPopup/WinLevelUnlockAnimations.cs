@@ -62,17 +62,17 @@ public class WinLevelUnlockAnimations : MonoBehaviour
         
         playerLevelIndex = 0;
         startGold = player.GoldCoins;
-        int currentPlayerGold = startGold;
+        //int currentPlayerGold = startGold;
         while (true)
         {
             if(playerLevelIndex >= unlocks.Levels.Length
                || playerLevelIndex >= unlocks.KeyWords.Length) 
                 break;
             
-            if (currentPlayerGold < unlocks.Levels[playerLevelIndex])
+            if (startGold < unlocks.Levels[playerLevelIndex])
                 break;
             
-            currentPlayerGold -= unlocks.Levels[playerLevelIndex];
+            //currentPlayerGold = startGold - unlocks.Levels[playerLevelIndex];
             playerLevelIndex++;
         }
 

@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.90199023
+  m_FillAmount: 0.20956518
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2692341582520316626}
+      - m_Target: {fileID: 4618685685789991242}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -223,6 +223,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7934380919578498716}
         m_TargetAssemblyTypeName: FirAnimations.FirAnimationsManager, Assembly-CSharp
         m_MethodName: StartAnimations
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1603290501975458713}
+        m_TargetAssemblyTypeName: FirAnimations.FirPositionAnimation, Assembly-CSharp
+        m_MethodName: Initialize
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -753,7 +765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4587615887533801568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1177,7 +1189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1226937931748171070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1279,7 +1291,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2692341582520316626}
+      - m_Target: {fileID: 7934380919578498716}
+        m_TargetAssemblyTypeName: FirAnimations.FirAnimationsManager, Assembly-CSharp
+        m_MethodName: ToEndPoint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1603290501975458713}
+        m_TargetAssemblyTypeName: FirAnimations.FirPositionAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4618685685789991242}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1378,7 +1414,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.681
+  m_Value: 0.29107562
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1395,6 +1431,7 @@ GameObject:
   - component: {fileID: 9053499683934096176}
   - component: {fileID: 6529874367442985623}
   - component: {fileID: 1686405483283043385}
+  - component: {fileID: 1603290501975458713}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1419,7 +1456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: 900}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2760297516277758768
@@ -1443,7 +1480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.009038696}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.009007138}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1540,6 +1577,46 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartSize: {x: 600, y: 600}
   EndSize: {x: 1250, y: 600}
+--- !u!114 &1603290501975458713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102323880420108374}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fd95133ad84bceb410ada04985dbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirPositionAnimation
+  EditorEnable: 0
+  Loop: 0
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -0.041201074
+      outSlope: -0.041201074
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.05010225
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 6.968892
+      outSlope: 6.968892
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.025562346
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartPosition: {x: 0, y: -50, z: 0}
+  EndPosition: {x: 0, y: 900, z: 0}
 --- !u!1 &5359156302511998954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +2054,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.902
+  m_Value: 0.20964423
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2051,7 +2128,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.6809681
+  m_FillAmount: 0.29100472
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
