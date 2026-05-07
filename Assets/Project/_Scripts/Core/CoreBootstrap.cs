@@ -142,7 +142,8 @@ public class CoreBootstrap : MonoBehaviour
     private IEnumerator DeckInitialize(List<MajhongTileView> listTiles)
     {
         rules.UnselectTile();
-
+        spells.DisableShuffle();
+        
         foreach (var tile in listTiles)
         {
             tile.isHint = false;
@@ -212,8 +213,7 @@ public class CoreBootstrap : MonoBehaviour
                 tile.EnableShadow();
                 animationRotation.OnComplete = null;
                 Destroy(animationRotation);
-                if(tilesCounter % 2 == 0)
-                    SoundManager.Instance.PlayTileSelect(transform.position);
+                SoundManager.Instance.PlayTileSelect(transform.position, 0.4f);
                 tilesCounter++;
             };
             animationRotation.Curve = curveRotation;
@@ -249,5 +249,6 @@ public class CoreBootstrap : MonoBehaviour
 
         rules.CheckWinCondition();
         spells.ButtonsOn();
+        spells.EnableShuffle();
     }
 }

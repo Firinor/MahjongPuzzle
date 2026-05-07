@@ -161,6 +161,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     [ContextMenu("Win")]
     public void Win()
     {
+        SoundManager.Instance.PlayWin();
         int bonus = player.Difficulty switch
         {
             1 => 1000,
@@ -178,6 +179,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     [ContextMenu("Lose")]
     public void Lose()
     {
+        SoundManager.Instance.PlayLose();
         losePopup.gameObject.SetActive(true);
         losePopup.ToStartPoint();
         losePopup.StartAnimations();

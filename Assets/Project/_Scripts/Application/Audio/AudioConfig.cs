@@ -10,4 +10,10 @@ public class AudioConfig : ScriptableObject
     public ClipSettings EndCollide;
     public ClipSettings TileSelect;
     public ClipSettings TileError;
+    [Header("Win")] 
+    public ClipSettings Win;
+    public ClipSettings Lose;
+    public ClipSettings Level;
+    public ClipSettings Unlock;
+    public ClipSettings Scores;
 }

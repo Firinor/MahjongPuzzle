@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,14 +7,16 @@ public class ButtonClick : MonoBehaviour
     private Toggle toggle;
     private Button button;
     
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.3f);
+        
         toggle = GetComponent<Toggle>();
 
         if (toggle != null)
         {
             toggle.onValueChanged.AddListener(v => OnClickSound());
-            return;
+            yield break;
         }
 
         button = GetComponent<Button>();
@@ -26,9 +29,13 @@ public class ButtonClick : MonoBehaviour
 
     public void OnClickSound()
     {
+        if(!enabled)
+            return;
+        
         if(SoundManager.Instance == null)
             return;
         
+        Debug.Log(name);
         SoundManager.Instance.PlayButtonClick();
     }
 

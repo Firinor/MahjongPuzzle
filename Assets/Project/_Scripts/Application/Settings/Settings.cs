@@ -127,20 +127,32 @@ public class Settings : MonoBehaviour
     private IEnumerator SetLanguage()
     {
         yield return LocalizationSettings.InitializationOperation;
-        
+
         if (data.Language == "ru-RU")
+        {
+            ruLanguageToggle.GetComponent<ButtonClick>().enabled = false;
             ruLanguageToggle.isOn = true;
+            ruLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+        }
         else
+        {
+            enLanguageToggle.GetComponent<ButtonClick>().enabled = false;
             enLanguageToggle.isOn = true;
+            enLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+        }
     }
 
     private void SetSounds()
     {
         musicSlider.value = data.MusicValue;
+        musicToggle.GetComponent<ButtonClick>().enabled = false;
         musicToggle.isOn = !data.IsMusicOn;
+        musicToggle.GetComponent<ButtonClick>().enabled = true;
         //musicToggle.GetComponent<Image>().sprite = data.IsMusicOn ? MusicOnSprite : MusicOffSprite;
         sfxSlider.value = data.SFXValue;
+        sfxToggle.GetComponent<ButtonClick>().enabled = false;
         sfxToggle.isOn = !data.IsSFXOn;
+        sfxToggle.GetComponent<ButtonClick>().enabled = true;
         //sfxToggle.GetComponent<Image>().sprite = data.IsSFXOn ? SoundOnSprite : SoundOffSprite;
     }
     

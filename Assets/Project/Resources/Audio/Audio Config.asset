@@ -27,8 +27,24 @@ MonoBehaviour:
   TileSelect:
     Clips:
     - {fileID: 8300000, guid: 775f0ac5f06a8f84d89e28f9e6a77253, type: 3}
-    Volume: 0.8
+    Volume: 0.5
   TileError:
     Clips:
     - {fileID: 8300000, guid: 460f7456836e2b34eb8b87e33025cce8, type: 3}
+    Volume: 1
+  Win:
+    Clips:
+    - {fileID: 8300000, guid: a6692dc64fcc9104a9aa7cb2a2f12d34, type: 3}
+    Volume: 1
+  Lose:
+    Clips:
+    - {fileID: 8300000, guid: fe8219c62ee2d2246adb5b547ba322e2, type: 3}
+    Volume: 1
+  Level:
+    Clips:
+    - {fileID: 8300000, guid: 05c230a0c8459a64e92ca1a4810907b1, type: 3}
+    Volume: 1
+  Scores:
+    Clips:
+    - {fileID: 8300000, guid: c58eaa92e6885154cbc1d96404d880bb, type: 3}
     Volume: 1

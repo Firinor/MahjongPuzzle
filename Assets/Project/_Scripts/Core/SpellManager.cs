@@ -117,7 +117,14 @@ public class SpellManager : MonoBehaviour
             }
         }
     }
-    
+    public void DisableShuffle()
+    {
+        spellShuffle.interactable = false;
+    }
+    public void EnableShuffle()
+    {
+        spellShuffle.interactable = true;
+    }
     private void ApplySpotlight()
     {
         if (isSpotLightOn)

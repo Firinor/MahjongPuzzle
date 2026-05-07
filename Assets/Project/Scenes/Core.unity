@@ -3217,6 +3217,7 @@ GameObject:
   - component: {fileID: 555563411}
   - component: {fileID: 555563410}
   - component: {fileID: 555563409}
+  - component: {fileID: 555563414}
   - component: {fileID: 555563413}
   m_Layer: 5
   m_Name: RepeatButton (1)
@@ -3367,6 +3368,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {r: 1, g: 1, b: 1, a: 0}
   EndPosition: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &555563414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555563408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
 --- !u!1 &557628157
 GameObject:
   m_ObjectHideFlags: 0
@@ -7283,6 +7296,7 @@ GameObject:
   - component: {fileID: 964266067}
   - component: {fileID: 964266066}
   - component: {fileID: 964266065}
+  - component: {fileID: 964266070}
   - component: {fileID: 964266069}
   m_Layer: 5
   m_Name: CloseButton
@@ -7459,6 +7473,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {r: 1, g: 1, b: 1, a: 0}
   EndPosition: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &964266070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964266063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
 --- !u!224 &973410466 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -9549,6 +9575,7 @@ GameObject:
   - component: {fileID: 1308338959}
   - component: {fileID: 1308338958}
   - component: {fileID: 1308338957}
+  - component: {fileID: 1308338961}
   - component: {fileID: 1308338956}
   - component: {fileID: 1308338960}
   m_Layer: 5
@@ -9735,6 +9762,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartZoom: {x: 0, y: 0, z: 0}
   EndZoom: {x: 1, y: 1, z: 1}
+--- !u!114 &1308338961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308338954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
 --- !u!1 &1318359957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10499,6 +10538,7 @@ GameObject:
   - component: {fileID: 1457917103}
   - component: {fileID: 1457917102}
   - component: {fileID: 1457917101}
+  - component: {fileID: 1457917105}
   - component: {fileID: 1457917100}
   - component: {fileID: 1457917104}
   m_Layer: 5
@@ -10685,6 +10725,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartZoom: {x: 0, y: 0, z: 0}
   EndZoom: {x: 1, y: 1, z: 1}
+--- !u!114 &1457917105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457917098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
 --- !u!82 &1489245076 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1482536227358839914, guid: 8fc29ed3fdf331d49961df10c1ba00ae, type: 3}

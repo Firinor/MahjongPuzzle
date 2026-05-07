@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class WinLevelUnlockAnimations : MonoBehaviour
 {
     [SerializeField]
-    private float numeratorSpeed = 200;
+    private float numeratorTime = 3;
     [SerializeField]
     private float delay = 4;
     [SerializeField]
@@ -130,6 +130,9 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private IEnumerator RewardCounter()
     {
+        float numeratorSpeed = reward / numeratorTime;
+        
+        SoundManager.Instance.PlayScores();
         while (currentReward < reward)
         {
             yield return null;
@@ -138,6 +141,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
             SetInLevelSlider();
         }
 
+        SoundManager.Instance.StopScores();
         currentReward = reward;
         rewardText.text = currentReward.ToString("0");
         SetInLevelSlider();
@@ -156,6 +160,9 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private IEnumerator BonusCounter()
     {
+        float numeratorSpeed = bonus / numeratorTime;
+        
+        SoundManager.Instance.PlayScores();
         while (currentBonus < bonus)
         {
             yield return null;
@@ -164,6 +171,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
             SetBonusSlider();
         }
 
+        SoundManager.Instance.StopScores();
         currentBonus = bonus;
         bonusText.text = currentBonus.ToString("0");
         SetBonusSlider();
@@ -186,6 +194,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
             unlockView.Animations.ToStartPoint();
             unlockView.Animations.StartAnimations();
             unlockView.gameObject.SetActive(true);
+            SoundManager.Instance.PlayUnlock();
             yield return new WaitUntil(() => buttonClick);
             buttonClick = false;
         }
@@ -221,6 +230,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private void NextLevel()
     {
+        SoundManager.Instance.PlayLevel();
         levelRewards.Add(unlocks.Sprites[playerLevelIndex]);
         playerLevelIndex++;
         sliderZoomAnimation.Play();
