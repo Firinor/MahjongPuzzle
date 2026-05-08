@@ -35,14 +35,18 @@ MonoBehaviour:
   Win:
     Clips:
     - {fileID: 8300000, guid: a6692dc64fcc9104a9aa7cb2a2f12d34, type: 3}
-    Volume: 1
+    Volume: 0.7
   Lose:
     Clips:
-    - {fileID: 8300000, guid: fe8219c62ee2d2246adb5b547ba322e2, type: 3}
+    - {fileID: 8300000, guid: 98275761aefb0a84bbc9fce02131a201, type: 3}
     Volume: 1
   Level:
     Clips:
     - {fileID: 8300000, guid: 05c230a0c8459a64e92ca1a4810907b1, type: 3}
+    Volume: 1
+  Unlock:
+    Clips:
+    - {fileID: 8300000, guid: f885e7df454aff747a7d49a835c527e3, type: 3}
     Volume: 1
   Scores:
     Clips:

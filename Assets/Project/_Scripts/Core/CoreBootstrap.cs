@@ -160,8 +160,8 @@ public class CoreBootstrap : MonoBehaviour
 
         //Animations
         tilesToSpawn = tilesToSpawn
-            .OrderByDescending(t => t.transform.position.z)
-            .ThenByDescending(t => t.transform.position.y)
+            .OrderByDescending(t => (int)(t.transform.position.z*10))
+            .ThenByDescending(t => (int)(t.transform.position.y*10))
             .ThenBy(t => t.transform.position.x)
             .ToList();
         

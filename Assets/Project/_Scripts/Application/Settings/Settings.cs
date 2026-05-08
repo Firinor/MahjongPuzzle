@@ -144,16 +144,18 @@ public class Settings : MonoBehaviour
 
     private void SetSounds()
     {
-        musicSlider.value = data.MusicValue;
         musicToggle.GetComponent<ButtonClick>().enabled = false;
+        sfxToggle.GetComponent<ButtonClick>().enabled = false;
+        
+        musicSlider.value = data.MusicValue;
         musicToggle.isOn = !data.IsMusicOn;
-        musicToggle.GetComponent<ButtonClick>().enabled = true;
         //musicToggle.GetComponent<Image>().sprite = data.IsMusicOn ? MusicOnSprite : MusicOffSprite;
         sfxSlider.value = data.SFXValue;
-        sfxToggle.GetComponent<ButtonClick>().enabled = false;
         sfxToggle.isOn = !data.IsSFXOn;
-        sfxToggle.GetComponent<ButtonClick>().enabled = true;
         //sfxToggle.GetComponent<Image>().sprite = data.IsSFXOn ? SoundOnSprite : SoundOffSprite;
+        
+        musicToggle.GetComponent<ButtonClick>().enabled = true;
+        sfxToggle.GetComponent<ButtonClick>().enabled = true;
     }
     
     private void OnDestroy()

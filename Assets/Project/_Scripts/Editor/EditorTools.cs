@@ -25,9 +25,10 @@ public static class EditorTools
             SetNeighbors(tile, deckTile);
 
         }
+
         desk.TilesPositions = desk.TilesPositions
-            .OrderByDescending(t => t.position.z)
-            .ThenByDescending(t => t.position.y)
+            .OrderByDescending(t => (int)(t.position.z*10))
+            .ThenByDescending(t => (int)(t.position.y*10))
             .ThenBy(t => t.position.x)
             .ToList();
         
@@ -41,19 +42,54 @@ public static class EditorTools
     
     private static void SetNeighbors(MajhongTileView tileView, DeckTile tile)
     {
-        Collider[] results = new Collider[4];
+        //Collider[] results = new Collider[4];
+        RaycastHit[] results = new RaycastHit[10];
         Bounds bounds = tileView.FrontTrigger.bounds;
-        int size = Physics.OverlapBoxNonAlloc(bounds.center, bounds.extents, results, Quaternion.identity);
+        int size = Physics.BoxCastNonAlloc(tileView.Center.position, bounds.size/2, Vector3.back, 
+            results, Quaternion.identity, 10);
         if (size > 0)
             for (int i = 0; i < size; i++)
             {
-                if (results[i].gameObject.layer == mask)
+                if(results[i].collider.gameObject == tileView.gameObject)
+                    continue;
+                
+                if (results[i].collider.gameObject.layer == mask)
                 {
-                    Debug.Log("UpNeighbors" + results[i].name);   
-                    tile.UpNeighbors.Add(results[i].transform.position);
+                    Debug.Log("UpNeighbors" + results[i].collider.name);   
+                    tile.UpNeighbors.Add(results[i].collider.transform.position);
                 }
             }
         bounds = tileView.LeftTrigger.bounds;
+        size = Physics.BoxCastNonAlloc(tileView.Center.position, bounds.size/2, Vector3.left, 
+            results, Quaternion.identity, .6f);
+        if (size > 0)
+            for (int i = 0; i < size; i++)
+            {
+                if(results[i].collider.gameObject == tileView.gameObject)
+                    continue;
+                
+                if (results[i].collider.gameObject.layer == mask)
+                {
+                    Debug.Log("LeftNeighbors" + results[i].collider.name);   
+                    tile.LeftNeighbors.Add(results[i].collider.transform.position);
+                }
+            }
+        bounds = tileView.RightTrigger.bounds;
+        size = Physics.BoxCastNonAlloc(tileView.Center.position, bounds.size/2, Vector3.right, 
+            results, Quaternion.identity, .6f);
+        if (size > 0)
+            for (int i = 0; i < size; i++)
+            {
+                if(results[i].collider.gameObject == tileView.gameObject)
+                    continue;
+                
+                if (results[i].collider.gameObject.layer == mask)
+                {
+                    Debug.Log("RightNeighbors" + results[i].collider.name);   
+                    tile.RightNeighbors.Add(results[i].collider.transform.position);
+                }
+            }
+        /*bounds = tileView.LeftTrigger.bounds;
         size = Physics.OverlapBoxNonAlloc(bounds.center, bounds.extents, results, Quaternion.identity);
         if (size > 0)
             for (int i = 0; i < size; i++)
@@ -74,11 +110,10 @@ public static class EditorTools
                     Debug.Log("RightNeighbors" + results[i].name);   
                     tile.RightNeighbors.Add(results[i].transform.position);
                 }
-            }
+            }*/
 
         tile.IsOpenOnStart = tile.RightNeighbors.Count == 0
                              && tile.LeftNeighbors.Count == 0
                              && tile.UpNeighbors.Count == 0;
-
     }
 }

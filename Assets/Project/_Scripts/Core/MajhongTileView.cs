@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using FirAnimations;
 using UnityEngine;
 
-[SelectionBase]
 public class MajhongTileView : MonoBehaviour
 {
     [SerializeField] 
@@ -23,8 +22,9 @@ public class MajhongTileView : MonoBehaviour
 
     [SerializeField] 
     private GameObject selectionFramel;
-
+    
 #if UNITY_EDITOR
+    public Transform Center => cube.transform;
     public BoxCollider FrontTrigger;
     public BoxCollider LeftTrigger;
     public BoxCollider RightTrigger;

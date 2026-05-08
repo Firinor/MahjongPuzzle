@@ -35,7 +35,7 @@ public class ButtonClick : MonoBehaviour
         if(SoundManager.Instance == null)
             return;
         
-        Debug.Log(name);
+        //Debug.Log(name);
         SoundManager.Instance.PlayButtonClick();
     }
 
