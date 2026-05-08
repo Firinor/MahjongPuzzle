@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b74177568e431a8d89c72e11096837, type: 3}
-  m_Name: ButterflyFin6
+  m_Name: ButterflyFin
   m_EditorClassIdentifier: Assembly-CSharp::Desk2
   ID: Butterfly
   TilesPositions:

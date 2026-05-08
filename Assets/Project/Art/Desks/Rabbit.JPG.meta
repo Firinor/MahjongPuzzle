@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec3a4a4294ed1d9428eb2882aaf97cc7
+guid: 59a670bad3c5e48418afb96f8008efb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7999501813891011847
-    second: blooming-flowers-pixel-art-set-260nw-260022134969_0
+      213: 5110612511535974256
+    second: Rabbit_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +123,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blooming-flowers-pixel-art-set-260nw-260022134969_0
+      name: Rabbit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 725
-        height: 420
+        width: 967
+        height: 660
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 705111d3480f30f60800000000000000
-      internalID: 7999501813891011847
+      spriteID: 077c4c6800b8ce640800000000000000
+      internalID: 5110612511535974256
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blooming-flowers-pixel-art-set-260nw-260022134969_0: 7999501813891011847
+      Rabbit_0: 5110612511535974256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

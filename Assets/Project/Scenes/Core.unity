@@ -9884,13 +9884,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ec90bf70326b34d46a0fb28c662b5c70, type: 2}
   desks2:
   - {fileID: 11400000, guid: 57a2d2e8b811975489d093a35c4a47af, type: 2}
-  - {fileID: 11400000, guid: 00622f53fb86a6c4092087b857c0bb14, type: 2}
-  - {fileID: 11400000, guid: 9fd400149de6a144fae67167ae17d2bf, type: 2}
-  - {fileID: 11400000, guid: 228fd73b95f6bca43ad73e49d54c9d3f, type: 2}
-  - {fileID: 11400000, guid: 75f7df0ff2d26004db2373654480c8e5, type: 2}
-  - {fileID: 11400000, guid: 0f60d09c6bcc3a34b843acb95427d337, type: 2}
-  - {fileID: 11400000, guid: 5e307c57bf70c6341a70dbd678bc0d18, type: 2}
-  - {fileID: 11400000, guid: 9b923ca92fbebd74e8c1d5c1916474f9, type: 2}
+  - {fileID: 11400000, guid: 3dd6cb36e7d9c4f49849186354bf634a, type: 2}
+  - {fileID: 11400000, guid: d1e754834059be94396498bf51de0e56, type: 2}
+  - {fileID: 11400000, guid: 3939754c67a90b94ca2e11f8be04206a, type: 2}
+  - {fileID: 11400000, guid: 1657f2d492515d04b9e5c1e2b6661208, type: 2}
+  - {fileID: 11400000, guid: 7e375968844e7244cb6ce3b108ed3acd, type: 2}
   settings: {fileID: 1575189758}
   pool: {fileID: 171712896}
   rules: {fileID: 180524335}

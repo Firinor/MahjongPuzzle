@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 335b634d32d391d4c98386738a7f2be1
+guid: f7c3fe794cc6b6740a5f97e4761940d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8427860237896154161
-    second: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
+      213: 4530433918361379743
+    second: Butterfly_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +123,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0421\u043D\u0438\u043C\u043E\u043A_0"
+      name: Butterfly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1100
-        height: 794
+        width: 834
+        height: 689
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc38f8f24c93a0b80800000000000000
-      internalID: -8427860237896154161
+      spriteID: f93af4e35a55fde30800000000000000
+      internalID: 4530433918361379743
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0421\u043D\u0438\u043C\u043E\u043A_0": -8427860237896154161
+      Butterfly_0: 4530433918361379743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

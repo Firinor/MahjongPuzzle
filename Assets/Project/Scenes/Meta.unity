@@ -2054,14 +2054,12 @@ MonoBehaviour:
   - {fileID: 934076480}
   - {fileID: 1178387374}
   deskSprites:
-  - {fileID: 21300000, guid: d1e0c9777c2c298459b294525ccc22a3, type: 3}
-  - {fileID: 21300000, guid: 6afb45461a20c13499ac13cbdab659bb, type: 3}
-  - {fileID: 21300000, guid: ec3a4a4294ed1d9428eb2882aaf97cc7, type: 3}
-  - {fileID: 21300000, guid: 1298d09ba0c27cc45ab6a0134aa44e9a, type: 3}
-  - {fileID: 21300000, guid: 335b634d32d391d4c98386738a7f2be1, type: 3}
-  - {fileID: 21300000, guid: 7fd9b269eeae6fb42b69fbbbc58c29c3, type: 3}
-  - {fileID: 21300000, guid: 79b13226f52937048b6c45a4bb2b686b, type: 3}
-  - {fileID: 21300000, guid: 6ce121a65f7b27b48b22e3ed86a2561e, type: 3}
+  - {fileID: 21300000, guid: 0e8aba86462741641b3bdff23c0baed4, type: 3}
+  - {fileID: 21300000, guid: 1effce42577abdc43bb03dd9570fe06c, type: 3}
+  - {fileID: 21300000, guid: 70c38c8fdc7a9514ab5ec7e97da0d203, type: 3}
+  - {fileID: 21300000, guid: 6df99e96a07579544851460ddbab536c, type: 3}
+  - {fileID: 21300000, guid: 59a670bad3c5e48418afb96f8008efb9, type: 3}
+  - {fileID: 21300000, guid: f7c3fe794cc6b6740a5f97e4761940d9, type: 3}
   ScrollDesksUp: {fileID: 232612885}
   ScrollDesksDown: {fileID: 1765451718}
 --- !u!1 &824504166
@@ -2570,10 +2568,6 @@ PrefabInstance:
       propertyPath: m_text
       value: '?'
       objectReference: {fileID: 0}
-    - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7999501813891011847, guid: ec3a4a4294ed1d9428eb2882aaf97cc7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2829,10 +2823,6 @@ PrefabInstance:
       propertyPath: m_text
       value: '?'
       objectReference: {fileID: 0}
-    - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6416395219486308750, guid: 6afb45461a20c13499ac13cbdab659bb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3021,14 +3011,6 @@ PrefabInstance:
     - target: {fileID: 9042154086895892109, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_text
       value: '?'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6754239384357436178, guid: 79b13226f52937048b6c45a4bb2b686b, type: 3}
-    - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5249,10 +5231,6 @@ PrefabInstance:
     - target: {fileID: 7703560786967402551, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
