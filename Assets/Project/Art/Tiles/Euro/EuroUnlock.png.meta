@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad149971ec7ab774e87f55cc46af5693
+guid: da2914748f0b1414f9741a6f73a8783b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8960107592192896430
-    second: SettingsSliderFill_0
+      213: 2867783612049584888
+    second: EuroUnlock_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 40, y: 0, z: 40, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SettingsSliderFill_0
+      name: EuroUnlock_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 669
-        height: 88
+        width: 3082
+        height: 1203
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 252df0a1e9d47a380800000000000000
-      internalID: -8960107592192896430
+      spriteID: 8f2f6e0400a6cc720800000000000000
+      internalID: 2867783612049584888
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SettingsSliderFill_0: -8960107592192896430
+      EuroUnlock_0: 2867783612049584888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

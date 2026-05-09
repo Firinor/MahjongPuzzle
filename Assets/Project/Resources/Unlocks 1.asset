@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a05709805de4476a1bd5dd9c3ed66cb, type: 3}
-  m_Name: Unlocks
+  m_Name: Unlocks 1
   m_EditorClassIdentifier: Assembly-CSharp::Unlocks
-  Levels: b80b0000581b0000c8320000204e000048710000409c0000
+  Levels: 640000002c01000058020000e8030000d0070000ac0d0000
   KeyWords:
   - Cat
   - Euro

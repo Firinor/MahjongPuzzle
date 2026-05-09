@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &352813295
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2746,7 +2746,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -4, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514900072
 MonoBehaviour:
@@ -2761,23 +2761,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5338644, g: 0.8773585, b: 0.5338644, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5764562528418808094, guid: 22e3eca9e031a224eae5ada372fbe1d6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad149971ec7ab774e87f55cc46af5693, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.738
+  m_FillAmount: 0.366
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &514900073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3467,7 +3467,7 @@ MonoBehaviour:
   m_MinValue: 13000
   m_MaxValue: 17000
   m_WholeNumbers: 0
-  m_Value: 16663
+  m_Value: 16749
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5275,7 +5275,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.738
+  m_Value: 0.366
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6158,7 +6158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -4, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852657439
 MonoBehaviour:
@@ -6173,23 +6173,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.84615326, b: 0.3915094, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1061095280324808263, guid: 3cf2358f8f83c22469e789b01bd4d054, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad149971ec7ab774e87f55cc46af5693, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.91575
+  m_FillAmount: 0.93725
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &852657440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10009,7 +10009,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -4, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361885513
 MonoBehaviour:
@@ -10024,7 +10024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8784314, g: 0.3254902, b: 0.34509805, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10036,11 +10036,11 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.40175
+  m_FillAmount: 0.06275
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1361885514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11159,7 +11159,7 @@ MonoBehaviour:
   m_MinValue: 13000
   m_MaxValue: 17000
   m_WholeNumbers: 0
-  m_Value: 14607
+  m_Value: 13251
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14388,6 +14388,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1536897796}
     m_Modifications:
+    - target: {fileID: 1892301262663737804, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: EditorEnable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2542005254466667988, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14485,6 +14489,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632345843861027579, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
       objectReference: {fileID: 0}
@@ -14498,15 +14510,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.01702387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01702387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.01702387
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99874645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041102541536655575, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.050055426
       objectReference: {fileID: 0}
     - target: {fileID: 5203751421050342499, guid: ce7f2dee9fc774041b99ebbaf720f15e, type: 3}
       propertyPath: m_LocalScale.x
