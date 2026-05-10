@@ -15,4 +15,10 @@ public class CheatGoldToDestroy : MonoBehaviour
         SaveLoadSystem<ProgressData>.Save("Player", player);
         SceneManager.LoadScene("Meta");
     }
+    
+    public void DestroySaves()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Meta");
+    }
 }
