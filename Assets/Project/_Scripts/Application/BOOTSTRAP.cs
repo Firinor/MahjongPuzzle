@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using YG;
 
 public class BOOTSTRAP : MonoBehaviour
 {
@@ -17,3 +18,11 @@ public class BOOTSTRAP : MonoBehaviour
         nextScene.SwitchToScene();
     }
 }
+
+public static class FirYG2Service
+{
+    public static void Initialize()
+    {
+        YG2.GameReadyAPI();
+    }
+} 
