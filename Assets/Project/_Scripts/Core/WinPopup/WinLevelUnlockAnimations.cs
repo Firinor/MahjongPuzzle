@@ -4,6 +4,7 @@ using FirAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class WinLevelUnlockAnimations : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class WinLevelUnlockAnimations : MonoBehaviour
 
     private List<Sprite> levelRewards = new(); 
     
-    public void Initialize(ProgressData player, int reward, int bonus = 0)
+    public void Initialize(SavesYG player, int reward, int bonus = 0)
     {
         //this.player = player;
         this.reward = reward;

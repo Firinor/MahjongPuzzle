@@ -1,0 +1,3 @@
+﻿Build path: E:/UNITY projects/FirGames/Majong/Builds/Majhong_Yandex_v0.991
+Build number: 1
+PluginYG version: 2.0091

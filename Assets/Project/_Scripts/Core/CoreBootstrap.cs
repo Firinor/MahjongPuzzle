@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
+using YG;
 
 public class CoreBootstrap : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private Material[] floorMaterials;
     
-    private ProgressData player;
+    private SavesYG player;
     private TilesData tileData;
     private Desk2 desk;
     
@@ -129,7 +130,7 @@ public class CoreBootstrap : MonoBehaviour
 
     private void LoadSaves()
     {
-        player = SaveLoadSystem<ProgressData>.Load("Player", Default: new());
+        player = YG2.saves;
         tileData = tiles.First(t => string.Equals(t.ID, player.tilesID));
         desk = desks2.First(d => string.Equals(d.ID, player.deskID));
     }

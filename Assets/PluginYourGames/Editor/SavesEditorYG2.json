@@ -1,0 +1,18 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 52,
+    "GoldCoins": 40000,
+    "tilesID": "ClassicTiles",
+    "deskID": "Rabbit",
+    "Difficulty": 2,
+    "ShuffleSpell": 3,
+    "HintSpell": 3,
+    "SpotLightSpell": 3
+}

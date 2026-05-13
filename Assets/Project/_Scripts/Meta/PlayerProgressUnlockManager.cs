@@ -2,13 +2,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class PlayerProgressUnlockManager : MonoBehaviour
 {
     [SerializeField] 
     private TextMeshProUGUI playerGold;
     
-    private ProgressData player;
+    private SavesYG player;
 
     [SerializeField]
     private Unlocks unlocks;
@@ -29,7 +30,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private int scrollDeskIndex = 0;
     private readonly List<string> unlockedDesks = new(){"ClassicDesk"};
     
-    public void Initialize(ProgressData progressData)
+    public void Initialize(SavesYG progressData)
     {
         player = progressData;
 
@@ -183,13 +184,13 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private void SelectDifficulty(int value)
     {
         player.Difficulty = value;
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
 
     private void SelectTiles(string ID)
     {
         player.tilesID = ID;
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
     private void SelectDesk(string ID)
     {
@@ -199,7 +200,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             bool v = desk.ID.Equals(ID);
             desk.Checkmark.enabled = v;
         }
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
 
     private void OnDestroy()

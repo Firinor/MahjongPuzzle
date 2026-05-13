@@ -2,6 +2,7 @@ using FirAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class SpellManager : MonoBehaviour
 {
@@ -23,12 +24,12 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HintCountText;
     [SerializeField] private TextMeshProUGUI SpotLightCountText;
 
-    private ProgressData player;
+    private SavesYG player;
 
     private bool isAnimationComplete;
     private bool isSpotLightOn = false;
     
-    public void Initialize(ProgressData progress)
+    public void Initialize(SavesYG progress)
     {
         player = progress;
         
@@ -90,7 +91,10 @@ public class SpellManager : MonoBehaviour
         {
             SpellSupply.SetActive(true);
             return;
-        }*/
+        }
+        
+        player.HintSpell--;
+        HintCountText.text = GetSpellCount(player.HintSpell);*/
         
         for (int i = 0; i < pool.transform.childCount-1; i++)
         {
@@ -107,7 +111,7 @@ public class SpellManager : MonoBehaviour
                 if (data1.Sprite == data2.Sprite)
                 {
                     HintCountText.text = GetSpellCount(player.HintSpell);
-                    SaveLoadSystem<ProgressData>.Save("Player", player);
+                    YG2.SaveProgress();
 
                     data1.isHint = true;
                     data2.isHint = true;
@@ -138,7 +142,7 @@ public class SpellManager : MonoBehaviour
             return;
         }
         
-        /*if (player.SpotLightSpell <= 0)
+       /* if (player.SpotLightSpell <= 0)
         {
             SpellSupply.SetActive(true);
             return;
@@ -146,7 +150,7 @@ public class SpellManager : MonoBehaviour
         
         player.SpotLightSpell--;
         SpotLightCountText.text = GetSpellCount(player.SpotLightSpell);
-        SaveLoadSystem<ProgressData>.Save("Player", player);*/
+        YG2.SaveProgress();*/
         
         Spotlight();
     }
@@ -176,19 +180,19 @@ public class SpellManager : MonoBehaviour
     {
         player.HintSpell++;
         HintCountText.text = player.HintSpell.ToString();
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
     public void AddShuffleSpell()
     {
         player.ShuffleSpell++;
         ShuffleCountText.text = player.ShuffleSpell.ToString();
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
     public void AddSpotLightSpell()
     {
         player.SpotLightSpell++;
         SpotLightCountText.text = player.SpotLightSpell.ToString();
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        YG2.SaveProgress();
     }
     
     private void OnDestroy()

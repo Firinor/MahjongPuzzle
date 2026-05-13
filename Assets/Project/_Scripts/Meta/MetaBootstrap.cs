@@ -1,6 +1,7 @@
 using System.Collections;
 using FirAnimations;
 using UnityEngine;
+using YG;
 
 [DefaultExecutionOrder(-1)]
 public class MetaBootstrap : MonoBehaviour
@@ -13,9 +14,7 @@ public class MetaBootstrap : MonoBehaviour
     [SerializeField] 
     private PlayerProgressUnlockManager unlocksManager;
     
-    public CheatGoldToDestroy CHEATS;
-    
-    private ProgressData player;
+    private SavesYG player;
     
     private IEnumerator Start()
     {
@@ -30,11 +29,12 @@ public class MetaBootstrap : MonoBehaviour
         LoadPlayerData();
         
         unlocksManager.Initialize(player);
-        CHEATS.Initialize(player);
+
+        YG2.GameReadyAPI();
     }
     
     private void LoadPlayerData()
     {
-        player = SaveLoadSystem<ProgressData>.Load("Player", Default: new());
+        player = YG2.saves;
     }
 }

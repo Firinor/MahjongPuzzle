@@ -12,17 +12,10 @@ public class BOOTSTRAP : MonoBehaviour
     IEnumerator Start()
     {
         yield return LocalizationSettings.InitializationOperation;
-
+        yield return YG2.onGetSDKData;
+        
         settings.Initialize(bootstrap: true);
         
         nextScene.SwitchToScene();
     }
 }
-
-public static class FirYG2Service
-{
-    public static void Initialize()
-    {
-        YG2.GameReadyAPI();
-    }
-} 

@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class SettingsData
@@ -7,5 +8,6 @@ public class SettingsData
     public bool IsMusicOn = true;
     public float SFXValue = .5f;
     public bool IsSFXOn = true;
+    [FormerlySerializedAs("PlayerLanguage")] public bool isPlayerLanguage = false;
     public string Language = "en";
 }
