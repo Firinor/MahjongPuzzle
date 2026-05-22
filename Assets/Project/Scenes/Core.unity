@@ -2828,7 +2828,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.427451, g: 0.59607846, b: 0.427451, a: 1}
+  m_BackGroundColor: {r: 0.56078434, g: 0.74509805, b: 0.56078434, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -7586,7 +7586,7 @@ GameObject:
   - component: {fileID: 997057375}
   - component: {fileID: 997057378}
   - component: {fileID: 997057377}
-  - component: {fileID: 997057376}
+  - component: {fileID: 997057379}
   m_Layer: 5
   m_Name: PlayerDeskInputImage
   m_TagString: Untagged
@@ -7613,50 +7613,6 @@ RectTransform:
   m_AnchoredPosition: {x: 19.37, y: -47.000008}
   m_SizeDelta: {x: 1577.14, y: 986}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &997057376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997057374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 0
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 997057377}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &997057377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7695,6 +7651,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997057374}
   m_CullTransparentMesh: 1
+--- !u!114 &997057379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997057374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b262cf197ac04124289f76dbcbd36818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHolder
 --- !u!224 &1003039719 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -8824,7 +8792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171a120edef7c1542953c9d209d020d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHand
-  playerInput: {fileID: 997057376}
+  playerInput: {fileID: 997057379}
 --- !u!114 &1205326071
 MonoBehaviour:
   m_ObjectHideFlags: 0

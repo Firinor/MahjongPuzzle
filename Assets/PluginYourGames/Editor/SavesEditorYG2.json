@@ -7,10 +7,10 @@
         false,
         false
     ],
-    "idSave": 52,
+    "idSave": 57,
     "GoldCoins": 40000,
-    "tilesID": "ClassicTiles",
-    "deskID": "Rabbit",
+    "tilesID": "Euro",
+    "deskID": "Butterfly",
     "Difficulty": 2,
     "ShuffleSpell": 3,
     "HintSpell": 3,
