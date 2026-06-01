@@ -21,7 +21,7 @@ MonoBehaviour:
     payingStatus: 0
   InterstitialAdv:
     showFirstAdv: 1
-    interAdvInterval: 5
+    interAdvInterval: 20
     postponeCallByFail: 0
     postponeCallTimer: 10
     labelAdvSimLabel: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
     device: 1
     language: ru
     enableInterAdv: 1
-    advIntervalSimulation: 5
+    advIntervalSimulation: 20
     durationAdv: 0.5
     loadAdv: 0
     testFailAds: 0

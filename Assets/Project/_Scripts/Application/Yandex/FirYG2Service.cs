@@ -21,8 +21,14 @@ public class FirYG2Service : MonoBehaviour
             Debug.LogError("Duo instance!");
         instance = this;
         DontDestroyOnLoad(gameObject);
+        
         YG2.onPurchaseSuccess += SuccessPurchased;
+        YG2.onAdvNotification += PauseGame;
+        YG2.onCloseAnyAdv  += UnpauseGame;
     }
+    
+    private void PauseGame() => YG2.PauseGame(true);
+    private void UnpauseGame() => YG2.PauseGame(false);
     public void Initialize()
     {
         YG2.GameReadyAPI();
@@ -56,22 +62,15 @@ public class FirYG2Service : MonoBehaviour
     /// </summary>
     public void CheckTimerAd()
     {
-        if (!YG2.isTimerAdvCompleted || YG2.nowAdsShow) 
+        if (!AdReady()) 
             return;
 
-        timerAdShowCoroutine = StartCoroutine(AdShow());
+        YG2.InterstitialAdvShow();
     }
 
-    private IEnumerator AdShow()
+    public bool AdReady()
     {
-        YG2.PauseGame(true);
-
-        YG2.InterstitialAdvShow();
-
-        while (!YG2.nowInterAdv)
-            yield return null;
-            
-        YG2.PauseGame(false);
+        return YG2.isTimerAdvCompleted && !YG2.nowAdsShow;
     }
 
     [ContextMenu("Pause")]
@@ -121,5 +120,7 @@ public class FirYG2Service : MonoBehaviour
     private void OnDestroy()
     {
         YG2.onPurchaseSuccess -= SuccessPurchased;
+        YG2.onAdvNotification -= PauseGame;
+        YG2.onCloseAnyAdv  -= UnpauseGame;
     }
 }
