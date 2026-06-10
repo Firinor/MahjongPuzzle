@@ -119,6 +119,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &642633111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642633113}
+  - component: {fileID: 642633112}
+  m_Layer: 0
+  m_Name: AudioLisener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &642633112
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642633111}
+  m_Enabled: 1
+--- !u!4 &642633113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642633111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &948678204
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BOOTSTRAP
   nextScene: {fileID: 948678207}
   settings: {fileID: 5198012798097311613}
+  isYG: 1
 --- !u!114 &948678207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
   SceneName: Meta
+  "close\u0421urtain": {fileID: 0}
 --- !u!1001 &1201559160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +278,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 504a7386cc96fc14a841199ac345061a, type: 3}
+--- !u!1 &1258647260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258647262}
+  - component: {fileID: 1258647261}
+  m_Layer: 0
+  m_Name: YandexService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1258647261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258647260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f031c24744549a1e104af1ca37a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FirYG2Service
+  Timer: 0
+--- !u!4 &1258647262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258647260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &3326780656088095645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -289,6 +376,7 @@ MonoBehaviour:
     IsMusicOn: 1
     SFXValue: 0.5
     IsSFXOn: 1
+    isPlayerLanguage: 0
     Language: en
   mixer: {fileID: 24100000, guid: 6073c46e496651d4484335f4d91fc61c, type: 2}
   musicSlider: {fileID: 0}
@@ -304,3 +392,5 @@ SceneRoots:
   - {fileID: 948678205}
   - {fileID: 3326780656088095645}
   - {fileID: 1201559160}
+  - {fileID: 1258647262}
+  - {fileID: 642633113}

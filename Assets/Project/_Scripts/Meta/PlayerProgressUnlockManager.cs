@@ -8,7 +8,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     [SerializeField] 
     private TextMeshProUGUI playerGold;
     
-    private ProgressData player;
+    private SaveData player;
 
     [SerializeField]
     private Unlocks unlocks;
@@ -27,19 +27,19 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private Button ScrollDesksDown;
 
     private int scrollDeskIndex = 0;
-    private readonly List<string> unlockedDesks = new(){"ClassicDesk"};
+    private readonly List<string> unlockedDesks = new(){"ClassicDesk", "ClassicDeskAlter"};
     
-    public void Initialize(ProgressData progressData)
+    public void Initialize(SaveData progressData)
     {
         player = progressData;
 
         playerGold.text = player.GoldCoins.ToString();
 
         UnlocksProgress();
-        UnlockedDesk(player.deskID);
+        UnlockedDesk(player.DeskID);
 
         tiles[0].Toggle.isOn = false;
-        var toggle = tiles.Find(d => d.ID.Equals(player.tilesID));
+        var toggle = tiles.Find(d => d.ID.Equals(player.TilesID));
         toggle.Toggle.isOn = true;
         
         difficulty[0].isOn = false;
@@ -68,7 +68,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             scrollIndex++;
         }
         
-        var desk = desks.Find(d => d.ID == player.deskID);
+        var desk = desks.Find(d => d.ID == player.DeskID);
         desk.Checkmark.enabled = true;
     }
 
@@ -103,7 +103,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             deskToggle.Unlock(deskSprites[scrollIndex]);
             scrollIndex++;
             
-            if(deskToggle.ID.Equals(player.deskID))
+            if(deskToggle.ID.Equals(player.DeskID))
                 deskToggle.Checkmark.enabled = true;
         }
     }
@@ -183,23 +183,23 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private void SelectDifficulty(int value)
     {
         player.Difficulty = value;
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        player.Save();
     }
 
     private void SelectTiles(string ID)
     {
-        player.tilesID = ID;
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        player.TilesID = ID;
+        player.Save();
     }
     private void SelectDesk(string ID)
     {
-        player.deskID = ID;
+        player.DeskID = ID;
         foreach (var desk in desks)
         {
             bool v = desk.ID.Equals(ID);
             desk.Checkmark.enabled = v;
         }
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        player.Save();
     }
 
     private void OnDestroy()

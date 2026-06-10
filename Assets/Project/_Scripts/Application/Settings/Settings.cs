@@ -4,6 +4,9 @@ using UnityEngine.Audio;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class Settings : MonoBehaviour
 {
@@ -49,10 +52,25 @@ public class Settings : MonoBehaviour
         
         
         Locale locale;
-        if(data.Language.Equals("ru-RU"))
-            locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
+        if (data.isPlayerLanguage)
+        {
+            if(data.Language.Equals("ru-RU"))
+                locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
+            else
+                locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+        }
         else
+        {
+#if IS_YANDEX
+            if(string.Equals(YG2.lang, "ru"))
+                locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
+            else
+                locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+#else
             locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+#endif
+        }
+        
         LocalizationSettings.SelectedLocale = locale;
     }
 
@@ -109,6 +127,7 @@ public class Settings : MonoBehaviour
             LocalizationSettings.SelectedLocale = locale;
 
             data.Language = "ru-RU";
+            data.isPlayerLanguage = true;
             SaveLoadSystem<SettingsData>.Save("Settings", data);
         });
         
@@ -120,6 +139,7 @@ public class Settings : MonoBehaviour
             LocalizationSettings.SelectedLocale = locale;
             
             data.Language = "en";
+            data.isPlayerLanguage = true;
             SaveLoadSystem<SettingsData>.Save("Settings", data);
         });
     }
@@ -128,17 +148,37 @@ public class Settings : MonoBehaviour
     {
         yield return LocalizationSettings.InitializationOperation;
 
-        if (data.Language == "ru-RU")
+        if (data.isPlayerLanguage)
         {
-            ruLanguageToggle.GetComponent<ButtonClick>().enabled = false;
-            ruLanguageToggle.isOn = true;
-            ruLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+            if (data.Language == "ru-RU")
+            {
+                ruLanguageToggle.GetComponent<ButtonClick>().enabled = false;
+                ruLanguageToggle.isOn = true;
+                ruLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+            }
+            else
+            {
+                enLanguageToggle.GetComponent<ButtonClick>().enabled = false;
+                enLanguageToggle.isOn = true;
+                enLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+            }
         }
         else
         {
-            enLanguageToggle.GetComponent<ButtonClick>().enabled = false;
-            enLanguageToggle.isOn = true;
-            enLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+#if IS_YANDEX
+            if(string.Equals(YG2.lang, "ru"))
+            {
+                ruLanguageToggle.GetComponent<ButtonClick>().enabled = false;
+                ruLanguageToggle.isOn = true;
+                ruLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+            }
+            else
+            {
+                enLanguageToggle.GetComponent<ButtonClick>().enabled = false;
+                enLanguageToggle.isOn = true;
+                enLanguageToggle.GetComponent<ButtonClick>().enabled = true;
+            }
+#endif
         }
     }
 

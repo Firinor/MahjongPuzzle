@@ -1,0 +1,15 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 291,
+    "GoldCoins": 0,
+    "tilesID": "ClassicTiles",
+    "deskID": "ClassicDesk",
+    "Difficulty": 1
+}

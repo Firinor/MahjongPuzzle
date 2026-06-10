@@ -1,6 +1,6 @@
 ﻿using System;
 
-[Serializable]
+/*[Serializable]
 public class ProgressData
 {
     public int GoldCoins;
@@ -29,4 +29,4 @@ public class ProgressData
         OnGoldChange?.Invoke(GoldCoins);
         return true;
     }
-}
+}*/

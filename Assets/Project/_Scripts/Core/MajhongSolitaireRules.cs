@@ -26,7 +26,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     [SerializeField] 
     private TextMeshProUGUI openPairs;
     
-    private ProgressData player;
+    private SaveData player;
     [SerializeField]
     private MajhongTileView tile;
 
@@ -44,7 +44,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     private int comboCounter;
     
 
-    public void Initialize(ProgressData player)
+    public void Initialize(SaveData player)
     {
         this.player = player;
         player.OnGoldChange += PlayerGoldChanged;
@@ -57,7 +57,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     private void PlayerGoldChanged(int count)
     {
         allPlayerGold.text = count.ToString();
-        SaveLoadSystem<ProgressData>.Save("Player", player);
+        player.Save();
     }
 
     private void IsCorrectTile(MajhongTileView tile)
@@ -121,7 +121,6 @@ public class MajhongSolitaireRules : MonoBehaviour
             roundPlayerGold.text = "+" + roundScores;
             pool.Release(tile1);
             pool.Release(tile);
-            SaveLoadSystem<ProgressData>.Save("Player", player);
             
             CheckWinCondition();
         });
@@ -175,6 +174,16 @@ public class MajhongSolitaireRules : MonoBehaviour
         winPopup.ToStartPoint();
         winPopup.StartAnimations();
         winAnimations.Play();
+    }
+    [ContextMenu("UnlockAll")]
+    public void UnlockAll()
+    {
+        player.AddGold(100000);
+    }
+    [ContextMenu("LockAll")]
+    public void LockAll()
+    {
+        player.ResetProgress();
     }
     [ContextMenu("Lose")]
     public void Lose()
