@@ -7,12 +7,9 @@
         false,
         false
     ],
-    "idSave": 234,
-    "GoldCoins": 41010,
-    "tilesID": "Euro",
-    "deskID": "Cat",
-    "Difficulty": 1,
-    "ShuffleSpell": 3,
-    "HintSpell": 3,
-    "SpotLightSpell": 3
+    "idSave": 291,
+    "GoldCoins": 0,
+    "tilesID": "ClassicTiles",
+    "deskID": "ClassicDesk",
+    "Difficulty": 1
 }

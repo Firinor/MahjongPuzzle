@@ -40,11 +40,15 @@ public class TilePool : MonoBehaviour
         }
     }
 
-    public List<MajhongTileView> GetAll()
+    public List<MajhongTileView> GetAll(bool isAddUnplayable = false)
     {
         List<MajhongTileView> result = new();
         for (int i = 0; i < transform.childCount; i++)
         {
+            if(!isAddUnplayable 
+               && !transform.GetChild(i).GetComponent<MajhongTileView>().IsPlayable)
+                continue;
+            
             if(!transform.GetChild(i).gameObject.activeSelf)
                 continue;
 

@@ -1,7 +1,9 @@
 using System.Collections;
 using FirAnimations;
 using UnityEngine;
+#if IS_YANDEX
 using YG;
+#endif
 
 [DefaultExecutionOrder(-1)]
 public class MetaBootstrap : MonoBehaviour
@@ -14,7 +16,10 @@ public class MetaBootstrap : MonoBehaviour
     [SerializeField] 
     private PlayerProgressUnlockManager unlocksManager;
     
-    private SavesYG player;
+    [SerializeField] 
+    private Cheats cheats;
+    
+    private SaveData player;
     
     private IEnumerator Start()
     {
@@ -30,11 +35,21 @@ public class MetaBootstrap : MonoBehaviour
         
         unlocksManager.Initialize(player);
 
-        YG2.GameReadyAPI();
+#if Cheats
+        cheats.Initialize(player);
+#endif
+#if IS_YANDEX
+    YG2.GameReadyAPI();
+#endif
     }
     
     private void LoadPlayerData()
     {
-        player = YG2.saves;
+#if IS_YANDEX
+        player = new YGSaveData();
+#else
+        player = new PrefsSaveData();
+#endif
+        player.FirstLoad();
     }
 }

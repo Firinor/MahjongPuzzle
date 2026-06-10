@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
@@ -8,7 +7,6 @@ using YG.Insides;
 public class FirYG2Service : MonoBehaviour
 {
     public static FirYG2Service instance;
-
     
     [SerializeField] private float Timer;
     
@@ -17,6 +15,7 @@ public class FirYG2Service : MonoBehaviour
     
     private void Awake()
     {
+#if IS_YANDEX
         if(instance != null)
             Debug.LogError("Duo instance!");
         instance = this;
@@ -25,6 +24,10 @@ public class FirYG2Service : MonoBehaviour
         YG2.onPurchaseSuccess += SuccessPurchased;
         YG2.onAdvNotification += PauseGame;
         YG2.onCloseAnyAdv  += UnpauseGame;
+#else
+        enabled = false;
+        Destroy(gameObject);
+#endif
     }
     
     private void PauseGame() => YG2.PauseGame(true);

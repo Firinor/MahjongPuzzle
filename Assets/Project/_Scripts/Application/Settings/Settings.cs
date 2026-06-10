@@ -4,7 +4,9 @@ using UnityEngine.Audio;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+#if IS_YANDEX
 using YG;
+#endif
 
 public class Settings : MonoBehaviour
 {
@@ -59,10 +61,14 @@ public class Settings : MonoBehaviour
         }
         else
         {
+#if IS_YANDEX
             if(string.Equals(YG2.lang, "ru"))
                 locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
             else
                 locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+#else
+            locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+#endif
         }
         
         LocalizationSettings.SelectedLocale = locale;
@@ -159,6 +165,7 @@ public class Settings : MonoBehaviour
         }
         else
         {
+#if IS_YANDEX
             if(string.Equals(YG2.lang, "ru"))
             {
                 ruLanguageToggle.GetComponent<ButtonClick>().enabled = false;
@@ -171,6 +178,7 @@ public class Settings : MonoBehaviour
                 enLanguageToggle.isOn = true;
                 enLanguageToggle.GetComponent<ButtonClick>().enabled = true;
             }
+#endif
         }
     }
 

@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BOOTSTRAP
   nextScene: {fileID: 948678207}
   settings: {fileID: 5198012798097311613}
+  isYG: 1
 --- !u!114 &948678207
 MonoBehaviour:
   m_ObjectHideFlags: 0

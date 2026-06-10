@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
-using YG;
 
 public class CoreBootstrap : MonoBehaviour
 {
@@ -31,7 +30,7 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private Material[] floorMaterials;
     
-    private SavesYG player;
+    private SaveData player;
     private TilesData tileData;
     private Desk2 desk;
     
@@ -44,7 +43,8 @@ public class CoreBootstrap : MonoBehaviour
         
         closeСurtain.Play();//OpenScene
         
-        LoadSaves();
+        LoadPlayerData();
+        
         settings.Initialize();
         pool.ClearAll(instant: true);
         StartCoroutine(DeckInitialize(EmptyDesk()));
@@ -128,11 +128,16 @@ public class CoreBootstrap : MonoBehaviour
         return ints;
     }
 
-    private void LoadSaves()
+    private void LoadPlayerData()
     {
-        player = YG2.saves;
-        tileData = tiles.First(t => string.Equals(t.ID, player.tilesID));
-        desk = desks2.First(d => string.Equals(d.ID, player.deskID));
+#if IS_YANDEX
+        player = new YGSaveData();
+#else
+        player = new PrefsSaveData();
+#endif
+        player.FirstLoad();
+        tileData = tiles.First(t => string.Equals(t.ID, player.TilesID));
+        desk = desks2.First(d => string.Equals(d.ID, player.DeskID));
     }
 
     public void Shuffle()

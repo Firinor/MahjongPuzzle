@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using FirAnimations;
 using TMPro;
 using UnityEngine;
-using YG;
 
 public class MajhongSolitaireRules : MonoBehaviour
 {
@@ -27,7 +26,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     [SerializeField] 
     private TextMeshProUGUI openPairs;
     
-    private SavesYG player;
+    private SaveData player;
     [SerializeField]
     private MajhongTileView tile;
 
@@ -45,7 +44,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     private int comboCounter;
     
 
-    public void Initialize(SavesYG player)
+    public void Initialize(SaveData player)
     {
         this.player = player;
         player.OnGoldChange += PlayerGoldChanged;
@@ -58,7 +57,7 @@ public class MajhongSolitaireRules : MonoBehaviour
     private void PlayerGoldChanged(int count)
     {
         allPlayerGold.text = count.ToString();
-        YG2.SaveProgress();
+        player.Save();
     }
 
     private void IsCorrectTile(MajhongTileView tile)
@@ -175,6 +174,16 @@ public class MajhongSolitaireRules : MonoBehaviour
         winPopup.ToStartPoint();
         winPopup.StartAnimations();
         winAnimations.Play();
+    }
+    [ContextMenu("UnlockAll")]
+    public void UnlockAll()
+    {
+        player.AddGold(100000);
+    }
+    [ContextMenu("LockAll")]
+    public void LockAll()
+    {
+        player.ResetProgress();
     }
     [ContextMenu("Lose")]
     public void Lose()
