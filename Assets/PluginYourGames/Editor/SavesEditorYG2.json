@@ -7,9 +7,9 @@
         false,
         false
     ],
-    "idSave": 291,
+    "idSave": 295,
     "GoldCoins": 0,
     "tilesID": "ClassicTiles",
-    "deskID": "ClassicDesk",
-    "Difficulty": 1
+    "deskID": "ClassicDeskAlter",
+    "Difficulty": 0
 }
