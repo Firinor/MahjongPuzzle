@@ -353,6 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMonetize
   GAME_ID: 3y0qc5zpe0z7rystsi6aauo1rd5wjkag
+  Timer: 150
+  timeLeft: 0
 --- !u!4 &1304049027
 Transform:
   m_ObjectHideFlags: 0

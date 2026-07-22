@@ -22,8 +22,7 @@ public class GameMonetize : MonoBehaviour
 
     public static Action OnResumeGame;
     public static Action OnPauseGame;
-
-
+    
     [DllImport("__Internal")]
     private static extern void InitApi(string gameKey);
 
@@ -93,19 +92,29 @@ public class GameMonetize : MonoBehaviour
             Debug.LogWarning("ShowBanner failed. Make sure you are running a WebGL build in a browser. Error: " + e.Message);
         }
     }
-
-    [ContextMenu("Pause")]
-    public void UnpauseGame()
+    
+    /// <summary>
+    /// Resume the game, this method is used when an ad has been showed
+    /// </summary>
+    void ResumeGame()
     {
         AudioListener.volume = 1f;
         Time.timeScale = 1f;
+        
+        if (OnResumeGame != null) OnResumeGame();
     }
 
-    public void PauseGame()
+    /// <summary>
+    /// Pause the game, this method is used when we show an ad
+    /// </summary>
+    void PauseGame()
     {
         Time.timeScale = Mathf.Epsilon;
         AudioListener.volume = 0f;
+        
+        if(OnPauseGame != null) OnPauseGame();
     }
+    
 #else
     private void Awake()
     {
