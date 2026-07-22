@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 94897060}
   - component: {fileID: 94897059}
   m_Layer: 0
-  m_Name: Yandex
+  m_Name: ADS Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d334cf25497e93da75e8886c49f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirYandexService.YandexInternADSTileHintEvent
-  timer: 60
+  timer: 150
   Rules: {fileID: 180524335}
 --- !u!114 &94897060
 MonoBehaviour:
@@ -431,7 +431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirYandexService.YandexInternADSButtons
   buttons:
-  - {fileID: 158896786}
   - {fileID: 2239636051237845601}
   - {fileID: 1003039720}
   - {fileID: 1835009418}

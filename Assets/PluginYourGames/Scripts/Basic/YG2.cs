@@ -39,7 +39,9 @@ namespace YG
         public static bool nowRewardAdv;
         public static Action onAdvNotification, onOpenAnyAdv, onCloseAnyAdv, onErrorAnyAdv;
 
+#if IS_YANDEX
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+#endif
         private static void Initialize()
         {
 #if UNITY_EDITOR

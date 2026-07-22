@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -693,7 +693,7 @@ PlayerSettings:
     PS4: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
     PS5: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
     Standalone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
-    WebGL: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;IS_YANDEX;!Cheats
+    WebGL: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;!IS_YANDEX;IS_GAMEMONETIZE;!Cheats
     Windows Store Apps: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
     XboxOne: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
     iPhone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg
@@ -795,7 +795,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 641fba09-98cc-4d96-bb16-b13263f8e552
   framebufferDepthMemorylessMode: 0

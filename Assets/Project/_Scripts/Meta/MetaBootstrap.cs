@@ -39,7 +39,10 @@ public class MetaBootstrap : MonoBehaviour
         cheats.Initialize(player);
 #endif
 #if IS_YANDEX
-    YG2.GameReadyAPI();
+        YG2.GameReadyAPI();
+#endif
+#if IS_GAMEMONETIZE
+        GameMonetize.Instance.Init();
 #endif
     }
     

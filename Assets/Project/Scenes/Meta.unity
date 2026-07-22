@@ -1867,7 +1867,7 @@ GameObject:
   - component: {fileID: 623389258}
   - component: {fileID: 623389259}
   m_Layer: 0
-  m_Name: Yandex
+  m_Name: ADSButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
