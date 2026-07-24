@@ -1,5 +1,28 @@
 {
   "dependencies": {
+    "com.mirrasdk.playgama.api": {
+      "version": "https://github.com/MirraSDK/SDK5-Playgama-API.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b022a30560da296e79d38cc93d6b7a221b7ea255"
+    },
+    "com.playgama.bridge": {
+      "version": "https://github.com/Playgama/bridge-unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fa34e39fcde5100ccc7f8d963adea543f536d515"
+    },
+    "com.romanlee17.mirrasdk5": {
+      "version": "https://github.com/MirraSDK/SDK5.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.addressables": "1.0.0"
+      },
+      "hash": "c9fc548f5c32fa997e3ef96e11168c5e0fbe5947"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.4",
       "depth": 0,

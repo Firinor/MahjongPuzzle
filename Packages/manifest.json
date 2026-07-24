@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.mirrasdk.playgama.api": "https://github.com/MirraSDK/SDK5-Playgama-API.git",
+    "com.playgama.bridge": "https://github.com/Playgama/bridge-unity.git",
+    "com.romanlee17.mirrasdk5": "https://github.com/MirraSDK/SDK5.git",
     "com.unity.2d.animation": "13.0.4",
     "com.unity.2d.aseprite": "3.0.1",
     "com.unity.2d.psdimporter": "12.0.1",
