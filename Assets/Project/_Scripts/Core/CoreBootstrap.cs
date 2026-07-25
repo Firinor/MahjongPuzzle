@@ -132,6 +132,8 @@ public class CoreBootstrap : MonoBehaviour
     {
 #if IS_YANDEX
         player = new YGSaveData();
+#elif IS_MIRRA
+        player = new MirraSaveData();
 #else
         player = new PrefsSaveData();
 #endif

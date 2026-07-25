@@ -669,10 +669,10 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: PROJECT:Uni 6 fix_Width_Height-Mobile
+  webGLTemplate: PROJECT:Bridge
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 2
+  webGLCompressionFormat: 0
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -696,7 +696,7 @@ PlayerSettings:
     PS4: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
     PS5: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
     Standalone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
-    WebGL: '!YandexGamesPlatform_yg;!PLUGIN_YG_2;!TMP_YG2;!NJSON_YG2;!InterstitialAdv_yg;!RewardedAdv_yg;!Authorization_yg;!Payments_yg;!Storage_yg;!Localization_yg;!IS_YANDEX;IS_GAMEMONETIZE;!Cheats;RU_YG2'
+    WebGL: '!YandexGamesPlatform_yg;!PLUGIN_YG_2;!TMP_YG2;!NJSON_YG2;!InterstitialAdv_yg;!RewardedAdv_yg;!Authorization_yg;!Payments_yg;!Storage_yg;!Localization_yg;!RU_YG2;!IS_YANDEX;!IS_GAMEMONETIZE;IS_MIRRA;Cheats'
     Windows Store Apps: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
     XboxOne: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
     iPhone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2
@@ -798,7 +798,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 641fba09-98cc-4d96-bb16-b13263f8e552
   framebufferDepthMemorylessMode: 0

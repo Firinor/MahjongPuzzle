@@ -8,8 +8,10 @@ public class GameManagerGM : MonoBehaviour {
 
     void Awake()
     {
+#if IS_GAMEMONETIZE
         GameMonetize.OnResumeGame += ResumeGame;
         GameMonetize.OnPauseGame += PauseGame;
+#endif
     }
 
     public void ResumeGame()
@@ -31,6 +33,8 @@ public class GameManagerGM : MonoBehaviour {
 
     public void ShowAd()
     {
+#if IS_GAMEMONETIZE
         GameMonetize.Instance.ShowAd();
+#endif
     }
 }

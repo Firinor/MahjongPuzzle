@@ -44,12 +44,17 @@ public class MetaBootstrap : MonoBehaviour
 #if IS_GAMEMONETIZE
         GameMonetize.Instance.Init();
 #endif
+#if IS_MIRRA
+        MirraService.Instance.Initialize();
+#endif
     }
     
     private void LoadPlayerData()
     {
 #if IS_YANDEX
         player = new YGSaveData();
+#elif IS_MIRRA
+        player = new MirraSaveData();
 #else
         player = new PrefsSaveData();
 #endif

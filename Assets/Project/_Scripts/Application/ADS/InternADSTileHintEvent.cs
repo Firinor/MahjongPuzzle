@@ -25,6 +25,12 @@ namespace FirYandexService
                 SelfDestroy();
                 return;
             }
+#elif IS_MIRRA
+            if(MirraService.Instance == null)
+            {
+                SelfDestroy();
+                return;
+            }
 #endif
             _timer = timer;
             Rules.OnTilesChanged += CheckTimer;
@@ -40,6 +46,8 @@ namespace FirYandexService
             FirYG2Service.instance.CheckTimerAd();
 #elif IS_GAMEMONETIZE
             GameMonetize.Instance.ShowAd();
+#elif IS_MIRRA
+            MirraService.Instance.ShowAd();
 #endif         
             _timer = timer;
         }

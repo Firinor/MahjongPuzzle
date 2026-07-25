@@ -22,6 +22,13 @@ namespace FirYandexService
                 return;
             GameMonetize.Instance.SetButtons(buttons);
         }
+#elif IS_MIRRA
+        private void Awake()
+        {
+            if(MirraService.Instance == null)
+                return;
+            MirraService.Instance.SetButtons(buttons);
+        }
 #else
         private void Awake()
         {
