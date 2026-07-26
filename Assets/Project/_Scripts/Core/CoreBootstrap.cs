@@ -130,13 +130,7 @@ public class CoreBootstrap : MonoBehaviour
 
     private void LoadPlayerData()
     {
-#if IS_YANDEX
-        player = new YGSaveData();
-#elif IS_MIRRA
-        player = new MirraSaveData();
-#else
-        player = new PrefsSaveData();
-#endif
+        player = SaveData.GetPlayer();
         player.FirstLoad();
         tileData = tiles.First(t => string.Equals(t.ID, player.TilesID));
         desk = desks2.First(d => string.Equals(d.ID, player.DeskID));

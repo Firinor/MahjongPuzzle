@@ -1,9 +1,6 @@
 using System.Collections;
 using FirAnimations;
 using UnityEngine;
-#if IS_YANDEX
-using YG;
-#endif
 
 [DefaultExecutionOrder(-1)]
 public class MetaBootstrap : MonoBehaviour
@@ -38,26 +35,11 @@ public class MetaBootstrap : MonoBehaviour
 #if Cheats
         cheats.Initialize(player);
 #endif
-#if IS_YANDEX
-        YG2.GameReadyAPI();
-#endif
-#if IS_GAMEMONETIZE
-        GameMonetize.Instance.Init();
-#endif
-#if IS_MIRRA
-        MirraService.Instance.Initialize();
-#endif
     }
     
     private void LoadPlayerData()
     {
-#if IS_YANDEX
-        player = new YGSaveData();
-#elif IS_MIRRA
-        player = new MirraSaveData();
-#else
-        player = new PrefsSaveData();
-#endif
+        player = SaveData.GetPlayer();
         player.FirstLoad();
     }
 }

@@ -8,6 +8,6 @@ public class SettingsData
     public bool IsMusicOn = true;
     public float SFXValue = .2f;
     public bool IsSFXOn = true;
-    [FormerlySerializedAs("PlayerLanguage")] public bool isPlayerLanguage = false;
+    public bool isPlayerLanguage = false;
     public string Language = "en";
 }

@@ -11,6 +11,8 @@ public class BOOTSTRAP : MonoBehaviour
     private SceneButton nextScene;
     [SerializeField]
     private Settings settings;
+    [SerializeField] 
+    private AudioSource music;
     
     IEnumerator Start()
     {
@@ -21,6 +23,18 @@ public class BOOTSTRAP : MonoBehaviour
         
         settings.Initialize(bootstrap: true);
         
+#if IS_YANDEX
+        YG2.GameReadyAPI();
+#endif
+#if IS_GAMEMONETIZE
+        GameMonetize.Instance.Init();
+#endif
+#if IS_MIRRA
+        MirraService.Instance.Initialize();
+#endif
+
+        if(music != null)
+            music.Play();
         nextScene.SwitchToScene();
     }
 }

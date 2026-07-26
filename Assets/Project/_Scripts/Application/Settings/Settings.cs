@@ -7,6 +7,10 @@ using UnityEngine.UI;
 #if IS_YANDEX
 using YG;
 #endif
+#if IS_MIRRA
+using MirraGames.SDK;
+using MirraGames.SDK.Common;
+#endif
 
 public class Settings : MonoBehaviour
 {
@@ -63,6 +67,11 @@ public class Settings : MonoBehaviour
         {
 #if IS_YANDEX
             if(string.Equals(YG2.lang, "ru"))
+                locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
+            else
+                locale = LocalizationSettings.AvailableLocales.GetLocale("en");
+#elif IS_MIRRA
+            if(MirraSDK.Language.Current == LanguageType.Russian)
                 locale = LocalizationSettings.AvailableLocales.GetLocale("ru-RU");
             else
                 locale = LocalizationSettings.AvailableLocales.GetLocale("en");
