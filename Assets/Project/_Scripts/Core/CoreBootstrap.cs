@@ -153,12 +153,19 @@ public class CoreBootstrap : MonoBehaviour
 
         yield return null;
 
-        List<MajhongTileView> tilesToSpawn = (player.Difficulty) switch
-        {
-            0 => DifficultyShuffle.ShuffleEasy(listTiles),
-            2 => DifficultyShuffle.ShuffleHard(listTiles),
-            _ => DifficultyShuffle.ShuffleNormal(listTiles),
-        };
+        List<MajhongTileView> tilesToSpawn;
+        int fallbackIndexer = 0;
+        do {
+            tilesToSpawn = (player.Difficulty) switch
+            {
+                0 => DifficultyShuffle.ShuffleEasy(listTiles),
+                2 => DifficultyShuffle.ShuffleHard(listTiles),
+                _ => DifficultyShuffle.ShuffleNormal(listTiles),
+            };
+            fallbackIndexer++;
+        } 
+        while (!rules.IsHasPairs(out int pairs) && fallbackIndexer < 10);
+
 
         //Animations
         tilesToSpawn = tilesToSpawn

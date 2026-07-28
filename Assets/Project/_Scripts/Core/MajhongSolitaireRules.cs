@@ -136,7 +136,18 @@ public class MajhongSolitaireRules : MonoBehaviour
             return;
         }
 
-        int pairs = 0;
+        bool isOnGame = IsHasPairs(out int pairs);
+        openPairs.text = pairs.ToString();
+
+        if(isOnGame)
+            return;
+        
+        Lose();
+    }
+
+    public bool IsHasPairs(out int pairs)
+    {
+        pairs = 0;
         HashSet<Sprite> openTiles = new();
         for (int i = 0; i < pool.transform.childCount; i++)
         {
@@ -149,12 +160,8 @@ public class MajhongSolitaireRules : MonoBehaviour
             if (!openTiles.Add(tileSprite))
                 pairs++;
         }
-
-        openPairs.text = pairs.ToString();
-        if (pairs > 0)
-            return;
-
-        Lose();
+        
+        return pairs > 0;
     }
 
     [ContextMenu("Win")]

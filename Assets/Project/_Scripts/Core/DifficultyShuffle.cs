@@ -14,10 +14,10 @@ public static class DifficultyShuffle
         
         //Decomposition
         //int layer = 1; //Debug
+        List<MajhongTileView> tilesLayer = new();
         while (result.Count < listTiles.Count)
         {
-            List<MajhongTileView> tilesLayer = new();
-
+            tilesLayer = new();
             foreach (var checkTile in tilesToCheck)
             {
                 if(!MajhongSolitaireRules.CheckNeighbors(checkTile))
@@ -44,6 +44,27 @@ public static class DifficultyShuffle
             tile.SetData(tilesShuffled[currentIndex]);
             tile.Unselect();
             currentIndex++;
+        }
+        
+        //We check that the same last tiles do not lie on top of each other
+        foreach (MajhongTileView tile in tilesLayer)
+        {
+            if (tile.UpNeighbors == null || tile.UpNeighbors.Count == 0)
+                continue;
+            
+            foreach (var upNeighbor in tile.UpNeighbors)
+            {
+                if(upNeighbor.Sprite != tile.Sprite)
+                    continue;
+
+                int randomIndex = Random.Range(0, result.Count - tilesLayer.Count);
+                int lastIndex = result.FindIndex(t => t == tile);
+                Sprite first = result[lastIndex].Sprite;
+                Sprite second = result[randomIndex].Sprite;
+                result[randomIndex].SetData(first);
+                result[lastIndex].SetData(second);
+                break;
+            }
         }
         
         return result;
