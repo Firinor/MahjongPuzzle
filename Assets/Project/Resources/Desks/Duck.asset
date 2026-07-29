@@ -1,0 +1,1407 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b74177568e431a8d89c72e11096837, type: 3}
+  m_Name: Duck
+  m_EditorClassIdentifier: Assembly-CSharp::Desk2
+  ID: Duck
+  TilesPositions:
+  - position: {x: -3.533999, y: 3.5299997, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: 3.5299997, z: -0.6079998}
+    - {x: -3.533999, y: 3.5299997, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: 0}
+  - position: {x: -2.6980004, y: 3.5299997, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -1.2159996}
+    - {x: -2.6980004, y: 3.5299997, z: -0.6079998}
+    LeftNeighbors:
+    - {x: -3.533999, y: 3.5299997, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: 3.5299997, z: 0}
+  - position: {x: -1.862, y: 3.5299997, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 3.5299997, z: -0.6079998}
+    - {x: -1.862, y: 3.5299997, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: 0}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: 2.3899999, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: 2.3899999, z: -0.6079998}
+    - {x: -4.3699994, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -3.533999, y: 2.3899999, z: 0}
+  - position: {x: -3.533999, y: 2.3899999, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -4.3699994, y: 2.3899999, z: 0}
+    RightNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: 0}
+  - position: {x: -2.6980004, y: 2.3899999, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: -0.6079998}
+    - {x: -2.6980004, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: 2.3899999, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: 2.3899999, z: 0}
+  - position: {x: -1.862, y: 2.3899999, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -0.6079998}
+    - {x: -1.862, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: 0}
+    RightNeighbors:
+    - {x: -1.0260005, y: 2.3899999, z: 0}
+  - position: {x: -1.0260005, y: 2.3899999, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.0260005, y: 2.3899999, z: -1.2159996}
+    - {x: -1.0260005, y: 2.3899999, z: -0.6079998}
+    LeftNeighbors:
+    - {x: -1.862, y: 2.3899999, z: 0}
+    RightNeighbors: []
+  - position: {x: -6.0419993, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -6.0419993, y: 1.25, z: -0.6079998}
+    - {x: -6.0419993, y: 1.25, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -5.205999, y: 1.25, z: 0}
+  - position: {x: -5.205999, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -5.205999, y: 1.25, z: -0.6079998}
+    - {x: -5.205999, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -6.0419993, y: 1.25, z: 0}
+    RightNeighbors:
+    - {x: -4.3699994, y: 1.25, z: 0}
+  - position: {x: -4.3699994, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -0.6079998}
+    - {x: -4.3699994, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -5.205999, y: 1.25, z: 0}
+    RightNeighbors:
+    - {x: -3.534, y: 1.25, z: 0}
+  - position: {x: -3.534, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.534, y: 1.25, z: -0.6079998}
+    - {x: -3.534, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: 1.25, z: 0}
+    RightNeighbors:
+    - {x: -2.6980004, y: 1.25, z: 0}
+  - position: {x: -2.6980004, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -0.6079998}
+    - {x: -2.6980004, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.534, y: 1.25, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: 1.25, z: 0}
+  - position: {x: -1.862, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 1.25, z: -0.6079998}
+    - {x: -1.862, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 1.25, z: 0}
+    RightNeighbors:
+    - {x: -1.0259995, y: 1.25, z: 0}
+  - position: {x: -1.0259995, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.0259995, y: 1.25, z: -0.6079998}
+    - {x: -1.0259995, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: 1.25, z: 0}
+    RightNeighbors: []
+  - position: {x: 4.8259997, y: 1.25, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 4.8259997, y: 1.25, z: -0.6079998}
+    - {x: 4.8259997, y: 1.25, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors: []
+  - position: {x: -3.533999, y: 0.10999966, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: 0.10999966, z: -0.6079998}
+    - {x: -3.533999, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: 0}
+  - position: {x: -2.6980004, y: 0.10999966, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -0.6079998}
+    - {x: -2.6980004, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: 0.10999966, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: 0.10999966, z: 0}
+  - position: {x: -1.862, y: 0.10999966, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 0.10999966, z: -0.6079998}
+    - {x: -1.862, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: 0}
+    RightNeighbors: []
+  - position: {x: 4.408, y: 0.10999966, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 4.408, y: 0.10999966, z: -0.6079998}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: 5.244, y: 0.10999966, z: 0}
+  - position: {x: 5.244, y: 0.10999966, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 5.244, y: 0.10999966, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 4.408, y: 0.10999966, z: 0}
+    RightNeighbors: []
+  - position: {x: -3.1159987, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159987, y: -1.03, z: -0.6079998}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.2800002, y: -1.03, z: 0}
+  - position: {x: -2.2800002, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2800002, y: -1.03, z: -0.6079998}
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.1159987, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: -1.4439998, y: -1.03, z: 0}
+  - position: {x: -1.4439998, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4439998, y: -1.03, z: -0.6079998}
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.2800002, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: -0.6080003, y: -1.03, z: 0}
+  - position: {x: -0.6080003, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -1.03, z: -0.6079998}
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.4439998, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 0.22800016, y: -1.03, z: 0}
+  - position: {x: 0.22800016, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22800016, y: -1.03, z: -0.6079998}
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.6080003, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 1.0640006, y: -1.03, z: 0}
+  - position: {x: 1.0640006, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.0640006, y: -1.03, z: -0.6079998}
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.22800016, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 1.9000001, y: -1.03, z: 0}
+  - position: {x: 1.9000001, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.9000001, y: -1.03, z: -0.6079998}
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.0640006, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 2.7360005, y: -1.03, z: 0}
+  - position: {x: 2.7360005, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 2.7360005, y: -1.03, z: -0.6079998}
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.9000001, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 3.572, y: -1.03, z: 0}
+  - position: {x: 3.572, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.572, y: -1.03, z: -0.6079998}
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.7360005, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 4.408, y: -1.03, z: 0}
+  - position: {x: 4.408, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 4.408, y: -1.03, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 3.572, y: -1.03, z: 0}
+    RightNeighbors:
+    - {x: 5.2440004, y: -1.03, z: 0}
+  - position: {x: 5.2440004, y: -1.03, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 5.2440004, y: -1.03, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 4.408, y: -1.03, z: 0}
+    RightNeighbors: []
+  - position: {x: -3.533999, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: -2.1699998, z: -0.6079998}
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -2.74, z: 0}
+    RightNeighbors:
+    - {x: -2.6980004, y: -2.1699998, z: 0}
+  - position: {x: -2.6980004, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.6980004, y: -2.1699998, z: -0.6079998}
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: -2.1699998, z: 0}
+  - position: {x: -1.862, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -1.862, y: -2.1699998, z: -0.6079998}
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: -1.0260005, y: -2.1699998, z: 0}
+  - position: {x: -1.0260005, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -1.0260005, y: -2.1699998, z: -0.6079998}
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: -0.19000006, y: -2.1699998, z: 0}
+  - position: {x: -0.19000006, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: -0.19000006, y: -2.1699998, z: -0.6079998}
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 0.6460004, y: -2.1699998, z: 0}
+  - position: {x: 0.6460004, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    - {x: 0.6460004, y: -2.1699998, z: -0.6079998}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 1.4819999, y: -2.1699998, z: 0}
+  - position: {x: 1.4819999, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.4819999, y: -2.1699998, z: -0.6079998}
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 2.3180003, y: -2.1699998, z: 0}
+  - position: {x: 2.3180003, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    - {x: 2.3180003, y: -2.1699998, z: -0.6079998}
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 3.1539998, y: -2.1699998, z: 0}
+  - position: {x: 3.1539998, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    - {x: 3.1539998, y: -2.1699998, z: -0.6079998}
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.3180003, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 3.9899998, y: -2.1699998, z: 0}
+  - position: {x: 3.9899998, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.9899998, y: -2.1699998, z: -0.6079998}
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 3.1539998, y: -2.1699998, z: 0}
+    RightNeighbors:
+    - {x: 4.826, y: -2.1699998, z: 0}
+  - position: {x: 4.826, y: -2.1699998, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 4.826, y: -2.1699998, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 3.9899998, y: -2.1699998, z: 0}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: -2.74, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: -2.74, z: -0.6079998}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -3.533999, y: -2.1699998, z: 0}
+    - {x: -3.533999, y: -3.3100002, z: 0}
+  - position: {x: -3.533999, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: -3.3100002, z: -0.6079998}
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -3.88, z: 0}
+    - {x: -4.3699994, y: -2.74, z: 0}
+    RightNeighbors:
+    - {x: -2.6980004, y: -3.3100002, z: 0}
+  - position: {x: -2.6980004, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -2.6980004, y: -3.3100002, z: -0.6079998}
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: -3.3100002, z: 0}
+  - position: {x: -1.862, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: -3.3100002, z: -0.6079998}
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: -1.0260005, y: -3.3100002, z: 0}
+  - position: {x: -1.0260005, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -1.0260005, y: -3.3100002, z: -0.6079998}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: -0.19000006, y: -3.3100002, z: 0}
+  - position: {x: -0.19000006, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    - {x: -0.19000006, y: -3.3100002, z: -0.6079998}
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: 0.6460004, y: -3.3100002, z: 0}
+  - position: {x: 0.6460004, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 0.6460004, y: -3.3100002, z: -0.6079998}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: 1.4819999, y: -3.3100002, z: 0}
+  - position: {x: 1.4819999, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 1.4819999, y: -3.3100002, z: -0.6079998}
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: 2.3180003, y: -3.3100002, z: 0}
+  - position: {x: 2.3180003, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 2.3180003, y: -3.3100002, z: -0.6079998}
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: 3.1539998, y: -3.3100002, z: 0}
+  - position: {x: 3.1539998, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.1539998, y: -3.3100002, z: -0.6079998}
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.3180003, y: -3.3100002, z: 0}
+    RightNeighbors:
+    - {x: 3.9899998, y: -3.3100002, z: 0}
+  - position: {x: 3.9899998, y: -3.3100002, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.9899998, y: -3.3100002, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 3.1539998, y: -3.3100002, z: 0}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: -3.88, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: -3.88, z: -0.6079998}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -3.533999, y: -4.45, z: 0}
+    - {x: -3.533999, y: -3.3100002, z: 0}
+  - position: {x: -3.533999, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: -4.45, z: -0.6079998}
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -3.88, z: 0}
+    RightNeighbors:
+    - {x: -2.6980004, y: -4.45, z: 0}
+  - position: {x: -2.6980004, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -2.6980004, y: -4.45, z: -0.6079998}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: -1.862, y: -4.45, z: 0}
+  - position: {x: -1.862, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: -4.45, z: -0.6079998}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: -1.0260005, y: -4.45, z: 0}
+  - position: {x: -1.0260005, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -1.0260005, y: -4.45, z: -0.6079998}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: -0.19000006, y: -4.45, z: 0}
+  - position: {x: -0.19000006, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.19000006, y: -4.45, z: -0.6079998}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: 0.6460004, y: -4.45, z: 0}
+  - position: {x: 0.6460004, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.6460004, y: -4.45, z: -0.6079998}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: 1.4819999, y: -4.45, z: 0}
+  - position: {x: 1.4819999, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.4819999, y: -4.45, z: -0.6079998}
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: 2.3180003, y: -4.45, z: 0}
+  - position: {x: 2.3180003, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    - {x: 2.3180003, y: -4.45, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -4.45, z: 0}
+    RightNeighbors:
+    - {x: 3.1539998, y: -4.45, z: 0}
+  - position: {x: 3.1539998, y: -4.45, z: 0}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.1539998, y: -4.45, z: -0.6079998}
+    LeftNeighbors:
+    - {x: 2.3180003, y: -4.45, z: 0}
+    RightNeighbors: []
+  - position: {x: -3.533999, y: 3.5299997, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: 3.5299997, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -0.6079998}
+  - position: {x: -2.6980004, y: 3.5299997, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: 3.5299997, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: 3.5299997, z: -0.6079998}
+  - position: {x: -1.862, y: 3.5299997, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 3.5299997, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: 2.3899999, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors: []
+  - position: {x: -2.6980004, y: 2.3899999, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -0.6079998}
+  - position: {x: -1.862, y: 2.3899999, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.0260005, y: 2.3899999, z: -0.6079998}
+  - position: {x: -1.0260005, y: 2.3899999, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.0260005, y: 2.3899999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -6.0419993, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -6.0419993, y: 1.25, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -5.205999, y: 1.25, z: -0.6079998}
+  - position: {x: -5.205999, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -5.205999, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -6.0419993, y: 1.25, z: -0.6079998}
+    RightNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -0.6079998}
+  - position: {x: -4.3699994, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -5.205999, y: 1.25, z: -0.6079998}
+    RightNeighbors:
+    - {x: -3.534, y: 1.25, z: -0.6079998}
+  - position: {x: -3.534, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.534, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -0.6079998}
+    RightNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -0.6079998}
+  - position: {x: -2.6980004, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.534, y: 1.25, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: 1.25, z: -0.6079998}
+  - position: {x: -1.862, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.0259995, y: 1.25, z: -0.6079998}
+  - position: {x: -1.0259995, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.0259995, y: 1.25, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: 1.25, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: 4.8259997, y: 1.25, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 4.8259997, y: 1.25, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors: []
+  - position: {x: -3.533999, y: 0.10999966, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.533999, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -0.6079998}
+  - position: {x: -2.6980004, y: 0.10999966, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: 0.10999966, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: 0.10999966, z: -0.6079998}
+  - position: {x: -1.862, y: 0.10999966, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.862, y: 0.10999966, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: 4.408, y: 0.10999966, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: 5.244, y: 0.10999966, z: -0.6079998}
+  - position: {x: 5.244, y: 0.10999966, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 4.408, y: 0.10999966, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -3.1159987, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.2800002, y: -1.03, z: -0.6079998}
+  - position: {x: -2.2800002, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.1159987, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.4439998, y: -1.03, z: -0.6079998}
+  - position: {x: -1.4439998, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.2800002, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: -0.6080003, y: -1.03, z: -0.6079998}
+  - position: {x: -0.6080003, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.4439998, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 0.22800016, y: -1.03, z: -0.6079998}
+  - position: {x: 0.22800016, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.6080003, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 1.0640006, y: -1.03, z: -0.6079998}
+  - position: {x: 1.0640006, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.22800016, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 1.9000001, y: -1.03, z: -0.6079998}
+  - position: {x: 1.9000001, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.0640006, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 2.7360005, y: -1.03, z: -0.6079998}
+  - position: {x: 2.7360005, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.9000001, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.572, y: -1.03, z: -0.6079998}
+  - position: {x: 3.572, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.7360005, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 4.408, y: -1.03, z: -0.6079998}
+  - position: {x: 4.408, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 3.572, y: -1.03, z: -0.6079998}
+    RightNeighbors:
+    - {x: 5.2440004, y: -1.03, z: -0.6079998}
+  - position: {x: 5.2440004, y: -1.03, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 4.408, y: -1.03, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -3.533999, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -2.74, z: -0.6079998}
+    RightNeighbors:
+    - {x: -2.6980004, y: -2.1699998, z: -0.6079998}
+  - position: {x: -2.6980004, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: -2.1699998, z: -0.6079998}
+  - position: {x: -1.862, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.0260005, y: -2.1699998, z: -0.6079998}
+  - position: {x: -1.0260005, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: -0.19000006, y: -2.1699998, z: -0.6079998}
+  - position: {x: -0.19000006, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 0.6460004, y: -2.1699998, z: -0.6079998}
+  - position: {x: 0.6460004, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 1.4819999, y: -2.1699998, z: -0.6079998}
+  - position: {x: 1.4819999, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 2.3180003, y: -2.1699998, z: -0.6079998}
+  - position: {x: 2.3180003, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.1539998, y: -2.1699998, z: -0.6079998}
+  - position: {x: 3.1539998, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.3180003, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.9899998, y: -2.1699998, z: -0.6079998}
+  - position: {x: 3.9899998, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 3.1539998, y: -2.1699998, z: -0.6079998}
+    RightNeighbors:
+    - {x: 4.826, y: -2.1699998, z: -0.6079998}
+  - position: {x: 4.826, y: -2.1699998, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 3.9899998, y: -2.1699998, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: -2.74, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -3.533999, y: -3.3100002, z: -0.6079998}
+    - {x: -3.533999, y: -2.1699998, z: -0.6079998}
+  - position: {x: -3.533999, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -3.88, z: -0.6079998}
+    - {x: -4.3699994, y: -2.74, z: -0.6079998}
+    RightNeighbors:
+    - {x: -2.6980004, y: -3.3100002, z: -0.6079998}
+  - position: {x: -2.6980004, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: -3.3100002, z: -0.6079998}
+  - position: {x: -1.862, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.0260005, y: -3.3100002, z: -0.6079998}
+  - position: {x: -1.0260005, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: -0.19000006, y: -3.3100002, z: -0.6079998}
+  - position: {x: -0.19000006, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: 0.6460004, y: -3.3100002, z: -0.6079998}
+  - position: {x: 0.6460004, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: 1.4819999, y: -3.3100002, z: -0.6079998}
+  - position: {x: 1.4819999, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: 2.3180003, y: -3.3100002, z: -0.6079998}
+  - position: {x: 2.3180003, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.1539998, y: -3.3100002, z: -0.6079998}
+  - position: {x: 3.1539998, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 2.3180003, y: -3.3100002, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.9899998, y: -3.3100002, z: -0.6079998}
+  - position: {x: 3.9899998, y: -3.3100002, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 3.1539998, y: -3.3100002, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: -3.88, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -3.533999, y: -3.3100002, z: -0.6079998}
+    - {x: -3.533999, y: -4.45, z: -0.6079998}
+  - position: {x: -3.533999, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -4.3699994, y: -3.88, z: -0.6079998}
+    RightNeighbors:
+    - {x: -2.6980004, y: -4.45, z: -0.6079998}
+  - position: {x: -2.6980004, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -3.533999, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.862, y: -4.45, z: -0.6079998}
+  - position: {x: -1.862, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -2.6980004, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: -1.0260005, y: -4.45, z: -0.6079998}
+  - position: {x: -1.0260005, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.862, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: -0.19000006, y: -4.45, z: -0.6079998}
+  - position: {x: -0.19000006, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -1.0260005, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: 0.6460004, y: -4.45, z: -0.6079998}
+  - position: {x: 0.6460004, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: -0.19000006, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: 1.4819999, y: -4.45, z: -0.6079998}
+  - position: {x: 1.4819999, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 0.6460004, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: 2.3180003, y: -4.45, z: -0.6079998}
+  - position: {x: 2.3180003, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors:
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    LeftNeighbors:
+    - {x: 1.4819999, y: -4.45, z: -0.6079998}
+    RightNeighbors:
+    - {x: 3.1539998, y: -4.45, z: -0.6079998}
+  - position: {x: 3.1539998, y: -4.45, z: -0.6079998}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 2.3180003, y: -4.45, z: -0.6079998}
+    RightNeighbors: []
+  - position: {x: -3.533999, y: 3.5299997, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -1.2159996}
+  - position: {x: -2.6980004, y: 3.5299997, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -3.533999, y: 3.5299997, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.862, y: 3.5299997, z: -1.2159996}
+  - position: {x: -1.862, y: 3.5299997, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.6980004, y: 3.5299997, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: -4.3699994, y: 2.3899999, z: -1.2159996}
+    IsOpenOnStart: 1
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors: []
+  - position: {x: -2.6980004, y: 2.3899999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -1.2159996}
+  - position: {x: -1.862, y: 2.3899999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.6980004, y: 2.3899999, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.0260005, y: 2.3899999, z: -1.2159996}
+  - position: {x: -1.0260005, y: 2.3899999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -1.862, y: 2.3899999, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: -6.0419993, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -5.205999, y: 1.25, z: -1.2159996}
+  - position: {x: -5.205999, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -6.0419993, y: 1.25, z: -1.2159996}
+    RightNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -1.2159996}
+  - position: {x: -4.3699994, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -5.205999, y: 1.25, z: -1.2159996}
+    RightNeighbors:
+    - {x: -3.534, y: 1.25, z: -1.2159996}
+  - position: {x: -3.534, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -4.3699994, y: 1.25, z: -1.2159996}
+    RightNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -1.2159996}
+  - position: {x: -2.6980004, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -3.534, y: 1.25, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.862, y: 1.25, z: -1.2159996}
+  - position: {x: -1.862, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.6980004, y: 1.25, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.0259995, y: 1.25, z: -1.2159996}
+  - position: {x: -1.0259995, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -1.862, y: 1.25, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: 4.8259997, y: 1.25, z: -1.2159996}
+    IsOpenOnStart: 1
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors: []
+  - position: {x: -3.533999, y: 0.10999966, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -1.2159996}
+  - position: {x: -2.6980004, y: 0.10999966, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -3.533999, y: 0.10999966, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.862, y: 0.10999966, z: -1.2159996}
+  - position: {x: -1.862, y: 0.10999966, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.6980004, y: 0.10999966, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+  - position: {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.2799993, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+  - position: {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -1.4440007, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+  - position: {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -0.6080003, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+  - position: {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 0.22799921, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+  - position: {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 1.0639997, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+  - position: {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 1.9000001, y: -1.5999999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 3.572, y: -1.5999999, z: -1.2159996}
+  - position: {x: 3.572, y: -1.5999999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 2.7359996, y: -1.5999999, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: -3.1159997, y: -2.74, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+  - position: {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -3.1159997, y: -2.74, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+  - position: {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.2799993, y: -2.7400002, z: -1.2159996}
+    RightNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+  - position: {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -1.4440007, y: -2.7400002, z: -1.2159996}
+    RightNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+  - position: {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -0.6080003, y: -2.7400002, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+  - position: {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 0.22799921, y: -2.7400002, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+  - position: {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 1.0639997, y: -2.7400002, z: -1.2159996}
+    RightNeighbors:
+    - {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+  - position: {x: 2.7359996, y: -2.7400002, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 1.9000001, y: -2.7400002, z: -1.2159996}
+    RightNeighbors: []
+  - position: {x: -3.1159997, y: -3.88, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors: []
+    RightNeighbors:
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+  - position: {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -3.1159997, y: -3.88, z: -1.2159996}
+    RightNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+  - position: {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -2.2799993, y: -3.8799999, z: -1.2159996}
+    RightNeighbors:
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+  - position: {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -1.4440007, y: -3.8799999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+  - position: {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: -0.6080003, y: -3.8799999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+  - position: {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 0.22799921, y: -3.8799999, z: -1.2159996}
+    RightNeighbors:
+    - {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+  - position: {x: 1.8999996, y: -3.8799999, z: -1.2159996}
+    IsOpenOnStart: 0
+    UpNeighbors: []
+    LeftNeighbors:
+    - {x: 1.0639997, y: -3.8799999, z: -1.2159996}
+    RightNeighbors: []

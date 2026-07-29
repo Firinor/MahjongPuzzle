@@ -2580,6 +2580,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 72561c4b2628d5c47a3f09492335829e, type: 3}
   - {fileID: 21300000, guid: d1da787adecf0f143b202499686cc10f, type: 3}
   - {fileID: 21300000, guid: 9da1eacddfa20ca48be7ea2f30529ee6, type: 3}
+  - {fileID: 21300000, guid: ea6fa9c0ea91c1849bd619a3897add5b, type: 3}
+  - {fileID: 21300000, guid: 55c340225a901d14a81fc9aba5bb563a, type: 3}
   ScrollDesksUp: {fileID: 232612885}
   ScrollDesksDown: {fileID: 1765451718}
 --- !u!1 &771092358

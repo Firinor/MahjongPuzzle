@@ -100,17 +100,20 @@ public class CoreBootstrap : MonoBehaviour
             tileView.UpNeighbors = new(4);
             foreach (Vector3 tile in deckTile.UpNeighbors)
             {
-                tileView.UpNeighbors.Add(dictionaryTileView[tile]);
+                //if(dictionaryTileView.ContainsKey(tile))
+                    tileView.UpNeighbors.Add(dictionaryTileView[tile]);
             }
             tileView.LeftNeighbors = new(2);
             foreach (Vector3 tile in deckTile.LeftNeighbors)
             {
-                tileView.LeftNeighbors.Add(dictionaryTileView[tile]);
+                //if(dictionaryTileView.ContainsKey(tile))
+                    tileView.LeftNeighbors.Add(dictionaryTileView[tile]);
             }
             tileView.RightNeighbors = new(2);
             foreach (Vector3 tile in deckTile.RightNeighbors)
             {
-                tileView.RightNeighbors.Add(dictionaryTileView[tile]);
+                //if(dictionaryTileView.ContainsKey(tile))
+                    tileView.RightNeighbors.Add(dictionaryTileView[tile]);
             }
         }
         

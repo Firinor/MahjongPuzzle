@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a05709805de4476a1bd5dd9c3ed66cb, type: 3}
   m_Name: Unlocks
   m_EditorClassIdentifier: Assembly-CSharp::Unlocks
-  Levels: b80b0000581b0000c8320000204e000048710000409c000008cf0000
+  Levels: b80b0000581b0000c8320000204e000048710000409c000008cf0000a0090100084c0100
   KeyWords:
   - Cat
   - Euro
@@ -21,6 +21,8 @@ MonoBehaviour:
   - Rabbit
   - Butterfly
   - Train
+  - Duck
+  - Kiwi
   Sprites:
   - {fileID: 21300000, guid: 959182cdb4e154741abc02e7ec0037d7, type: 3}
   - {fileID: 21300000, guid: da2914748f0b1414f9741a6f73a8783b, type: 3}
@@ -29,3 +31,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 72561c4b2628d5c47a3f09492335829e, type: 3}
   - {fileID: 21300000, guid: d1da787adecf0f143b202499686cc10f, type: 3}
   - {fileID: 21300000, guid: 9da1eacddfa20ca48be7ea2f30529ee6, type: 3}
+  - {fileID: 21300000, guid: ea6fa9c0ea91c1849bd619a3897add5b, type: 3}
+  - {fileID: 21300000, guid: 55c340225a901d14a81fc9aba5bb563a, type: 3}

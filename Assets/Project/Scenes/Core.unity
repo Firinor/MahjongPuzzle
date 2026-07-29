@@ -9715,6 +9715,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1657f2d492515d04b9e5c1e2b6661208, type: 2}
   - {fileID: 11400000, guid: 7e375968844e7244cb6ce3b108ed3acd, type: 2}
   - {fileID: 11400000, guid: b6392cfbd594f4d49b7ff5f56760db73, type: 2}
+  - {fileID: 11400000, guid: 5f47a597d623f904f9a53aa88e4e1734, type: 2}
+  - {fileID: 11400000, guid: 28892666ee67767478c5a9e4d4199aba, type: 2}
   settings: {fileID: 1575189758}
   pool: {fileID: 171712896}
   rules: {fileID: 180524335}
@@ -9727,7 +9729,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 2c10dc143610683438afbf8e6c6e7571, type: 2}
   - {fileID: 2100000, guid: 489b49c31fa3b154c93a8c8b652dd2af, type: 2}
   - {fileID: 2100000, guid: 73cc57ba7039742438d0b111c5ae8c2a, type: 2}
-  - {fileID: 2100000, guid: 73cc57ba7039742438d0b111c5ae8c2a, type: 2}
+  - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
+  - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
+  - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
+  - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
+  - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
 --- !u!4 &1325497669
 Transform:
   m_ObjectHideFlags: 0
