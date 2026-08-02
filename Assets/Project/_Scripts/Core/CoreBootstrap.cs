@@ -22,6 +22,8 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private MajhongSolitaireRules rules;
     [SerializeField] 
+    private CameraMover cameraMover;
+    [SerializeField] 
     private SpellManager spells;
     
     [SerializeField] 
@@ -50,6 +52,7 @@ public class CoreBootstrap : MonoBehaviour
         StartCoroutine(DeckInitialize(EmptyDesk()));
         rules.Initialize(player);
         spells.Initialize(player);
+        cameraMover.Initialize();
     }
 
     private List<MajhongTileView> EmptyDesk()
