@@ -32,6 +32,7 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
             {
                 float currentDistance = Vector2.Distance(touch1.position, touch2.position);
                 float delta = currentDistance - _initialDistance;
+                _initialDistance = currentDistance;
                 if (isDebug)
                     Debug.Log($"eventData: {delta}, coef: {touchScrollCoef}");
                 onZoom?.Invoke(delta * touchScrollCoef);

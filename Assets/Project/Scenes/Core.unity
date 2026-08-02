@@ -7960,10 +7960,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 765960571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.37, y: -47.000008}
-  m_SizeDelta: {x: 1577.14, y: 986}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997057377
 MonoBehaviour:
@@ -8016,7 +8016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHolder
   mouseScrollCoef: -0.3
-  touchScrollCoef: 0.01
+  touchScrollCoef: -0.01
   isDebug: 0
 --- !u!224 &1003039719 stripped
 RectTransform:

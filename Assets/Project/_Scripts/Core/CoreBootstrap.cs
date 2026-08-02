@@ -25,6 +25,8 @@ public class CoreBootstrap : MonoBehaviour
     private CameraMover cameraMover;
     [SerializeField] 
     private SpellManager spells;
+    [SerializeField] 
+    private PlayerInputHolder inputHolder;
     
     [SerializeField] 
     private Transform tileStartAnimationPoint;
@@ -35,6 +37,8 @@ public class CoreBootstrap : MonoBehaviour
     private SaveData player;
     private TilesData tileData;
     private Desk2 desk;
+
+    private bool startSignal;
     
     [ContextMenu("DeckInitialize")]
     private IEnumerator Start()
@@ -53,8 +57,15 @@ public class CoreBootstrap : MonoBehaviour
         rules.Initialize(player);
         spells.Initialize(player);
         cameraMover.Initialize();
+
+        inputHolder.onClick += FastStart;
     }
 
+    private void FastStart(Vector2 point)
+    {
+        startSignal = true;
+    }
+    
     private List<MajhongTileView> EmptyDesk()
     {
         List<Sprite> listTiles = new(desk.TilesPositions.Count);
@@ -149,6 +160,8 @@ public class CoreBootstrap : MonoBehaviour
     
     private IEnumerator DeckInitialize(List<MajhongTileView> listTiles)
     {
+        startSignal = false;
+        
         rules.UnselectTile();
         spells.DisableShuffle();
         
@@ -233,10 +246,12 @@ public class CoreBootstrap : MonoBehaviour
             };
             animationRotation.Curve = curveRotation;
             animationRotation.Play();
-            yield return new WaitForSeconds(delta);
+            if(!startSignal)
+                yield return new WaitForSeconds(delta);
             delta *= 0.996f;
         }
-        yield return new WaitForSeconds(1);
+        if(!startSignal)
+            yield return new WaitForSeconds(1);
         
         //lastTile
         lastTile.GetComponent<FirPositionAnimation>().Play();
@@ -265,5 +280,10 @@ public class CoreBootstrap : MonoBehaviour
         rules.CheckWinCondition();
         spells.ButtonsOn();
         spells.EnableShuffle();
+    }
+
+    private void OnDestroy()
+    {
+        inputHolder.onClick -= FastStart;
     }
 }
