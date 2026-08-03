@@ -41,6 +41,8 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
 
         if (Input.touchCount == 0)
         {
+            if (isDebug)
+                Debug.Log($"isZoom = false");
             isZoom = false;
         }
     }
