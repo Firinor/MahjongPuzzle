@@ -3,17 +3,29 @@ using UnityEngine;
 
 public class CanvasRatioManager : MonoBehaviour
 {
-    public event Action<ScreenOrientation> onChange;
+    public static event Action<ScreenOrientation> onChange;
 #if UNITY_EDITOR
     public bool isDebug;
 #endif
     
     private bool isLandscape = true;
-    
-    void Start()
+
+    private void Start()
     {
-        if (!SystemInfo.supportsGyroscope) 
+        if (!SystemInfo.supportsGyroscope)
+        {
+#if UNITY_EDITOR
+            if (isDebug)
+            {
+                DontDestroyOnLoad(gameObject);
+                return;
+            }
+#endif
             Destroy(gameObject);
+            return;
+        }
+        
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()

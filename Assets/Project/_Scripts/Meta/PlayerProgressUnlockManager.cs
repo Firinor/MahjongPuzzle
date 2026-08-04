@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,9 +15,9 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private Unlocks unlocks;
     
     [SerializeField] 
-    private List<TileToggle> tiles;
+    private List<Wrapper<TileToggle>> tiles;
     [SerializeField] 
-    private List<Toggle> difficulty;
+    public List<Wrapper<Toggle>> difficulty;
     [SerializeField] 
     private List<DeskToggle> desks;
     [SerializeField] 
@@ -38,12 +39,16 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         UnlocksProgress();
         UnlockedDesk(player.DeskID);
 
-        tiles[0].Toggle.isOn = false;
-        var toggle = tiles.Find(d => d.ID.Equals(player.TilesID));
-        toggle.Toggle.isOn = true;
+        foreach (var tileToggle in tiles[0].List)
+            tileToggle.Toggle.isOn = false;
+        var toggles = tiles.Find(d => d.List[0].ID.Equals(player.TilesID));
+        foreach (var tileToggle in toggles.List)
+            tileToggle.Toggle.isOn = true;
         
-        difficulty[0].isOn = false;
-        difficulty[player.Difficulty].isOn = true;
+        foreach (var diffToggle in difficulty[0].List)
+            diffToggle.isOn = false;
+        foreach (var diffToggle in difficulty[player.Difficulty].List)
+            diffToggle.isOn = true;
         
         Subscriptions();
     }
@@ -90,7 +95,6 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         UnselectAll();
         FillDesks();
     }
-
     private void FillDesks()
     {
         int scrollIndex = scrollDeskIndex;
@@ -107,7 +111,6 @@ public class PlayerProgressUnlockManager : MonoBehaviour
                 deskToggle.Checkmark.enabled = true;
         }
     }
-
     private void UnselectAll()
     {
         foreach (var desk in desks)
@@ -133,15 +136,17 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             //coins -= unlocks.Levels[index];
             string unlockKey = unlocks.KeyWords[index];
 
-            if (unlockKey.Equals(tiles[1].ID))
+            if (unlockKey.Equals(tiles[1].List[0].ID))
             {
-                tiles[1].Unlock();
+                foreach (var tileToggle in tiles[1].List)
+                    tileToggle.Unlock();
                 index++;
                 continue;
             }
-            if (unlockKey.Equals(tiles[2].ID))
+            if (unlockKey.Equals(tiles[2].List[0].ID))
             {
-                tiles[2].Unlock(); 
+                foreach (var tileToggle in tiles[2].List)
+                    tileToggle.Unlock(); 
                 index++;
                 continue;
             }
@@ -155,21 +160,23 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     {
         foreach (var d in difficulty)
         {
-            d.onValueChanged.AddListener(v =>
-            {
-                if(!v)
-                    return;
-                SelectDifficulty(difficulty.IndexOf(d));
-            });
+            foreach (var d1 in d.List)
+                d1.onValueChanged.AddListener(v =>
+                {
+                    if(!v)
+                        return;
+                    SelectDifficulty(difficulty.IndexOf(d));
+                });
         }
-        foreach (var tileToggle in tiles)
+        foreach (var tileToggles in tiles)
         {
-            tileToggle.Toggle.onValueChanged.AddListener(v =>
-            {
-                if(!v)
-                    return;
-                SelectTiles(tileToggle.ID);
-            });
+            foreach (var tileToggle in tileToggles.List)
+                tileToggle.Toggle.onValueChanged.AddListener(v =>
+                {
+                    if(!v)
+                        return;
+                    SelectTiles(tileToggle.ID);
+                });
         }
         foreach (var desk in desks)
         {
@@ -205,16 +212,22 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private void OnDestroy()
     {
         foreach (var t in tiles)
-        {
-            t.Toggle.onValueChanged.RemoveAllListeners();
-        }
+            foreach (var t2 in t.List)
+                t2.Toggle.onValueChanged.RemoveAllListeners();
+        
         foreach (var d in difficulty)
-        {
-            d.onValueChanged.RemoveAllListeners();
-        }
+            foreach (var d2 in d.List)
+                d2.onValueChanged.RemoveAllListeners();
+        
         foreach (var d in desks)
         {
             d.Button.onClick.RemoveAllListeners();
         }
     }
+}
+
+[Serializable]
+public class Wrapper<T>
+{
+    public List<T> List;
 }
