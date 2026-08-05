@@ -1,7 +1,8 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class PlayerProgressUnlockManager : MonoBehaviour
@@ -15,9 +16,11 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private Unlocks unlocks;
     
     [SerializeField] 
-    private List<Wrapper<TileToggle>> tiles;
+    private List<TileToggle> tiles;
     [SerializeField] 
-    public List<Wrapper<Toggle>> difficulty;
+    public Button difficulty;
+    [SerializeField] 
+    public TextMeshProUGUI difficultyText;
     [SerializeField] 
     private List<DeskToggle> desks;
     [SerializeField] 
@@ -39,16 +42,12 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         UnlocksProgress();
         UnlockedDesk(player.DeskID);
 
-        foreach (var tileToggle in tiles[0].List)
+        foreach (var tileToggle in tiles)
             tileToggle.Toggle.isOn = false;
-        var toggles = tiles.Find(d => d.List[0].ID.Equals(player.TilesID));
-        foreach (var tileToggle in toggles.List)
-            tileToggle.Toggle.isOn = true;
+        var toggle = tiles.Find(d => d.ID.Equals(player.TilesID));
+        toggle.Toggle.isOn = true;
         
-        foreach (var diffToggle in difficulty[0].List)
-            diffToggle.isOn = false;
-        foreach (var diffToggle in difficulty[player.Difficulty].List)
-            diffToggle.isOn = true;
+        RefreshDifficultyText();
         
         Subscriptions();
     }
@@ -136,17 +135,15 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             //coins -= unlocks.Levels[index];
             string unlockKey = unlocks.KeyWords[index];
 
-            if (unlockKey.Equals(tiles[1].List[0].ID))
+            if (unlockKey.Equals(tiles[1].ID))
             {
-                foreach (var tileToggle in tiles[1].List)
-                    tileToggle.Unlock();
+                tiles[1].Unlock();
                 index++;
                 continue;
             }
-            if (unlockKey.Equals(tiles[2].List[0].ID))
+            if (unlockKey.Equals(tiles[2].ID))
             {
-                foreach (var tileToggle in tiles[2].List)
-                    tileToggle.Unlock(); 
+                tiles[2].Unlock(); 
                 index++;
                 continue;
             }
@@ -158,25 +155,17 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     private void Subscriptions()
     {
-        foreach (var d in difficulty)
+
+        difficulty.onClick.AddListener(SelectDifficulty);
+
+        foreach (var tileToggle in tiles)
         {
-            foreach (var d1 in d.List)
-                d1.onValueChanged.AddListener(v =>
-                {
-                    if(!v)
-                        return;
-                    SelectDifficulty(difficulty.IndexOf(d));
-                });
-        }
-        foreach (var tileToggles in tiles)
-        {
-            foreach (var tileToggle in tileToggles.List)
-                tileToggle.Toggle.onValueChanged.AddListener(v =>
-                {
-                    if(!v)
-                        return;
-                    SelectTiles(tileToggle.ID);
-                });
+            tileToggle.Toggle.onValueChanged.AddListener(v =>
+            {
+                if(!v)
+                    return;
+                SelectTiles(tileToggle.ID);
+            });
         }
         foreach (var desk in desks)
         {
@@ -187,9 +176,23 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         }
     }
 
-    private void SelectDifficulty(int value)
+    private void SelectDifficulty()
     {
-        player.Difficulty = value;
+        player.Difficulty = (player.Difficulty + 1) % 3;
+        RefreshDifficultyText();
+    }
+
+    private void RefreshDifficultyText()
+    {
+        string key = player.Difficulty switch
+        {
+            0 => "Easy",
+            2 => "Hard",
+            _ => "Normal"
+        };
+        string localizedText = LocalizationSettings.StringDatabase
+            .GetLocalizedString("Perevodi", key);
+        difficultyText.text = localizedText;
         player.Save();
     }
 
@@ -212,22 +215,13 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private void OnDestroy()
     {
         foreach (var t in tiles)
-            foreach (var t2 in t.List)
-                t2.Toggle.onValueChanged.RemoveAllListeners();
-        
-        foreach (var d in difficulty)
-            foreach (var d2 in d.List)
-                d2.onValueChanged.RemoveAllListeners();
+            t.Toggle.onValueChanged.RemoveAllListeners();
+
+        difficulty.onClick.RemoveAllListeners();
         
         foreach (var d in desks)
         {
             d.Button.onClick.RemoveAllListeners();
         }
     }
-}
-
-[Serializable]
-public class Wrapper<T>
-{
-    public List<T> List;
 }

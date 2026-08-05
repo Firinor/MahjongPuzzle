@@ -7,9 +7,9 @@
         false,
         false
     ],
-    "idSave": 384,
+    "idSave": 412,
     "GoldCoins": 90015460,
     "tilesID": "Euro",
-    "deskID": "Butterfly",
-    "Difficulty": 0
+    "deskID": "ClassicDesk",
+    "Difficulty": 1
 }
