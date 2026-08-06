@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91735c3a106ba0842bcdcac1bf93ce02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  SceneName: Core
+  SceneName: CoreSolitare
   "close\u0421urtain": {fileID: 416901838}
 --- !u!114 &329453230
 MonoBehaviour:

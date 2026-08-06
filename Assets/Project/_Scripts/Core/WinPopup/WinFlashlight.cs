@@ -27,5 +27,6 @@ public class WinFlashlight : MonoBehaviour
         Vector3 newPosition = target.position;
         newPosition.z = zPosition;
         root.position = newPosition;
+        transform.localScale = Vector3.one * Camera.main.orthographicSize / 7f;
     }
 }

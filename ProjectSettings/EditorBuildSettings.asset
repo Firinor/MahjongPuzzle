@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Meta.unity
     guid: 28cdbbb9e87fd0c44b2e00bbec36e24d
   - enabled: 1
-    path: Assets/Project/Scenes/Core.unity
+    path: Assets/Project/Scenes/CoreSolitare.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c4f20010273d2704c93a641d30293e12, type: 2}

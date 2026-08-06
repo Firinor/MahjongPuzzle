@@ -54,7 +54,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _Diameter: 0
+    - _Diameter: 2.5577927
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _FillFull: -23.43
@@ -63,6 +63,7 @@ Material:
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
+    - _XRMotionVectorsPass: 1
     - _ZTest: 8
     - _ZWrite: 0
     - _ZWriteControl: 0
