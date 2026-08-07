@@ -1067,6 +1067,7 @@ MonoBehaviour:
     IsMusicOn: 1
     SFXValue: 0.5
     IsSFXOn: 1
+    isPlayerLanguage: 0
     Language: en
   mixer: {fileID: 24100000, guid: 6073c46e496651d4484335f4d91fc61c, type: 2}
   musicSlider: {fileID: 8049596506509998914}
@@ -1445,6 +1446,7 @@ GameObject:
   - component: {fileID: 6529874367442985623}
   - component: {fileID: 1686405483283043385}
   - component: {fileID: 1603290501975458713}
+  - component: {fileID: 4390762719040850931}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1630,6 +1632,20 @@ MonoBehaviour:
     m_RotationOrder: 4
   StartPosition: {x: 0, y: -50, z: 0}
   EndPosition: {x: 0, y: 900, z: 0}
+--- !u!114 &4390762719040850931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5102323880420108374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485bb6c575514130a75c24e562f4e2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScreenSizeTransformController
+  width: 1400
+  cameraRatio: 7
 --- !u!1 &5359156302511998954
 GameObject:
   m_ObjectHideFlags: 0

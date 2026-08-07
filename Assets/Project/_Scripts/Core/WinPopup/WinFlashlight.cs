@@ -1,3 +1,4 @@
+using System;
 using FirAnimations;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class WinFlashlight : MonoBehaviour
     private Transform target;
     [SerializeField] 
     private float zPosition;
+    [SerializeField] 
+    private Transform winPopupTransform;
     
     public void Play()
     {
@@ -27,6 +30,6 @@ public class WinFlashlight : MonoBehaviour
         Vector3 newPosition = target.position;
         newPosition.z = zPosition;
         root.position = newPosition;
-        transform.localScale = Vector3.one * Camera.main.orthographicSize / 7f;
+        transform.localScale = winPopupTransform.localScale * Camera.main.orthographicSize / 9f;
     }
 }

@@ -1,52 +1,33 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class CanvasRatioManager : MonoBehaviour
 {
-    public static event Action<ScreenOrientation> onChange;
-#if UNITY_EDITOR
-    public bool isDebug;
-#endif
-    
-    private bool isLandscape = true;
+    public static event Action onChange;
+    private Vector2 lastScreen;
+    private float time;
+    private WaitForSeconds delay;
 
     private void Start()
     {
-        if (!SystemInfo.supportsGyroscope)
-        {
-#if UNITY_EDITOR
-            if (isDebug)
-            {
-                DontDestroyOnLoad(gameObject);
-                return;
-            }
-#endif
-            Destroy(gameObject);
-            return;
-        }
-        
+        lastScreen = new (){ x = Screen.width, y = Screen.height };
+        delay = new WaitForSeconds(time);
+        StartCoroutine(CheckUpdates());
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Update()
+    private IEnumerator CheckUpdates()
     {
-        if (isLandscape && Screen.height > Screen.width)
+        while (true)
         {
-            isLandscape = false;
-#if UNITY_EDITOR
-            if(isDebug)
-                Debug.Log(Screen.orientation);
-#endif
-            onChange?.Invoke(Screen.orientation);
-        }
-        if(!isLandscape && Screen.height < Screen.width)
-        {
-            isLandscape = true;
-#if UNITY_EDITOR
-            if(isDebug)
-                Debug.Log(Screen.orientation);
-#endif
-            onChange?.Invoke(Screen.orientation);
+            yield return delay;
+            if (Screen.height != lastScreen.y
+                || Screen.width != lastScreen.x)
+            {
+                lastScreen = new (){ x = Screen.width, y = Screen.height };
+                onChange?.Invoke();
+            }
         }
     }
 }
