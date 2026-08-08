@@ -2,8 +2,8 @@
 
 public class ScreenSizeTransformController : MonoBehaviour
 {
-    public float width;
-    public float cameraRatio = 5f;
+    public float widthRatio;
+    //public float cameraRatio = 5f;
 
     private void Start()
     {
@@ -13,12 +13,22 @@ public class ScreenSizeTransformController : MonoBehaviour
 
     private void UpdateScale()
     {
-        Debug.Log($"Screen width: {Screen.width}");
-        if(Screen.width < width)
-            transform.localScale = Vector3.one * (Screen.width / width) * (Camera.main.orthographicSize/cameraRatio);
+        float ratio = (float)Screen.height / (float)Screen.width;
+        if(ratio > widthRatio)
+            transform.localScale = Vector3.one * (ratio / widthRatio);
         else
-            transform.localScale = Vector3.one * (Camera.main.orthographicSize/cameraRatio);
+            transform.localScale = Vector3.one;
     }
+    
+    private void Update()
+    {
+        float ratio = (float)Screen.height / (float)Screen.width;
+        if(ratio > widthRatio)
+            transform.localScale = Vector3.one * (ratio / widthRatio);
+        else
+            transform.localScale = Vector3.one;
+    }
+    
 
     private void OnDestroy()
     {

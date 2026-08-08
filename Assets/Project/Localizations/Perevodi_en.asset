@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 349143834484736
-    m_Localized: "collect \nidentical tiles"
+    m_Localized: "collect \nidentical \ntiles"
     m_Metadata:
       m_Items: []
   - m_Id: 349224000217088

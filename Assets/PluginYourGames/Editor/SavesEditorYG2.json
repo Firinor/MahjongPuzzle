@@ -7,9 +7,9 @@
         false,
         false
     ],
-    "idSave": 475,
-    "GoldCoins": 90186530,
-    "tilesID": "Euro",
-    "deskID": "Train",
+    "idSave": 570,
+    "GoldCoins": 10245,
+    "tilesID": "ClassicTiles",
+    "deskID": "ClassicDesk",
     "Difficulty": 2
 }
