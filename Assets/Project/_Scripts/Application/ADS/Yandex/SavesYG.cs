@@ -9,6 +9,7 @@ namespace YG
         public string tilesID = "ClassicTiles";
         public string deskID = "ClassicDesk";
         public int Difficulty = 1;
+        public int GameMode;
     }
 }
 
@@ -37,6 +38,11 @@ public class YGSaveData : SaveData
     {
         get => saves.Difficulty;
         set => saves.Difficulty = value;
+    }
+    public override GameMode GameMode 
+    {
+        get => (GameMode)saves.GameMode;
+        set => saves.GameMode = (int)value;
     }
 
     public override void FirstLoad()
@@ -71,6 +77,11 @@ public class YGSaveData : SaveData
         TilesID = "ClassicTiles";
         DeskID = "ClassicDesk";
         Difficulty = 1;
+#if IS_Collecting
+        GameMode = GameMode.Collecting;
+#else
+        GameMode = GameMode.Solitare;
+#endif
         InvokeGoldChange(GoldCoins);
         Save();
     }

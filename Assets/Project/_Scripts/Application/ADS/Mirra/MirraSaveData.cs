@@ -41,6 +41,11 @@ public class MirraSaveData : SaveData
         get => data.difficulty;
         set => data.difficulty = value;
     }
+    public override GameMode GameMode 
+    {
+        get => data.GameMode;
+        set => data.GameMode = value;
+    }
     
     public override void FirstLoad()
     {
@@ -75,6 +80,11 @@ public class MirraSaveData : SaveData
         data.TilesID = "ClassicTiles";
         data.DeskID = "ClassicDesk";
         data.Difficulty = 1;
+#if IS_Collecting
+        data.GameMode = GameMode.Collecting;
+#else
+        data.GameMode = GameMode.Solitare;
+#endif
         InvokeGoldChange(data.GoldCoins);
         Save();
     }

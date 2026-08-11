@@ -7,6 +7,7 @@ public abstract class SaveData
     public abstract string TilesID { get; set; }
     public abstract string DeskID { get; set; }
     public abstract int Difficulty { get; set; }
+    public abstract GameMode GameMode { get; set; }
     
     public event Action<int> OnGoldChange;
 
@@ -32,4 +33,12 @@ public abstract class SaveData
         return new PrefsSaveData();
 #endif
     }
+}
+
+[Serializable]
+public enum GameMode
+{
+    Solitare,
+    Collecting,
+    Slide
 }

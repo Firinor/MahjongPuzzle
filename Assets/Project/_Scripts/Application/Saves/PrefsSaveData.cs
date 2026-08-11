@@ -7,6 +7,7 @@ public class PrefsSaveData : SaveData
     public string tilesID = "ClassicTiles";
     public string deskID = "ClassicDesk";
     public int difficulty = 1;
+    public GameMode gameMode;
 
     public override int GoldCoins
     {
@@ -29,6 +30,12 @@ public class PrefsSaveData : SaveData
         set => difficulty = value;
     }
 
+    public override GameMode GameMode
+    {
+        get => gameMode;
+        set => gameMode = value;
+    }
+
     public override void FirstLoad()
     {
         var data = SaveLoadSystem<PrefsSaveData>.Load("Player", new ());
@@ -36,6 +43,7 @@ public class PrefsSaveData : SaveData
         tilesID = data.tilesID;
         deskID = data.deskID;
         difficulty = data.difficulty;
+        gameMode = data.gameMode;
     }
 
     public override void AddGold(int count)
@@ -60,6 +68,11 @@ public class PrefsSaveData : SaveData
         TilesID = "ClassicTiles";
         DeskID = "ClassicDesk";
         Difficulty = 1;
+#if IS_Collecting
+        GameMode = GameMode.Collecting;
+#else
+        GameMode = GameMode.Solitare;
+#endif
         InvokeGoldChange(GoldCoins);
         Save();
     }

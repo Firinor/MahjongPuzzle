@@ -90,6 +90,14 @@ MonoBehaviour:
     m_Localized: Shuffle
     m_Metadata:
       m_Items: []
+  - m_Id: 42950834916089856
+    m_Localized: Solitare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42950900678582272
+    m_Localized: Collecting
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

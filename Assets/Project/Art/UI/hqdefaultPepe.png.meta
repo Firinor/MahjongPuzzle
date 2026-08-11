@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: e110caf48bb7bfd4ab48f8771889fbd8
+guid: c213a266ad7729e43aa2265e11ba7e33
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5060398083951376929
-    second: LoseOh_0
+      213: 6178789308058468217
+    second: hqdefaultPepe_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LoseOh_0
+      name: hqdefaultPepe_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 3
-        width: 760
-        height: 487
+        width: 507
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12a3df70f352a3640800000000000000
-      internalID: 5060398083951376929
+      spriteID: 97f7ec893287fb550800000000000000
+      internalID: 6178789308058468217
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LoseOh_0: 5060398083951376929
+      hqdefaultPepe_0: 6178789308058468217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -127,7 +127,7 @@ public class MajhongTileView : MonoBehaviour
     [ContextMenu("Neighbors")]
     private void Neighbors()
     {
-        Debug.Log(MajhongSolitaireRules.CheckNeighbors(this));
+        Debug.Log(CoreRulesManager.CheckNeighbors(this));
     }
     public void SetDarkerMaterial()
     {

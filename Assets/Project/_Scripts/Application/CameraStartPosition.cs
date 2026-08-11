@@ -10,25 +10,29 @@ public class CameraStartPosition : MonoBehaviour
     public float collectingPortraitOrthographicSize = 5;
     public float collectingLandscapeOrthographicSize = 10;
     
-    void Awake()
+    public void Initialize(SaveData player)
     {
         bool isLandscape = Screen.width > Screen.height;
         Vector3 cameraPosition = transform.position;
-        
-#if IS_Solitare
-        cameraPosition.y = YpositionSoliter;
-        if (isLandscape)
-            Camera.main.orthographicSize = solitareLandscapeOrthographicSize;
-        else
-            Camera.main.orthographicSize = solitarePortraitOrthographicSize;
-#elif IS_Collecting
-        cameraPosition.y = YpositionCollecting;
-        if (isLandscape)
-            Camera.main.orthographicSize = collectingLandscapeOrthographicSize;
-        else
-            Camera.main.orthographicSize = collectingPortraitOrthographicSize;
-#endif
-        
+
+        if (player.GameMode == GameMode.Solitare)
+        {
+            cameraPosition.y = YpositionSoliter;
+            if (isLandscape)
+                Camera.main.orthographicSize = solitareLandscapeOrthographicSize;
+            else
+                Camera.main.orthographicSize = solitarePortraitOrthographicSize;
+        }
+        else if (player.GameMode == GameMode.Collecting)
+        {
+
+            cameraPosition.y = YpositionCollecting;
+            if (isLandscape)
+                Camera.main.orthographicSize = collectingLandscapeOrthographicSize;
+            else
+                Camera.main.orthographicSize = collectingPortraitOrthographicSize;
+        }
+
         transform.position = cameraPosition;
     }
 }

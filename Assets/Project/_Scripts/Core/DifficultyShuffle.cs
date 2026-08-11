@@ -20,7 +20,7 @@ public static class DifficultyShuffle
             tilesLayer = new();
             foreach (var checkTile in tilesToCheck)
             {
-                if(!MajhongSolitaireRules.CheckNeighbors(checkTile))
+                if(!CoreRulesManager.CheckNeighbors(checkTile))
                     tilesLayer.Add(checkTile);
             }
             foreach (var checkTile in tilesLayer)
@@ -86,7 +86,7 @@ public static class DifficultyShuffle
                 if (tilesToCheck.Count > 0)
                 {
                     MajhongTileView randomTile = tilesToCheck.PullRandom();
-                    if (MajhongSolitaireRules.CheckNeighbors(randomTile))
+                    if (CoreRulesManager.CheckNeighbors(randomTile))
                         continue;
                     randomTile1 = randomTile;
                     listTiles.Remove(randomTile1);
@@ -104,7 +104,7 @@ public static class DifficultyShuffle
                 if (tilesToCheck.Count > 0)
                 {
                     MajhongTileView randomTile = tilesToCheck.PullRandom();
-                    if (MajhongSolitaireRules.CheckNeighbors(randomTile))
+                    if (CoreRulesManager.CheckNeighbors(randomTile))
                         continue;
                     randomTile2 = randomTile;
                     listTiles.Remove(randomTile2);

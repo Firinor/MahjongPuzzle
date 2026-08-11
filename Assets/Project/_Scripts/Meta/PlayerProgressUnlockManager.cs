@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
@@ -21,6 +22,10 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     public Button difficulty;
     [SerializeField] 
     public TextMeshProUGUI difficultyText;
+    [SerializeField] 
+    public Button gameMode;
+    [SerializeField] 
+    public TextMeshProUGUI gameModeText;
     [SerializeField] 
     private List<DeskToggle> desks;
     [SerializeField] 
@@ -48,6 +53,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         toggle.Toggle.isOn = true;
         
         RefreshDifficultyText();
+        RefreshGameModeText();
         
         Subscriptions();
     }
@@ -157,6 +163,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     {
 
         difficulty.onClick.AddListener(SelectDifficulty);
+        gameMode.onClick.AddListener(SelectGameMode);
 
         foreach (var tileToggle in tiles)
         {
@@ -180,6 +187,26 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     {
         player.Difficulty = (player.Difficulty + 1) % 3;
         RefreshDifficultyText();
+        player.Save();
+    }
+    
+    private void SelectGameMode()
+    {
+        if (player.GameMode == GameMode.Collecting)
+            player.GameMode = GameMode.Solitare;
+        else
+            player.GameMode = GameMode.Collecting;
+        
+        RefreshGameModeText();
+        player.Save();
+    }
+
+    private void RefreshGameModeText()
+    {
+        string localizedText = LocalizationSettings.StringDatabase
+            .GetLocalizedString("Perevodi", player.GameMode.ToString());
+        gameModeText.text = localizedText;
+        gameModeText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Perevodi", player.GameMode.ToString());
     }
 
     private void RefreshDifficultyText()
@@ -193,7 +220,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         string localizedText = LocalizationSettings.StringDatabase
             .GetLocalizedString("Perevodi", key);
         difficultyText.text = localizedText;
-        player.Save();
+        difficultyText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Perevodi", key);
     }
 
     private void SelectTiles(string ID)

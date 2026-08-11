@@ -342,6 +342,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -611,7 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirYandexService.YandexInternADSTileHintEvent
   timer: 150
-  Rules: {fileID: 180524335}
+  rulesManager: {fileID: 180524335}
 --- !u!114 &94897060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,11 +875,15 @@ MonoBehaviour:
   losePopup: {fileID: 1583292495}
   allPlayerGold: {fileID: 1039507820}
   roundPlayerGold: {fileID: 568475439}
-  openPairs: {fileID: 1508006253}
+  OpenPairs: {fileID: 1508006253}
+  TilesHand: {fileID: 1284663212}
   tile: {fileID: 0}
+  roundScores: 0
   defaultPoints: 10
   comboBonusPoints: 5
   comboTimePeriod: 10
+  comboCounter: 0
+  IsComboEnable: 0
 --- !u!1 &196009205
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,9 +3180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraStartPosition
   YpositionSoliter: 0
-  YpositionCollecting: 2
-  orthographicSizePortrait: 5
-  orthographicSizeLandscape: 10
+  YpositionCollecting: 1.25
+  solitarePortraitOrthographicSize: 15.6
+  solitareLandscapeOrthographicSize: 5.2
+  collectingPortraitOrthographicSize: 15.6
+  collectingLandscapeOrthographicSize: 6.5
 --- !u!1001 &537693235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4381,7 +4391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e110caf48bb7bfd4ab48f8771889fbd8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c213a266ad7729e43aa2265e11ba7e33, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 0
@@ -8395,6 +8405,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -9765,6 +9779,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -9874,6 +9892,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 1210856389}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1210856391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1210856389}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1001 &1243572749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9991,6 +10020,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -10100,6 +10133,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 1243572749}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1243572751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1243572749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1247085776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10369,6 +10413,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259482680}
   m_CullTransparentMesh: 1
+--- !u!114 &1264809158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 998639221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1284663209
 GameObject:
   m_ObjectHideFlags: 0
@@ -10379,6 +10434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284663210}
   - component: {fileID: 1284663211}
+  - component: {fileID: 1284663212}
   m_Layer: 5
   m_Name: TilesHand
   m_TagString: Untagged
@@ -10439,6 +10495,28 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1284663212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284663209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696f1f43bec02b14bba4e0f9f2d9fc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TilesHand
+  Tiles:
+  - {fileID: 2061872213615643171}
+  - {fileID: 1669646994}
+  - {fileID: 1243572751}
+  - {fileID: 1699279146}
+  - {fileID: 1492414367}
+  - {fileID: 1210856391}
+  - {fileID: 1772668446}
+  - {fileID: 1264809158}
+  TilesCount: 0
 --- !u!114 &1290284684 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3788540492525088987, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -10782,10 +10860,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 28892666ee67767478c5a9e4d4199aba, type: 2}
   settings: {fileID: 1575189758}
   pool: {fileID: 171712896}
-  rules: {fileID: 180524335}
+  rulesManager: {fileID: 180524335}
   cameraMover: {fileID: 857595867}
   spells: {fileID: 1736813613}
   inputHolder: {fileID: 997057379}
+  cameraStartPosition: {fileID: 519420033}
   tileStartAnimationPoint: {fileID: 26950910}
   floorMaterials:
   - {fileID: 2100000, guid: 828b482603dcb2141a3e85cc7f8b2ede, type: 2}
@@ -11323,6 +11402,10 @@ PrefabInstance:
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
@@ -11953,6 +12036,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
@@ -12062,6 +12149,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 1492414365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1492414367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1492414365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1508006251
 GameObject:
   m_ObjectHideFlags: 0
@@ -13748,6 +13846,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4792954300919470994, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4822830632212744435, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: graphic
       value: 
@@ -13784,6 +13886,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8267061126689059084, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13794,6 +13900,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 1669646992}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1669646994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1669646992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1681360695
 GameObject:
   m_ObjectHideFlags: 0
@@ -14006,6 +14123,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686054281}
   m_CullTransparentMesh: 1
+--- !u!114 &1699279146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1397387096}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1736813611
 GameObject:
   m_ObjectHideFlags: 0
@@ -14054,7 +14182,7 @@ MonoBehaviour:
   spellHint: {fileID: 1835009418}
   spellSpotlight: {fileID: 973410467}
   bootstrap: {fileID: 1325497668}
-  rules: {fileID: 180524335}
+  rulesManager: {fileID: 180524335}
   pool: {fileID: 171712896}
   effects: {fileID: 1138478092}
   animations: {fileID: 1449665877}
@@ -14419,6 +14547,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1482536227358839914, guid: 8fc29ed3fdf331d49961df10c1ba00ae, type: 3}
   m_PrefabInstance: {fileID: 537693235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772668446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 76786671}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1 &1780320589
 GameObject:
   m_ObjectHideFlags: 0
@@ -15978,6 +16117,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 6426444149494760975}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2061872213615643171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 6426444149494760975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1001 &2239636051237845596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16454,7 +16604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 165
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_LocalPosition.x

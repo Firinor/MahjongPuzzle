@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CoreBootstrap : MonoBehaviour
 {
@@ -20,13 +21,15 @@ public class CoreBootstrap : MonoBehaviour
     [SerializeField] 
     private TilePool pool;
     [SerializeField] 
-    private MajhongSolitaireRules rules;
+    private CoreRulesManager rulesManager;
     [SerializeField] 
     private CameraMover cameraMover;
     [SerializeField] 
     private SpellManager spells;
     [SerializeField] 
     private PlayerInputHolder inputHolder;
+    [SerializeField] 
+    private CameraStartPosition cameraStartPosition;
     
     [SerializeField] 
     private Transform tileStartAnimationPoint;
@@ -54,9 +57,10 @@ public class CoreBootstrap : MonoBehaviour
         settings.Initialize();
         pool.ClearAll(instant: true);
         StartCoroutine(DeckInitialize(EmptyDesk()));
-        rules.Initialize(player);
+        rulesManager.Initialize(player);
         spells.Initialize(player);
         cameraMover.Initialize();
+        cameraStartPosition.Initialize(player);
 
         inputHolder.onClick += FastStart;
     }
@@ -162,7 +166,7 @@ public class CoreBootstrap : MonoBehaviour
     {
         startSignal = false;
         
-        rules.UnselectTile();
+        rulesManager.UnselectTile();
         spells.DisableShuffle();
         
         foreach (var tile in listTiles)
@@ -183,7 +187,7 @@ public class CoreBootstrap : MonoBehaviour
             };
             fallbackIndexer++;
         } 
-        while (!rules.IsHasPairs(out int pairs) && fallbackIndexer < 10);
+        while (!rulesManager.IsHasPairs(out int pairs) && fallbackIndexer < 10);
 
 
         //Animations
@@ -277,7 +281,7 @@ public class CoreBootstrap : MonoBehaviour
             tile.RaycastEnableEditor();
         }
 
-        rules.CheckWinCondition();
+        rulesManager.CheckWinCondition();
         spells.ButtonsOn();
         spells.EnableShuffle();
     }

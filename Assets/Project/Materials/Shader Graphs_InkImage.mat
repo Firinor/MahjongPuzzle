@@ -49,6 +49,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alfa: 0.32
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -57,7 +58,7 @@ Material:
     - _Diameter: 3
     - _DstBlend: 10
     - _DstBlendAlpha: 10
-    - _FillFull: -23.43
+    - _FillFull: 24.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5

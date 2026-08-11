@@ -1,6 +1,7 @@
 using FirAnimations;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SpellManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class SpellManager : MonoBehaviour
     [SerializeField] private Button spellHint;
     [SerializeField] private Button spellSpotlight;
     [SerializeField] private CoreBootstrap bootstrap;
-    [SerializeField] private MajhongSolitaireRules rules;
+    [SerializeField] private CoreRulesManager rulesManager;
     [SerializeField] private TilePool pool;
     [SerializeField] private TilesEffects effects;
     [SerializeField] private FirAnimationsManager animations;
@@ -41,7 +42,7 @@ public class SpellManager : MonoBehaviour
         spellHint.gameObject.SetActive(false);
         spellSpotlight.gameObject.SetActive(false);
         
-        rules.OnTilesChanged += TrySpotlight;
+        rulesManager.OnTilesChanged += TrySpotlight;
         
         //ShuffleCountText.text = GetSpellCount(player.ShuffleSpell);
         //HintCountText.text = GetSpellCount(player.HintSpell);
@@ -98,13 +99,13 @@ public class SpellManager : MonoBehaviour
         for (int i = 0; i < pool.transform.childCount-1; i++)
         {
             MajhongTileView data1 = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            if(data1.isHint || MajhongSolitaireRules.CheckNeighbors(data1))
+            if(data1.isHint || CoreRulesManager.CheckNeighbors(data1))
                 continue;
             
             for (int j = i+1; j < pool.transform.childCount; j++)
             {
                 MajhongTileView data2 = pool.transform.GetChild(j).GetComponent<MajhongTileView>();
-                if(data2.isHint || MajhongSolitaireRules.CheckNeighbors(data2))
+                if(data2.isHint || CoreRulesManager.CheckNeighbors(data2))
                     continue;
                 
                 if (data1.Sprite == data2.Sprite)
@@ -163,7 +164,7 @@ public class SpellManager : MonoBehaviour
         for (int i = 0; i < pool.transform.childCount; i++)
         {
             MajhongTileView tileView = pool.transform.GetChild(i).GetComponent<MajhongTileView>();
-            if (!MajhongSolitaireRules.CheckNeighbors(tileView))
+            if (!CoreRulesManager.CheckNeighbors(tileView))
             {
                 tileView.DisableDarkerMaterial();
                 continue;
@@ -201,6 +202,6 @@ public class SpellManager : MonoBehaviour
         spellHint.onClick.RemoveAllListeners();
         spellSpotlight.onClick.RemoveAllListeners();
         
-        rules.OnTilesChanged -= TrySpotlight;
+        rulesManager.OnTilesChanged -= TrySpotlight;
     }
 }

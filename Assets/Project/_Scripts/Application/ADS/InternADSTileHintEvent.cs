@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace FirYandexService
 {
@@ -10,7 +11,7 @@ namespace FirYandexService
         private float _timer;
 #pragma warning restore CS0414
         
-        public MajhongSolitaireRules Rules;
+        public CoreRulesManager rulesManager;
         private void Awake()
         {
 #if IS_YANDEX
@@ -33,7 +34,7 @@ namespace FirYandexService
             }
 #endif
             _timer = timer;
-            Rules.OnTilesChanged += CheckTimer;
+            rulesManager.OnTilesChanged += CheckTimer;
         }
 
         private void CheckTimer()
@@ -61,7 +62,7 @@ namespace FirYandexService
         {
             if(FirYG2Service.instance == null)
                 return;
-            Rules.OnTilesChanged -= CheckTimer;
+            rulesManager.OnTilesChanged -= CheckTimer;
         }
         
         private void SelfDestroy()
