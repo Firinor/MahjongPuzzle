@@ -50,6 +50,7 @@ public class MajhongTileView : MonoBehaviour
     public bool isHint;
     
     public Sprite Sprite => face.sprite;
+    public Color MaterialColor => cube.material.color;
     
     public bool IsPlayable = true;
     public bool IsOpenOnStart;

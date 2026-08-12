@@ -34,13 +34,18 @@ public class TilesHand : MonoBehaviour
             out Vector2 localStartPos           
         );
         AimObject.anchoredPosition = localStartPos;
-        firstOpen.Animation.transform.SetParent(AimObject);
-        firstOpen.Animation.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        firstOpen.Animation.transform.SetParent(firstOpen.transform, worldPositionStays: true);
-        firstOpen.Animation.StartPosition = firstOpen.Animation.GetComponent<RectTransform>().anchoredPosition;
-        firstOpen.Animation.ToStartPoint();
-        firstOpen.Animation.gameObject.SetActive(true);
-        firstOpen.Animation.Play();
+        firstOpen.PositionAnimation.transform.SetParent(AimObject);
+        firstOpen.PositionAnimation.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        firstOpen.PositionAnimation.transform.SetParent(firstOpen.transform, worldPositionStays: true);
+        firstOpen.PositionAnimation.StartPosition = firstOpen.PositionAnimation.GetComponent<RectTransform>().anchoredPosition;
+        firstOpen.ColorAnimation.StartPosition = tile.MaterialColor;
+        firstOpen.PositionAnimation.ToStartPoint();
+        firstOpen.ZoomAnimation.ToStartPoint();
+        firstOpen.ColorAnimation.ToStartPoint();
+        firstOpen.PositionAnimation.gameObject.SetActive(true);
+        firstOpen.PositionAnimation.Play();
+        firstOpen.ZoomAnimation.Play();
+        firstOpen.ColorAnimation.Play();
     }
 
     public void HasCollect()

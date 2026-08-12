@@ -10243,8 +10243,7 @@ MonoBehaviour:
   - {fileID: 435933199}
   - {fileID: 2063585112}
   - {fileID: 458491172}
-  TilePrefab: {fileID: 8861292354762319867, guid: 0cf3aadc52926084d84243dbd7189bfa, type: 3}
-  AimObject: {fileID: 0}
+  AimObject: {fileID: 976163575}
   Canvas: {fileID: 517614073}
   TilesCount: 0
 --- !u!114 &1290284684 stripped
