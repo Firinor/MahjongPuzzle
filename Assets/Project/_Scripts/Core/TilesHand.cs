@@ -4,6 +4,8 @@ using UnityEngine;
 public class TilesHand : MonoBehaviour
 {
     public TileInHandView[] Tiles;
+    public RectTransform AimObject;
+    public Transform Canvas;
 
     public int TilesCount;
     public bool Full => TilesCount == Tiles.Length;
@@ -25,12 +27,17 @@ public class TilesHand : MonoBehaviour
         
         firstOpen.Face.sprite = tile.Sprite;
         var posStart = Camera.main.WorldToScreenPoint(tile.transform.position);
-        posStart.z = 0;
-        var posEnd = Camera.main.WorldToScreenPoint(firstOpen.Tile.transform.position);
-        posEnd.z = 0;
-        posStart -= posEnd;
-        //posStart.z = firstOpen.Animation.transform.position.z;
-        firstOpen.Animation.StartPosition = posStart;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            Canvas.GetComponent<RectTransform>(),                   
+            posStart,                    
+            Camera.main,        
+            out Vector2 localStartPos           
+        );
+        AimObject.anchoredPosition = localStartPos;
+        firstOpen.Animation.transform.SetParent(AimObject);
+        firstOpen.Animation.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        firstOpen.Animation.transform.SetParent(firstOpen.transform, worldPositionStays: true);
+        firstOpen.Animation.StartPosition = firstOpen.Animation.GetComponent<RectTransform>().anchoredPosition;
         firstOpen.Animation.ToStartPoint();
         firstOpen.Animation.gameObject.SetActive(true);
         firstOpen.Animation.Play();
