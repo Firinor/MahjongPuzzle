@@ -12,4 +12,11 @@ public class TileInHandView : MonoBehaviour
     public MajhongTileView TileOwner;
     
     public bool IsFull => TileOwner != null;
+
+    public void Hide()
+    {
+        TileOwner = null;
+        PositionAnimation.gameObject.SetActive(false);
+        Debug.Log($"{name} Tile false");
+    }
 }

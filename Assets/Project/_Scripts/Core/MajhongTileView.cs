@@ -164,9 +164,13 @@ public class MajhongTileView : MonoBehaviour
     {
         StopAnimation();
         statuses |= TileStatuses.Selected;
-        SoundManager.Instance.PlayTileSelect(transform.position);
+        SelectedSound();
         zoomAnimation.Play();
         ResetMaterial();
+    }
+    public void SelectedSound()
+    {
+        SoundManager.Instance.PlayTileSelect(transform.position);
     }
 
     private void StopAnimation()

@@ -53,14 +53,12 @@ public class CoreRulesManager : MonoBehaviour
         
         if (player.GameMode == GameMode.Collecting)
         {
-            OpenPairs.gameObject.SetActive(false);
-            rules = new CollectingRules {
-                TilesHand = TilesHand
-            };
+            OpenPairs.transform.parent.gameObject.SetActive(false);
+            rules = new CollectingRules(TilesHand);
         }
         else
         {
-            OpenPairs.gameObject.SetActive(true);
+            OpenPairs.transform.parent.gameObject.SetActive(true);
             Destroy(TilesHand.gameObject);
             rules = new SolitareRules();
         }
@@ -152,5 +150,10 @@ public class CoreRulesManager : MonoBehaviour
     public void CheckWinCondition()
     {
         rules.CheckWinCondition();
+    }
+
+    private void OnDestroy()
+    {
+        rules?.Dispose();
     }
 }
