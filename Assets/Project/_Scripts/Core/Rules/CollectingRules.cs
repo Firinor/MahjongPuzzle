@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class CollectingRules : Rules, IDisposable
 {
@@ -8,7 +10,7 @@ public class CollectingRules : Rules, IDisposable
     {
         TilesHand = tilesHand;
         TilesHand.OnFlyEndAnimation += CheckPairs;
-        TilesHand.OnCollideEndAnimation += CheckWinCondition;
+        //TilesHand.OnCollideEndAnimation += CheckWinCondition;
     }
 
     public override void IsCorrectTile(MajhongTileView tile)
@@ -28,28 +30,43 @@ public class CollectingRules : Rules, IDisposable
 
     private void CheckPairs()
     {
-        foreach (TileInHandView tile1 in TilesHand.Tiles)
+        foreach (TileInHandViewFrame tile1 in TilesHand.Tiles)
         {
             if (!tile1.IsFull)
                 continue;
+            
+            if (!tile1.TileView.InGame)
+                continue;
+            
+            if (tile1.TileView.RectTransform.anchoredPosition.sqrMagnitude > 0.01f)
+                continue;
 
-            foreach (TileInHandView tile2 in TilesHand.Tiles)
+            foreach (TileInHandViewFrame tile2 in TilesHand.Tiles)
             {
                 if (!tile2.IsFull)
                     continue;
-
+                
+                if (!tile2.TileView.InGame)
+                    continue;
+                
+                if (tile2.TileView.RectTransform.anchoredPosition.sqrMagnitude > 0.01f)
+                    continue;
+                
                 if (tile1 == tile2)
                     continue;
 
-                if (tile1.Face.sprite == tile2.Face.sprite)
+                if (tile1.TileView.Face.sprite == tile2.TileView.Face.sprite)
                 {
+                    tile1.TileView.InGame = false;
+                    tile2.TileView.InGame = false;
                     CollideEffect(tile1, tile2);
-                    return;
+                    break;
                 }
             }
         }
     }
-    private void CollideEffect(TileInHandView tile1, TileInHandView tile2)
+
+    private void CollideEffect(TileInHandViewFrame tile1, TileInHandViewFrame tile2)
     {
         if ((DateTime.Now - Manager.lastComboTime).TotalSeconds > Manager.comboTimePeriod)
         {
@@ -63,13 +80,19 @@ public class CollectingRules : Rules, IDisposable
 
         Manager.lastComboTime = DateTime.Now;
         int scores = Manager.defaultPoints + Manager.comboBonusPoints * Manager.comboCounter;
-        
+
+        MajhongTileView majTile1 = tile1.TileView.TileOwner;
+        MajhongTileView majTile2 = tile2.TileView.TileOwner;
+        Debug.Log("Tile1 "+ majTile1.Sprite.name + " Tile2 "+ majTile2.Sprite.name);
         Manager.effects.FlyTiles(tile1, tile2, scores, () =>
         {
             Manager.roundScores += scores;
             Manager.roundPlayerGold.text = "+" + Manager.roundScores;
-            pool.Release(tile1.TileOwner);
-            pool.Release(tile2.TileOwner);
+            Debug.Log("Tile1aft "+ majTile1.Sprite.name + " Tile2aft "+ majTile2.Sprite.name);
+            pool.Release(majTile1);
+            pool.Release(majTile2);
+            tile1.Hide();
+            tile2.Hide();
             TilesHand.MoveTiles();
             
             CheckWinCondition();
@@ -91,7 +114,7 @@ public class CollectingRules : Rules, IDisposable
     public override void Dispose()
     {
         TilesHand.OnFlyEndAnimation -= CheckPairs;
-        TilesHand.OnCollideEndAnimation -= CheckWinCondition;
+        //TilesHand.OnCollideEndAnimation -= CheckWinCondition;
         GC.SuppressFinalize(this);
     }
 }

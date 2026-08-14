@@ -25,38 +25,29 @@ public class TilesEffects : MonoBehaviour
     {
         StartCoroutine(FlyTilesCoroutine(tile1, tile2, scores, callback));
     }
-    public void FlyTiles(TileInHandView tile1, TileInHandView tile2, 
+    public void FlyTiles(TileInHandViewFrame tile1, TileInHandViewFrame tile2, 
         int scores, Action callback)
     {
+        if(tile2.TileView.SecondZoomAnimation.OnComplete is not null)
+            return;
+        
         SoundManager.Instance.PlayTileEndCollide(tile1.transform.position);
+
+        TileInHandView tile1View = tile1.TileView;
+        TileInHandView tile2View = tile2.TileView;
+        tile1View.SecondZoomAnimation.Stop();
+        tile2View.SecondZoomAnimation.Stop();
         
-        var zoom = tile1.PositionAnimation.gameObject.AddComponent<FirZoomAnimation>();
-        zoom.StartZoom = Vector3.one;
-        zoom.EndZoom = Vector3.zero;
-        zoom.ToStartPoint();
-        zoom.Play();
+        tile1View.SecondZoomAnimation.ToStartPoint();
+        tile1View.SecondZoomAnimation.Play();
         
-        var zoom2 = tile2.PositionAnimation.gameObject.AddComponent<FirZoomAnimation>();
-        zoom2.StartZoom = Vector3.one;
-        zoom2.EndZoom = Vector3.zero;
-        zoom2.ToStartPoint();
-        zoom2.Play();
-        zoom2.OnComplete += () =>
+        tile2View.SecondZoomAnimation.ToStartPoint();
+        tile2View.SecondZoomAnimation.Play();
+        tile2View.SecondZoomAnimation.OnComplete = () =>
         {
-            Debug.Log($"OnComplete 1");
-            zoom2.OnComplete = null;
-            zoom.Stop();
-            zoom2.Stop();
-            Debug.Log($"OnComplete 2");
-            Destroy(zoom); 
-            Destroy(zoom2); 
-            Debug.Log($"OnComplete 3");
-            tile1.Hide();
-            tile2.Hide();
-            Debug.Log($"OnComplete 4");
-            zoom.ToStartPoint();
-            zoom2.ToStartPoint();
-            Debug.Log($"OnComplete 5");
+            tile2View.SecondZoomAnimation.OnComplete = null;
+            tile1View.SecondZoomAnimation.Stop();
+            tile2View.SecondZoomAnimation.Stop();
             callback?.Invoke();
         };
     }

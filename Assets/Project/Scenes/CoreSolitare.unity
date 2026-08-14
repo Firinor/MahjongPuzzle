@@ -251,6 +251,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &47712542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 47712541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &58676926
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +867,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &181320899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 181320898}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &196009205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1667,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &302207920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 302207919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1001 &304213511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2484,6 +2517,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5759145687561727840, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2493,6 +2538,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &376267949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 376267948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &392849286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,17 +2776,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 1482536227358839914, guid: 8fc29ed3fdf331d49961df10c1ba00ae, type: 3}
   m_PrefabInstance: {fileID: 434772276}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &435933199 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 1207201031}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &435933200 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -2925,17 +2970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &458491172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 376267948}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &458491173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -9776,6 +9810,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &1207201032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1207201031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &1247085776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,16 +10174,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TilesHand
   Tiles:
-  - {fileID: 2061872213615643171}
-  - {fileID: 1631544004}
-  - {fileID: 1521908462}
-  - {fileID: 1781608870}
-  - {fileID: 1694529474}
-  - {fileID: 435933199}
-  - {fileID: 2063585112}
-  - {fileID: 458491172}
+  - {fileID: 6426444149494760976}
+  - {fileID: 1857447114}
+  - {fileID: 181320899}
+  - {fileID: 47712542}
+  - {fileID: 2137872985}
+  - {fileID: 1207201032}
+  - {fileID: 302207920}
+  - {fileID: 376267949}
   AimObject: {fileID: 8861292355195581709}
   Canvas: {fileID: 517614073}
+  TileViewPrefab: {fileID: 5648110466407292901, guid: 76cf68c4dafdb2347ab2334857cbf0c4, type: 3}
 --- !u!114 &1290284684 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3788540492525088987, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -11448,17 +11494,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508006251}
   m_CullTransparentMesh: 1
---- !u!114 &1521908462 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 181320898}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &1521908463 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -12381,17 +12416,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1227813568661021665, guid: 8fc29ed3fdf331d49961df10c1ba00ae, type: 3}
   m_PrefabInstance: {fileID: 1630987234}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1631544004 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 1857447113}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &1631544005 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -13061,17 +13085,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686054281}
   m_CullTransparentMesh: 1
---- !u!114 &1694529474 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 2137872984}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &1694529475 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -13526,17 +13539,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1781608870 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 47712541}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &1781608871 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -13780,6 +13782,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &1857447114 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 1857447113}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &1860545975
 GameObject:
   m_ObjectHideFlags: 0
@@ -14841,17 +14854,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056650178}
   m_CullTransparentMesh: 1
---- !u!114 &2063585112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 302207919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!224 &2063585113 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
@@ -15157,6 +15159,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &2137872985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 2137872984}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1 &2140868870
 GameObject:
   m_ObjectHideFlags: 0
@@ -15329,17 +15342,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4749125701318757157, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
   m_PrefabInstance: {fileID: 6426444149494760975}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2061872213615643171 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7671757039900759019, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
-  m_PrefabInstance: {fileID: 6426444149494760975}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
 --- !u!1001 &2239636051237845596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15702,6 +15704,10 @@ PrefabInstance:
       value: 0.5647059
       objectReference: {fileID: 0}
     - target: {fileID: 887843903738039403, guid: 5d057c8a4fe93854195d677bcad04a64, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 887843903738039403, guid: 5d057c8a4fe93854195d677bcad04a64, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -15866,6 +15872,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604262776509477546, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5759145687561727840, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -15875,6 +15893,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+--- !u!114 &6426444149494760976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385277705899479518, guid: 8d38ea5f233ccc141aa2fcf1353a7305, type: 3}
+  m_PrefabInstance: {fileID: 6426444149494760975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e632060eabe645e7aaafe4622dbc0f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileInHandViewFrame
 --- !u!1001 &6495213763730708780
 PrefabInstance:
   m_ObjectHideFlags: 0
