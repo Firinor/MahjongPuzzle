@@ -23,9 +23,6 @@ public class BOOTSTRAP : MonoBehaviour
         
         settings.Initialize(bootstrap: true);
         
-#if IS_YANDEX
-        YG2.GameReadyAPI();
-#endif
 #if IS_GAMEMONETIZE
         GameMonetize.Instance.Init();
 #endif

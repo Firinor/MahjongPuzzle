@@ -42,7 +42,6 @@ public class TilesHand : MonoBehaviour
 
         TileInHandView newView = Instantiate(TileViewPrefab, firstOpen.transform);
         newView.gameObject.name = n++.ToString();
-        Debug.Log(newView.name + "created");
         newView.TileOwner = tile;
         firstOpen.TileView = newView;
         
@@ -73,7 +72,6 @@ public class TilesHand : MonoBehaviour
 
         newView.PositionAnimation.OnComplete = () =>
         {
-            Debug.Log(newView.name + "anim complete");
             newView.PositionAnimation.OnComplete = null;
             OnFlyEndAnimation?.Invoke();
         };
@@ -87,15 +85,12 @@ public class TilesHand : MonoBehaviour
     }
     private void MoveTilesFromHand(TileInHandViewFrame fromTile, TileInHandViewFrame toTile)
     {
-        fromTile.TileView.PositionAnimation.Stop();
-        fromTile.TileView.ZoomAnimation.Stop();
-        
+        var posStart = fromTile.GetComponent<RectTransform>().anchoredPosition.x - toTile.GetComponent<RectTransform>().anchoredPosition.x;
         fromTile.TileView.transform.SetParent(toTile.transform, worldPositionStays: true);
         
         toTile.TileView = fromTile.TileView;
         fromTile.TileView = null;
         
-        var posStart = fromTile.GetComponent<RectTransform>().anchoredPosition.x - toTile.GetComponent<RectTransform>().anchoredPosition.x;
         toTile.TileView.PositionAnimation.StartPosition = new Vector2(posStart, 0);
         toTile.TileView.PositionAnimation.ToStartPoint();
         toTile.TileView.PositionAnimation.gameObject.SetActive(true);
@@ -112,8 +107,9 @@ public class TilesHand : MonoBehaviour
             
             for (int j = i+1; j < Tiles.Length; j++)//Find full
             {
-                if(!Tiles[j].IsFull
-                   || !Tiles[j].TileView.InGame) 
+                if(!Tiles[j].IsFull 
+                   || !Tiles[j].TileView.InGame
+                   || Tiles[j].TileView.PositionAnimation.enabled) 
                     continue;
                 
                 MoveTilesFromHand(Tiles[j], Tiles[i]);

@@ -28,15 +28,13 @@ public class TilesEffects : MonoBehaviour
     public void FlyTiles(TileInHandViewFrame tile1, TileInHandViewFrame tile2, 
         int scores, Action callback)
     {
-        if(tile2.TileView.SecondZoomAnimation.OnComplete is not null)
+        if(tile2.TileView.SecondZoomAnimation.enabled)
             return;
         
         SoundManager.Instance.PlayTileEndCollide(tile1.transform.position);
 
         TileInHandView tile1View = tile1.TileView;
         TileInHandView tile2View = tile2.TileView;
-        tile1View.SecondZoomAnimation.Stop();
-        tile2View.SecondZoomAnimation.Stop();
         
         tile1View.SecondZoomAnimation.ToStartPoint();
         tile1View.SecondZoomAnimation.Play();

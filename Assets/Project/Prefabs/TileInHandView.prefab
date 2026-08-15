@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e469e5cf07104448ace435a5ff64ad40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileInHandView
+  InGame: 1
   RectTransform: {fileID: 7963718485935284412}
   Face: {fileID: 5906498136021738266}
   PositionAnimation: {fileID: 851341992542504152}

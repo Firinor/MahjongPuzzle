@@ -24,12 +24,17 @@ public class CollectingRules : Rules, IDisposable
             return;
         }
         
+        if(TilesHand.Full)
+            return;
+        
         tile.SelectedSound();
         TilesHand.AddTile(tile);
     }
 
     private void CheckPairs()
     {
+        bool checkLose = true;
+        
         foreach (TileInHandViewFrame tile1 in TilesHand.Tiles)
         {
             if (!tile1.IsFull)
@@ -38,7 +43,7 @@ public class CollectingRules : Rules, IDisposable
             if (!tile1.TileView.InGame)
                 continue;
             
-            if (tile1.TileView.RectTransform.anchoredPosition.sqrMagnitude > 0.01f)
+            if (tile1.TileView.PositionAnimation.enabled)
                 continue;
 
             foreach (TileInHandViewFrame tile2 in TilesHand.Tiles)
@@ -49,7 +54,7 @@ public class CollectingRules : Rules, IDisposable
                 if (!tile2.TileView.InGame)
                     continue;
                 
-                if (tile2.TileView.RectTransform.anchoredPosition.sqrMagnitude > 0.01f)
+                if (tile2.TileView.PositionAnimation.enabled)
                     continue;
                 
                 if (tile1 == tile2)
@@ -57,6 +62,7 @@ public class CollectingRules : Rules, IDisposable
 
                 if (tile1.TileView.Face.sprite == tile2.TileView.Face.sprite)
                 {
+                    checkLose = false;
                     tile1.TileView.InGame = false;
                     tile2.TileView.InGame = false;
                     CollideEffect(tile1, tile2);
@@ -64,6 +70,9 @@ public class CollectingRules : Rules, IDisposable
                 }
             }
         }
+        
+        if(checkLose)
+            CheckWinCondition();
     }
 
     private void CollideEffect(TileInHandViewFrame tile1, TileInHandViewFrame tile2)
@@ -93,10 +102,12 @@ public class CollectingRules : Rules, IDisposable
             pool.Release(majTile2);
             tile1.Hide();
             tile2.Hide();
+            
             TilesHand.MoveTiles();
             
             CheckWinCondition();
         });
+        TilesHand.MoveTiles();
     }
     
     public override void CheckWinCondition()

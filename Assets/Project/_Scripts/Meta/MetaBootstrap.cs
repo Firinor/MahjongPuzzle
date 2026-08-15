@@ -1,6 +1,9 @@
 using System.Collections;
 using FirAnimations;
 using UnityEngine;
+#if IS_YANDEX
+using YG;
+#endif
 
 [DefaultExecutionOrder(-1)]
 public class MetaBootstrap : MonoBehaviour
@@ -34,6 +37,9 @@ public class MetaBootstrap : MonoBehaviour
 
 #if Cheats
         cheats.Initialize(player);
+#endif
+#if IS_YANDEX
+        YG2.GameReadyAPI();
 #endif
     }
     
