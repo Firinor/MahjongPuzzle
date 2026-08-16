@@ -7,10 +7,10 @@
         false,
         false
     ],
-    "idSave": 704,
-    "GoldCoins": 19085,
+    "idSave": 781,
+    "GoldCoins": 132450,
     "tilesID": "Euro",
-    "deskID": "Flower",
-    "Difficulty": 0,
-    "GameMode": 1
+    "deskID": "ClassicDesk",
+    "Difficulty": 2,
+    "GameMode": 0
 }

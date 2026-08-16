@@ -55,7 +55,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _Diameter: 0.0067725284
+    - _Diameter: 1.996273
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _FillFull: 24.8

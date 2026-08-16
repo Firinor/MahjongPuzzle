@@ -53,7 +53,11 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         toggle.Toggle.isOn = true;
         
         RefreshDifficultyText();
+#if IS_YANDEX
+       Destroy(gameMode.gameObject);
+#else
         RefreshGameModeText();
+#endif
         
         Subscriptions();
     }
@@ -163,7 +167,9 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     {
 
         difficulty.onClick.AddListener(SelectDifficulty);
+#if !IS_YANDEX
         gameMode.onClick.AddListener(SelectGameMode);
+#endif
 
         foreach (var tileToggle in tiles)
         {

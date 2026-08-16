@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class CollectingRules : Rules, IDisposable
 {
@@ -31,43 +32,27 @@ public class CollectingRules : Rules, IDisposable
         TilesHand.AddTile(tile);
     }
 
-    private void CheckPairs()
+    private void CheckPairs(TileInHandViewFrame tile)
     {
         bool checkLose = true;
         
-        foreach (TileInHandViewFrame tile1 in TilesHand.Tiles)
+        foreach (TileInHandViewFrame tilePretendent in TilesHand.Tiles)
         {
-            if (!tile1.IsFull)
-                continue;
-            
-            if (!tile1.TileView.InGame)
-                continue;
-            
-            if (tile1.TileView.PositionAnimation.enabled)
+            if (!tilePretendent.IsFull)
+                break;
+            if (tilePretendent == tile)
+                break;
+
+            if (!tilePretendent.TileView.InGame)
                 continue;
 
-            foreach (TileInHandViewFrame tile2 in TilesHand.Tiles)
+            if (tile.TileView.Face.sprite == tilePretendent.TileView.Face.sprite)
             {
-                if (!tile2.IsFull)
-                    continue;
-                
-                if (!tile2.TileView.InGame)
-                    continue;
-                
-                if (tile2.TileView.PositionAnimation.enabled)
-                    continue;
-                
-                if (tile1 == tile2)
-                    continue;
-
-                if (tile1.TileView.Face.sprite == tile2.TileView.Face.sprite)
-                {
-                    checkLose = false;
-                    tile1.TileView.InGame = false;
-                    tile2.TileView.InGame = false;
-                    CollideEffect(tile1, tile2);
-                    break;
-                }
+                checkLose = false;
+                tile.TileView.InGame = false;
+                tilePretendent.TileView.InGame = false;
+                CollideEffect(tilePretendent, tile);
+                break;
             }
         }
         
@@ -92,6 +77,8 @@ public class CollectingRules : Rules, IDisposable
 
         MajhongTileView majTile1 = tile1.TileView.TileOwner;
         MajhongTileView majTile2 = tile2.TileView.TileOwner;
+        TileInHandView handTile1 = tile1.TileView;
+        TileInHandView handTile2 = tile2.TileView;
         Debug.Log("Tile1 "+ majTile1.Sprite.name + " Tile2 "+ majTile2.Sprite.name);
         Manager.effects.FlyTiles(tile1, tile2, scores, () =>
         {
@@ -100,8 +87,12 @@ public class CollectingRules : Rules, IDisposable
             Debug.Log("Tile1aft "+ majTile1.Sprite.name + " Tile2aft "+ majTile2.Sprite.name);
             pool.Release(majTile1);
             pool.Release(majTile2);
-            tile1.Hide();
-            tile2.Hide();
+            Object.Destroy(handTile1.gameObject);
+            if(tile1.TileView == handTile1)
+                tile1.TileView = null;
+            Object.Destroy(handTile2.gameObject);
+            if(tile2.TileView == handTile2)
+                tile2.TileView = null;
             
             TilesHand.MoveTiles();
             

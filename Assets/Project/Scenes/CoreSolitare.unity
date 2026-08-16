@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd4d334cf25497e93da75e8886c49f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirYandexService.YandexInternADSTileHintEvent
-  timer: 150
+  timer: 120
   rulesManager: {fileID: 180524335}
 --- !u!114 &94897060
 MonoBehaviour:
@@ -5139,7 +5139,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 2
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
 --- !u!114 &621459966
@@ -5156,7 +5156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 25
 --- !u!4 &621459967
 Transform:
   m_ObjectHideFlags: 0
@@ -6073,14 +6073,14 @@ RectTransform:
   m_Children:
   - {fileID: 873593513}
   - {fileID: 997057375}
-  - {fileID: 249738496}
   - {fileID: 288287877}
   - {fileID: 1284663210}
-  - {fileID: 2239636051237845597}
   - {fileID: 1449665875}
+  - {fileID: 2239636051237845597}
   - {fileID: 1566561522}
   - {fileID: 1536897796}
   - {fileID: 1583292494}
+  - {fileID: 249738496}
   - {fileID: 1575189755}
   - {fileID: 667531893}
   - {fileID: 2096318258}

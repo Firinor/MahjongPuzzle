@@ -11,7 +11,7 @@ public class TilesHand : MonoBehaviour
 
     public TileInHandView TileViewPrefab;
     
-    public event Action OnFlyEndAnimation;
+    public event Action<TileInHandViewFrame> OnFlyEndAnimation;
     
     private static int n;
     
@@ -73,7 +73,7 @@ public class TilesHand : MonoBehaviour
         newView.PositionAnimation.OnComplete = () =>
         {
             newView.PositionAnimation.OnComplete = null;
-            OnFlyEndAnimation?.Invoke();
+            OnFlyEndAnimation?.Invoke(firstOpen);
         };
         
         var zoom = tile.gameObject.AddComponent<FirZoomAnimation>();
