@@ -10,6 +10,10 @@ namespace YG
         public string deskID = "ClassicDesk";
         public int Difficulty = 1;
         public int GameMode;
+        public int GoldMedals;
+        public int SilverMedals;
+        public int BronzeMedals;
+        public string LevelStars = "";
     }
 }
 
@@ -44,7 +48,27 @@ public class YGSaveData : SaveData
         get => (GameMode)saves.GameMode;
         set => saves.GameMode = (int)value;
     }
-
+    public override int GoldMedals
+    {
+        get => saves.GoldMedals;
+        set => saves.GoldMedals = value;
+    }
+    public override int SilverMedals
+    {
+        get => saves.SilverMedals;
+        set => saves.SilverMedals = value;
+    }
+    public override int BronzeMedals
+    {
+        get => saves.BronzeMedals;
+        set => saves.BronzeMedals = value;
+    }
+    public override string LevelStars
+    {
+        get => saves.LevelStars;
+        set => saves.LevelStars = value;
+    }
+    
     public override void FirstLoad()
     {
         saves = YG2.saves;

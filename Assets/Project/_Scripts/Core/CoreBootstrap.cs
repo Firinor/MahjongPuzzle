@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CoreBootstrap : MonoBehaviour
 {

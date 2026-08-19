@@ -57,7 +57,8 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(isDrag || isZoom) return;
+        if(isDrag || isZoom) 
+            return;
         onClick?.Invoke(eventData.position);
     }
 

@@ -8,7 +8,11 @@ public class PrefsSaveData : SaveData
     public string deskID = "ClassicDesk";
     public int difficulty = 1;
     public GameMode gameMode;
-
+    public int goldMedals;
+    public int silverMedals;
+    public int bronzeMedals;
+    public string levelStars = "";
+    
     public override int GoldCoins
     {
         get => goldCoins;
@@ -35,7 +39,26 @@ public class PrefsSaveData : SaveData
         get => gameMode;
         set => gameMode = value;
     }
-
+    public override int GoldMedals
+    {
+        get => goldMedals;
+        set => goldMedals = value;
+    }
+    public override int SilverMedals
+    {
+        get => silverMedals;
+        set => silverMedals = value;
+    }
+    public override int BronzeMedals
+    {
+        get => bronzeMedals;
+        set => bronzeMedals = value;
+    }
+    public override string LevelStars
+    {
+        get => levelStars;
+        set => levelStars = value;
+    }
     public override void FirstLoad()
     {
         var data = SaveLoadSystem<PrefsSaveData>.Load("Player", new ());
@@ -44,6 +67,10 @@ public class PrefsSaveData : SaveData
         deskID = data.deskID;
         difficulty = data.difficulty;
         gameMode = data.gameMode;
+        goldMedals = data.goldMedals;
+        silverMedals = data.silverMedals;
+        bronzeMedals = data.bronzeMedals;
+        levelStars = data.levelStars;
     }
 
     public override void AddGold(int count)
@@ -73,7 +100,10 @@ public class PrefsSaveData : SaveData
 #else
         GameMode = GameMode.Solitare;
 #endif
-        InvokeGoldChange(GoldCoins);
+        GoldMedals = 0;
+        SilverMedals = 0;
+        BronzeMedals = 0;
+        LevelStars = "";
         Save();
     }
 

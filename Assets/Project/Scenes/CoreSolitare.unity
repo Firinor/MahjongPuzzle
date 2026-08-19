@@ -2959,6 +2959,50 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!1 &445386215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445386216}
+  - component: {fileID: 445386217}
+  m_Layer: 0
+  m_Name: YandexRewardetADS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445386216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445386215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1839880449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &445386217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445386215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1ece0775301114f8b54917c67761c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardedADS_YG
 --- !u!114 &448367823 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3788540492525088987, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -4736,7 +4780,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264226365575696225, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_Name
-      value: SpellButton1 (2)
+      value: SpellButton1
       objectReference: {fileID: 0}
     - target: {fileID: 1417505360051269142, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8304,7 +8348,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264226365575696225, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_Name
-      value: SpellButton1 (1)
+      value: SpellButton3
       objectReference: {fileID: 0}
     - target: {fileID: 1417505360051269142, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8448,7 +8492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 287.3333
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8528,7 +8572,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0, b: 0, a: 0.003921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8631,8 +8675,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  StartPosition: {x: -130, y: 460, z: 0}
-  EndPosition: {x: 110, y: 460, z: 0}
+  StartPosition: {x: -130, y: 287.3333, z: 0}
+  EndPosition: {x: 110, y: 287.3333, z: 0}
 --- !u!1 &1016418670
 GameObject:
   m_ObjectHideFlags: 0
@@ -11109,8 +11153,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1003039719}
   - {fileID: 1835009417}
+  - {fileID: 1003039719}
   - {fileID: 973410466}
   m_Father: {fileID: 765960571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11135,11 +11179,11 @@ MonoBehaviour:
   _time: 1
   _timeLimit: 4
   animations_and_startTime:
-  - Animation: {fileID: 1003039726}
-    StartTime: 0
-  - Animation: {fileID: 2003121648}
-    StartTime: 0.5
   - Animation: {fileID: 2027089186}
+    StartTime: 0
+  - Animation: {fileID: 1003039726}
+    StartTime: 0.5
+  - Animation: {fileID: 2003121648}
     StartTime: 1
 --- !u!1 &1457917098
 GameObject:
@@ -13613,6 +13657,7 @@ Transform:
   - {fileID: 223416754}
   - {fileID: 94897058}
   - {fileID: 857595866}
+  - {fileID: 445386216}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847066465
@@ -14574,8 +14619,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  StartPosition: {x: -130, y: 287.3333, z: 0}
-  EndPosition: {x: 110, y: 287.3333, z: 0}
+  StartPosition: {x: -130, y: 460, z: 0}
+  EndPosition: {x: 110, y: 460, z: 0}
 --- !u!1 &2017609754
 GameObject:
   m_ObjectHideFlags: 0
@@ -15321,9 +15366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -15995,7 +16040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264226365575696225, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_Name
-      value: SpellButton1
+      value: SpellButton2
       objectReference: {fileID: 0}
     - target: {fileID: 1417505360051269142, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -16131,7 +16176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 460
+      value: 287.3333
       objectReference: {fileID: 0}
     - target: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

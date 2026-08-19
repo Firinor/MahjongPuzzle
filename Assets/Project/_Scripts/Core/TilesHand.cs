@@ -30,7 +30,6 @@ public class TilesHand : MonoBehaviour
     {
         tile.RaycastDisable();
         tile.IsPlayable = false;
-        tile.gameObject.SetActive(false);
 
         TileInHandViewFrame firstOpen = Tiles.FirstOrDefault(t => !t.IsFull);
 
@@ -79,9 +78,16 @@ public class TilesHand : MonoBehaviour
         var zoom = tile.gameObject.AddComponent<FirZoomAnimation>();
         zoom.StartZoom = Vector3.one;
         zoom.EndZoom = Vector3.zero;
+        Keyframe[] keys = zoom.Curve.keys;
+        int lastIndex = keys.Length - 1;
+        keys[lastIndex].time = 0.3f;
+        zoom.Curve.keys = keys;
         zoom.ToStartPoint();
         zoom.Play();
-        zoom.OnComplete += () => { Destroy(zoom); };
+        zoom.OnComplete += () => {     
+            tile.gameObject.SetActive(false);
+            Destroy(zoom); 
+        };
     }
     private void MoveTilesFromHand(TileInHandViewFrame fromTile, TileInHandViewFrame toTile)
     {

@@ -46,7 +46,26 @@ public class MirraSaveData : SaveData
         get => data.GameMode;
         set => data.GameMode = value;
     }
-    
+    public override int GoldMedals
+    {
+        get => data.goldMedals;
+        set => data.goldMedals = value;
+    }
+    public override int SilverMedals
+    {
+        get => data.silverMedals;
+        set => data.silverMedals = value;
+    }
+    public override int BronzeMedals
+    {
+        get => data.bronzeMedals;
+        set => data.bronzeMedals = value;
+    }
+    public override string LevelStars
+    {
+        get => data.levelStars;
+        set => data.levelStars = value;
+    }
     public override void FirstLoad()
     {
         if (HasData())
@@ -85,7 +104,10 @@ public class MirraSaveData : SaveData
 #else
         data.GameMode = GameMode.Solitare;
 #endif
-        InvokeGoldChange(data.GoldCoins);
+        data.GoldMedals = 0;
+        data.SilverMedals = 0;
+        data.BronzeMedals = 0;
+        data.LevelStars = "";
         Save();
     }
 }

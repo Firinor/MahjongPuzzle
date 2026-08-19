@@ -1,7 +1,6 @@
 using FirAnimations;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class SpellManager : MonoBehaviour
@@ -35,12 +34,16 @@ public class SpellManager : MonoBehaviour
         
         spellShuffle.onClick.AddListener(Shuffle);
         spellShuffle2.onClick.AddListener(Shuffle);
-        spellHint.onClick.AddListener(Hint);
-        spellSpotlight.onClick.AddListener(ApplySpotlight);
-
         spellShuffle.gameObject.SetActive(false);
-        spellHint.gameObject.SetActive(false);
+
+        spellSpotlight.onClick.AddListener(ApplySpotlight);
         spellSpotlight.gameObject.SetActive(false);
+
+        if (progress.GameMode == GameMode.Solitare)
+        {
+            spellHint.onClick.AddListener(Hint);
+        }
+        spellHint.gameObject.SetActive(false);
         
         rulesManager.OnTilesChanged += TrySpotlight;
         
@@ -52,9 +55,12 @@ public class SpellManager : MonoBehaviour
     public void ButtonsOn()
     {
         spellShuffle.gameObject.SetActive(true);
-        spellHint.gameObject.SetActive(true);
         spellSpotlight.gameObject.SetActive(true);
-        
+        if (player.GameMode == GameMode.Solitare)
+        {
+            spellHint.gameObject.SetActive(true);
+        }
+
         if(isAnimationComplete)
             return;
         

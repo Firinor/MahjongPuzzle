@@ -4,6 +4,10 @@
 public abstract class SaveData
 {
     public abstract int GoldCoins { get; set; }
+    public abstract int GoldMedals { get; set; }
+    public abstract int SilverMedals { get; set; }
+    public abstract int BronzeMedals { get; set; }
+    public abstract string LevelStars { get; set; }
     public abstract string TilesID { get; set; }
     public abstract string DeskID { get; set; }
     public abstract int Difficulty { get; set; }

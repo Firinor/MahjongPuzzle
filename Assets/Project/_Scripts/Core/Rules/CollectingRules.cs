@@ -11,7 +11,6 @@ public class CollectingRules : Rules, IDisposable
     {
         TilesHand = tilesHand;
         TilesHand.OnFlyEndAnimation += CheckPairs;
-        //TilesHand.OnCollideEndAnimation += CheckWinCondition;
     }
 
     public override void IsCorrectTile(MajhongTileView tile)
@@ -56,6 +55,8 @@ public class CollectingRules : Rules, IDisposable
             }
         }
         
+        TilesHand.MoveTiles();
+        
         if(checkLose)
             CheckWinCondition();
     }
@@ -79,12 +80,10 @@ public class CollectingRules : Rules, IDisposable
         MajhongTileView majTile2 = tile2.TileView.TileOwner;
         TileInHandView handTile1 = tile1.TileView;
         TileInHandView handTile2 = tile2.TileView;
-        Debug.Log("Tile1 "+ majTile1.Sprite.name + " Tile2 "+ majTile2.Sprite.name);
         Manager.effects.FlyTiles(tile1, tile2, scores, () =>
         {
             Manager.roundScores += scores;
             Manager.roundPlayerGold.text = "+" + Manager.roundScores;
-            Debug.Log("Tile1aft "+ majTile1.Sprite.name + " Tile2aft "+ majTile2.Sprite.name);
             pool.Release(majTile1);
             pool.Release(majTile2);
             Object.Destroy(handTile1.gameObject);
@@ -98,7 +97,6 @@ public class CollectingRules : Rules, IDisposable
             
             CheckWinCondition();
         });
-        TilesHand.MoveTiles();
     }
     
     public override void CheckWinCondition()
@@ -116,7 +114,6 @@ public class CollectingRules : Rules, IDisposable
     public override void Dispose()
     {
         TilesHand.OnFlyEndAnimation -= CheckPairs;
-        //TilesHand.OnCollideEndAnimation -= CheckWinCondition;
         GC.SuppressFinalize(this);
     }
 }
