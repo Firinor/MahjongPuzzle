@@ -54,6 +54,7 @@ public class CoreRulesManager : MonoBehaviour
         if (player.GameMode == GameMode.Collecting)
         {
             OpenPairs.transform.parent.gameObject.SetActive(false);
+            TilesHand.Initialize();
             rules = new CollectingRules(TilesHand);
         }
         else

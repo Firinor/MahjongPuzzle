@@ -111,6 +111,8 @@ public static class DifficultyShuffle
                 }
                 else
                 {
+                    if(listTiles.Count <= 0)
+                        break;
                     MajhongTileView randomTile = listTiles.PullRandom();
                     randomTile2 = randomTile;
                 }
@@ -119,8 +121,11 @@ public static class DifficultyShuffle
 
             randomTile1.gameObject.SetActive(false);
             randomTile1.IsPlayable = false;
-            randomTile2.gameObject.SetActive(false);
-            randomTile2.IsPlayable = false;
+            if (randomTile2 is not null)
+            {
+                randomTile2.gameObject.SetActive(false);
+                randomTile2.IsPlayable = false;
+            }
         }
         
         //Initialization
@@ -168,13 +173,19 @@ public static class DifficultyShuffle
             .ToList();
         
         var pairs = new List<List<Sprite>>();
-        for (int i = 0; i < sorted.Count; i += 2)
+
+        Sprite OddSprite = null;
+        if (sorted.Count % 2 == 1)
+            OddSprite = sorted[^1];
+        
+        for (int i = 0; i < sorted.Count-1; i += 2)
         {
             pairs.Add(new(){sorted[i], sorted[i+1]});
         }
-        
         pairs.Shuffle();
-        
-        return pairs.SelectMany(p => p).ToList();
+        result = pairs.SelectMany(p => p).ToList();
+        if(OddSprite is not null)
+            result.Add(OddSprite);
+        return result;
     }
 }

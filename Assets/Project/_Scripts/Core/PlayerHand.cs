@@ -7,6 +7,7 @@ public class PlayerHand : MonoBehaviour
     private PlayerInputHolder playerInput;
 
     public Action<MajhongTileView> OnTileClick;
+    public GameObject losePopup;
 
     private void Start()
     {
@@ -15,6 +16,9 @@ public class PlayerHand : MonoBehaviour
 
     private void FindTile(Vector2 position)
     {
+        if(losePopup.activeSelf)
+            return;
+        
         MajhongTileView tile = GetRayHitTile(position);
         
         if(tile == null)

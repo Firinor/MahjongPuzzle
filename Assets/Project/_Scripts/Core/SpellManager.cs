@@ -33,7 +33,8 @@ public class SpellManager : MonoBehaviour
         player = progress;
         
         spellShuffle.onClick.AddListener(Shuffle);
-        spellShuffle2.onClick.AddListener(Shuffle);
+        if (player.GameMode == GameMode.Solitare)
+            spellShuffle2.onClick.AddListener(Shuffle);
         spellShuffle.gameObject.SetActive(false);
 
         spellSpotlight.onClick.AddListener(ApplySpotlight);

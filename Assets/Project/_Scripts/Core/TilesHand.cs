@@ -1,31 +1,89 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
+using UnityEngine.UI;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class TilesHand : MonoBehaviour
 {
-    public TileInHandViewFrame[] Tiles;
+    public List<TileInHandViewFrame> Tiles;
     public RectTransform AimObject;
     public Transform Canvas;
 
+    public TileInHandViewFrame TileFramePrefab;
     public TileInHandView TileViewPrefab;
-    
+    public int OpenHandTiles = 4;
+    public int LimitHandTiles = 8;
+    public GameObject losePopup;
+    public Button LoseContinueButton;
     public event Action<TileInHandViewFrame> OnFlyEndAnimation;
     
     private static int n;
     
     public int TilesCount => Tiles.Count(t => t.TileView?.TileOwner is not null);
-    public bool Full => TilesCount == Tiles.Length;
+    public bool Full => TilesCount == Tiles.Count(t => !t.IsLock);
     public bool HasNoSpace
     {
         get
         {
             if (!Full) return false;
-            return Tiles.Length == Tiles.Select(t => t.TileView?.Face.sprite).Distinct().Count();
+            int tilesCount = Tiles.Where(t => t.TileView != null 
+                                              && t.TileView.Face.sprite != null
+                                              && !t.TileView.PositionAnimation.enabled)
+                                    .Select(t => t.TileView.Face.sprite)
+                                    .Distinct()
+                                    .Count();
+            return Tiles.Count(t => !t.IsLock) == tilesCount;
         }
     }
     
+    public void Initialize()
+    {
+        Tiles = new();
+        for (int i = 0; i < OpenHandTiles; i++)
+        {
+            var newFrame = Instantiate(TileFramePrefab, transform);
+            newFrame.Unlock();
+            Tiles.Add(newFrame);
+        }
+        var lastFrame = Instantiate(TileFramePrefab, transform);
+        Tiles.Add(lastFrame);
+        lastFrame.Lock.onClick.AddListener(UnlockHandFrame);
+        LoseContinueButton.onClick.AddListener(UnlockHandFrame);
+    }
+
+    private void UnlockHandFrame()
+    {
+#if IS_YANDEX
+        YG2.RewardedAdvShow("AddHand", AddHandFrame);
+#else
+        AddHandFrame();
+#endif
+    }
+    private void AddHandFrame()
+    {
+        if (Tiles.Count >= LimitHandTiles)
+        {
+            TileInHandViewFrame lastFrame = Tiles[^1];
+            lastFrame.Lock.onClick.RemoveAllListeners();
+            lastFrame.Unlock();
+            LoseContinueButton.interactable = false;
+        }
+        else
+        {
+            var newFrame = Instantiate(TileFramePrefab, transform);
+            newFrame.Unlock();
+            newFrame.transform.SetSiblingIndex(Tiles.Count - 1);
+            Tiles.Add(newFrame);
+            (Tiles[^1], Tiles[^2]) = (Tiles[^2], Tiles[^1]);
+        }
+        losePopup.SetActive(false);
+    }
+
     public void AddTile(MajhongTileView tile)
     {
         tile.RaycastDisable();
@@ -106,12 +164,13 @@ public class TilesHand : MonoBehaviour
 
     public void MoveTiles()
     {
-        for (int i = 0; i < Tiles.Length; i++)//Find empty
+        for (int i = 0; i < Tiles.Count; i++)//Find empty
         {
-            if(Tiles[i].IsFull && Tiles[i].TileView.InGame) 
+            if(Tiles[i].IsFull 
+               && Tiles[i].TileView.InGame) 
                 continue;
             
-            for (int j = i+1; j < Tiles.Length; j++)//Find full
+            for (int j = i+1; j < Tiles.Count; j++)//Find full
             {
                 if(!Tiles[j].IsFull 
                    || !Tiles[j].TileView.InGame
@@ -122,5 +181,12 @@ public class TilesHand : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        LoseContinueButton.onClick.RemoveAllListeners();
+        Tiles[^1].Lock?.onClick.RemoveAllListeners();
+        Tiles = null;
     }
 }

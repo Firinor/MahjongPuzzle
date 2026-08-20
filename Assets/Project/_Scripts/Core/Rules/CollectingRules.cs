@@ -63,18 +63,7 @@ public class CollectingRules : Rules, IDisposable
 
     private void CollideEffect(TileInHandViewFrame tile1, TileInHandViewFrame tile2)
     {
-        if ((DateTime.Now - Manager.lastComboTime).TotalSeconds > Manager.comboTimePeriod)
-        {
-            Manager.comboCounter = 0;
-        }
-        else //combo
-        {
-            if(Manager.IsComboEnable) //on Easy-mode no combo bonus
-                Manager.comboCounter++;
-        }
-
-        Manager.lastComboTime = DateTime.Now;
-        int scores = Manager.defaultPoints + Manager.comboBonusPoints * Manager.comboCounter;
+        int scores = Manager.defaultPoints;
 
         MajhongTileView majTile1 = tile1.TileView.TileOwner;
         MajhongTileView majTile2 = tile2.TileView.TileOwner;
