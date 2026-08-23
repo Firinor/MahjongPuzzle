@@ -5,14 +5,12 @@ using UnityEngine;
 public class CanvasRatioManager : MonoBehaviour
 {
     public static event Action onChange;
-    private Vector2 lastScreen;
-    private float time;
-    private WaitForSeconds delay;
+    private Vector2Int lastScreen;
+    private readonly WaitForSeconds delay = new(5f);
 
     private void Start()
     {
         lastScreen = new (){ x = Screen.width, y = Screen.height };
-        delay = new WaitForSeconds(time);
         StartCoroutine(CheckUpdates());
         DontDestroyOnLoad(gameObject);
     }
@@ -22,12 +20,12 @@ public class CanvasRatioManager : MonoBehaviour
         while (true)
         {
             yield return delay;
-            if (Screen.height != lastScreen.y
-                || Screen.width != lastScreen.x)
-            {
-                lastScreen = new (){ x = Screen.width, y = Screen.height };
-                onChange?.Invoke();
-            }
+            if (Screen.height == lastScreen.y
+                && Screen.width == lastScreen.x) 
+                continue;
+            
+            lastScreen = new Vector2Int { x = Screen.width, y = Screen.height };
+            onChange?.Invoke();
         }
     }
 }

@@ -16,9 +16,32 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
     private bool isDrag;
     private bool isZoom;
     
+    private int TouchCount
+    {
+        get
+        {
+            int result = 0;
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);
+                if (touch.phase == TouchPhase.Began
+                    || touch.phase == TouchPhase.Moved
+                    || touch.phase == TouchPhase.Stationary)
+                {
+                    result++;
+                }
+            }
+
+            return result;
+        }
+    }
+    
     void Update()
     {
-        if (Input.touchCount == 2)
+        if (isDebug)
+            Debug.Log($"Input.touchCount: {TouchCount}");
+        
+        if (TouchCount == 2)
         {
             isZoom = true;
             Touch touch1 = Input.GetTouch(0);
@@ -39,7 +62,7 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
             }
         }
 
-        if (Input.touchCount == 0)
+        if (TouchCount == 0)
         {
             if (isDebug)
                 Debug.Log($"isZoom = false");
@@ -57,6 +80,8 @@ public class PlayerInputHolder : MonoBehaviour, IPointerClickHandler, IBeginDrag
     
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (isDebug)
+            Debug.Log($"isDrag: {isDrag}, isZoom: {isZoom}");
         if(isDrag || isZoom) 
             return;
         onClick?.Invoke(eventData.position);

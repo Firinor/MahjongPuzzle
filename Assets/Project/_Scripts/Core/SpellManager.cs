@@ -2,6 +2,9 @@ using FirAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class SpellManager : MonoBehaviour
 {
@@ -34,7 +37,7 @@ public class SpellManager : MonoBehaviour
         
         spellShuffle.onClick.AddListener(Shuffle);
         if (player.GameMode == GameMode.Solitare)
-            spellShuffle2.onClick.AddListener(Shuffle);
+            spellShuffle2.onClick.AddListener(AdsShuffle);
         spellShuffle.gameObject.SetActive(false);
 
         spellSpotlight.onClick.AddListener(ApplySpotlight);
@@ -74,6 +77,15 @@ public class SpellManager : MonoBehaviour
     {
         return count.ToString();
         //return count > 0 ? count.ToString() : "<color=green>+</color>";
+    }
+
+    private void AdsShuffle()
+    {
+#if IS_YANDEX
+        YG2.RewardedAdvShow("Shuffle", Shuffle);
+#else
+        Shuffle();
+#endif
     }
     private void Shuffle()
     {
@@ -205,7 +217,7 @@ public class SpellManager : MonoBehaviour
     private void OnDestroy()
     {
         spellShuffle.onClick.RemoveAllListeners();
-        spellShuffle2.onClick.RemoveAllListeners();
+        spellShuffle2.onClick.RemoveListener(AdsShuffle);
         spellHint.onClick.RemoveAllListeners();
         spellSpotlight.onClick.RemoveAllListeners();
         

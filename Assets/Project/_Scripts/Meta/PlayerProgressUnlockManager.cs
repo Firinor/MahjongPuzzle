@@ -54,7 +54,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         
         RefreshDifficultyText();
 #if IS_YANDEX
-       Destroy(gameMode.gameObject);
+        Destroy(gameMode.gameObject);
 #else
         RefreshGameModeText();
 #endif

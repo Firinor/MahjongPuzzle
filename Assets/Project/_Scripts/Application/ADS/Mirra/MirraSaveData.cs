@@ -1,4 +1,5 @@
-﻿using MirraGames.SDK;
+﻿#if IS_MIRRA
+using MirraGames.SDK;
 using UnityEngine;
 
 public class MirraSaveData : SaveData
@@ -111,3 +112,4 @@ public class MirraSaveData : SaveData
         Save();
     }
 }
+#endif

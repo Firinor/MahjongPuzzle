@@ -185,7 +185,9 @@ public class TilesHand : MonoBehaviour
 
     private void OnDestroy()
     {
-        LoseContinueButton.onClick.RemoveAllListeners();
+        LoseContinueButton.onClick.RemoveListener(UnlockHandFrame);
+        if(Tiles is null || Tiles.Count <= 0)
+            return;
         Tiles[^1].Lock?.onClick.RemoveAllListeners();
         Tiles = null;
     }

@@ -34,7 +34,19 @@
                 "boolCollection": [
                     {
                         "key": "IAds.Visible",
-                        "value": true
+                        "value": false
+                    },
+                    {
+                        "key": "IAnalytics.Visible",
+                        "value": false
+                    },
+                    {
+                        "key": "IAssets.Visible",
+                        "value": false
+                    },
+                    {
+                        "key": "IAchievements.Visible",
+                        "value": false
                     }
                 ],
                 "intCollection": [],
