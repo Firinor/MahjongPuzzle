@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 1366
-  defaultScreenHeightWeb: 768
+  defaultScreenWidthWeb: 1920
+  defaultScreenHeightWeb: 1080
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
@@ -143,7 +143,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.302
+  bundleVersion: 1.303
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   - {fileID: 11400000, guid: b0d4fbe7dba30ac4b8d9cfb4f3dc50da, type: 2}
@@ -703,7 +703,7 @@ PlayerSettings:
     PS4: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
     PS5: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
     Standalone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
-    WebGL: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg;IS_YANDEX;!IS_GAMEMONETIZE;!IS_MIRRA;!Cheats;IS_Collecting
+    WebGL: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg;IS_YANDEX;!IS_GAMEMONETIZE;!IS_MIRRA;!Cheats;!IS_Collecting
     Windows Store Apps: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
     XboxOne: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
     iPhone: YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;InterstitialAdv_yg;RewardedAdv_yg;Authorization_yg;Payments_yg;Storage_yg;Localization_yg;RU_YG2;Review_yg;Leaderboards_yg
