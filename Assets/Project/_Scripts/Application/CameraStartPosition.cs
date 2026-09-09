@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraStartPosition : MonoBehaviour
 {
+    public float XpositionSoliter = 0;
+    public float XpositionCollecting = 2;
     public float YpositionSoliter = 0;
     public float YpositionCollecting = 2;
     public float solitarePortraitOrthographicSize = 5;
@@ -17,6 +19,7 @@ public class CameraStartPosition : MonoBehaviour
 
         if (player.GameMode == GameMode.Solitare)
         {
+            cameraPosition.x = XpositionSoliter;
             cameraPosition.y = YpositionSoliter;
             if (isLandscape)
                 Camera.main.orthographicSize = solitareLandscapeOrthographicSize;
@@ -25,7 +28,7 @@ public class CameraStartPosition : MonoBehaviour
         }
         else if (player.GameMode == GameMode.Collecting)
         {
-
+            cameraPosition.x = XpositionCollecting;
             cameraPosition.y = YpositionCollecting;
             if (isLandscape)
                 Camera.main.orthographicSize = collectingLandscapeOrthographicSize;

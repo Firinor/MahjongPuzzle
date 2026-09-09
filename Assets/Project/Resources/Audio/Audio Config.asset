@@ -16,6 +16,18 @@ MonoBehaviour:
     Clips:
     - {fileID: 8300000, guid: a9b05da1c29828b49bcc528dd3867e5c, type: 3}
     Volume: 1
+  OpenScroll:
+    Clips:
+    - {fileID: 8300000, guid: 4ab3c757c886245429cb87bcd682eb56, type: 3}
+    Volume: 1
+  CloseScroll:
+    Clips:
+    - {fileID: 8300000, guid: 752bb66bd28ae3b4c86ca2428e75c56b, type: 3}
+    Volume: 1
+  HelpSpell:
+    Clips:
+    - {fileID: 8300000, guid: e1c65f75b38e2534ca71edcca0e99c48, type: 3}
+    Volume: 1
   StartCollide:
     Clips:
     - {fileID: 8300000, guid: 02d50e61e387b694eb6ef7ada54153d6, type: 3}

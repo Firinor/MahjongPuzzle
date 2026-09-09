@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &288287876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 1
 --- !u!114 &288287880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,13 +2805,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.06146416, y: -0.060400654, z: 0.004967243, w: 0.9962676}
   m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7, y: -7, z: 1}
 --- !u!114 &519420033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2822,8 +2824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b04c9a84f6a2674b9f74aa6273a8b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraStartPosition
+  XpositionSoliter: 0
+  XpositionCollecting: 2.5
   YpositionSoliter: 0
-  YpositionCollecting: 1.25
+  YpositionCollecting: -1.42
   solitarePortraitOrthographicSize: 15.6
   solitareLandscapeOrthographicSize: 5.2
   collectingPortraitOrthographicSize: 15.6
@@ -3141,6 +3145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &557628157
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,9 +5820,9 @@ MonoBehaviour:
   maxZoom: 16
   minZoom: 2
   zoomSpeed: 0.02
-  startPosition: {x: 0, y: -0.42}
-  XBorder: 7
-  YBorder: 3
+  startPosition: {x: 0, y: -0.48}
+  XBorder: 8
+  YBorder: 5
   input: {fileID: 997057379}
   inertia: 1
 --- !u!1 &873593512
@@ -6800,6 +6805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!224 &973410466 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8358666252608467486, guid: 6b16145642bdf1f4dadad980c9ba9e63, type: 3}
@@ -7451,6 +7457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!114 &1003039726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8796,7 +8803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.96}
   m_AnchorMax: {x: 0.5, y: 0.96}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -75}
   m_SizeDelta: {x: 1000, y: 55}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1284663211
@@ -9068,6 +9075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &1318359957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10000,6 +10008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &1508006251
 GameObject:
   m_ObjectHideFlags: 0
@@ -12871,6 +12880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!114 &2003121648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13072,6 +13082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 3
 --- !u!114 &2027089186
 MonoBehaviour:
   m_ObjectHideFlags: 0

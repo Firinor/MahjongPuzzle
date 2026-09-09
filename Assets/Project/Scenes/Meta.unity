@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!114 &86620652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 1
 --- !u!114 &215642959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,6 +1167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1001 &238716070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1440,6 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &368967545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,7 +1814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336520093662407844, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_fontSize
-      value: 110.9
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2336520093662407844, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_fontColor.b
@@ -3000,7 +3004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9042154086895892109, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_fontSize
-      value: 112.4
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_Enabled
@@ -3243,7 +3247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336520093662407844, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_fontSize
-      value: 110.9
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2336520093662407844, guid: 35cd561351a27f14e967556f0e99180b, type: 3}
       propertyPath: m_fontColor.b
@@ -3514,6 +3518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!114 &1100977377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3717,7 +3722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9042154086895892109, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_fontSize
-      value: 112.4
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_Enabled
@@ -3996,7 +4001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9042154086895892109, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_fontSize
-      value: 112.4
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9107932483278835439, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_Enabled
@@ -4273,6 +4278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!114 &1490340768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4931,6 +4937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 0
 --- !u!1 &1775931549
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,7 +5942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9042154086895892109, guid: 78c7c735b033d2b4783e3351330974b8, type: 3}
       propertyPath: m_fontSize
-      value: 112.4
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6334,6 +6341,10 @@ PrefabInstance:
     - target: {fileID: 1603290501975458713, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: EndPosition.y
       value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101650878659203012, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
+      propertyPath: sound
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3326780654621372571, guid: b31508a20f71a8d44b185535acf0cf50, type: 3}
       propertyPath: m_Pivot.x

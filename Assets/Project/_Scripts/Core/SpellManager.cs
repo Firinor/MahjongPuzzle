@@ -60,6 +60,7 @@ public class SpellManager : MonoBehaviour
     {
         spellShuffle.gameObject.SetActive(true);
         spellSpotlight.gameObject.SetActive(true);
+        spellSpotlight.GetComponent<ButtonClick>().Initialize();
         if (player.GameMode == GameMode.Solitare)
         {
             spellHint.gameObject.SetActive(true);

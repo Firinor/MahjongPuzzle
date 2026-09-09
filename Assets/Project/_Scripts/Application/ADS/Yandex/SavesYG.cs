@@ -8,7 +8,11 @@ namespace YG
         public string tilesID = "ClassicTiles";
         public string deskID = "ClassicDesk";
         public int Difficulty = 1;
+#if IS_Collecting
+        public int GameMode = 1;
+#else
         public int GameMode;
+#endif
         public int GoldMedals;
         public int SilverMedals;
         public int BronzeMedals;

@@ -29,6 +29,7 @@ public class CollectingRules : Rules, IDisposable
         
         tile.SelectedSound();
         TilesHand.AddTile(tile);
+        Manager.TilesChanged();
     }
 
     private void CheckPairs(TileInHandViewFrame tile)

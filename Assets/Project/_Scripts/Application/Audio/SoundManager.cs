@@ -34,6 +34,18 @@ public class SoundManager : MonoBehaviour
       
       Play(position, config.ButtonClick, isPriority: true);
    }
+   public void PlayOpenScroll(Vector3 position = default)
+   {
+      Play(position, config.OpenScroll, isPriority: true);
+   }
+   public void PlayCloseScroll(Vector3 position = default)
+   {
+      Play(position, config.CloseScroll, isPriority: true);
+   }
+   public void PlayHelpSpell(Vector3 position = default)
+   {
+      Play(position, config.HelpSpell, isPriority: true);
+   }
    public void PlayTileStartCollide(Vector3 position = default)
    {
       Play(position, config.StartCollide, isPriority: true);

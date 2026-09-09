@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fd6d4e15b76db4c89b6a1db5985730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClick
+  sound: 2
 --- !u!114 &7050060249669498519
 MonoBehaviour:
   m_ObjectHideFlags: 0

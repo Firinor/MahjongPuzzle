@@ -5,6 +5,9 @@ public class AudioConfig : ScriptableObject
 {
     [Header("Buttons")] 
     public ClipSettings ButtonClick;
+    public ClipSettings OpenScroll;
+    public ClipSettings CloseScroll;
+    public ClipSettings HelpSpell;
     [Header("Tiles")] 
     public ClipSettings StartCollide;
     public ClipSettings EndCollide;
