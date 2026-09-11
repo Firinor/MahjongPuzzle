@@ -59,11 +59,13 @@ public class SpellManager : MonoBehaviour
     public void ButtonsOn()
     {
         spellShuffle.gameObject.SetActive(true);
+        spellShuffle.GetComponent<ButtonClick>().Initialize();
         spellSpotlight.gameObject.SetActive(true);
         spellSpotlight.GetComponent<ButtonClick>().Initialize();
         if (player.GameMode == GameMode.Solitare)
         {
             spellHint.gameObject.SetActive(true);
+            spellHint.GetComponent<ButtonClick>().Initialize();
         }
 
         if(isAnimationComplete)
