@@ -15,6 +15,9 @@ public class Unlocks : ScriptableObject
         68000,//Castle
         85000,//Batterfly
     };
+    public int[] GreenLevels =
+    {
+    };
     public string[] KeyWords =
     {
         "Cat",
@@ -26,6 +29,12 @@ public class Unlocks : ScriptableObject
         "Rabbit",
         "Castle",
         "Butterfly",
+    };
+    public string[] GreenKeyWords =
+    {
+        "Taro",
+        "Mountain",
+        "TheCube",
     };
     public Sprite[] Sprites;
 }
