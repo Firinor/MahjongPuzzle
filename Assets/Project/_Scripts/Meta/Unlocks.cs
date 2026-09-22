@@ -35,6 +35,7 @@ public class Unlocks : ScriptableObject
         "Taro",
         "Mountain",
         "TheCube",
+        "Wall"
     };
     public Sprite[] Sprites;
 }
