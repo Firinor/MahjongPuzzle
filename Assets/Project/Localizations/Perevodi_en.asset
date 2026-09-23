@@ -98,6 +98,14 @@ MonoBehaviour:
     m_Localized: Collecting
     m_Metadata:
       m_Items: []
+  - m_Id: 58385894301425664
+    m_Localized: TRIFLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58386465590796288
+    m_Localized: EXAM
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

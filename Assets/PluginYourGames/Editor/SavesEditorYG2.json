@@ -7,14 +7,14 @@
         false,
         false
     ],
-    "idSave": 948,
+    "idSave": 979,
     "GoldCoins": 0,
     "tilesID": "ClassicTiles",
     "deskID": "ClassicDesk",
-    "Difficulty": 1,
+    "Difficulty": 0,
     "GameMode": 0,
     "GoldMedals": 0,
     "SilverMedals": 0,
     "BronzeMedals": 0,
-    "LevelStars": ""
+    "LevelStars": []
 }

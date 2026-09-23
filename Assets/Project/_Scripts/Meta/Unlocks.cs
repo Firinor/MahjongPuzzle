@@ -14,9 +14,16 @@ public class Unlocks : ScriptableObject
         53000,//Rabbit
         68000,//Castle
         85000,//Batterfly
+        //Fish
+        //Elefatn
+        1000000//Castle
     };
-    public int[] GreenLevels =
+    public int[] MedalLevels =
     {
+        1,//Mountain
+        2,//Taro
+        5,//Wall
+        20,//TheCube
     };
     public string[] KeyWords =
     {
@@ -30,12 +37,12 @@ public class Unlocks : ScriptableObject
         "Castle",
         "Butterfly",
     };
-    public string[] GreenKeyWords =
+    public string[] MedalKeyWords =
     {
-        "Taro",
         "Mountain",
-        "TheCube",
-        "Wall"
+        "Taro",
+        "Wall",
+        "TheCube"
     };
     public Sprite[] Sprites;
 }

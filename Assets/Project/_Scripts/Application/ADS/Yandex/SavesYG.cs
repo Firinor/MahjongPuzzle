@@ -16,7 +16,7 @@ namespace YG
         public int GoldMedals;
         public int SilverMedals;
         public int BronzeMedals;
-        public string LevelStars = "";
+        public LevelStars[] LevelStars;
     }
 }
 
@@ -66,7 +66,7 @@ public class YGSaveData : SaveData
         get => saves.BronzeMedals;
         set => saves.BronzeMedals = value;
     }
-    public override string LevelStars
+    public override LevelStars[] LevelStars
     {
         get => saves.LevelStars;
         set => saves.LevelStars = value;

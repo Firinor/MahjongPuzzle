@@ -11,7 +11,7 @@ public class PrefsSaveData : SaveData
     public int goldMedals;
     public int silverMedals;
     public int bronzeMedals;
-    public string levelStars = "";
+    public LevelStars[] levelStars;
     
     public override int GoldCoins
     {
@@ -54,7 +54,7 @@ public class PrefsSaveData : SaveData
         get => bronzeMedals;
         set => bronzeMedals = value;
     }
-    public override string LevelStars
+    public override LevelStars[] LevelStars
     {
         get => levelStars;
         set => levelStars = value;
@@ -103,7 +103,6 @@ public class PrefsSaveData : SaveData
         GoldMedals = 0;
         SilverMedals = 0;
         BronzeMedals = 0;
-        LevelStars = "";
         Save();
     }
 

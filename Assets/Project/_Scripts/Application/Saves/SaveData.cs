@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 [Serializable]
 public abstract class SaveData
@@ -7,11 +9,42 @@ public abstract class SaveData
     public abstract int GoldMedals { get; set; }
     public abstract int SilverMedals { get; set; }
     public abstract int BronzeMedals { get; set; }
-    public abstract string LevelStars { get; set; }
+    public abstract LevelStars[] LevelStars { get; set; }
     public abstract string TilesID { get; set; }
     public abstract string DeskID { get; set; }
     public abstract int Difficulty { get; set; }
     public abstract GameMode GameMode { get; set; }
+    
+    public int MedalsCount
+    {
+        get {
+            if(LevelStars is null
+               || LevelStars.Length == 0)
+                return 0;
+
+            int result = 0;
+            foreach (LevelStars level in LevelStars)
+            {
+                result += level.medalCount;
+            }
+            return result;
+        }
+    }
+    public int MedalsCountByLevel(string levelID)
+    {
+        if(LevelStars is null
+           || LevelStars.Length == 0)
+            return 0;
+        
+        foreach (LevelStars level in LevelStars)
+        {
+            if (string.Equals(level.ID, levelID))
+                return level.medalCount;
+        }
+        return 0;
+    }
+
+    
     
     public event Action<int> OnGoldChange;
 
@@ -45,4 +78,11 @@ public enum GameMode
     Solitare,
     Collecting,
     Slide
+}
+
+[Serializable]
+public struct LevelStars
+{
+    public string ID;
+    public int medalCount;
 }

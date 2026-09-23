@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
@@ -9,7 +10,9 @@ using UnityEngine.UI;
 public class PlayerProgressUnlockManager : MonoBehaviour
 {
     [SerializeField] 
-    private TextMeshProUGUI playerGold;
+    private TextMeshProUGUI playerCoins;
+    [SerializeField]
+    private TextMeshProUGUI playerMedals;
     
     private SaveData player;
 
@@ -20,6 +23,14 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private List<TileToggle> tiles;
     [SerializeField] 
     public Button difficulty;
+    [SerializeField] 
+    public Sprite difficultyEasyButtonSprite;
+    [SerializeField] 
+    public Sprite difficultyHardButtonSprite;
+    [SerializeField] 
+    public Sprite CoinSprite;
+    [SerializeField] 
+    public Sprite MedalSprite;
     [SerializeField] 
     public TextMeshProUGUI difficultyText;
     [SerializeField] 
@@ -36,13 +47,20 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     private Button ScrollDesksDown;
 
     private int scrollDeskIndex = 0;
-    private readonly List<string> unlockedDesks = new(){"ClassicDesk", "ClassicDeskAlter"};
+    private readonly List<LevelStruct> unlockedDesks = new()
+    {
+        new(){ID = "ClassicDesk", 
+            IsUnlocked = true}, 
+        new(){ID = "ClassicDeskAlter", 
+            IsUnlocked = true},
+    };
     
     public void Initialize(SaveData progressData)
     {
         player = progressData;
 
-        playerGold.text = player.GoldCoins.ToString();
+        playerCoins.text = player.GoldCoins.ToString();
+        playerMedals.text = player.MedalsCount.ToString();
 
         UnlocksProgress();
         UnlockedDesk(player.DeskID);
@@ -64,24 +82,24 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     private void UnlockedDesk(string playerDesk)
     {
-        scrollDeskIndex = unlockedDesks.IndexOf(playerDesk);
+        scrollDeskIndex = -1;
+        foreach (var levelDesk in unlockedDesks)
+        {
+            if (string.Equals(levelDesk.ID, playerDesk))
+            {
+                scrollDeskIndex = unlockedDesks.IndexOf(levelDesk);
+                break;
+            }
+        }
+        
         int scrollIndex = scrollDeskIndex;
         if (scrollIndex % 2 != 0)
             scrollIndex--;
         if (scrollIndex >= deskSprites.Count - 4)
             scrollIndex = deskSprites.Count - 4;
         scrollDeskIndex = scrollIndex;
-
-        foreach (var deskToggle in desks)
-        {
-            if(scrollIndex >= unlockedDesks.Count)
-                break;
-
-            deskToggle.ID = unlockedDesks[scrollIndex];
-            deskToggle.Unlock(deskSprites[scrollIndex]);
-            scrollIndex++;
-        }
         
+        FillDesks();
         var desk = desks.Find(d => d.ID == player.DeskID);
         desk.Checkmark.enabled = true;
     }
@@ -92,7 +110,6 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             return;
         scrollDeskIndex-=2;
         
-        UnselectAll();
         FillDesks();
     }
     public void DeckDown()
@@ -101,7 +118,6 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             return;
         scrollDeskIndex+=2;
         
-        UnselectAll();
         FillDesks();
     }
     private void FillDesks()
@@ -109,60 +125,68 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         int scrollIndex = scrollDeskIndex;
         foreach (var deskToggle in desks)
         {
-            if(scrollIndex >= unlockedDesks.Count)
-                break;
-            
-            deskToggle.ID = unlockedDesks[scrollIndex];
-            deskToggle.Unlock(deskSprites[scrollIndex]);
+            deskToggle.Unlock(unlockedDesks[scrollIndex]);
             scrollIndex++;
-            
-            if(deskToggle.ID.Equals(player.DeskID))
-                deskToggle.Checkmark.enabled = true;
-        }
-    }
-    private void UnselectAll()
-    {
-        foreach (var desk in desks)
-        {
-            desk.Lock();
-            desk.Checkmark.enabled = false;
+            deskToggle.Checkmark.enabled = deskToggle.ID.Equals(player.DeskID);
         }
     }
 
     private void UnlocksProgress()
     {
+        unlockedDesks[0].Sprite = deskSprites[0];
+        unlockedDesks[0].MedalsCount = player.MedalsCountByLevel(unlockedDesks[0].ID);
+        unlockedDesks[1].Sprite = deskSprites[1];
+        unlockedDesks[1].MedalsCount = player.MedalsCountByLevel(unlockedDesks[1].ID);
+        
         int coins = player.GoldCoins;
-        int index = 0;
-        while (true)
+        for(int i = 0; i < unlocks.KeyWords.Length; i++)
         {
-            if(index >= unlocks.Levels.Length
-               || index >= unlocks.KeyWords.Length) 
-                break;
-            
-            if (coins < unlocks.Levels[index])
-                break;
-            
-            //coins -= unlocks.Levels[index];
-            string unlockKey = unlocks.KeyWords[index];
-
-            if (unlockKey.Equals(tiles[1].ID))
+            Sprite deskSprite = deskSprites.FirstOrDefault(d => string.Equals(d.name, unlocks.KeyWords[i]));
+            if (deskSprite is null)
             {
-                tiles[1].Unlock();
-                index++;
-                continue;
-            }
-            if (unlockKey.Equals(tiles[2].ID))
-            {
-                tiles[2].Unlock(); 
-                index++;
+                //Debug.Log(unlocks.KeyWords[i]);
                 continue;
             }
             
-            unlockedDesks.Add(unlockKey);
-            index++;
+            LevelStruct newLevel = new();
+            newLevel.ID = unlocks.KeyWords[i];
+            newLevel.IsUnlocked = coins >= unlocks.Levels[i];
+            newLevel.UnlockCost = unlocks.Levels[i];
+            newLevel.CurrencySprite = CoinSprite;
+            newLevel.MedalsCount = player.MedalsCountByLevel(newLevel.ID);
+            newLevel.Sprite = deskSprite;
+            unlockedDesks.Add(newLevel);
+        }
+        int medals = player.MedalsCount;
+        int indexPosition = 3;
+        for(int i = 0; i < unlocks.MedalKeyWords.Length; i++)
+        {
+            Sprite deskSprite = deskSprites.FirstOrDefault(d => string.Equals(d.name, unlocks.MedalKeyWords[i]));
+            if (deskSprite is null)
+            {
+                //Debug.Log(unlocks.MedalKeyWords[i]);
+                continue;
+            }
+            
+            LevelStruct newLevel = new();
+            newLevel.ID = unlocks.MedalKeyWords[i];
+            newLevel.IsUnlocked = medals >= unlocks.MedalLevels[i];
+            newLevel.UnlockCost = unlocks.MedalLevels[i];
+            newLevel.CurrencySprite = MedalSprite;
+            newLevel.MedalsCount = player.MedalsCountByLevel(newLevel.ID);
+            newLevel.Sprite = deskSprite;
+            if (i < unlocks.MedalKeyWords.Length - 1)
+            {
+                unlockedDesks.Insert(indexPosition, newLevel);
+                indexPosition += 4;
+            }
+            else
+            {
+                unlockedDesks.Add(newLevel);
+            }
         }
     }
-
+    
     private void Subscriptions()
     {
 
@@ -191,7 +215,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
 
     private void SelectDifficulty()
     {
-        player.Difficulty = (player.Difficulty + 1) % 3;
+        player.Difficulty = (player.Difficulty + 1) % 5;
         RefreshDifficultyText();
         player.Save();
     }
@@ -219,14 +243,18 @@ public class PlayerProgressUnlockManager : MonoBehaviour
     {
         string key = player.Difficulty switch
         {
-            0 => "Easy",
-            2 => "Hard",
-            _ => "Normal"
+            0 => "Trifle",
+            2 => "Normal",
+            3 => "Hard",
+            4 => "Exam",
+            _ => "Easy"
         };
         string localizedText = LocalizationSettings.StringDatabase
             .GetLocalizedString("Perevodi", key);
         difficultyText.text = localizedText;
         difficultyText.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Perevodi", key);
+        difficulty.GetComponent<Image>().sprite =
+            player.Difficulty < 3 ? difficultyEasyButtonSprite : difficultyHardButtonSprite;
     }
 
     private void SelectTiles(string ID)
@@ -257,4 +285,14 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             d.Button.onClick.RemoveAllListeners();
         }
     }
+}
+
+public class LevelStruct
+{
+    public string ID;
+    public Sprite Sprite;
+    public bool IsUnlocked;
+    public int UnlockCost;
+    public Sprite CurrencySprite;
+    public int MedalsCount;
 }
