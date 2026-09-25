@@ -50,8 +50,7 @@ public class SolitareRules : Rules
         }
         else //combo
         {
-            if(Manager.IsComboEnable) //on Easy-mode no combo bonus
-                Manager.comboCounter++;
+            Manager.comboCounter++;
         }
 
         Manager.lastComboTime = DateTime.Now;

@@ -7,10 +7,10 @@
         false,
         false
     ],
-    "idSave": 979,
-    "GoldCoins": 0,
+    "idSave": 1012,
+    "GoldCoins": 100000,
     "tilesID": "ClassicTiles",
-    "deskID": "ClassicDesk",
+    "deskID": "Fish",
     "Difficulty": 0,
     "GameMode": 0,
     "GoldMedals": 0,

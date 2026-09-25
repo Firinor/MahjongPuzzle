@@ -778,7 +778,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiles_0
+      name: p2
       rect:
         serializedVersion: 2
         x: 0
@@ -800,7 +800,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_1
+      name: p3
       rect:
         serializedVersion: 2
         x: 220
@@ -822,7 +822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_2
+      name: p4
       rect:
         serializedVersion: 2
         x: 440
@@ -844,7 +844,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_3
+      name: p5
       rect:
         serializedVersion: 2
         x: 660
@@ -866,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_4
+      name: p6
       rect:
         serializedVersion: 2
         x: 880
@@ -888,7 +888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_5
+      name: p7
       rect:
         serializedVersion: 2
         x: 1100
@@ -910,7 +910,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_6
+      name: p8
       rect:
         serializedVersion: 2
         x: 1320
@@ -932,7 +932,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_7
+      name: p9
       rect:
         serializedVersion: 2
         x: 1540
@@ -954,7 +954,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_8
+      name: p10
       rect:
         serializedVersion: 2
         x: 1760
@@ -976,7 +976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_9
+      name: pj
       rect:
         serializedVersion: 2
         x: 1980
@@ -998,7 +998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_10
+      name: pq
       rect:
         serializedVersion: 2
         x: 2200
@@ -1020,7 +1020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_11
+      name: pk
       rect:
         serializedVersion: 2
         x: 2420
@@ -1042,7 +1042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_12
+      name: pa
       rect:
         serializedVersion: 2
         x: 2640
@@ -1064,7 +1064,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_14
+      name: k2
       rect:
         serializedVersion: 2
         x: 0
@@ -1086,7 +1086,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_15
+      name: k3
       rect:
         serializedVersion: 2
         x: 220
@@ -1108,7 +1108,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_16
+      name: k4
       rect:
         serializedVersion: 2
         x: 440
@@ -1130,7 +1130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_17
+      name: k5
       rect:
         serializedVersion: 2
         x: 660
@@ -1152,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_18
+      name: k6
       rect:
         serializedVersion: 2
         x: 880
@@ -1174,7 +1174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_19
+      name: k7
       rect:
         serializedVersion: 2
         x: 1100
@@ -1196,7 +1196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_20
+      name: k8
       rect:
         serializedVersion: 2
         x: 1320
@@ -1218,7 +1218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_21
+      name: k9
       rect:
         serializedVersion: 2
         x: 1540
@@ -1240,7 +1240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_22
+      name: k10
       rect:
         serializedVersion: 2
         x: 1760
@@ -1262,7 +1262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_23
+      name: kj
       rect:
         serializedVersion: 2
         x: 1980
@@ -1284,7 +1284,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_24
+      name: kq
       rect:
         serializedVersion: 2
         x: 2200
@@ -1306,7 +1306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_25
+      name: kk
       rect:
         serializedVersion: 2
         x: 2419
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_26
+      name: ka
       rect:
         serializedVersion: 2
         x: 2640
@@ -1350,7 +1350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_27
+      name: b2
       rect:
         serializedVersion: 2
         x: 0
@@ -1372,7 +1372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_28
+      name: b3
       rect:
         serializedVersion: 2
         x: 220
@@ -1394,7 +1394,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_29
+      name: b4
       rect:
         serializedVersion: 2
         x: 440
@@ -1416,7 +1416,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_30
+      name: b5
       rect:
         serializedVersion: 2
         x: 660
@@ -1438,7 +1438,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_31
+      name: b6
       rect:
         serializedVersion: 2
         x: 880
@@ -1460,7 +1460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_32
+      name: b7
       rect:
         serializedVersion: 2
         x: 1100
@@ -1482,7 +1482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_33
+      name: b8
       rect:
         serializedVersion: 2
         x: 1320
@@ -1504,7 +1504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_34
+      name: b9
       rect:
         serializedVersion: 2
         x: 1540
@@ -1526,7 +1526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_35
+      name: b10
       rect:
         serializedVersion: 2
         x: 1760
@@ -1548,7 +1548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_36
+      name: bj
       rect:
         serializedVersion: 2
         x: 1980
@@ -1570,7 +1570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_37
+      name: bq
       rect:
         serializedVersion: 2
         x: 2200
@@ -1592,7 +1592,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_38
+      name: bk
       rect:
         serializedVersion: 2
         x: 2420
@@ -1614,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_39
+      name: ba
       rect:
         serializedVersion: 2
         x: 2640
@@ -1636,7 +1636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_40
+      name: joker_black
       rect:
         serializedVersion: 2
         x: 2860
@@ -1658,7 +1658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_41
+      name: c2
       rect:
         serializedVersion: 2
         x: 0
@@ -1680,7 +1680,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_42
+      name: c3
       rect:
         serializedVersion: 2
         x: 220
@@ -1702,7 +1702,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_43
+      name: c4
       rect:
         serializedVersion: 2
         x: 440
@@ -1724,7 +1724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_44
+      name: c5
       rect:
         serializedVersion: 2
         x: 660
@@ -1746,7 +1746,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_45
+      name: c6
       rect:
         serializedVersion: 2
         x: 880
@@ -1768,7 +1768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_46
+      name: c7
       rect:
         serializedVersion: 2
         x: 1100
@@ -1790,7 +1790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_47
+      name: c8
       rect:
         serializedVersion: 2
         x: 1320
@@ -1812,7 +1812,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_48
+      name: c9
       rect:
         serializedVersion: 2
         x: 1540
@@ -1834,7 +1834,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_49
+      name: c10
       rect:
         serializedVersion: 2
         x: 1760
@@ -1856,7 +1856,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_50
+      name: cj
       rect:
         serializedVersion: 2
         x: 1980
@@ -1878,7 +1878,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_51
+      name: cq
       rect:
         serializedVersion: 2
         x: 2200
@@ -1900,7 +1900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_52
+      name: ck
       rect:
         serializedVersion: 2
         x: 2420
@@ -1922,7 +1922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_53
+      name: ca
       rect:
         serializedVersion: 2
         x: 2640
@@ -1944,7 +1944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiles_54
+      name: jorer_red
       rect:
         serializedVersion: 2
         x: 2860
@@ -1981,61 +1981,61 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":220.0,"y":300.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Tiles_0: 7223950226953391895
-      Tiles_1: -8377130690987618698
-      Tiles_10: 7477827516038983822
-      Tiles_11: 3930821917377472818
-      Tiles_12: -47299315171432025
       Tiles_13: 9045646400296435942
-      Tiles_14: -6765242926017629268
-      Tiles_15: -8637159173488095169
-      Tiles_16: 8933607801220796041
-      Tiles_17: -8955812619259062215
-      Tiles_18: 4680653795402065389
-      Tiles_19: 4753258692078137619
-      Tiles_2: -4684333735789482159
-      Tiles_20: -7956832237065629149
-      Tiles_21: -6100061461012067082
-      Tiles_22: -7369953315678303813
-      Tiles_23: -7326330765846486680
-      Tiles_24: 5264979163374914166
-      Tiles_25: -8644279775636323431
-      Tiles_26: 3841374895227053369
-      Tiles_27: 2398694386035660818
-      Tiles_28: 8976018127306389262
-      Tiles_29: 6930148502292774571
-      Tiles_3: -5062486230716756072
-      Tiles_30: 4243927867023665446
-      Tiles_31: 4080561482957604121
-      Tiles_32: 887565136908663245
-      Tiles_33: 5891617607487913053
-      Tiles_34: 3342371246333263808
-      Tiles_35: 6074651378490148917
-      Tiles_36: 926801475820779279
-      Tiles_37: -5481814538712004923
-      Tiles_38: 5844434069267237002
-      Tiles_39: 7394766530161362282
-      Tiles_4: 4099902767569298868
-      Tiles_40: -716952794829026261
-      Tiles_41: 628180894593707404
-      Tiles_42: 5427169084622684963
-      Tiles_43: 5708117247693342933
-      Tiles_44: 1082208779602798038
-      Tiles_45: 2370382069461181947
-      Tiles_46: -8931170882956590797
-      Tiles_47: -4844553450429767101
-      Tiles_48: -6984465467794331371
-      Tiles_49: 4761351777526946229
-      Tiles_5: -6833445872158455971
-      Tiles_50: 6297325419972939874
-      Tiles_51: -1182408495049320820
-      Tiles_52: 1520167212354721406
-      Tiles_53: -5561059225712939094
-      Tiles_54: -8012127113721705627
-      Tiles_6: -537749870668139058
-      Tiles_7: 1561205615984820651
-      Tiles_8: 857779327251732012
-      Tiles_9: 3825752689756085014
+      b10: 6074651378490148917
+      b2: 2398694386035660818
+      b3: 8976018127306389262
+      b4: 6930148502292774571
+      b5: 4243927867023665446
+      b6: 4080561482957604121
+      b7: 887565136908663245
+      b8: 5891617607487913053
+      b9: 3342371246333263808
+      ba: 7394766530161362282
+      bj: 926801475820779279
+      bk: 5844434069267237002
+      bq: -5481814538712004923
+      c10: 4761351777526946229
+      c2: 628180894593707404
+      c3: 5427169084622684963
+      c4: 5708117247693342933
+      c5: 1082208779602798038
+      c6: 2370382069461181947
+      c7: -8931170882956590797
+      c8: -4844553450429767101
+      c9: -6984465467794331371
+      ca: -5561059225712939094
+      cj: 6297325419972939874
+      ck: 1520167212354721406
+      cq: -1182408495049320820
+      joker_black: -716952794829026261
+      jorer_red: -8012127113721705627
+      k10: -7369953315678303813
+      k2: -6765242926017629268
+      k3: -8637159173488095169
+      k4: 8933607801220796041
+      k5: -8955812619259062215
+      k6: 4680653795402065389
+      k7: 4753258692078137619
+      k8: -7956832237065629149
+      k9: -6100061461012067082
+      ka: 3841374895227053369
+      kj: -7326330765846486680
+      kk: -8644279775636323431
+      kq: 5264979163374914166
+      p10: 857779327251732012
+      p2: 7223950226953391895
+      p3: -8377130690987618698
+      p4: -4684333735789482159
+      p5: -5062486230716756072
+      p6: 4099902767569298868
+      p7: -6833445872158455971
+      p8: -537749870668139058
+      p9: 1561205615984820651
+      pa: -47299315171432025
+      pj: 3825752689756085014
+      pk: 3930821917377472818
+      pq: 7477827516038983822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

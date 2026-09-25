@@ -144,6 +144,11 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             Sprite deskSprite = deskSprites.FirstOrDefault(d => string.Equals(d.name, unlocks.KeyWords[i]));
             if (deskSprite is null)
             {
+                if (string.Equals(unlocks.KeyWords[i], "Euro")
+                    && coins >= unlocks.Levels[i])
+                {
+                    tiles[1].Unlock();
+                }
                 //Debug.Log(unlocks.KeyWords[i]);
                 continue;
             }
@@ -164,6 +169,11 @@ public class PlayerProgressUnlockManager : MonoBehaviour
             Sprite deskSprite = deskSprites.FirstOrDefault(d => string.Equals(d.name, unlocks.MedalKeyWords[i]));
             if (deskSprite is null)
             {
+                if (string.Equals(unlocks.KeyWords[i], "Taro")
+                    && coins >= unlocks.Levels[i])
+                {
+                    tiles[2].Unlock();
+                }
                 //Debug.Log(unlocks.MedalKeyWords[i]);
                 continue;
             }
@@ -195,7 +205,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
         gameMode.onClick.AddListener(SelectGameMode);
 #endif
 
-        foreach (var tileToggle in tiles)
+        foreach (TileToggle tileToggle in tiles)
         {
             tileToggle.Toggle.onValueChanged.AddListener(v =>
             {
@@ -204,7 +214,7 @@ public class PlayerProgressUnlockManager : MonoBehaviour
                 SelectTiles(tileToggle.ID);
             });
         }
-        foreach (var desk in desks)
+        foreach (DeskToggle desk in desks)
         {
             desk.Button.onClick.AddListener(() =>
             {

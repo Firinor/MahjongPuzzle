@@ -43,7 +43,8 @@ public class SpellManager : MonoBehaviour
         spellSpotlight.onClick.AddListener(ApplySpotlight);
         spellSpotlight.gameObject.SetActive(false);
 
-        if (progress.GameMode == GameMode.Solitare)
+        if (progress.GameMode == GameMode.Solitare
+            && player.Difficulty < 3)
         {
             spellHint.onClick.AddListener(Hint);
         }
@@ -62,7 +63,8 @@ public class SpellManager : MonoBehaviour
         spellShuffle.GetComponent<ButtonClick>().Initialize();
         spellSpotlight.gameObject.SetActive(true);
         spellSpotlight.GetComponent<ButtonClick>().Initialize();
-        if (player.GameMode == GameMode.Solitare)
+        if (player.GameMode == GameMode.Solitare
+            && player.Difficulty < 3)
         {
             spellHint.gameObject.SetActive(true);
             spellHint.GetComponent<ButtonClick>().Initialize();
@@ -89,6 +91,11 @@ public class SpellManager : MonoBehaviour
 #else
         Shuffle();
 #endif
+    }
+
+    public void DisableSpotLight()
+    {
+        isSpotLightOn = false;
     }
     private void Shuffle()
     {

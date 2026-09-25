@@ -37,7 +37,6 @@ public class CoreRulesManager : MonoBehaviour
     public int comboBonusPoints = 5;
     public float comboTimePeriod = 10;
     public int comboCounter;
-    public bool IsComboEnable;
 
     private static Rules rules;
 
@@ -48,8 +47,6 @@ public class CoreRulesManager : MonoBehaviour
 
         allPlayerGold.text = player.GoldCoins.ToString();
         roundPlayerGold.text = "+" + roundScores;
-
-        IsComboEnable = player.Difficulty > 0;
         
         if (player.GameMode == GameMode.Collecting)
         {
@@ -59,9 +56,10 @@ public class CoreRulesManager : MonoBehaviour
         }
         else
         {
-            OpenPairs.transform.parent.gameObject.SetActive(true);
             Destroy(TilesHand.gameObject);
             rules = new SolitareRules();
+            bool isHardMode = player.Difficulty > 2;
+            OpenPairs.transform.parent.gameObject.SetActive(!isHardMode);
         }
 
         rules.Manager = this;
@@ -85,6 +83,8 @@ public class CoreRulesManager : MonoBehaviour
         {
             1 => 1000,
             2 => 5000,
+            3 => 10000,
+            4 => 50000,
             _ => 0
         };
         

@@ -34,6 +34,11 @@ public class CoreBootstrap : MonoBehaviour
     private Transform tileStartAnimationPoint;
     
     [SerializeField] 
+    private Color HardColor;
+    [SerializeField] 
+    private SpriteRenderer BackgroundImage;
+    
+    [SerializeField] 
     private Material[] floorMaterials;
     
     private SaveData player;
@@ -60,6 +65,11 @@ public class CoreBootstrap : MonoBehaviour
         spells.Initialize(player);
         cameraMover.Initialize();
         cameraStartPosition.Initialize(player);
+        if (player.Difficulty > 2)
+        {
+            BackgroundImage.color = HardColor;
+            Camera.main!.backgroundColor = HardColor;
+        }
 
         inputHolder.onClick += FastStart;
     }
@@ -72,15 +82,13 @@ public class CoreBootstrap : MonoBehaviour
     private List<MajhongTileView> EmptyDesk()
     {
         List<Sprite> listTiles = new(desk.TilesPositions.Count);
-        int pairs = desk.TilesPositions.Count / 2;
-        int lastTileIndex = Math.Min(tileData.Tiles.Length, pairs);
-        List<int> possibleTiles = FillListWhisTiles(lastTileIndex);
-        
+        List<int> possibleTiles = FillListWhisTiles();
+        List<int> copyTiles = new List<int>(possibleTiles);
         while(listTiles.Count < desk.TilesPositions.Count)
         {
-            int randomTile = possibleTiles.PullRandom();
-            if (possibleTiles.Count <= 0)
-                possibleTiles = FillListWhisTiles(lastTileIndex);
+            int randomTile = copyTiles.PullRandom();
+            if (copyTiles.Count <= 0)
+                copyTiles = new List<int>(possibleTiles);
             
             listTiles.Add(tileData.Tiles[randomTile]);
             listTiles.Add(tileData.Tiles[randomTile]);
@@ -136,15 +144,24 @@ public class CoreBootstrap : MonoBehaviour
         
         return tilesView;
     }
-    private List<int> FillListWhisTiles(int lastTileIndex)
+    private List<int> FillListWhisTiles()
     {
-        List<int> ints = new(lastTileIndex);
-        for (int i = 0; i < lastTileIndex; i++)
-        {
-            int index = i;
-            ints.Add(index);
-        }
+        List<int> ints = Extensions.AFewCardsFromTheDeck(36, tileData.Tiles.Length);
+        int Seasons = ints[^1];
+        int Plants = ints[^2];
+        ints.Add(Seasons);
+        ints.Add(Seasons);
+        ints.Add(Seasons);
+        ints.Add(Plants);
+        ints.Add(Plants);
+        ints.Add(Plants);
 
+        /*string result = "";
+        foreach (var value in ints)
+        {
+            result += ", " + value;
+        }
+        Debug.Log(result);*/
         return ints;
     }
 
@@ -158,7 +175,17 @@ public class CoreBootstrap : MonoBehaviour
 
     public void Shuffle()
     {
-        StartCoroutine(DeckInitialize(pool.GetAll()));
+        if(player.Difficulty < 3)
+            StartCoroutine(DeckInitialize(pool.GetAll()));
+        else
+        {
+            spells.DisableSpotLight();
+            rulesManager.comboCounter = 0;
+            rulesManager.roundScores = 0;
+            rulesManager.roundPlayerGold.text = "+0";
+            pool.ClearAll(instant: true);
+            StartCoroutine(DeckInitialize(EmptyDesk()));
+        }
     }
     
     private IEnumerator DeckInitialize(List<MajhongTileView> listTiles)
@@ -182,6 +209,8 @@ public class CoreBootstrap : MonoBehaviour
             {
                 0 => DifficultyShuffle.ShuffleEasy(listTiles),
                 2 => DifficultyShuffle.ShuffleHard(listTiles),
+                3 => DifficultyShuffle.ShuffleNormal(listTiles),
+                4 => DifficultyShuffle.ShuffleHard(listTiles),
                 _ => DifficultyShuffle.ShuffleNormal(listTiles),
             };
             fallbackIndexer++;
