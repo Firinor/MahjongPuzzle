@@ -5718,7 +5718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -99.99991, y: -30}
+  m_AnchoredPosition: {x: -99.99994, y: -30}
   m_SizeDelta: {x: -800, y: 94}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &873593515
@@ -8975,7 +8975,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6392cfbd594f4d49b7ff5f56760db73, type: 2}
   - {fileID: 11400000, guid: 5f47a597d623f904f9a53aa88e4e1734, type: 2}
   - {fileID: 11400000, guid: 28892666ee67767478c5a9e4d4199aba, type: 2}
-  - {fileID: 11400000, guid: a4fedbdcf1db7b04a912ded8aa419e4c, type: 2}
+  - {fileID: 11400000, guid: 8da1b72d87facf940ac0a68706cbcd1e, type: 2}
+  - {fileID: 11400000, guid: cbed5216bfc2a474bb35a515dcf8de26, type: 2}
   settings: {fileID: 1575189758}
   pool: {fileID: 171712896}
   rulesManager: {fileID: 180524335}
@@ -13288,6 +13289,10 @@ PrefabInstance:
     - target: {fileID: 7050060249669498519, guid: 38e121ff3cfa7984990a7666e43d7906, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990248766093448013, guid: 38e121ff3cfa7984990a7666e43d7906, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 8200830588986200333, guid: 38e121ff3cfa7984990a7666e43d7906, type: 3}
       propertyPath: m_Pivot.x

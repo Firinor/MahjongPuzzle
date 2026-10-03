@@ -98,7 +98,7 @@ public class CoreRulesManager : MonoBehaviour
     [ContextMenu("UnlockAll")]
     public void UnlockAll()
     {
-        player.AddGold(100000);
+        player.AddGold(1000000);
     }
     [ContextMenu("LockAll")]
     public void LockAll()
