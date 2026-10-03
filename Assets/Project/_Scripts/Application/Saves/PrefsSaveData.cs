@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 [Serializable]
 public class PrefsSaveData : SaveData
@@ -11,7 +12,7 @@ public class PrefsSaveData : SaveData
     public int goldMedals;
     public int silverMedals;
     public int bronzeMedals;
-    public LevelStars[] levelStars;
+    public List<LevelStars> levelStars = new();
     
     public override int GoldCoins
     {
@@ -54,7 +55,7 @@ public class PrefsSaveData : SaveData
         get => bronzeMedals;
         set => bronzeMedals = value;
     }
-    public override LevelStars[] LevelStars
+    public override List<LevelStars> LevelStars
     {
         get => levelStars;
         set => levelStars = value;
@@ -77,6 +78,29 @@ public class PrefsSaveData : SaveData
     {
         GoldCoins += count;
         InvokeGoldChange(GoldCoins);
+    }
+
+    public override void AddMedals(string fromDeskID, int count)
+    {
+        foreach (LevelStars levelStar in levelStars)
+        {
+            if(!string.Equals(fromDeskID, levelStar.ID))
+                continue;
+            
+            if(count <= levelStar.medalCount)
+                return;
+
+            levelStar.medalCount = count;
+            return;
+        }
+
+        LevelStars level = new LevelStars()
+        {
+            ID = fromDeskID,
+            medalCount = count
+        };
+        
+        levelStars.Add(level);
     }
 
     public override bool TrySpendGold(int count)

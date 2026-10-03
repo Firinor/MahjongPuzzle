@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using YG;
 
 namespace YG
@@ -16,7 +17,7 @@ namespace YG
         public int GoldMedals;
         public int SilverMedals;
         public int BronzeMedals;
-        public LevelStars[] LevelStars;
+        public List<LevelStars> LevelStars = new();
     }
 }
 
@@ -66,7 +67,7 @@ public class YGSaveData : SaveData
         get => saves.BronzeMedals;
         set => saves.BronzeMedals = value;
     }
-    public override LevelStars[] LevelStars
+    public override List<LevelStars> LevelStars
     {
         get => saves.LevelStars;
         set => saves.LevelStars = value;
@@ -82,7 +83,28 @@ public class YGSaveData : SaveData
         GoldCoins += count;
         InvokeGoldChange(GoldCoins);
     }
+    public override void AddMedals(string fromDeskID, int count)
+    {
+        foreach (LevelStars levelStar in LevelStars)
+        {
+            if(!string.Equals(fromDeskID, levelStar.ID))
+                continue;
+            
+            if(count <= levelStar.medalCount)
+                return;
 
+            levelStar.medalCount = count;
+            return;
+        }
+
+        LevelStars level = new LevelStars()
+        {
+            ID = fromDeskID,
+            medalCount = count
+        };
+        
+        LevelStars.Add(level);
+    }
     public override bool TrySpendGold(int count)
     {
         if (GoldCoins < count)

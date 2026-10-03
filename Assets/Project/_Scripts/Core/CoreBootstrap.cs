@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +60,7 @@ public class CoreBootstrap : MonoBehaviour
         settings.Initialize();
         pool.ClearAll(instant: true);
         StartCoroutine(DeckInitialize(EmptyDesk()));
-        rulesManager.Initialize(player);
+        rulesManager.Initialize(player, desks2);
         spells.Initialize(player);
         cameraMover.Initialize();
         cameraStartPosition.Initialize(player);

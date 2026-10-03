@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 [Serializable]
 public abstract class SaveData
@@ -9,7 +8,7 @@ public abstract class SaveData
     public abstract int GoldMedals { get; set; }
     public abstract int SilverMedals { get; set; }
     public abstract int BronzeMedals { get; set; }
-    public abstract LevelStars[] LevelStars { get; set; }
+    public abstract List<LevelStars> LevelStars { get; set; }
     public abstract string TilesID { get; set; }
     public abstract string DeskID { get; set; }
     public abstract int Difficulty { get; set; }
@@ -19,7 +18,7 @@ public abstract class SaveData
     {
         get {
             if(LevelStars is null
-               || LevelStars.Length == 0)
+               || LevelStars.Count == 0)
                 return 0;
 
             int result = 0;
@@ -33,7 +32,7 @@ public abstract class SaveData
     public int MedalsCountByLevel(string levelID)
     {
         if(LevelStars is null
-           || LevelStars.Length == 0)
+           || LevelStars.Count == 0)
             return 0;
         
         foreach (LevelStars level in LevelStars)
@@ -43,14 +42,13 @@ public abstract class SaveData
         }
         return 0;
     }
-
-    
     
     public event Action<int> OnGoldChange;
 
     public abstract void FirstLoad();
     
     public abstract void AddGold(int count);
+    public abstract void AddMedals(string deskID, int count);
     public abstract bool TrySpendGold(int count);
     public abstract void ResetProgress();
     public abstract void Save();
@@ -81,7 +79,7 @@ public enum GameMode
 }
 
 [Serializable]
-public struct LevelStars
+public class LevelStars
 {
     public string ID;
     public int medalCount;

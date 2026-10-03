@@ -39,12 +39,14 @@ public class CoreRulesManager : MonoBehaviour
     public int comboCounter;
 
     private static Rules rules;
+    private Desk2[] desks;
 
-    public void Initialize(SaveData player)
+    public void Initialize(SaveData player, Desk2[] desks)
     {
         this.player = player;
         player.OnGoldChange += PlayerGoldChanged;
-
+        this.desks = desks;
+        
         allPlayerGold.text = player.GoldCoins.ToString();
         roundPlayerGold.text = "+" + roundScores;
         
@@ -89,6 +91,11 @@ public class CoreRulesManager : MonoBehaviour
         };
         
         winAnimations.Initialize(player, roundScores, bonus);
+        if (player.Difficulty > 2)
+        {
+            int medalsCount = player.Difficulty - 2;
+            player.AddMedals(player.DeskID, medalsCount);
+        }
         player.AddGold(roundScores + bonus);
         winPopup.gameObject.SetActive(true);
         winPopup.ToStartPoint();
@@ -98,6 +105,10 @@ public class CoreRulesManager : MonoBehaviour
     [ContextMenu("UnlockAll")]
     public void UnlockAll()
     {
+        foreach (var desk in desks)
+        {
+            player.AddMedals(desk.ID, 2);
+        }
         player.AddGold(1000000);
     }
     [ContextMenu("LockAll")]

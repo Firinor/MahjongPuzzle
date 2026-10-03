@@ -7,14 +7,67 @@
         false,
         false
     ],
-    "idSave": 1022,
-    "GoldCoins": 1150000,
+    "idSave": 1025,
+    "GoldCoins": 2150000,
     "tilesID": "ClassicTiles",
-    "deskID": "Elefant",
+    "deskID": "TheCube",
     "Difficulty": 4,
     "GameMode": 0,
     "GoldMedals": 0,
     "SilverMedals": 0,
     "BronzeMedals": 0,
-    "LevelStars": []
+    "LevelStars": [
+        {
+            "ID": "ClassicDesk",
+            "medalCount": 2
+        },
+        {
+            "ID": "ClassicDeskAlter",
+            "medalCount": 2
+        },
+        {
+            "ID": "Butterfly",
+            "medalCount": 2
+        },
+        {
+            "ID": "Cat",
+            "medalCount": 2
+        },
+        {
+            "ID": "Flower",
+            "medalCount": 2
+        },
+        {
+            "ID": "Plane",
+            "medalCount": 2
+        },
+        {
+            "ID": "Rabbit",
+            "medalCount": 2
+        },
+        {
+            "ID": "Train",
+            "medalCount": 2
+        },
+        {
+            "ID": "Duck",
+            "medalCount": 2
+        },
+        {
+            "ID": "Kiwi",
+            "medalCount": 2
+        },
+        {
+            "ID": "Fish",
+            "medalCount": 2
+        },
+        {
+            "ID": "Elefant",
+            "medalCount": 2
+        },
+        {
+            "ID": "TheCube",
+            "medalCount": 2
+        }
+    ]
 }
